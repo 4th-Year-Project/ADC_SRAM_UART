@@ -2647,3 +2647,2944 @@ Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.]. Thread: Worker-29
 
 !ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 19:58:50.929
 !MESSAGE XSCT command with result: [con], Result: [null, ]. Thread: Worker-29
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:02:37.968
+!MESSAGE XSCT Command: [disconnect tcfchan#53], Thread: Thread-3494
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:02:37.983
+!MESSAGE XSCT command with result: [disconnect tcfchan#53], Result: [null, ]. Thread: Thread-3494
+
+!ENTRY com.xilinx.sdk.utils 1 0 2019-04-13 20:02:38.976
+!MESSAGE Updating toolusage
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:02:38.991
+!MESSAGE XSCT Command: [connect -url tcp:127.0.0.1:3121], Thread: Worker-16
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:02:39.022
+!MESSAGE XSCT command with result: [connect -url tcp:127.0.0.1:3121], Result: [null, tcfchan#54]. Thread: Worker-16
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:02:39.022
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-16
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:02:39.054
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent Cmod A7 - 35T 210328AA0008A]. Thread: Worker-16
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:02:39.054
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-16
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:02:39.069
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent Cmod A7 - 35T 210328AA0008A]. Thread: Worker-16
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:02:39.085
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Digilent Cmod A7 - 35T 210328AA0008A" && level==1}], Thread: Worker-16
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:02:39.116
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Digilent Cmod A7 - 35T 210328AA0008A" && level==1}], Result: [null,      2  xc7a35t (idcode 0362d093 irlen 6 fpga)]. Thread: Worker-16
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:02:39.116
+!MESSAGE XSCT Command: [targets -set -filter {jtag_cable_name =~ "Digilent Cmod A7 - 35T 210328AA0008A" && level==0} -index 0], Thread: Worker-16
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:02:39.163
+!MESSAGE XSCT command with result: [targets -set -filter {jtag_cable_name =~ "Digilent Cmod A7 - 35T 210328AA0008A" && level==0} -index 0], Result: [null, ]. Thread: Worker-16
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:02:39.179
+!MESSAGE XSCT Command: [fpga -state], Thread: Worker-16
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:02:39.194
+!MESSAGE XSCT command with result: [fpga -state], Result: [null, FPGA is configured]. Thread: Worker-16
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:02:39.194
+!MESSAGE XSCT Command: [connect -url tcp:127.0.0.1:3121], Thread: Worker-16
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:02:39.194
+!MESSAGE XSCT command with result: [connect -url tcp:127.0.0.1:3121], Result: [null, tcfchan#54]. Thread: Worker-16
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:02:39.210
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-16
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:02:39.225
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent Cmod A7 - 35T 210328AA0008A]. Thread: Worker-16
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:02:39.225
+!MESSAGE XSCT Command: [version -server], Thread: Worker-16
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:02:39.225
+!MESSAGE XSCT command with result: [version -server], Result: [null, 2018.3]. Thread: Worker-16
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:02:39.241
+!MESSAGE XSCT Command: [version], Thread: Worker-16
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:02:39.241
+!MESSAGE XSCT command with result: [version], Result: [null, xsct 2018.3
+SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.]. Thread: Worker-16
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:02:39.257
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-16
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:02:39.257
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent Cmod A7 - 35T 210328AA0008A]. Thread: Worker-16
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:02:39.272
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Digilent Cmod A7 - 35T 210328AA0008A" && level==1}], Thread: Worker-16
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:02:39.304
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Digilent Cmod A7 - 35T 210328AA0008A" && level==1}], Result: [null,      2  xc7a35t (idcode 0362d093 irlen 6 fpga)]. Thread: Worker-16
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:02:39.304
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-16
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:02:39.319
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent Cmod A7 - 35T 210328AA0008A]. Thread: Worker-16
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:02:39.335
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Digilent Cmod A7 - 35T 210328AA0008A" && level==1}], Thread: Worker-16
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:02:39.366
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Digilent Cmod A7 - 35T 210328AA0008A" && level==1}], Result: [null,      2  xc7a35t (idcode 0362d093 irlen 6 fpga)]. Thread: Worker-16
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:02:39.366
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-16
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:02:39.382
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent Cmod A7 - 35T 210328AA0008A]. Thread: Worker-16
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:02:39.397
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Digilent Cmod A7 - 35T 210328AA0008A" && level==1}], Thread: Worker-16
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:02:39.429
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Digilent Cmod A7 - 35T 210328AA0008A" && level==1}], Result: [null,      2  xc7a35t (idcode 0362d093 irlen 6 fpga)]. Thread: Worker-16
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:02:39.429
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-16
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:02:39.444
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent Cmod A7 - 35T 210328AA0008A]. Thread: Worker-16
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:02:39.444
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Digilent Cmod A7 - 35T 210328AA0008A" && level==1}], Thread: Worker-16
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:02:39.491
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Digilent Cmod A7 - 35T 210328AA0008A" && level==1}], Result: [null,      2  xc7a35t (idcode 0362d093 irlen 6 fpga)]. Thread: Worker-16
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:02:39.491
+!MESSAGE XSCT Command: [jtag targets -set -filter {name =~ "Digilent Cmod A7 - 35T 210328AA0008A" && level == 0}], Thread: Worker-16
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:02:39.522
+!MESSAGE XSCT command with result: [jtag targets -set -filter {name =~ "Digilent Cmod A7 - 35T 210328AA0008A" && level == 0}], Result: [null, ]. Thread: Worker-16
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:02:39.538
+!MESSAGE XSCT Command: [jtag frequency], Thread: Worker-16
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:02:39.538
+!MESSAGE XSCT command with result: [jtag frequency], Result: [null, 15000000]. Thread: Worker-16
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:02:39.538
+!MESSAGE XSCT Command: [configparams mdm-detect-bscan-mask 2], Thread: Worker-16
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:02:39.554
+!MESSAGE XSCT command with result: [configparams mdm-detect-bscan-mask 2], Result: [null, ]. Thread: Worker-16
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:02:39.554
+!MESSAGE XSCT Command: [targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Cmod A7 - 35T 210328AA0008A"} -index 0], Thread: Worker-16
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:02:39.616
+!MESSAGE XSCT command with result: [targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Cmod A7 - 35T 210328AA0008A"} -index 0], Result: [null, ]. Thread: Worker-16
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:02:39.616
+!MESSAGE XSCT Command: [rst -processor], Thread: Worker-16
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:02:39.666
+!MESSAGE XSCT command with result: [rst -processor], Result: [null, ]. Thread: Worker-16
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:02:39.666
+!MESSAGE XSCT Command: [targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Cmod A7 - 35T 210328AA0008A"} -index 0], Thread: Worker-16
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:02:39.728
+!MESSAGE XSCT command with result: [targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Cmod A7 - 35T 210328AA0008A"} -index 0], Result: [null, ]. Thread: Worker-16
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:02:39.744
+!MESSAGE XSCT Command: [dow C:/FPGA_Projects/ADC_SRAM_UART/ADC_SRAM_UART.sdk/ADC_SRAM_UART/Debug/ADC_SRAM_UART.elf], Thread: Worker-16
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:02:39.822
+!MESSAGE XSCT command with result: [dow C:/FPGA_Projects/ADC_SRAM_UART/ADC_SRAM_UART.sdk/ADC_SRAM_UART/Debug/ADC_SRAM_UART.elf], Result: [null, ]. Thread: Worker-16
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:02:39.900
+!MESSAGE XSCT Command: [targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Cmod A7 - 35T 210328AA0008A"} -index 0], Thread: Worker-16
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:02:40.088
+!MESSAGE XSCT command with result: [targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Cmod A7 - 35T 210328AA0008A"} -index 0], Result: [null, ]. Thread: Worker-16
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:02:40.103
+!MESSAGE XSCT Command: [con], Thread: Worker-16
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:02:40.119
+!MESSAGE XSCT command with result: [con], Result: [null, ]. Thread: Worker-16
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:02:42.453
+!MESSAGE XSCT Command: [disconnect tcfchan#54], Thread: Thread-3535
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:02:42.474
+!MESSAGE XSCT command with result: [disconnect tcfchan#54], Result: [null, ]. Thread: Thread-3535
+
+!ENTRY com.xilinx.sdk.utils 1 0 2019-04-13 20:02:43.461
+!MESSAGE Updating toolusage
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:02:43.461
+!MESSAGE XSCT Command: [connect -url tcp:127.0.0.1:3121], Thread: Worker-35
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:02:43.492
+!MESSAGE XSCT command with result: [connect -url tcp:127.0.0.1:3121], Result: [null, tcfchan#55]. Thread: Worker-35
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:02:43.492
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-35
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:02:43.523
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent Cmod A7 - 35T 210328AA0008A]. Thread: Worker-35
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:02:43.539
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-35
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:02:43.554
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent Cmod A7 - 35T 210328AA0008A]. Thread: Worker-35
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:02:43.554
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Digilent Cmod A7 - 35T 210328AA0008A" && level==1}], Thread: Worker-35
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:02:43.601
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Digilent Cmod A7 - 35T 210328AA0008A" && level==1}], Result: [null,      2  xc7a35t (idcode 0362d093 irlen 6 fpga)]. Thread: Worker-35
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:02:43.601
+!MESSAGE XSCT Command: [targets -set -filter {jtag_cable_name =~ "Digilent Cmod A7 - 35T 210328AA0008A" && level==0} -index 0], Thread: Worker-35
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:02:43.648
+!MESSAGE XSCT command with result: [targets -set -filter {jtag_cable_name =~ "Digilent Cmod A7 - 35T 210328AA0008A" && level==0} -index 0], Result: [null, ]. Thread: Worker-35
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:02:43.648
+!MESSAGE XSCT Command: [fpga -state], Thread: Worker-35
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:02:43.664
+!MESSAGE XSCT command with result: [fpga -state], Result: [null, FPGA is configured]. Thread: Worker-35
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:02:43.664
+!MESSAGE XSCT Command: [connect -url tcp:127.0.0.1:3121], Thread: Worker-35
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:02:43.679
+!MESSAGE XSCT command with result: [connect -url tcp:127.0.0.1:3121], Result: [null, tcfchan#55]. Thread: Worker-35
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:02:43.679
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-35
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:02:43.695
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent Cmod A7 - 35T 210328AA0008A]. Thread: Worker-35
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:02:43.695
+!MESSAGE XSCT Command: [version -server], Thread: Worker-35
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:02:43.711
+!MESSAGE XSCT command with result: [version -server], Result: [null, 2018.3]. Thread: Worker-35
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:02:43.711
+!MESSAGE XSCT Command: [version], Thread: Worker-35
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:02:43.711
+!MESSAGE XSCT command with result: [version], Result: [null, xsct 2018.3
+SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.]. Thread: Worker-35
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:02:43.726
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-35
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:02:43.742
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent Cmod A7 - 35T 210328AA0008A]. Thread: Worker-35
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:02:43.742
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Digilent Cmod A7 - 35T 210328AA0008A" && level==1}], Thread: Worker-35
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:02:43.789
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Digilent Cmod A7 - 35T 210328AA0008A" && level==1}], Result: [null,      2  xc7a35t (idcode 0362d093 irlen 6 fpga)]. Thread: Worker-35
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:02:43.789
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-35
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:02:43.804
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent Cmod A7 - 35T 210328AA0008A]. Thread: Worker-35
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:02:43.804
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Digilent Cmod A7 - 35T 210328AA0008A" && level==1}], Thread: Worker-35
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:02:43.851
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Digilent Cmod A7 - 35T 210328AA0008A" && level==1}], Result: [null,      2  xc7a35t (idcode 0362d093 irlen 6 fpga)]. Thread: Worker-35
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:02:43.851
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-35
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:02:43.867
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent Cmod A7 - 35T 210328AA0008A]. Thread: Worker-35
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:02:43.882
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Digilent Cmod A7 - 35T 210328AA0008A" && level==1}], Thread: Worker-35
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:02:43.914
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Digilent Cmod A7 - 35T 210328AA0008A" && level==1}], Result: [null,      2  xc7a35t (idcode 0362d093 irlen 6 fpga)]. Thread: Worker-35
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:02:43.914
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-35
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:02:43.929
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent Cmod A7 - 35T 210328AA0008A]. Thread: Worker-35
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:02:43.929
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Digilent Cmod A7 - 35T 210328AA0008A" && level==1}], Thread: Worker-35
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:02:43.976
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Digilent Cmod A7 - 35T 210328AA0008A" && level==1}], Result: [null,      2  xc7a35t (idcode 0362d093 irlen 6 fpga)]. Thread: Worker-35
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:02:43.976
+!MESSAGE XSCT Command: [jtag targets -set -filter {name =~ "Digilent Cmod A7 - 35T 210328AA0008A" && level == 0}], Thread: Worker-35
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:02:44.007
+!MESSAGE XSCT command with result: [jtag targets -set -filter {name =~ "Digilent Cmod A7 - 35T 210328AA0008A" && level == 0}], Result: [null, ]. Thread: Worker-35
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:02:44.023
+!MESSAGE XSCT Command: [jtag frequency], Thread: Worker-35
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:02:44.023
+!MESSAGE XSCT command with result: [jtag frequency], Result: [null, 15000000]. Thread: Worker-35
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:02:44.023
+!MESSAGE XSCT Command: [configparams mdm-detect-bscan-mask 2], Thread: Worker-35
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:02:44.039
+!MESSAGE XSCT command with result: [configparams mdm-detect-bscan-mask 2], Result: [null, ]. Thread: Worker-35
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:02:44.039
+!MESSAGE XSCT Command: [targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Cmod A7 - 35T 210328AA0008A"} -index 0], Thread: Worker-35
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:02:44.086
+!MESSAGE XSCT command with result: [targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Cmod A7 - 35T 210328AA0008A"} -index 0], Result: [null, ]. Thread: Worker-35
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:02:44.101
+!MESSAGE XSCT Command: [rst -processor], Thread: Worker-35
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:02:44.137
+!MESSAGE XSCT command with result: [rst -processor], Result: [null, ]. Thread: Worker-35
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:02:44.153
+!MESSAGE XSCT Command: [targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Cmod A7 - 35T 210328AA0008A"} -index 0], Thread: Worker-35
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:02:44.231
+!MESSAGE XSCT command with result: [targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Cmod A7 - 35T 210328AA0008A"} -index 0], Result: [null, ]. Thread: Worker-35
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:02:44.247
+!MESSAGE XSCT Command: [dow C:/FPGA_Projects/ADC_SRAM_UART/ADC_SRAM_UART.sdk/ADC_SRAM_UART/Debug/ADC_SRAM_UART.elf], Thread: Worker-35
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:02:44.340
+!MESSAGE XSCT command with result: [dow C:/FPGA_Projects/ADC_SRAM_UART/ADC_SRAM_UART.sdk/ADC_SRAM_UART/Debug/ADC_SRAM_UART.elf], Result: [null, ]. Thread: Worker-35
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:02:44.419
+!MESSAGE XSCT Command: [targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Cmod A7 - 35T 210328AA0008A"} -index 0], Thread: Worker-35
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:02:44.512
+!MESSAGE XSCT command with result: [targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Cmod A7 - 35T 210328AA0008A"} -index 0], Result: [null, ]. Thread: Worker-35
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:02:44.528
+!MESSAGE XSCT Command: [con], Thread: Worker-35
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:02:44.559
+!MESSAGE XSCT command with result: [con], Result: [null, ]. Thread: Worker-35
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:03:09.428
+!MESSAGE XSCT Command: [disconnect tcfchan#55], Thread: Thread-3585
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:03:09.443
+!MESSAGE XSCT command with result: [disconnect tcfchan#55], Result: [null, ]. Thread: Thread-3585
+
+!ENTRY com.xilinx.sdk.utils 1 0 2019-04-13 20:03:10.429
+!MESSAGE Updating toolusage
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:03:10.445
+!MESSAGE XSCT Command: [connect -url tcp:127.0.0.1:3121], Thread: Worker-35
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:03:10.476
+!MESSAGE XSCT command with result: [connect -url tcp:127.0.0.1:3121], Result: [null, tcfchan#56]. Thread: Worker-35
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:03:10.476
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-35
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:03:10.507
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent Cmod A7 - 35T 210328AA0008A]. Thread: Worker-35
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:03:10.507
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-35
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:03:10.523
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent Cmod A7 - 35T 210328AA0008A]. Thread: Worker-35
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:03:10.538
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Digilent Cmod A7 - 35T 210328AA0008A" && level==1}], Thread: Worker-35
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:03:10.570
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Digilent Cmod A7 - 35T 210328AA0008A" && level==1}], Result: [null,      2  xc7a35t (idcode 0362d093 irlen 6 fpga)]. Thread: Worker-35
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:03:10.570
+!MESSAGE XSCT Command: [targets -set -filter {jtag_cable_name =~ "Digilent Cmod A7 - 35T 210328AA0008A" && level==0} -index 0], Thread: Worker-35
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:03:10.616
+!MESSAGE XSCT command with result: [targets -set -filter {jtag_cable_name =~ "Digilent Cmod A7 - 35T 210328AA0008A" && level==0} -index 0], Result: [null, ]. Thread: Worker-35
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:03:10.616
+!MESSAGE XSCT Command: [fpga -state], Thread: Worker-35
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:03:10.632
+!MESSAGE XSCT command with result: [fpga -state], Result: [null, FPGA is configured]. Thread: Worker-35
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:03:10.632
+!MESSAGE XSCT Command: [connect -url tcp:127.0.0.1:3121], Thread: Worker-35
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:03:10.648
+!MESSAGE XSCT command with result: [connect -url tcp:127.0.0.1:3121], Result: [null, tcfchan#56]. Thread: Worker-35
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:03:10.648
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-35
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:03:10.663
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent Cmod A7 - 35T 210328AA0008A]. Thread: Worker-35
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:03:10.663
+!MESSAGE XSCT Command: [version -server], Thread: Worker-35
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:03:10.679
+!MESSAGE XSCT command with result: [version -server], Result: [null, 2018.3]. Thread: Worker-35
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:03:10.679
+!MESSAGE XSCT Command: [version], Thread: Worker-35
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:03:10.695
+!MESSAGE XSCT command with result: [version], Result: [null, xsct 2018.3
+SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.]. Thread: Worker-35
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:03:10.695
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-35
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:03:10.710
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent Cmod A7 - 35T 210328AA0008A]. Thread: Worker-35
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:03:10.710
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Digilent Cmod A7 - 35T 210328AA0008A" && level==1}], Thread: Worker-35
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:03:10.741
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Digilent Cmod A7 - 35T 210328AA0008A" && level==1}], Result: [null,      2  xc7a35t (idcode 0362d093 irlen 6 fpga)]. Thread: Worker-35
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:03:10.757
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-35
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:03:10.773
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent Cmod A7 - 35T 210328AA0008A]. Thread: Worker-35
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:03:10.773
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Digilent Cmod A7 - 35T 210328AA0008A" && level==1}], Thread: Worker-35
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:03:10.804
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Digilent Cmod A7 - 35T 210328AA0008A" && level==1}], Result: [null,      2  xc7a35t (idcode 0362d093 irlen 6 fpga)]. Thread: Worker-35
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:03:10.820
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-35
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:03:10.835
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent Cmod A7 - 35T 210328AA0008A]. Thread: Worker-35
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:03:10.835
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Digilent Cmod A7 - 35T 210328AA0008A" && level==1}], Thread: Worker-35
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:03:10.866
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Digilent Cmod A7 - 35T 210328AA0008A" && level==1}], Result: [null,      2  xc7a35t (idcode 0362d093 irlen 6 fpga)]. Thread: Worker-35
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:03:10.866
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-35
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:03:10.882
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent Cmod A7 - 35T 210328AA0008A]. Thread: Worker-35
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:03:10.898
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Digilent Cmod A7 - 35T 210328AA0008A" && level==1}], Thread: Worker-35
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:03:10.929
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Digilent Cmod A7 - 35T 210328AA0008A" && level==1}], Result: [null,      2  xc7a35t (idcode 0362d093 irlen 6 fpga)]. Thread: Worker-35
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:03:10.929
+!MESSAGE XSCT Command: [jtag targets -set -filter {name =~ "Digilent Cmod A7 - 35T 210328AA0008A" && level == 0}], Thread: Worker-35
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:03:10.960
+!MESSAGE XSCT command with result: [jtag targets -set -filter {name =~ "Digilent Cmod A7 - 35T 210328AA0008A" && level == 0}], Result: [null, ]. Thread: Worker-35
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:03:10.976
+!MESSAGE XSCT Command: [jtag frequency], Thread: Worker-35
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:03:10.976
+!MESSAGE XSCT command with result: [jtag frequency], Result: [null, 15000000]. Thread: Worker-35
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:03:10.991
+!MESSAGE XSCT Command: [configparams mdm-detect-bscan-mask 2], Thread: Worker-35
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:03:10.991
+!MESSAGE XSCT command with result: [configparams mdm-detect-bscan-mask 2], Result: [null, ]. Thread: Worker-35
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:03:10.991
+!MESSAGE XSCT Command: [targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Cmod A7 - 35T 210328AA0008A"} -index 0], Thread: Worker-35
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:03:11.054
+!MESSAGE XSCT command with result: [targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Cmod A7 - 35T 210328AA0008A"} -index 0], Result: [null, ]. Thread: Worker-35
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:03:11.054
+!MESSAGE XSCT Command: [rst -processor], Thread: Worker-35
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:03:11.104
+!MESSAGE XSCT command with result: [rst -processor], Result: [null, ]. Thread: Worker-35
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:03:11.104
+!MESSAGE XSCT Command: [targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Cmod A7 - 35T 210328AA0008A"} -index 0], Thread: Worker-35
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:03:11.166
+!MESSAGE XSCT command with result: [targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Cmod A7 - 35T 210328AA0008A"} -index 0], Result: [null, ]. Thread: Worker-35
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:03:11.166
+!MESSAGE XSCT Command: [dow C:/FPGA_Projects/ADC_SRAM_UART/ADC_SRAM_UART.sdk/ADC_SRAM_UART/Debug/ADC_SRAM_UART.elf], Thread: Worker-35
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:03:11.260
+!MESSAGE XSCT command with result: [dow C:/FPGA_Projects/ADC_SRAM_UART/ADC_SRAM_UART.sdk/ADC_SRAM_UART/Debug/ADC_SRAM_UART.elf], Result: [null, ]. Thread: Worker-35
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:03:11.338
+!MESSAGE XSCT Command: [targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Cmod A7 - 35T 210328AA0008A"} -index 0], Thread: Worker-35
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:03:11.416
+!MESSAGE XSCT command with result: [targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Cmod A7 - 35T 210328AA0008A"} -index 0], Result: [null, ]. Thread: Worker-35
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:03:11.432
+!MESSAGE XSCT Command: [con], Thread: Worker-35
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:03:11.447
+!MESSAGE XSCT command with result: [con], Result: [null, ]. Thread: Worker-35
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:03:24.545
+!MESSAGE XSCT Command: [disconnect tcfchan#56], Thread: Thread-3633
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:03:24.561
+!MESSAGE XSCT command with result: [disconnect tcfchan#56], Result: [null, ]. Thread: Thread-3633
+
+!ENTRY com.xilinx.sdk.utils 1 0 2019-04-13 20:03:25.555
+!MESSAGE Updating toolusage
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:03:25.555
+!MESSAGE XSCT Command: [connect -url tcp:127.0.0.1:3121], Thread: Worker-27
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:03:25.586
+!MESSAGE XSCT command with result: [connect -url tcp:127.0.0.1:3121], Result: [null, tcfchan#57]. Thread: Worker-27
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:03:25.602
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-27
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:03:25.633
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent Cmod A7 - 35T 210328AA0008A]. Thread: Worker-27
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:03:25.633
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-27
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:03:25.649
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent Cmod A7 - 35T 210328AA0008A]. Thread: Worker-27
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:03:25.649
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Digilent Cmod A7 - 35T 210328AA0008A" && level==1}], Thread: Worker-27
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:03:25.696
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Digilent Cmod A7 - 35T 210328AA0008A" && level==1}], Result: [null,      2  xc7a35t (idcode 0362d093 irlen 6 fpga)]. Thread: Worker-27
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:03:25.696
+!MESSAGE XSCT Command: [targets -set -filter {jtag_cable_name =~ "Digilent Cmod A7 - 35T 210328AA0008A" && level==0} -index 0], Thread: Worker-27
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:03:25.742
+!MESSAGE XSCT command with result: [targets -set -filter {jtag_cable_name =~ "Digilent Cmod A7 - 35T 210328AA0008A" && level==0} -index 0], Result: [null, ]. Thread: Worker-27
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:03:25.758
+!MESSAGE XSCT Command: [fpga -state], Thread: Worker-27
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:03:25.758
+!MESSAGE XSCT command with result: [fpga -state], Result: [null, FPGA is configured]. Thread: Worker-27
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:03:25.774
+!MESSAGE XSCT Command: [connect -url tcp:127.0.0.1:3121], Thread: Worker-27
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:03:25.774
+!MESSAGE XSCT command with result: [connect -url tcp:127.0.0.1:3121], Result: [null, tcfchan#57]. Thread: Worker-27
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:03:25.774
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-27
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:03:25.789
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent Cmod A7 - 35T 210328AA0008A]. Thread: Worker-27
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:03:25.805
+!MESSAGE XSCT Command: [version -server], Thread: Worker-27
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:03:25.805
+!MESSAGE XSCT command with result: [version -server], Result: [null, 2018.3]. Thread: Worker-27
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:03:25.805
+!MESSAGE XSCT Command: [version], Thread: Worker-27
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:03:25.820
+!MESSAGE XSCT command with result: [version], Result: [null, xsct 2018.3
+SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.]. Thread: Worker-27
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:03:25.820
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-27
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:03:25.836
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent Cmod A7 - 35T 210328AA0008A]. Thread: Worker-27
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:03:25.836
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Digilent Cmod A7 - 35T 210328AA0008A" && level==1}], Thread: Worker-27
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:03:25.883
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Digilent Cmod A7 - 35T 210328AA0008A" && level==1}], Result: [null,      2  xc7a35t (idcode 0362d093 irlen 6 fpga)]. Thread: Worker-27
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:03:25.883
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-27
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:03:25.899
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent Cmod A7 - 35T 210328AA0008A]. Thread: Worker-27
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:03:25.914
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Digilent Cmod A7 - 35T 210328AA0008A" && level==1}], Thread: Worker-27
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:03:25.946
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Digilent Cmod A7 - 35T 210328AA0008A" && level==1}], Result: [null,      2  xc7a35t (idcode 0362d093 irlen 6 fpga)]. Thread: Worker-27
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:03:25.946
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-27
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:03:25.961
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent Cmod A7 - 35T 210328AA0008A]. Thread: Worker-27
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:03:25.977
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Digilent Cmod A7 - 35T 210328AA0008A" && level==1}], Thread: Worker-27
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:03:26.008
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Digilent Cmod A7 - 35T 210328AA0008A" && level==1}], Result: [null,      2  xc7a35t (idcode 0362d093 irlen 6 fpga)]. Thread: Worker-27
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:03:26.008
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-27
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:03:26.024
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent Cmod A7 - 35T 210328AA0008A]. Thread: Worker-27
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:03:26.024
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Digilent Cmod A7 - 35T 210328AA0008A" && level==1}], Thread: Worker-27
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:03:26.071
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Digilent Cmod A7 - 35T 210328AA0008A" && level==1}], Result: [null,      2  xc7a35t (idcode 0362d093 irlen 6 fpga)]. Thread: Worker-27
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:03:26.071
+!MESSAGE XSCT Command: [jtag targets -set -filter {name =~ "Digilent Cmod A7 - 35T 210328AA0008A" && level == 0}], Thread: Worker-27
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:03:26.102
+!MESSAGE XSCT command with result: [jtag targets -set -filter {name =~ "Digilent Cmod A7 - 35T 210328AA0008A" && level == 0}], Result: [null, ]. Thread: Worker-27
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:03:26.117
+!MESSAGE XSCT Command: [jtag frequency], Thread: Worker-27
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:03:26.117
+!MESSAGE XSCT command with result: [jtag frequency], Result: [null, 15000000]. Thread: Worker-27
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:03:26.133
+!MESSAGE XSCT Command: [configparams mdm-detect-bscan-mask 2], Thread: Worker-27
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:03:26.133
+!MESSAGE XSCT command with result: [configparams mdm-detect-bscan-mask 2], Result: [null, ]. Thread: Worker-27
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:03:26.133
+!MESSAGE XSCT Command: [targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Cmod A7 - 35T 210328AA0008A"} -index 0], Thread: Worker-27
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:03:26.196
+!MESSAGE XSCT command with result: [targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Cmod A7 - 35T 210328AA0008A"} -index 0], Result: [null, ]. Thread: Worker-27
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:03:26.196
+!MESSAGE XSCT Command: [rst -processor], Thread: Worker-27
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:03:26.233
+!MESSAGE XSCT command with result: [rst -processor], Result: [null, ]. Thread: Worker-27
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:03:26.233
+!MESSAGE XSCT Command: [targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Cmod A7 - 35T 210328AA0008A"} -index 0], Thread: Worker-27
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:03:26.295
+!MESSAGE XSCT command with result: [targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Cmod A7 - 35T 210328AA0008A"} -index 0], Result: [null, ]. Thread: Worker-27
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:03:26.295
+!MESSAGE XSCT Command: [dow C:/FPGA_Projects/ADC_SRAM_UART/ADC_SRAM_UART.sdk/ADC_SRAM_UART/Debug/ADC_SRAM_UART.elf], Thread: Worker-27
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:03:26.373
+!MESSAGE XSCT command with result: [dow C:/FPGA_Projects/ADC_SRAM_UART/ADC_SRAM_UART.sdk/ADC_SRAM_UART/Debug/ADC_SRAM_UART.elf], Result: [null, ]. Thread: Worker-27
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:03:26.451
+!MESSAGE XSCT Command: [targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Cmod A7 - 35T 210328AA0008A"} -index 0], Thread: Worker-27
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:03:26.545
+!MESSAGE XSCT command with result: [targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Cmod A7 - 35T 210328AA0008A"} -index 0], Result: [null, ]. Thread: Worker-27
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:03:26.545
+!MESSAGE XSCT Command: [con], Thread: Worker-27
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:03:26.576
+!MESSAGE XSCT command with result: [con], Result: [null, ]. Thread: Worker-27
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:04:26.277
+!MESSAGE XSCT Command: [disconnect tcfchan#57], Thread: Thread-3683
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:04:26.314
+!MESSAGE XSCT command with result: [disconnect tcfchan#57], Result: [null, ]. Thread: Thread-3683
+
+!ENTRY com.xilinx.sdk.utils 1 0 2019-04-13 20:04:27.301
+!MESSAGE Updating toolusage
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:04:27.301
+!MESSAGE XSCT Command: [connect -url tcp:127.0.0.1:3121], Thread: Worker-38
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:04:27.332
+!MESSAGE XSCT command with result: [connect -url tcp:127.0.0.1:3121], Result: [null, tcfchan#58]. Thread: Worker-38
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:04:27.332
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-38
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:04:27.363
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent Cmod A7 - 35T 210328AA0008A]. Thread: Worker-38
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:04:27.363
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-38
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:04:27.379
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent Cmod A7 - 35T 210328AA0008A]. Thread: Worker-38
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:04:27.379
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Digilent Cmod A7 - 35T 210328AA0008A" && level==1}], Thread: Worker-38
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:04:27.426
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Digilent Cmod A7 - 35T 210328AA0008A" && level==1}], Result: [null,      2  xc7a35t (idcode 0362d093 irlen 6 fpga)]. Thread: Worker-38
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:04:27.426
+!MESSAGE XSCT Command: [targets -set -filter {jtag_cable_name =~ "Digilent Cmod A7 - 35T 210328AA0008A" && level==0} -index 0], Thread: Worker-38
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:04:27.473
+!MESSAGE XSCT command with result: [targets -set -filter {jtag_cable_name =~ "Digilent Cmod A7 - 35T 210328AA0008A" && level==0} -index 0], Result: [null, ]. Thread: Worker-38
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:04:27.473
+!MESSAGE XSCT Command: [fpga -state], Thread: Worker-38
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:04:27.488
+!MESSAGE XSCT command with result: [fpga -state], Result: [null, FPGA is configured]. Thread: Worker-38
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:04:27.488
+!MESSAGE XSCT Command: [connect -url tcp:127.0.0.1:3121], Thread: Worker-38
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:04:27.504
+!MESSAGE XSCT command with result: [connect -url tcp:127.0.0.1:3121], Result: [null, tcfchan#58]. Thread: Worker-38
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:04:27.504
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-38
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:04:27.520
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent Cmod A7 - 35T 210328AA0008A]. Thread: Worker-38
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:04:27.520
+!MESSAGE XSCT Command: [version -server], Thread: Worker-38
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:04:27.535
+!MESSAGE XSCT command with result: [version -server], Result: [null, 2018.3]. Thread: Worker-38
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:04:27.535
+!MESSAGE XSCT Command: [version], Thread: Worker-38
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:04:27.535
+!MESSAGE XSCT command with result: [version], Result: [null, xsct 2018.3
+SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.]. Thread: Worker-38
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:04:27.551
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-38
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:04:27.566
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent Cmod A7 - 35T 210328AA0008A]. Thread: Worker-38
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:04:27.566
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Digilent Cmod A7 - 35T 210328AA0008A" && level==1}], Thread: Worker-38
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:04:27.598
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Digilent Cmod A7 - 35T 210328AA0008A" && level==1}], Result: [null,      2  xc7a35t (idcode 0362d093 irlen 6 fpga)]. Thread: Worker-38
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:04:27.613
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-38
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:04:27.629
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent Cmod A7 - 35T 210328AA0008A]. Thread: Worker-38
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:04:27.629
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Digilent Cmod A7 - 35T 210328AA0008A" && level==1}], Thread: Worker-38
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:04:27.660
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Digilent Cmod A7 - 35T 210328AA0008A" && level==1}], Result: [null,      2  xc7a35t (idcode 0362d093 irlen 6 fpga)]. Thread: Worker-38
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:04:27.676
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-38
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:04:27.691
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent Cmod A7 - 35T 210328AA0008A]. Thread: Worker-38
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:04:27.691
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Digilent Cmod A7 - 35T 210328AA0008A" && level==1}], Thread: Worker-38
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:04:27.723
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Digilent Cmod A7 - 35T 210328AA0008A" && level==1}], Result: [null,      2  xc7a35t (idcode 0362d093 irlen 6 fpga)]. Thread: Worker-38
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:04:27.723
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-38
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:04:27.754
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent Cmod A7 - 35T 210328AA0008A]. Thread: Worker-38
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:04:27.754
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Digilent Cmod A7 - 35T 210328AA0008A" && level==1}], Thread: Worker-38
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:04:27.785
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Digilent Cmod A7 - 35T 210328AA0008A" && level==1}], Result: [null,      2  xc7a35t (idcode 0362d093 irlen 6 fpga)]. Thread: Worker-38
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:04:27.785
+!MESSAGE XSCT Command: [jtag targets -set -filter {name =~ "Digilent Cmod A7 - 35T 210328AA0008A" && level == 0}], Thread: Worker-38
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:04:27.832
+!MESSAGE XSCT command with result: [jtag targets -set -filter {name =~ "Digilent Cmod A7 - 35T 210328AA0008A" && level == 0}], Result: [null, ]. Thread: Worker-38
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:04:27.832
+!MESSAGE XSCT Command: [jtag frequency], Thread: Worker-38
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:04:27.832
+!MESSAGE XSCT command with result: [jtag frequency], Result: [null, 15000000]. Thread: Worker-38
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:04:27.848
+!MESSAGE XSCT Command: [configparams mdm-detect-bscan-mask 2], Thread: Worker-38
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:04:27.848
+!MESSAGE XSCT command with result: [configparams mdm-detect-bscan-mask 2], Result: [null, ]. Thread: Worker-38
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:04:27.863
+!MESSAGE XSCT Command: [targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Cmod A7 - 35T 210328AA0008A"} -index 0], Thread: Worker-38
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:04:27.910
+!MESSAGE XSCT command with result: [targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Cmod A7 - 35T 210328AA0008A"} -index 0], Result: [null, ]. Thread: Worker-38
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:04:27.926
+!MESSAGE XSCT Command: [rst -processor], Thread: Worker-38
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:04:27.961
+!MESSAGE XSCT command with result: [rst -processor], Result: [null, ]. Thread: Worker-38
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:04:27.961
+!MESSAGE XSCT Command: [targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Cmod A7 - 35T 210328AA0008A"} -index 0], Thread: Worker-38
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:04:28.024
+!MESSAGE XSCT command with result: [targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Cmod A7 - 35T 210328AA0008A"} -index 0], Result: [null, ]. Thread: Worker-38
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:04:28.024
+!MESSAGE XSCT Command: [dow C:/FPGA_Projects/ADC_SRAM_UART/ADC_SRAM_UART.sdk/ADC_SRAM_UART/Debug/ADC_SRAM_UART.elf], Thread: Worker-38
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:04:28.117
+!MESSAGE XSCT command with result: [dow C:/FPGA_Projects/ADC_SRAM_UART/ADC_SRAM_UART.sdk/ADC_SRAM_UART/Debug/ADC_SRAM_UART.elf], Result: [null, ]. Thread: Worker-38
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:04:28.196
+!MESSAGE XSCT Command: [targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Cmod A7 - 35T 210328AA0008A"} -index 0], Thread: Worker-38
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:04:28.289
+!MESSAGE XSCT command with result: [targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Cmod A7 - 35T 210328AA0008A"} -index 0], Result: [null, ]. Thread: Worker-38
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:04:28.289
+!MESSAGE XSCT Command: [con], Thread: Worker-38
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:04:28.320
+!MESSAGE XSCT command with result: [con], Result: [null, ]. Thread: Worker-38
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:04:31.008
+!MESSAGE XSCT Command: [disconnect tcfchan#58], Thread: Thread-3726
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:04:31.008
+!MESSAGE XSCT command with result: [disconnect tcfchan#58], Result: [null, ]. Thread: Thread-3726
+
+!ENTRY com.xilinx.sdk.utils 1 0 2019-04-13 20:04:32.009
+!MESSAGE Updating toolusage
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:04:32.025
+!MESSAGE XSCT Command: [connect -url tcp:127.0.0.1:3121], Thread: Worker-31
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:04:32.040
+!MESSAGE XSCT command with result: [connect -url tcp:127.0.0.1:3121], Result: [null, tcfchan#59]. Thread: Worker-31
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:04:32.056
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-31
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:04:32.071
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent Cmod A7 - 35T 210328AA0008A]. Thread: Worker-31
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:04:32.087
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-31
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:04:32.087
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent Cmod A7 - 35T 210328AA0008A]. Thread: Worker-31
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:04:32.103
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Digilent Cmod A7 - 35T 210328AA0008A" && level==1}], Thread: Worker-31
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:04:32.134
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Digilent Cmod A7 - 35T 210328AA0008A" && level==1}], Result: [null,      2  xc7a35t (idcode 0362d093 irlen 6 fpga)]. Thread: Worker-31
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:04:32.150
+!MESSAGE XSCT Command: [targets -set -filter {jtag_cable_name =~ "Digilent Cmod A7 - 35T 210328AA0008A" && level==0} -index 0], Thread: Worker-31
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:04:32.196
+!MESSAGE XSCT command with result: [targets -set -filter {jtag_cable_name =~ "Digilent Cmod A7 - 35T 210328AA0008A" && level==0} -index 0], Result: [null, ]. Thread: Worker-31
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:04:32.196
+!MESSAGE XSCT Command: [fpga -state], Thread: Worker-31
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:04:32.196
+!MESSAGE XSCT command with result: [fpga -state], Result: [null, FPGA is configured]. Thread: Worker-31
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:04:32.212
+!MESSAGE XSCT Command: [connect -url tcp:127.0.0.1:3121], Thread: Worker-31
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:04:32.212
+!MESSAGE XSCT command with result: [connect -url tcp:127.0.0.1:3121], Result: [null, tcfchan#59]. Thread: Worker-31
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:04:32.228
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-31
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:04:32.243
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent Cmod A7 - 35T 210328AA0008A]. Thread: Worker-31
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:04:32.243
+!MESSAGE XSCT Command: [version -server], Thread: Worker-31
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:04:32.243
+!MESSAGE XSCT command with result: [version -server], Result: [null, 2018.3]. Thread: Worker-31
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:04:32.259
+!MESSAGE XSCT Command: [version], Thread: Worker-31
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:04:32.259
+!MESSAGE XSCT command with result: [version], Result: [null, xsct 2018.3
+SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.]. Thread: Worker-31
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:04:32.259
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-31
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:04:32.275
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent Cmod A7 - 35T 210328AA0008A]. Thread: Worker-31
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:04:32.290
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Digilent Cmod A7 - 35T 210328AA0008A" && level==1}], Thread: Worker-31
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:04:32.321
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Digilent Cmod A7 - 35T 210328AA0008A" && level==1}], Result: [null,      2  xc7a35t (idcode 0362d093 irlen 6 fpga)]. Thread: Worker-31
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:04:32.321
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-31
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:04:32.337
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent Cmod A7 - 35T 210328AA0008A]. Thread: Worker-31
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:04:32.353
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Digilent Cmod A7 - 35T 210328AA0008A" && level==1}], Thread: Worker-31
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:04:32.384
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Digilent Cmod A7 - 35T 210328AA0008A" && level==1}], Result: [null,      2  xc7a35t (idcode 0362d093 irlen 6 fpga)]. Thread: Worker-31
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:04:32.384
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-31
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:04:32.400
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent Cmod A7 - 35T 210328AA0008A]. Thread: Worker-31
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:04:32.415
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Digilent Cmod A7 - 35T 210328AA0008A" && level==1}], Thread: Worker-31
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:04:32.446
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Digilent Cmod A7 - 35T 210328AA0008A" && level==1}], Result: [null,      2  xc7a35t (idcode 0362d093 irlen 6 fpga)]. Thread: Worker-31
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:04:32.446
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-31
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:04:32.462
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent Cmod A7 - 35T 210328AA0008A]. Thread: Worker-31
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:04:32.462
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Digilent Cmod A7 - 35T 210328AA0008A" && level==1}], Thread: Worker-31
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:04:32.509
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Digilent Cmod A7 - 35T 210328AA0008A" && level==1}], Result: [null,      2  xc7a35t (idcode 0362d093 irlen 6 fpga)]. Thread: Worker-31
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:04:32.509
+!MESSAGE XSCT Command: [jtag targets -set -filter {name =~ "Digilent Cmod A7 - 35T 210328AA0008A" && level == 0}], Thread: Worker-31
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:04:32.540
+!MESSAGE XSCT command with result: [jtag targets -set -filter {name =~ "Digilent Cmod A7 - 35T 210328AA0008A" && level == 0}], Result: [null, ]. Thread: Worker-31
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:04:32.556
+!MESSAGE XSCT Command: [jtag frequency], Thread: Worker-31
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:04:32.556
+!MESSAGE XSCT command with result: [jtag frequency], Result: [null, 15000000]. Thread: Worker-31
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:04:32.571
+!MESSAGE XSCT Command: [configparams mdm-detect-bscan-mask 2], Thread: Worker-31
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:04:32.571
+!MESSAGE XSCT command with result: [configparams mdm-detect-bscan-mask 2], Result: [null, ]. Thread: Worker-31
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:04:32.571
+!MESSAGE XSCT Command: [targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Cmod A7 - 35T 210328AA0008A"} -index 0], Thread: Worker-31
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:04:32.634
+!MESSAGE XSCT command with result: [targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Cmod A7 - 35T 210328AA0008A"} -index 0], Result: [null, ]. Thread: Worker-31
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:04:32.634
+!MESSAGE XSCT Command: [rst -processor], Thread: Worker-31
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:04:32.684
+!MESSAGE XSCT command with result: [rst -processor], Result: [null, ]. Thread: Worker-31
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:04:32.684
+!MESSAGE XSCT Command: [targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Cmod A7 - 35T 210328AA0008A"} -index 0], Thread: Worker-31
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:04:32.746
+!MESSAGE XSCT command with result: [targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Cmod A7 - 35T 210328AA0008A"} -index 0], Result: [null, ]. Thread: Worker-31
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:04:32.762
+!MESSAGE XSCT Command: [dow C:/FPGA_Projects/ADC_SRAM_UART/ADC_SRAM_UART.sdk/ADC_SRAM_UART/Debug/ADC_SRAM_UART.elf], Thread: Worker-31
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:04:32.840
+!MESSAGE XSCT command with result: [dow C:/FPGA_Projects/ADC_SRAM_UART/ADC_SRAM_UART.sdk/ADC_SRAM_UART/Debug/ADC_SRAM_UART.elf], Result: [null, ]. Thread: Worker-31
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:04:32.918
+!MESSAGE XSCT Command: [targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Cmod A7 - 35T 210328AA0008A"} -index 0], Thread: Worker-31
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:04:33.012
+!MESSAGE XSCT command with result: [targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Cmod A7 - 35T 210328AA0008A"} -index 0], Result: [null, ]. Thread: Worker-31
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:04:33.027
+!MESSAGE XSCT Command: [con], Thread: Worker-31
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:04:33.059
+!MESSAGE XSCT command with result: [con], Result: [null, ]. Thread: Worker-31
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:05:43.563
+!MESSAGE XSCT Command: [disconnect tcfchan#59], Thread: Thread-3791
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:05:43.578
+!MESSAGE XSCT command with result: [disconnect tcfchan#59], Result: [null, ]. Thread: Thread-3791
+
+!ENTRY com.xilinx.sdk.utils 1 0 2019-04-13 20:05:44.577
+!MESSAGE Updating toolusage
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:05:44.577
+!MESSAGE XSCT Command: [connect -url tcp:127.0.0.1:3121], Thread: Worker-31
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:05:44.592
+!MESSAGE XSCT command with result: [connect -url tcp:127.0.0.1:3121], Result: [null, tcfchan#60]. Thread: Worker-31
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:05:44.608
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-31
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:05:44.624
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent Cmod A7 - 35T 210328AA0008A]. Thread: Worker-31
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:05:44.639
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-31
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:05:44.655
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent Cmod A7 - 35T 210328AA0008A]. Thread: Worker-31
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:05:44.655
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Digilent Cmod A7 - 35T 210328AA0008A" && level==1}], Thread: Worker-31
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:05:44.686
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Digilent Cmod A7 - 35T 210328AA0008A" && level==1}], Result: [null,      2  xc7a35t (idcode 0362d093 irlen 6 fpga)]. Thread: Worker-31
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:05:44.702
+!MESSAGE XSCT Command: [targets -set -filter {jtag_cable_name =~ "Digilent Cmod A7 - 35T 210328AA0008A" && level==0} -index 0], Thread: Worker-31
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:05:44.733
+!MESSAGE XSCT command with result: [targets -set -filter {jtag_cable_name =~ "Digilent Cmod A7 - 35T 210328AA0008A" && level==0} -index 0], Result: [null, ]. Thread: Worker-31
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:05:44.749
+!MESSAGE XSCT Command: [fpga -state], Thread: Worker-31
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:05:44.749
+!MESSAGE XSCT command with result: [fpga -state], Result: [null, FPGA is configured]. Thread: Worker-31
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:05:44.749
+!MESSAGE XSCT Command: [connect -url tcp:127.0.0.1:3121], Thread: Worker-31
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:05:44.764
+!MESSAGE XSCT command with result: [connect -url tcp:127.0.0.1:3121], Result: [null, tcfchan#60]. Thread: Worker-31
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:05:44.764
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-31
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:05:44.780
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent Cmod A7 - 35T 210328AA0008A]. Thread: Worker-31
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:05:44.780
+!MESSAGE XSCT Command: [version -server], Thread: Worker-31
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:05:44.795
+!MESSAGE XSCT command with result: [version -server], Result: [null, 2018.3]. Thread: Worker-31
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:05:44.795
+!MESSAGE XSCT Command: [version], Thread: Worker-31
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:05:44.819
+!MESSAGE XSCT command with result: [version], Result: [null, xsct 2018.3
+SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.]. Thread: Worker-31
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:05:44.829
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-31
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:05:44.861
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent Cmod A7 - 35T 210328AA0008A]. Thread: Worker-31
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:05:44.873
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Digilent Cmod A7 - 35T 210328AA0008A" && level==1}], Thread: Worker-31
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:05:44.956
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Digilent Cmod A7 - 35T 210328AA0008A" && level==1}], Result: [null,      2  xc7a35t (idcode 0362d093 irlen 6 fpga)]. Thread: Worker-31
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:05:44.963
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-31
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:05:44.991
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent Cmod A7 - 35T 210328AA0008A]. Thread: Worker-31
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:05:44.998
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Digilent Cmod A7 - 35T 210328AA0008A" && level==1}], Thread: Worker-31
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:05:45.054
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Digilent Cmod A7 - 35T 210328AA0008A" && level==1}], Result: [null,      2  xc7a35t (idcode 0362d093 irlen 6 fpga)]. Thread: Worker-31
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:05:45.060
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-31
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:05:45.086
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent Cmod A7 - 35T 210328AA0008A]. Thread: Worker-31
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:05:45.094
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Digilent Cmod A7 - 35T 210328AA0008A" && level==1}], Thread: Worker-31
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:05:45.147
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Digilent Cmod A7 - 35T 210328AA0008A" && level==1}], Result: [null,      2  xc7a35t (idcode 0362d093 irlen 6 fpga)]. Thread: Worker-31
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:05:45.153
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-31
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:05:45.167
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent Cmod A7 - 35T 210328AA0008A]. Thread: Worker-31
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:05:45.173
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Digilent Cmod A7 - 35T 210328AA0008A" && level==1}], Thread: Worker-31
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:05:45.208
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Digilent Cmod A7 - 35T 210328AA0008A" && level==1}], Result: [null,      2  xc7a35t (idcode 0362d093 irlen 6 fpga)]. Thread: Worker-31
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:05:45.214
+!MESSAGE XSCT Command: [jtag targets -set -filter {name =~ "Digilent Cmod A7 - 35T 210328AA0008A" && level == 0}], Thread: Worker-31
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:05:45.251
+!MESSAGE XSCT command with result: [jtag targets -set -filter {name =~ "Digilent Cmod A7 - 35T 210328AA0008A" && level == 0}], Result: [null, ]. Thread: Worker-31
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:05:45.256
+!MESSAGE XSCT Command: [jtag frequency], Thread: Worker-31
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:05:45.264
+!MESSAGE XSCT command with result: [jtag frequency], Result: [null, 15000000]. Thread: Worker-31
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:05:45.280
+!MESSAGE XSCT Command: [configparams mdm-detect-bscan-mask 2], Thread: Worker-31
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:05:45.294
+!MESSAGE XSCT command with result: [configparams mdm-detect-bscan-mask 2], Result: [null, ]. Thread: Worker-31
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:05:45.299
+!MESSAGE XSCT Command: [targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Cmod A7 - 35T 210328AA0008A"} -index 0], Thread: Worker-31
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:05:45.360
+!MESSAGE XSCT command with result: [targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Cmod A7 - 35T 210328AA0008A"} -index 0], Result: [null, ]. Thread: Worker-31
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:05:45.366
+!MESSAGE XSCT Command: [rst -processor], Thread: Worker-31
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:05:45.396
+!MESSAGE XSCT command with result: [rst -processor], Result: [null, ]. Thread: Worker-31
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:05:45.402
+!MESSAGE XSCT Command: [targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Cmod A7 - 35T 210328AA0008A"} -index 0], Thread: Worker-31
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:05:45.459
+!MESSAGE XSCT command with result: [targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Cmod A7 - 35T 210328AA0008A"} -index 0], Result: [null, ]. Thread: Worker-31
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:05:45.465
+!MESSAGE XSCT Command: [dow C:/FPGA_Projects/ADC_SRAM_UART/ADC_SRAM_UART.sdk/ADC_SRAM_UART/Debug/ADC_SRAM_UART.elf], Thread: Worker-31
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:05:45.546
+!MESSAGE XSCT command with result: [dow C:/FPGA_Projects/ADC_SRAM_UART/ADC_SRAM_UART.sdk/ADC_SRAM_UART/Debug/ADC_SRAM_UART.elf], Result: [null, ]. Thread: Worker-31
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:05:45.603
+!MESSAGE XSCT Command: [targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Cmod A7 - 35T 210328AA0008A"} -index 0], Thread: Worker-31
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:05:45.693
+!MESSAGE XSCT command with result: [targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Cmod A7 - 35T 210328AA0008A"} -index 0], Result: [null, ]. Thread: Worker-31
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:05:45.699
+!MESSAGE XSCT Command: [con], Thread: Worker-31
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:05:45.719
+!MESSAGE XSCT command with result: [con], Result: [null, ]. Thread: Worker-31
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:05:49.860
+!MESSAGE XSCT Command: [disconnect tcfchan#60], Thread: Thread-3834
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:05:49.876
+!MESSAGE XSCT command with result: [disconnect tcfchan#60], Result: [null, ]. Thread: Thread-3834
+
+!ENTRY com.xilinx.sdk.utils 1 0 2019-04-13 20:05:50.872
+!MESSAGE Updating toolusage
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:05:50.872
+!MESSAGE XSCT Command: [connect -url tcp:127.0.0.1:3121], Thread: Worker-33
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:05:50.903
+!MESSAGE XSCT command with result: [connect -url tcp:127.0.0.1:3121], Result: [null, tcfchan#61]. Thread: Worker-33
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:05:50.918
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-33
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:05:50.965
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent Cmod A7 - 35T 210328AA0008A]. Thread: Worker-33
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:05:50.965
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-33
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:05:50.996
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent Cmod A7 - 35T 210328AA0008A]. Thread: Worker-33
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:05:50.996
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Digilent Cmod A7 - 35T 210328AA0008A" && level==1}], Thread: Worker-33
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:05:51.028
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Digilent Cmod A7 - 35T 210328AA0008A" && level==1}], Result: [null,      2  xc7a35t (idcode 0362d093 irlen 6 fpga)]. Thread: Worker-33
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:05:51.043
+!MESSAGE XSCT Command: [targets -set -filter {jtag_cable_name =~ "Digilent Cmod A7 - 35T 210328AA0008A" && level==0} -index 0], Thread: Worker-33
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:05:51.075
+!MESSAGE XSCT command with result: [targets -set -filter {jtag_cable_name =~ "Digilent Cmod A7 - 35T 210328AA0008A" && level==0} -index 0], Result: [null, ]. Thread: Worker-33
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:05:51.090
+!MESSAGE XSCT Command: [fpga -state], Thread: Worker-33
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:05:51.090
+!MESSAGE XSCT command with result: [fpga -state], Result: [null, FPGA is configured]. Thread: Worker-33
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:05:51.090
+!MESSAGE XSCT Command: [connect -url tcp:127.0.0.1:3121], Thread: Worker-33
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:05:51.106
+!MESSAGE XSCT command with result: [connect -url tcp:127.0.0.1:3121], Result: [null, tcfchan#61]. Thread: Worker-33
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:05:51.106
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-33
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:05:51.121
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent Cmod A7 - 35T 210328AA0008A]. Thread: Worker-33
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:05:51.137
+!MESSAGE XSCT Command: [version -server], Thread: Worker-33
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:05:51.137
+!MESSAGE XSCT command with result: [version -server], Result: [null, 2018.3]. Thread: Worker-33
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:05:51.137
+!MESSAGE XSCT Command: [version], Thread: Worker-33
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:05:51.153
+!MESSAGE XSCT command with result: [version], Result: [null, xsct 2018.3
+SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.]. Thread: Worker-33
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:05:51.153
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-33
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:05:51.168
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent Cmod A7 - 35T 210328AA0008A]. Thread: Worker-33
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:05:51.184
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Digilent Cmod A7 - 35T 210328AA0008A" && level==1}], Thread: Worker-33
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:05:51.215
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Digilent Cmod A7 - 35T 210328AA0008A" && level==1}], Result: [null,      2  xc7a35t (idcode 0362d093 irlen 6 fpga)]. Thread: Worker-33
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:05:51.215
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-33
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:05:51.231
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent Cmod A7 - 35T 210328AA0008A]. Thread: Worker-33
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:05:51.231
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Digilent Cmod A7 - 35T 210328AA0008A" && level==1}], Thread: Worker-33
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:05:51.278
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Digilent Cmod A7 - 35T 210328AA0008A" && level==1}], Result: [null,      2  xc7a35t (idcode 0362d093 irlen 6 fpga)]. Thread: Worker-33
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:05:51.278
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-33
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:05:51.293
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent Cmod A7 - 35T 210328AA0008A]. Thread: Worker-33
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:05:51.293
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Digilent Cmod A7 - 35T 210328AA0008A" && level==1}], Thread: Worker-33
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:05:51.325
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Digilent Cmod A7 - 35T 210328AA0008A" && level==1}], Result: [null,      2  xc7a35t (idcode 0362d093 irlen 6 fpga)]. Thread: Worker-33
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:05:51.340
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-33
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:05:51.356
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent Cmod A7 - 35T 210328AA0008A]. Thread: Worker-33
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:05:51.356
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Digilent Cmod A7 - 35T 210328AA0008A" && level==1}], Thread: Worker-33
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:05:51.403
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Digilent Cmod A7 - 35T 210328AA0008A" && level==1}], Result: [null,      2  xc7a35t (idcode 0362d093 irlen 6 fpga)]. Thread: Worker-33
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:05:51.403
+!MESSAGE XSCT Command: [jtag targets -set -filter {name =~ "Digilent Cmod A7 - 35T 210328AA0008A" && level == 0}], Thread: Worker-33
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:05:51.434
+!MESSAGE XSCT command with result: [jtag targets -set -filter {name =~ "Digilent Cmod A7 - 35T 210328AA0008A" && level == 0}], Result: [null, ]. Thread: Worker-33
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:05:51.450
+!MESSAGE XSCT Command: [jtag frequency], Thread: Worker-33
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:05:51.450
+!MESSAGE XSCT command with result: [jtag frequency], Result: [null, 15000000]. Thread: Worker-33
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:05:51.450
+!MESSAGE XSCT Command: [configparams mdm-detect-bscan-mask 2], Thread: Worker-33
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:05:51.465
+!MESSAGE XSCT command with result: [configparams mdm-detect-bscan-mask 2], Result: [null, ]. Thread: Worker-33
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:05:51.465
+!MESSAGE XSCT Command: [targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Cmod A7 - 35T 210328AA0008A"} -index 0], Thread: Worker-33
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:05:51.528
+!MESSAGE XSCT command with result: [targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Cmod A7 - 35T 210328AA0008A"} -index 0], Result: [null, ]. Thread: Worker-33
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:05:51.528
+!MESSAGE XSCT Command: [rst -processor], Thread: Worker-33
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:05:51.577
+!MESSAGE XSCT command with result: [rst -processor], Result: [null, ]. Thread: Worker-33
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:05:51.577
+!MESSAGE XSCT Command: [targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Cmod A7 - 35T 210328AA0008A"} -index 0], Thread: Worker-33
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:05:51.640
+!MESSAGE XSCT command with result: [targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Cmod A7 - 35T 210328AA0008A"} -index 0], Result: [null, ]. Thread: Worker-33
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:05:51.640
+!MESSAGE XSCT Command: [dow C:/FPGA_Projects/ADC_SRAM_UART/ADC_SRAM_UART.sdk/ADC_SRAM_UART/Debug/ADC_SRAM_UART.elf], Thread: Worker-33
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:05:51.718
+!MESSAGE XSCT command with result: [dow C:/FPGA_Projects/ADC_SRAM_UART/ADC_SRAM_UART.sdk/ADC_SRAM_UART/Debug/ADC_SRAM_UART.elf], Result: [null, ]. Thread: Worker-33
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:05:51.796
+!MESSAGE XSCT Command: [targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Cmod A7 - 35T 210328AA0008A"} -index 0], Thread: Worker-33
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:05:51.906
+!MESSAGE XSCT command with result: [targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Cmod A7 - 35T 210328AA0008A"} -index 0], Result: [null, ]. Thread: Worker-33
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:05:51.906
+!MESSAGE XSCT Command: [con], Thread: Worker-33
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:05:51.937
+!MESSAGE XSCT command with result: [con], Result: [null, ]. Thread: Worker-33
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:06:53.341
+!MESSAGE XSCT Command: [disconnect tcfchan#61], Thread: Thread-3892
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:06:53.368
+!MESSAGE XSCT command with result: [disconnect tcfchan#61], Result: [null, ]. Thread: Thread-3892
+
+!ENTRY com.xilinx.sdk.utils 1 0 2019-04-13 20:06:54.354
+!MESSAGE Updating toolusage
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:06:54.354
+!MESSAGE XSCT Command: [connect -url tcp:127.0.0.1:3121], Thread: Worker-31
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:06:54.401
+!MESSAGE XSCT command with result: [connect -url tcp:127.0.0.1:3121], Result: [null, tcfchan#62]. Thread: Worker-31
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:06:54.401
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-31
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:06:54.432
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent Cmod A7 - 35T 210328AA0008A]. Thread: Worker-31
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:06:54.432
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-31
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:06:54.448
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent Cmod A7 - 35T 210328AA0008A]. Thread: Worker-31
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:06:54.448
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Digilent Cmod A7 - 35T 210328AA0008A" && level==1}], Thread: Worker-31
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:06:54.495
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Digilent Cmod A7 - 35T 210328AA0008A" && level==1}], Result: [null,      2  xc7a35t (idcode 0362d093 irlen 6 fpga)]. Thread: Worker-31
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:06:54.495
+!MESSAGE XSCT Command: [targets -set -filter {jtag_cable_name =~ "Digilent Cmod A7 - 35T 210328AA0008A" && level==0} -index 0], Thread: Worker-31
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:06:54.542
+!MESSAGE XSCT command with result: [targets -set -filter {jtag_cable_name =~ "Digilent Cmod A7 - 35T 210328AA0008A" && level==0} -index 0], Result: [null, ]. Thread: Worker-31
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:06:54.557
+!MESSAGE XSCT Command: [fpga -state], Thread: Worker-31
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:06:54.573
+!MESSAGE XSCT command with result: [fpga -state], Result: [null, FPGA is configured]. Thread: Worker-31
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:06:54.573
+!MESSAGE XSCT Command: [connect -url tcp:127.0.0.1:3121], Thread: Worker-31
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:06:54.573
+!MESSAGE XSCT command with result: [connect -url tcp:127.0.0.1:3121], Result: [null, tcfchan#62]. Thread: Worker-31
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:06:54.589
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-31
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:06:54.604
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent Cmod A7 - 35T 210328AA0008A]. Thread: Worker-31
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:06:54.604
+!MESSAGE XSCT Command: [version -server], Thread: Worker-31
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:06:54.604
+!MESSAGE XSCT command with result: [version -server], Result: [null, 2018.3]. Thread: Worker-31
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:06:54.620
+!MESSAGE XSCT Command: [version], Thread: Worker-31
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:06:54.620
+!MESSAGE XSCT command with result: [version], Result: [null, xsct 2018.3
+SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.]. Thread: Worker-31
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:06:54.636
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-31
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:06:54.651
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent Cmod A7 - 35T 210328AA0008A]. Thread: Worker-31
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:06:54.651
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Digilent Cmod A7 - 35T 210328AA0008A" && level==1}], Thread: Worker-31
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:06:54.682
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Digilent Cmod A7 - 35T 210328AA0008A" && level==1}], Result: [null,      2  xc7a35t (idcode 0362d093 irlen 6 fpga)]. Thread: Worker-31
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:06:54.682
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-31
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:06:54.698
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent Cmod A7 - 35T 210328AA0008A]. Thread: Worker-31
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:06:54.714
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Digilent Cmod A7 - 35T 210328AA0008A" && level==1}], Thread: Worker-31
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:06:54.745
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Digilent Cmod A7 - 35T 210328AA0008A" && level==1}], Result: [null,      2  xc7a35t (idcode 0362d093 irlen 6 fpga)]. Thread: Worker-31
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:06:54.761
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-31
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:06:54.776
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent Cmod A7 - 35T 210328AA0008A]. Thread: Worker-31
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:06:54.776
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Digilent Cmod A7 - 35T 210328AA0008A" && level==1}], Thread: Worker-31
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:06:54.823
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Digilent Cmod A7 - 35T 210328AA0008A" && level==1}], Result: [null,      2  xc7a35t (idcode 0362d093 irlen 6 fpga)]. Thread: Worker-31
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:06:54.823
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-31
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:06:54.839
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent Cmod A7 - 35T 210328AA0008A]. Thread: Worker-31
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:06:54.839
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Digilent Cmod A7 - 35T 210328AA0008A" && level==1}], Thread: Worker-31
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:06:54.870
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Digilent Cmod A7 - 35T 210328AA0008A" && level==1}], Result: [null,      2  xc7a35t (idcode 0362d093 irlen 6 fpga)]. Thread: Worker-31
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:06:54.886
+!MESSAGE XSCT Command: [jtag targets -set -filter {name =~ "Digilent Cmod A7 - 35T 210328AA0008A" && level == 0}], Thread: Worker-31
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:06:54.917
+!MESSAGE XSCT command with result: [jtag targets -set -filter {name =~ "Digilent Cmod A7 - 35T 210328AA0008A" && level == 0}], Result: [null, ]. Thread: Worker-31
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:06:54.932
+!MESSAGE XSCT Command: [jtag frequency], Thread: Worker-31
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:06:54.932
+!MESSAGE XSCT command with result: [jtag frequency], Result: [null, 15000000]. Thread: Worker-31
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:06:54.948
+!MESSAGE XSCT Command: [configparams mdm-detect-bscan-mask 2], Thread: Worker-31
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:06:54.948
+!MESSAGE XSCT command with result: [configparams mdm-detect-bscan-mask 2], Result: [null, ]. Thread: Worker-31
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:06:54.964
+!MESSAGE XSCT Command: [targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Cmod A7 - 35T 210328AA0008A"} -index 0], Thread: Worker-31
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:06:55.026
+!MESSAGE XSCT command with result: [targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Cmod A7 - 35T 210328AA0008A"} -index 0], Result: [null, ]. Thread: Worker-31
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:06:55.026
+!MESSAGE XSCT Command: [rst -processor], Thread: Worker-31
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:06:55.064
+!MESSAGE XSCT command with result: [rst -processor], Result: [null, ]. Thread: Worker-31
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:06:55.064
+!MESSAGE XSCT Command: [targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Cmod A7 - 35T 210328AA0008A"} -index 0], Thread: Worker-31
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:06:55.126
+!MESSAGE XSCT command with result: [targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Cmod A7 - 35T 210328AA0008A"} -index 0], Result: [null, ]. Thread: Worker-31
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:06:55.142
+!MESSAGE XSCT Command: [dow C:/FPGA_Projects/ADC_SRAM_UART/ADC_SRAM_UART.sdk/ADC_SRAM_UART/Debug/ADC_SRAM_UART.elf], Thread: Worker-31
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:06:55.220
+!MESSAGE XSCT command with result: [dow C:/FPGA_Projects/ADC_SRAM_UART/ADC_SRAM_UART.sdk/ADC_SRAM_UART/Debug/ADC_SRAM_UART.elf], Result: [null, ]. Thread: Worker-31
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:06:55.314
+!MESSAGE XSCT Command: [targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Cmod A7 - 35T 210328AA0008A"} -index 0], Thread: Worker-31
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:06:55.392
+!MESSAGE XSCT command with result: [targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Cmod A7 - 35T 210328AA0008A"} -index 0], Result: [null, ]. Thread: Worker-31
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:06:55.408
+!MESSAGE XSCT Command: [con], Thread: Worker-31
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:06:55.439
+!MESSAGE XSCT command with result: [con], Result: [null, ]. Thread: Worker-31
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:07:02.688
+!MESSAGE XSCT Command: [disconnect tcfchan#62], Thread: Thread-3936
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:07:02.710
+!MESSAGE XSCT command with result: [disconnect tcfchan#62], Result: [null, ]. Thread: Thread-3936
+
+!ENTRY com.xilinx.sdk.utils 1 0 2019-04-13 20:07:03.695
+!MESSAGE Updating toolusage
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:07:03.711
+!MESSAGE XSCT Command: [connect -url tcp:127.0.0.1:3121], Thread: Worker-29
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:07:03.727
+!MESSAGE XSCT command with result: [connect -url tcp:127.0.0.1:3121], Result: [null, tcfchan#63]. Thread: Worker-29
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:07:03.742
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-29
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:07:03.774
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent Cmod A7 - 35T 210328AA0008A]. Thread: Worker-29
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:07:03.774
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-29
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:07:03.789
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent Cmod A7 - 35T 210328AA0008A]. Thread: Worker-29
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:07:03.805
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Digilent Cmod A7 - 35T 210328AA0008A" && level==1}], Thread: Worker-29
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:07:03.836
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Digilent Cmod A7 - 35T 210328AA0008A" && level==1}], Result: [null,      2  xc7a35t (idcode 0362d093 irlen 6 fpga)]. Thread: Worker-29
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:07:03.836
+!MESSAGE XSCT Command: [targets -set -filter {jtag_cable_name =~ "Digilent Cmod A7 - 35T 210328AA0008A" && level==0} -index 0], Thread: Worker-29
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:07:03.883
+!MESSAGE XSCT command with result: [targets -set -filter {jtag_cable_name =~ "Digilent Cmod A7 - 35T 210328AA0008A" && level==0} -index 0], Result: [null, ]. Thread: Worker-29
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:07:03.883
+!MESSAGE XSCT Command: [fpga -state], Thread: Worker-29
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:07:03.899
+!MESSAGE XSCT command with result: [fpga -state], Result: [null, FPGA is configured]. Thread: Worker-29
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:07:03.899
+!MESSAGE XSCT Command: [connect -url tcp:127.0.0.1:3121], Thread: Worker-29
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:07:03.899
+!MESSAGE XSCT command with result: [connect -url tcp:127.0.0.1:3121], Result: [null, tcfchan#63]. Thread: Worker-29
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:07:03.914
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-29
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:07:03.930
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent Cmod A7 - 35T 210328AA0008A]. Thread: Worker-29
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:07:03.930
+!MESSAGE XSCT Command: [version -server], Thread: Worker-29
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:07:03.930
+!MESSAGE XSCT command with result: [version -server], Result: [null, 2018.3]. Thread: Worker-29
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:07:03.945
+!MESSAGE XSCT Command: [version], Thread: Worker-29
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:07:03.945
+!MESSAGE XSCT command with result: [version], Result: [null, xsct 2018.3
+SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.]. Thread: Worker-29
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:07:03.961
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-29
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:07:03.977
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent Cmod A7 - 35T 210328AA0008A]. Thread: Worker-29
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:07:03.977
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Digilent Cmod A7 - 35T 210328AA0008A" && level==1}], Thread: Worker-29
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:07:04.008
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Digilent Cmod A7 - 35T 210328AA0008A" && level==1}], Result: [null,      2  xc7a35t (idcode 0362d093 irlen 6 fpga)]. Thread: Worker-29
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:07:04.024
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-29
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:07:04.039
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent Cmod A7 - 35T 210328AA0008A]. Thread: Worker-29
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:07:04.039
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Digilent Cmod A7 - 35T 210328AA0008A" && level==1}], Thread: Worker-29
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:07:04.086
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Digilent Cmod A7 - 35T 210328AA0008A" && level==1}], Result: [null,      2  xc7a35t (idcode 0362d093 irlen 6 fpga)]. Thread: Worker-29
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:07:04.086
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-29
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:07:04.102
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent Cmod A7 - 35T 210328AA0008A]. Thread: Worker-29
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:07:04.102
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Digilent Cmod A7 - 35T 210328AA0008A" && level==1}], Thread: Worker-29
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:07:04.133
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Digilent Cmod A7 - 35T 210328AA0008A" && level==1}], Result: [null,      2  xc7a35t (idcode 0362d093 irlen 6 fpga)]. Thread: Worker-29
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:07:04.149
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-29
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:07:04.164
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent Cmod A7 - 35T 210328AA0008A]. Thread: Worker-29
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:07:04.164
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Digilent Cmod A7 - 35T 210328AA0008A" && level==1}], Thread: Worker-29
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:07:04.195
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Digilent Cmod A7 - 35T 210328AA0008A" && level==1}], Result: [null,      2  xc7a35t (idcode 0362d093 irlen 6 fpga)]. Thread: Worker-29
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:07:04.195
+!MESSAGE XSCT Command: [jtag targets -set -filter {name =~ "Digilent Cmod A7 - 35T 210328AA0008A" && level == 0}], Thread: Worker-29
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:07:04.242
+!MESSAGE XSCT command with result: [jtag targets -set -filter {name =~ "Digilent Cmod A7 - 35T 210328AA0008A" && level == 0}], Result: [null, ]. Thread: Worker-29
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:07:04.242
+!MESSAGE XSCT Command: [jtag frequency], Thread: Worker-29
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:07:04.258
+!MESSAGE XSCT command with result: [jtag frequency], Result: [null, 15000000]. Thread: Worker-29
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:07:04.258
+!MESSAGE XSCT Command: [configparams mdm-detect-bscan-mask 2], Thread: Worker-29
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:07:04.274
+!MESSAGE XSCT command with result: [configparams mdm-detect-bscan-mask 2], Result: [null, ]. Thread: Worker-29
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:07:04.274
+!MESSAGE XSCT Command: [targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Cmod A7 - 35T 210328AA0008A"} -index 0], Thread: Worker-29
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:07:04.336
+!MESSAGE XSCT command with result: [targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Cmod A7 - 35T 210328AA0008A"} -index 0], Result: [null, ]. Thread: Worker-29
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:07:04.336
+!MESSAGE XSCT Command: [rst -processor], Thread: Worker-29
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:07:04.373
+!MESSAGE XSCT command with result: [rst -processor], Result: [null, ]. Thread: Worker-29
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:07:04.373
+!MESSAGE XSCT Command: [targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Cmod A7 - 35T 210328AA0008A"} -index 0], Thread: Worker-29
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:07:04.435
+!MESSAGE XSCT command with result: [targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Cmod A7 - 35T 210328AA0008A"} -index 0], Result: [null, ]. Thread: Worker-29
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:07:04.451
+!MESSAGE XSCT Command: [dow C:/FPGA_Projects/ADC_SRAM_UART/ADC_SRAM_UART.sdk/ADC_SRAM_UART/Debug/ADC_SRAM_UART.elf], Thread: Worker-29
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:07:04.529
+!MESSAGE XSCT command with result: [dow C:/FPGA_Projects/ADC_SRAM_UART/ADC_SRAM_UART.sdk/ADC_SRAM_UART/Debug/ADC_SRAM_UART.elf], Result: [null, ]. Thread: Worker-29
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:07:04.623
+!MESSAGE XSCT Command: [targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Cmod A7 - 35T 210328AA0008A"} -index 0], Thread: Worker-29
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:07:04.732
+!MESSAGE XSCT command with result: [targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Cmod A7 - 35T 210328AA0008A"} -index 0], Result: [null, ]. Thread: Worker-29
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:07:04.732
+!MESSAGE XSCT Command: [con], Thread: Worker-29
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:07:04.763
+!MESSAGE XSCT command with result: [con], Result: [null, ]. Thread: Worker-29
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:08:51.767
+!MESSAGE XSCT Command: [disconnect tcfchan#63], Thread: Thread-4016
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:08:51.789
+!MESSAGE XSCT command with result: [disconnect tcfchan#63], Result: [null, ]. Thread: Thread-4016
+
+!ENTRY com.xilinx.sdk.utils 1 0 2019-04-13 20:08:52.781
+!MESSAGE Updating toolusage
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:08:52.781
+!MESSAGE XSCT Command: [connect -url tcp:127.0.0.1:3121], Thread: Worker-33
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:08:52.797
+!MESSAGE XSCT command with result: [connect -url tcp:127.0.0.1:3121], Result: [null, tcfchan#64]. Thread: Worker-33
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:08:52.797
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-33
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:08:52.812
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent Cmod A7 - 35T 210328AA0008A]. Thread: Worker-33
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:08:52.828
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-33
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:08:52.844
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent Cmod A7 - 35T 210328AA0008A]. Thread: Worker-33
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:08:52.844
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Digilent Cmod A7 - 35T 210328AA0008A" && level==1}], Thread: Worker-33
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:08:52.875
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Digilent Cmod A7 - 35T 210328AA0008A" && level==1}], Result: [null,      2  xc7a35t (idcode 0362d093 irlen 6 fpga)]. Thread: Worker-33
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:08:52.891
+!MESSAGE XSCT Command: [targets -set -filter {jtag_cable_name =~ "Digilent Cmod A7 - 35T 210328AA0008A" && level==0} -index 0], Thread: Worker-33
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:08:52.937
+!MESSAGE XSCT command with result: [targets -set -filter {jtag_cable_name =~ "Digilent Cmod A7 - 35T 210328AA0008A" && level==0} -index 0], Result: [null, ]. Thread: Worker-33
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:08:52.937
+!MESSAGE XSCT Command: [fpga -state], Thread: Worker-33
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:08:52.953
+!MESSAGE XSCT command with result: [fpga -state], Result: [null, FPGA is configured]. Thread: Worker-33
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:08:52.953
+!MESSAGE XSCT Command: [connect -url tcp:127.0.0.1:3121], Thread: Worker-33
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:08:52.953
+!MESSAGE XSCT command with result: [connect -url tcp:127.0.0.1:3121], Result: [null, tcfchan#64]. Thread: Worker-33
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:08:52.969
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-33
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:08:52.984
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent Cmod A7 - 35T 210328AA0008A]. Thread: Worker-33
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:08:52.984
+!MESSAGE XSCT Command: [version -server], Thread: Worker-33
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:08:53.000
+!MESSAGE XSCT command with result: [version -server], Result: [null, 2018.3]. Thread: Worker-33
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:08:53.000
+!MESSAGE XSCT Command: [version], Thread: Worker-33
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:08:53.000
+!MESSAGE XSCT command with result: [version], Result: [null, xsct 2018.3
+SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.]. Thread: Worker-33
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:08:53.031
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-33
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:08:53.047
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent Cmod A7 - 35T 210328AA0008A]. Thread: Worker-33
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:08:53.047
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Digilent Cmod A7 - 35T 210328AA0008A" && level==1}], Thread: Worker-33
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:08:53.078
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Digilent Cmod A7 - 35T 210328AA0008A" && level==1}], Result: [null,      2  xc7a35t (idcode 0362d093 irlen 6 fpga)]. Thread: Worker-33
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:08:53.094
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-33
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:08:53.109
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent Cmod A7 - 35T 210328AA0008A]. Thread: Worker-33
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:08:53.109
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Digilent Cmod A7 - 35T 210328AA0008A" && level==1}], Thread: Worker-33
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:08:53.156
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Digilent Cmod A7 - 35T 210328AA0008A" && level==1}], Result: [null,      2  xc7a35t (idcode 0362d093 irlen 6 fpga)]. Thread: Worker-33
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:08:53.156
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-33
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:08:53.172
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent Cmod A7 - 35T 210328AA0008A]. Thread: Worker-33
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:08:53.187
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Digilent Cmod A7 - 35T 210328AA0008A" && level==1}], Thread: Worker-33
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:08:53.219
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Digilent Cmod A7 - 35T 210328AA0008A" && level==1}], Result: [null,      2  xc7a35t (idcode 0362d093 irlen 6 fpga)]. Thread: Worker-33
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:08:53.219
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-33
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:08:53.234
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent Cmod A7 - 35T 210328AA0008A]. Thread: Worker-33
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:08:53.234
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Digilent Cmod A7 - 35T 210328AA0008A" && level==1}], Thread: Worker-33
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:08:53.281
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Digilent Cmod A7 - 35T 210328AA0008A" && level==1}], Result: [null,      2  xc7a35t (idcode 0362d093 irlen 6 fpga)]. Thread: Worker-33
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:08:53.281
+!MESSAGE XSCT Command: [jtag targets -set -filter {name =~ "Digilent Cmod A7 - 35T 210328AA0008A" && level == 0}], Thread: Worker-33
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:08:53.312
+!MESSAGE XSCT command with result: [jtag targets -set -filter {name =~ "Digilent Cmod A7 - 35T 210328AA0008A" && level == 0}], Result: [null, ]. Thread: Worker-33
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:08:53.328
+!MESSAGE XSCT Command: [jtag frequency], Thread: Worker-33
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:08:53.328
+!MESSAGE XSCT command with result: [jtag frequency], Result: [null, 15000000]. Thread: Worker-33
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:08:53.344
+!MESSAGE XSCT Command: [configparams mdm-detect-bscan-mask 2], Thread: Worker-33
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:08:53.344
+!MESSAGE XSCT command with result: [configparams mdm-detect-bscan-mask 2], Result: [null, ]. Thread: Worker-33
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:08:53.359
+!MESSAGE XSCT Command: [targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Cmod A7 - 35T 210328AA0008A"} -index 0], Thread: Worker-33
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:08:53.406
+!MESSAGE XSCT command with result: [targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Cmod A7 - 35T 210328AA0008A"} -index 0], Result: [null, ]. Thread: Worker-33
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:08:53.422
+!MESSAGE XSCT Command: [rst -processor], Thread: Worker-33
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:08:53.457
+!MESSAGE XSCT command with result: [rst -processor], Result: [null, ]. Thread: Worker-33
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:08:53.457
+!MESSAGE XSCT Command: [targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Cmod A7 - 35T 210328AA0008A"} -index 0], Thread: Worker-33
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:08:53.520
+!MESSAGE XSCT command with result: [targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Cmod A7 - 35T 210328AA0008A"} -index 0], Result: [null, ]. Thread: Worker-33
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:08:53.535
+!MESSAGE XSCT Command: [dow C:/FPGA_Projects/ADC_SRAM_UART/ADC_SRAM_UART.sdk/ADC_SRAM_UART/Debug/ADC_SRAM_UART.elf], Thread: Worker-33
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:08:53.613
+!MESSAGE XSCT command with result: [dow C:/FPGA_Projects/ADC_SRAM_UART/ADC_SRAM_UART.sdk/ADC_SRAM_UART/Debug/ADC_SRAM_UART.elf], Result: [null, ]. Thread: Worker-33
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:08:53.692
+!MESSAGE XSCT Command: [targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Cmod A7 - 35T 210328AA0008A"} -index 0], Thread: Worker-33
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:08:53.785
+!MESSAGE XSCT command with result: [targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Cmod A7 - 35T 210328AA0008A"} -index 0], Result: [null, ]. Thread: Worker-33
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:08:53.785
+!MESSAGE XSCT Command: [con], Thread: Worker-33
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:08:53.817
+!MESSAGE XSCT command with result: [con], Result: [null, ]. Thread: Worker-33
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:09:48.752
+!MESSAGE XSCT Command: [disconnect tcfchan#64], Thread: Thread-4070
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:09:48.774
+!MESSAGE XSCT command with result: [disconnect tcfchan#64], Result: [null, ]. Thread: Thread-4070
+
+!ENTRY com.xilinx.sdk.utils 1 0 2019-04-13 20:09:49.767
+!MESSAGE Updating toolusage
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:09:49.783
+!MESSAGE XSCT Command: [connect -url tcp:127.0.0.1:3121], Thread: Worker-42
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:09:49.798
+!MESSAGE XSCT command with result: [connect -url tcp:127.0.0.1:3121], Result: [null, tcfchan#65]. Thread: Worker-42
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:09:49.798
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-42
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:09:49.829
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent Cmod A7 - 35T 210328AA0008A]. Thread: Worker-42
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:09:49.829
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-42
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:09:49.845
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent Cmod A7 - 35T 210328AA0008A]. Thread: Worker-42
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:09:49.861
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Digilent Cmod A7 - 35T 210328AA0008A" && level==1}], Thread: Worker-42
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:09:49.892
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Digilent Cmod A7 - 35T 210328AA0008A" && level==1}], Result: [null,      2  xc7a35t (idcode 0362d093 irlen 6 fpga)]. Thread: Worker-42
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:09:49.892
+!MESSAGE XSCT Command: [targets -set -filter {jtag_cable_name =~ "Digilent Cmod A7 - 35T 210328AA0008A" && level==0} -index 0], Thread: Worker-42
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:09:49.939
+!MESSAGE XSCT command with result: [targets -set -filter {jtag_cable_name =~ "Digilent Cmod A7 - 35T 210328AA0008A" && level==0} -index 0], Result: [null, ]. Thread: Worker-42
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:09:49.939
+!MESSAGE XSCT Command: [fpga -state], Thread: Worker-42
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:09:49.954
+!MESSAGE XSCT command with result: [fpga -state], Result: [null, FPGA is configured]. Thread: Worker-42
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:09:49.970
+!MESSAGE XSCT Command: [connect -url tcp:127.0.0.1:3121], Thread: Worker-42
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:09:49.986
+!MESSAGE XSCT command with result: [connect -url tcp:127.0.0.1:3121], Result: [null, tcfchan#65]. Thread: Worker-42
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:09:49.986
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-42
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:09:50.001
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent Cmod A7 - 35T 210328AA0008A]. Thread: Worker-42
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:09:50.001
+!MESSAGE XSCT Command: [version -server], Thread: Worker-42
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:09:50.017
+!MESSAGE XSCT command with result: [version -server], Result: [null, 2018.3]. Thread: Worker-42
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:09:50.017
+!MESSAGE XSCT Command: [version], Thread: Worker-42
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:09:50.033
+!MESSAGE XSCT command with result: [version], Result: [null, xsct 2018.3
+SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.]. Thread: Worker-42
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:09:50.033
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-42
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:09:50.048
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent Cmod A7 - 35T 210328AA0008A]. Thread: Worker-42
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:09:50.048
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Digilent Cmod A7 - 35T 210328AA0008A" && level==1}], Thread: Worker-42
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:09:50.095
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Digilent Cmod A7 - 35T 210328AA0008A" && level==1}], Result: [null,      2  xc7a35t (idcode 0362d093 irlen 6 fpga)]. Thread: Worker-42
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:09:50.095
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-42
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:09:50.111
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent Cmod A7 - 35T 210328AA0008A]. Thread: Worker-42
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:09:50.126
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Digilent Cmod A7 - 35T 210328AA0008A" && level==1}], Thread: Worker-42
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:09:50.158
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Digilent Cmod A7 - 35T 210328AA0008A" && level==1}], Result: [null,      2  xc7a35t (idcode 0362d093 irlen 6 fpga)]. Thread: Worker-42
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:09:50.158
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-42
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:09:50.173
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent Cmod A7 - 35T 210328AA0008A]. Thread: Worker-42
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:09:50.173
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Digilent Cmod A7 - 35T 210328AA0008A" && level==1}], Thread: Worker-42
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:09:50.220
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Digilent Cmod A7 - 35T 210328AA0008A" && level==1}], Result: [null,      2  xc7a35t (idcode 0362d093 irlen 6 fpga)]. Thread: Worker-42
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:09:50.220
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-42
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:09:50.236
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent Cmod A7 - 35T 210328AA0008A]. Thread: Worker-42
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:09:50.236
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Digilent Cmod A7 - 35T 210328AA0008A" && level==1}], Thread: Worker-42
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:09:50.267
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Digilent Cmod A7 - 35T 210328AA0008A" && level==1}], Result: [null,      2  xc7a35t (idcode 0362d093 irlen 6 fpga)]. Thread: Worker-42
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:09:50.283
+!MESSAGE XSCT Command: [jtag targets -set -filter {name =~ "Digilent Cmod A7 - 35T 210328AA0008A" && level == 0}], Thread: Worker-42
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:09:50.314
+!MESSAGE XSCT command with result: [jtag targets -set -filter {name =~ "Digilent Cmod A7 - 35T 210328AA0008A" && level == 0}], Result: [null, ]. Thread: Worker-42
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:09:50.314
+!MESSAGE XSCT Command: [jtag frequency], Thread: Worker-42
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:09:50.329
+!MESSAGE XSCT command with result: [jtag frequency], Result: [null, 15000000]. Thread: Worker-42
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:09:50.329
+!MESSAGE XSCT Command: [configparams mdm-detect-bscan-mask 2], Thread: Worker-42
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:09:50.345
+!MESSAGE XSCT command with result: [configparams mdm-detect-bscan-mask 2], Result: [null, ]. Thread: Worker-42
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:09:50.345
+!MESSAGE XSCT Command: [targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Cmod A7 - 35T 210328AA0008A"} -index 0], Thread: Worker-42
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:09:50.408
+!MESSAGE XSCT command with result: [targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Cmod A7 - 35T 210328AA0008A"} -index 0], Result: [null, ]. Thread: Worker-42
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:09:50.408
+!MESSAGE XSCT Command: [rst -processor], Thread: Worker-42
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:09:50.442
+!MESSAGE XSCT command with result: [rst -processor], Result: [null, ]. Thread: Worker-42
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:09:50.442
+!MESSAGE XSCT Command: [targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Cmod A7 - 35T 210328AA0008A"} -index 0], Thread: Worker-42
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:09:50.504
+!MESSAGE XSCT command with result: [targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Cmod A7 - 35T 210328AA0008A"} -index 0], Result: [null, ]. Thread: Worker-42
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:09:50.520
+!MESSAGE XSCT Command: [dow C:/FPGA_Projects/ADC_SRAM_UART/ADC_SRAM_UART.sdk/ADC_SRAM_UART/Debug/ADC_SRAM_UART.elf], Thread: Worker-42
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:09:50.598
+!MESSAGE XSCT command with result: [dow C:/FPGA_Projects/ADC_SRAM_UART/ADC_SRAM_UART.sdk/ADC_SRAM_UART/Debug/ADC_SRAM_UART.elf], Result: [null, ]. Thread: Worker-42
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:09:50.676
+!MESSAGE XSCT Command: [targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Cmod A7 - 35T 210328AA0008A"} -index 0], Thread: Worker-42
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:09:50.770
+!MESSAGE XSCT command with result: [targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Cmod A7 - 35T 210328AA0008A"} -index 0], Result: [null, ]. Thread: Worker-42
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:09:50.770
+!MESSAGE XSCT Command: [con], Thread: Worker-42
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:09:50.817
+!MESSAGE XSCT command with result: [con], Result: [null, ]. Thread: Worker-42
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:10:13.261
+!MESSAGE XSCT Command: [disconnect tcfchan#65], Thread: Thread-4117
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:10:13.275
+!MESSAGE XSCT command with result: [disconnect tcfchan#65], Result: [null, ]. Thread: Thread-4117
+
+!ENTRY com.xilinx.sdk.utils 1 0 2019-04-13 20:10:34.020
+!MESSAGE Updating toolusage
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:10:34.020
+!MESSAGE XSCT Command: [connect -url tcp:127.0.0.1:3121], Thread: Worker-31
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:10:35.257
+!MESSAGE XSCT command with result: [connect -url tcp:127.0.0.1:3121], Result: [null, tcfchan#66]. Thread: Worker-31
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:10:35.273
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-31
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:10:35.570
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent Cmod A7 - 35T 210328AA0008A]. Thread: Worker-31
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:10:35.585
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-31
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:10:35.601
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent Cmod A7 - 35T 210328AA0008A]. Thread: Worker-31
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:10:35.617
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Digilent Cmod A7 - 35T 210328AA0008A" && level==1}], Thread: Worker-31
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:10:35.648
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Digilent Cmod A7 - 35T 210328AA0008A" && level==1}], Result: [null,      2  xc7a35t (idcode 0362d093 irlen 6 fpga)]. Thread: Worker-31
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:10:35.648
+!MESSAGE XSCT Command: [targets -set -filter {jtag_cable_name =~ "Digilent Cmod A7 - 35T 210328AA0008A" && level==0} -index 0], Thread: Worker-31
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:10:35.679
+!MESSAGE XSCT command with result: [targets -set -filter {jtag_cable_name =~ "Digilent Cmod A7 - 35T 210328AA0008A" && level==0} -index 0], Result: [null, ]. Thread: Worker-31
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:10:35.695
+!MESSAGE XSCT Command: [fpga -state], Thread: Worker-31
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:10:35.710
+!MESSAGE XSCT command with result: [fpga -state], Result: [null, FPGA is configured]. Thread: Worker-31
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:10:35.710
+!MESSAGE XSCT Command: [connect -url tcp:127.0.0.1:3121], Thread: Worker-31
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:10:35.710
+!MESSAGE XSCT command with result: [connect -url tcp:127.0.0.1:3121], Result: [null, tcfchan#66]. Thread: Worker-31
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:10:35.726
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-31
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:10:35.742
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent Cmod A7 - 35T 210328AA0008A]. Thread: Worker-31
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:10:35.742
+!MESSAGE XSCT Command: [version -server], Thread: Worker-31
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:10:35.757
+!MESSAGE XSCT command with result: [version -server], Result: [null, 2018.3]. Thread: Worker-31
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:10:35.757
+!MESSAGE XSCT Command: [version], Thread: Worker-31
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:10:35.757
+!MESSAGE XSCT command with result: [version], Result: [null, xsct 2018.3
+SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.]. Thread: Worker-31
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:10:35.773
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-31
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:10:35.788
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent Cmod A7 - 35T 210328AA0008A]. Thread: Worker-31
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:10:35.788
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Digilent Cmod A7 - 35T 210328AA0008A" && level==1}], Thread: Worker-31
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:10:35.820
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Digilent Cmod A7 - 35T 210328AA0008A" && level==1}], Result: [null,      2  xc7a35t (idcode 0362d093 irlen 6 fpga)]. Thread: Worker-31
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:10:35.835
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-31
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:10:35.835
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent Cmod A7 - 35T 210328AA0008A]. Thread: Worker-31
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:10:35.851
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Digilent Cmod A7 - 35T 210328AA0008A" && level==1}], Thread: Worker-31
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:10:35.882
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Digilent Cmod A7 - 35T 210328AA0008A" && level==1}], Result: [null,      2  xc7a35t (idcode 0362d093 irlen 6 fpga)]. Thread: Worker-31
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:10:35.898
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-31
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:10:35.898
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent Cmod A7 - 35T 210328AA0008A]. Thread: Worker-31
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:10:35.913
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Digilent Cmod A7 - 35T 210328AA0008A" && level==1}], Thread: Worker-31
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:10:35.945
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Digilent Cmod A7 - 35T 210328AA0008A" && level==1}], Result: [null,      2  xc7a35t (idcode 0362d093 irlen 6 fpga)]. Thread: Worker-31
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:10:35.960
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-31
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:10:35.976
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent Cmod A7 - 35T 210328AA0008A]. Thread: Worker-31
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:10:35.976
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Digilent Cmod A7 - 35T 210328AA0008A" && level==1}], Thread: Worker-31
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:10:36.007
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Digilent Cmod A7 - 35T 210328AA0008A" && level==1}], Result: [null,      2  xc7a35t (idcode 0362d093 irlen 6 fpga)]. Thread: Worker-31
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:10:36.023
+!MESSAGE XSCT Command: [jtag targets -set -filter {name =~ "Digilent Cmod A7 - 35T 210328AA0008A" && level == 0}], Thread: Worker-31
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:10:36.054
+!MESSAGE XSCT command with result: [jtag targets -set -filter {name =~ "Digilent Cmod A7 - 35T 210328AA0008A" && level == 0}], Result: [null, ]. Thread: Worker-31
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:10:36.070
+!MESSAGE XSCT Command: [jtag frequency], Thread: Worker-31
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:10:36.070
+!MESSAGE XSCT command with result: [jtag frequency], Result: [null, 15000000]. Thread: Worker-31
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:10:36.085
+!MESSAGE XSCT Command: [configparams mdm-detect-bscan-mask 2], Thread: Worker-31
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:10:36.085
+!MESSAGE XSCT command with result: [configparams mdm-detect-bscan-mask 2], Result: [null, ]. Thread: Worker-31
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:10:36.101
+!MESSAGE XSCT Command: [targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Cmod A7 - 35T 210328AA0008A"} -index 0], Thread: Worker-31
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:10:36.179
+!MESSAGE XSCT command with result: [targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Cmod A7 - 35T 210328AA0008A"} -index 0], Result: [null, ]. Thread: Worker-31
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:10:36.179
+!MESSAGE XSCT Command: [rst -processor], Thread: Worker-31
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:10:36.216
+!MESSAGE XSCT command with result: [rst -processor], Result: [null, ]. Thread: Worker-31
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:10:36.216
+!MESSAGE XSCT Command: [targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Cmod A7 - 35T 210328AA0008A"} -index 0], Thread: Worker-31
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:10:36.278
+!MESSAGE XSCT command with result: [targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Cmod A7 - 35T 210328AA0008A"} -index 0], Result: [null, ]. Thread: Worker-31
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:10:36.294
+!MESSAGE XSCT Command: [dow C:/FPGA_Projects/ADC_SRAM_UART/ADC_SRAM_UART.sdk/ADC_SRAM_UART/Debug/ADC_SRAM_UART.elf], Thread: Worker-31
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:10:36.372
+!MESSAGE XSCT command with result: [dow C:/FPGA_Projects/ADC_SRAM_UART/ADC_SRAM_UART.sdk/ADC_SRAM_UART/Debug/ADC_SRAM_UART.elf], Result: [null, ]. Thread: Worker-31
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:10:36.450
+!MESSAGE XSCT Command: [targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Cmod A7 - 35T 210328AA0008A"} -index 0], Thread: Worker-31
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:10:36.544
+!MESSAGE XSCT command with result: [targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Cmod A7 - 35T 210328AA0008A"} -index 0], Result: [null, ]. Thread: Worker-31
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:10:36.559
+!MESSAGE XSCT Command: [con], Thread: Worker-31
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:10:36.575
+!MESSAGE XSCT command with result: [con], Result: [null, ]. Thread: Worker-31
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:10:52.359
+!MESSAGE XSCT Command: [disconnect tcfchan#66], Thread: Thread-4173
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:10:52.392
+!MESSAGE XSCT command with result: [disconnect tcfchan#66], Result: [null, ]. Thread: Thread-4173
+
+!ENTRY com.xilinx.sdk.utils 1 0 2019-04-13 20:10:53.363
+!MESSAGE Updating toolusage
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:10:53.363
+!MESSAGE XSCT Command: [connect -url tcp:127.0.0.1:3121], Thread: Worker-39
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:10:53.379
+!MESSAGE XSCT command with result: [connect -url tcp:127.0.0.1:3121], Result: [null, tcfchan#67]. Thread: Worker-39
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:10:53.394
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-39
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:10:53.426
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent Cmod A7 - 35T 210328AA0008A]. Thread: Worker-39
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:10:53.426
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-39
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:10:53.441
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent Cmod A7 - 35T 210328AA0008A]. Thread: Worker-39
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:10:53.441
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Digilent Cmod A7 - 35T 210328AA0008A" && level==1}], Thread: Worker-39
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:10:53.472
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Digilent Cmod A7 - 35T 210328AA0008A" && level==1}], Result: [null,      2  xc7a35t (idcode 0362d093 irlen 6 fpga)]. Thread: Worker-39
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:10:53.488
+!MESSAGE XSCT Command: [targets -set -filter {jtag_cable_name =~ "Digilent Cmod A7 - 35T 210328AA0008A" && level==0} -index 0], Thread: Worker-39
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:10:53.535
+!MESSAGE XSCT command with result: [targets -set -filter {jtag_cable_name =~ "Digilent Cmod A7 - 35T 210328AA0008A" && level==0} -index 0], Result: [null, ]. Thread: Worker-39
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:10:53.535
+!MESSAGE XSCT Command: [fpga -state], Thread: Worker-39
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:10:53.551
+!MESSAGE XSCT command with result: [fpga -state], Result: [null, FPGA is configured]. Thread: Worker-39
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:10:53.551
+!MESSAGE XSCT Command: [connect -url tcp:127.0.0.1:3121], Thread: Worker-39
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:10:53.566
+!MESSAGE XSCT command with result: [connect -url tcp:127.0.0.1:3121], Result: [null, tcfchan#67]. Thread: Worker-39
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:10:53.566
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-39
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:10:53.582
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent Cmod A7 - 35T 210328AA0008A]. Thread: Worker-39
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:10:53.582
+!MESSAGE XSCT Command: [version -server], Thread: Worker-39
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:10:53.597
+!MESSAGE XSCT command with result: [version -server], Result: [null, 2018.3]. Thread: Worker-39
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:10:53.613
+!MESSAGE XSCT Command: [version], Thread: Worker-39
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:10:53.613
+!MESSAGE XSCT command with result: [version], Result: [null, xsct 2018.3
+SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.]. Thread: Worker-39
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:10:53.629
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-39
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:10:53.644
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent Cmod A7 - 35T 210328AA0008A]. Thread: Worker-39
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:10:53.644
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Digilent Cmod A7 - 35T 210328AA0008A" && level==1}], Thread: Worker-39
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:10:53.691
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Digilent Cmod A7 - 35T 210328AA0008A" && level==1}], Result: [null,      2  xc7a35t (idcode 0362d093 irlen 6 fpga)]. Thread: Worker-39
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:10:53.707
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-39
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:10:53.722
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent Cmod A7 - 35T 210328AA0008A]. Thread: Worker-39
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:10:53.722
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Digilent Cmod A7 - 35T 210328AA0008A" && level==1}], Thread: Worker-39
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:10:53.754
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Digilent Cmod A7 - 35T 210328AA0008A" && level==1}], Result: [null,      2  xc7a35t (idcode 0362d093 irlen 6 fpga)]. Thread: Worker-39
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:10:53.769
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-39
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:10:53.785
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent Cmod A7 - 35T 210328AA0008A]. Thread: Worker-39
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:10:53.785
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Digilent Cmod A7 - 35T 210328AA0008A" && level==1}], Thread: Worker-39
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:10:53.816
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Digilent Cmod A7 - 35T 210328AA0008A" && level==1}], Result: [null,      2  xc7a35t (idcode 0362d093 irlen 6 fpga)]. Thread: Worker-39
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:10:53.832
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-39
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:10:53.847
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent Cmod A7 - 35T 210328AA0008A]. Thread: Worker-39
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:10:53.847
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Digilent Cmod A7 - 35T 210328AA0008A" && level==1}], Thread: Worker-39
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:10:53.879
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Digilent Cmod A7 - 35T 210328AA0008A" && level==1}], Result: [null,      2  xc7a35t (idcode 0362d093 irlen 6 fpga)]. Thread: Worker-39
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:10:53.894
+!MESSAGE XSCT Command: [jtag targets -set -filter {name =~ "Digilent Cmod A7 - 35T 210328AA0008A" && level == 0}], Thread: Worker-39
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:10:53.926
+!MESSAGE XSCT command with result: [jtag targets -set -filter {name =~ "Digilent Cmod A7 - 35T 210328AA0008A" && level == 0}], Result: [null, ]. Thread: Worker-39
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:10:53.941
+!MESSAGE XSCT Command: [jtag frequency], Thread: Worker-39
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:10:53.941
+!MESSAGE XSCT command with result: [jtag frequency], Result: [null, 15000000]. Thread: Worker-39
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:10:53.941
+!MESSAGE XSCT Command: [configparams mdm-detect-bscan-mask 2], Thread: Worker-39
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:10:53.957
+!MESSAGE XSCT command with result: [configparams mdm-detect-bscan-mask 2], Result: [null, ]. Thread: Worker-39
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:10:53.957
+!MESSAGE XSCT Command: [targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Cmod A7 - 35T 210328AA0008A"} -index 0], Thread: Worker-39
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:10:54.019
+!MESSAGE XSCT command with result: [targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Cmod A7 - 35T 210328AA0008A"} -index 0], Result: [null, ]. Thread: Worker-39
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:10:54.019
+!MESSAGE XSCT Command: [rst -processor], Thread: Worker-39
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:10:54.069
+!MESSAGE XSCT command with result: [rst -processor], Result: [null, ]. Thread: Worker-39
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:10:54.069
+!MESSAGE XSCT Command: [targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Cmod A7 - 35T 210328AA0008A"} -index 0], Thread: Worker-39
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:10:54.132
+!MESSAGE XSCT command with result: [targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Cmod A7 - 35T 210328AA0008A"} -index 0], Result: [null, ]. Thread: Worker-39
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:10:54.132
+!MESSAGE XSCT Command: [dow C:/FPGA_Projects/ADC_SRAM_UART/ADC_SRAM_UART.sdk/ADC_SRAM_UART/Debug/ADC_SRAM_UART.elf], Thread: Worker-39
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:10:54.225
+!MESSAGE XSCT command with result: [dow C:/FPGA_Projects/ADC_SRAM_UART/ADC_SRAM_UART.sdk/ADC_SRAM_UART/Debug/ADC_SRAM_UART.elf], Result: [null, ]. Thread: Worker-39
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:10:54.319
+!MESSAGE XSCT Command: [targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Cmod A7 - 35T 210328AA0008A"} -index 0], Thread: Worker-39
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:10:54.413
+!MESSAGE XSCT command with result: [targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Cmod A7 - 35T 210328AA0008A"} -index 0], Result: [null, ]. Thread: Worker-39
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:10:54.413
+!MESSAGE XSCT Command: [con], Thread: Worker-39
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:10:54.444
+!MESSAGE XSCT command with result: [con], Result: [null, ]. Thread: Worker-39
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:12:11.379
+!MESSAGE XSCT Command: [disconnect tcfchan#67], Thread: Thread-4231
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:12:11.426
+!MESSAGE XSCT command with result: [disconnect tcfchan#67], Result: [null, ]. Thread: Thread-4231
+
+!ENTRY com.xilinx.sdk.utils 1 0 2019-04-13 20:12:12.391
+!MESSAGE Updating toolusage
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:12:12.391
+!MESSAGE XSCT Command: [connect -url tcp:127.0.0.1:3121], Thread: Worker-22
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:12:12.422
+!MESSAGE XSCT command with result: [connect -url tcp:127.0.0.1:3121], Result: [null, tcfchan#68]. Thread: Worker-22
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:12:12.438
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-22
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:12:12.469
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent Cmod A7 - 35T 210328AA0008A]. Thread: Worker-22
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:12:12.469
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-22
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:12:12.485
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent Cmod A7 - 35T 210328AA0008A]. Thread: Worker-22
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:12:12.500
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Digilent Cmod A7 - 35T 210328AA0008A" && level==1}], Thread: Worker-22
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:12:12.531
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Digilent Cmod A7 - 35T 210328AA0008A" && level==1}], Result: [null,      2  xc7a35t (idcode 0362d093 irlen 6 fpga)]. Thread: Worker-22
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:12:12.531
+!MESSAGE XSCT Command: [targets -set -filter {jtag_cable_name =~ "Digilent Cmod A7 - 35T 210328AA0008A" && level==0} -index 0], Thread: Worker-22
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:12:12.578
+!MESSAGE XSCT command with result: [targets -set -filter {jtag_cable_name =~ "Digilent Cmod A7 - 35T 210328AA0008A" && level==0} -index 0], Result: [null, ]. Thread: Worker-22
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:12:12.578
+!MESSAGE XSCT Command: [fpga -state], Thread: Worker-22
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:12:12.594
+!MESSAGE XSCT command with result: [fpga -state], Result: [null, FPGA is configured]. Thread: Worker-22
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:12:12.594
+!MESSAGE XSCT Command: [connect -url tcp:127.0.0.1:3121], Thread: Worker-22
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:12:12.610
+!MESSAGE XSCT command with result: [connect -url tcp:127.0.0.1:3121], Result: [null, tcfchan#68]. Thread: Worker-22
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:12:12.610
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-22
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:12:12.625
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent Cmod A7 - 35T 210328AA0008A]. Thread: Worker-22
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:12:12.641
+!MESSAGE XSCT Command: [version -server], Thread: Worker-22
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:12:12.641
+!MESSAGE XSCT command with result: [version -server], Result: [null, 2018.3]. Thread: Worker-22
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:12:12.641
+!MESSAGE XSCT Command: [version], Thread: Worker-22
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:12:12.656
+!MESSAGE XSCT command with result: [version], Result: [null, xsct 2018.3
+SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.]. Thread: Worker-22
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:12:12.656
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-22
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:12:12.672
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent Cmod A7 - 35T 210328AA0008A]. Thread: Worker-22
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:12:12.672
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Digilent Cmod A7 - 35T 210328AA0008A" && level==1}], Thread: Worker-22
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:12:12.719
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Digilent Cmod A7 - 35T 210328AA0008A" && level==1}], Result: [null,      2  xc7a35t (idcode 0362d093 irlen 6 fpga)]. Thread: Worker-22
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:12:12.719
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-22
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:12:12.735
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent Cmod A7 - 35T 210328AA0008A]. Thread: Worker-22
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:12:12.735
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Digilent Cmod A7 - 35T 210328AA0008A" && level==1}], Thread: Worker-22
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:12:12.766
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Digilent Cmod A7 - 35T 210328AA0008A" && level==1}], Result: [null,      2  xc7a35t (idcode 0362d093 irlen 6 fpga)]. Thread: Worker-22
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:12:12.781
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-22
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:12:12.797
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent Cmod A7 - 35T 210328AA0008A]. Thread: Worker-22
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:12:12.797
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Digilent Cmod A7 - 35T 210328AA0008A" && level==1}], Thread: Worker-22
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:12:12.828
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Digilent Cmod A7 - 35T 210328AA0008A" && level==1}], Result: [null,      2  xc7a35t (idcode 0362d093 irlen 6 fpga)]. Thread: Worker-22
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:12:12.844
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-22
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:12:12.860
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent Cmod A7 - 35T 210328AA0008A]. Thread: Worker-22
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:12:12.860
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Digilent Cmod A7 - 35T 210328AA0008A" && level==1}], Thread: Worker-22
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:12:12.891
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Digilent Cmod A7 - 35T 210328AA0008A" && level==1}], Result: [null,      2  xc7a35t (idcode 0362d093 irlen 6 fpga)]. Thread: Worker-22
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:12:12.906
+!MESSAGE XSCT Command: [jtag targets -set -filter {name =~ "Digilent Cmod A7 - 35T 210328AA0008A" && level == 0}], Thread: Worker-22
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:12:12.938
+!MESSAGE XSCT command with result: [jtag targets -set -filter {name =~ "Digilent Cmod A7 - 35T 210328AA0008A" && level == 0}], Result: [null, ]. Thread: Worker-22
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:12:12.938
+!MESSAGE XSCT Command: [jtag frequency], Thread: Worker-22
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:12:12.938
+!MESSAGE XSCT command with result: [jtag frequency], Result: [null, 15000000]. Thread: Worker-22
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:12:12.953
+!MESSAGE XSCT Command: [configparams mdm-detect-bscan-mask 2], Thread: Worker-22
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:12:12.953
+!MESSAGE XSCT command with result: [configparams mdm-detect-bscan-mask 2], Result: [null, ]. Thread: Worker-22
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:12:12.969
+!MESSAGE XSCT Command: [targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Cmod A7 - 35T 210328AA0008A"} -index 0], Thread: Worker-22
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:12:13.031
+!MESSAGE XSCT command with result: [targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Cmod A7 - 35T 210328AA0008A"} -index 0], Result: [null, ]. Thread: Worker-22
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:12:13.031
+!MESSAGE XSCT Command: [rst -processor], Thread: Worker-22
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:12:13.069
+!MESSAGE XSCT command with result: [rst -processor], Result: [null, ]. Thread: Worker-22
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:12:13.069
+!MESSAGE XSCT Command: [targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Cmod A7 - 35T 210328AA0008A"} -index 0], Thread: Worker-22
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:12:13.132
+!MESSAGE XSCT command with result: [targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Cmod A7 - 35T 210328AA0008A"} -index 0], Result: [null, ]. Thread: Worker-22
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:12:13.132
+!MESSAGE XSCT Command: [dow C:/FPGA_Projects/ADC_SRAM_UART/ADC_SRAM_UART.sdk/ADC_SRAM_UART/Debug/ADC_SRAM_UART.elf], Thread: Worker-22
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:12:13.225
+!MESSAGE XSCT command with result: [dow C:/FPGA_Projects/ADC_SRAM_UART/ADC_SRAM_UART.sdk/ADC_SRAM_UART/Debug/ADC_SRAM_UART.elf], Result: [null, ]. Thread: Worker-22
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:12:13.303
+!MESSAGE XSCT Command: [targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Cmod A7 - 35T 210328AA0008A"} -index 0], Thread: Worker-22
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:12:13.397
+!MESSAGE XSCT command with result: [targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Cmod A7 - 35T 210328AA0008A"} -index 0], Result: [null, ]. Thread: Worker-22
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:12:13.397
+!MESSAGE XSCT Command: [con], Thread: Worker-22
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:12:13.428
+!MESSAGE XSCT command with result: [con], Result: [null, ]. Thread: Worker-22
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:14:25.462
+!MESSAGE XSCT Command: [disconnect tcfchan#68], Thread: Thread-4297
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:14:25.478
+!MESSAGE XSCT command with result: [disconnect tcfchan#68], Result: [null, ]. Thread: Thread-4297
+
+!ENTRY com.xilinx.sdk.utils 1 0 2019-04-13 20:14:26.471
+!MESSAGE Updating toolusage
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:14:26.487
+!MESSAGE XSCT Command: [connect -url tcp:127.0.0.1:3121], Thread: Worker-35
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:14:26.518
+!MESSAGE XSCT command with result: [connect -url tcp:127.0.0.1:3121], Result: [null, tcfchan#69]. Thread: Worker-35
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:14:26.518
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-35
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:14:26.581
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent Cmod A7 - 35T 210328AA0008A]. Thread: Worker-35
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:14:26.581
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-35
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:14:26.596
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent Cmod A7 - 35T 210328AA0008A]. Thread: Worker-35
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:14:26.612
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Digilent Cmod A7 - 35T 210328AA0008A" && level==1}], Thread: Worker-35
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:14:26.643
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Digilent Cmod A7 - 35T 210328AA0008A" && level==1}], Result: [null,      2  xc7a35t (idcode 0362d093 irlen 6 fpga)]. Thread: Worker-35
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:14:26.643
+!MESSAGE XSCT Command: [targets -set -filter {jtag_cable_name =~ "Digilent Cmod A7 - 35T 210328AA0008A" && level==0} -index 0], Thread: Worker-35
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:14:26.690
+!MESSAGE XSCT command with result: [targets -set -filter {jtag_cable_name =~ "Digilent Cmod A7 - 35T 210328AA0008A" && level==0} -index 0], Result: [null, ]. Thread: Worker-35
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:14:26.706
+!MESSAGE XSCT Command: [fpga -state], Thread: Worker-35
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:14:26.706
+!MESSAGE XSCT command with result: [fpga -state], Result: [null, FPGA is configured]. Thread: Worker-35
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:14:26.706
+!MESSAGE XSCT Command: [connect -url tcp:127.0.0.1:3121], Thread: Worker-35
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:14:26.721
+!MESSAGE XSCT command with result: [connect -url tcp:127.0.0.1:3121], Result: [null, tcfchan#69]. Thread: Worker-35
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:14:26.721
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-35
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:14:26.737
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent Cmod A7 - 35T 210328AA0008A]. Thread: Worker-35
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:14:26.752
+!MESSAGE XSCT Command: [version -server], Thread: Worker-35
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:14:26.752
+!MESSAGE XSCT command with result: [version -server], Result: [null, 2018.3]. Thread: Worker-35
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:14:26.752
+!MESSAGE XSCT Command: [version], Thread: Worker-35
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:14:26.768
+!MESSAGE XSCT command with result: [version], Result: [null, xsct 2018.3
+SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.]. Thread: Worker-35
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:14:26.768
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-35
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:14:26.784
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent Cmod A7 - 35T 210328AA0008A]. Thread: Worker-35
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:14:26.799
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Digilent Cmod A7 - 35T 210328AA0008A" && level==1}], Thread: Worker-35
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:14:26.831
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Digilent Cmod A7 - 35T 210328AA0008A" && level==1}], Result: [null,      2  xc7a35t (idcode 0362d093 irlen 6 fpga)]. Thread: Worker-35
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:14:26.846
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-35
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:14:26.862
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent Cmod A7 - 35T 210328AA0008A]. Thread: Worker-35
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:14:26.862
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Digilent Cmod A7 - 35T 210328AA0008A" && level==1}], Thread: Worker-35
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:14:26.893
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Digilent Cmod A7 - 35T 210328AA0008A" && level==1}], Result: [null,      2  xc7a35t (idcode 0362d093 irlen 6 fpga)]. Thread: Worker-35
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:14:26.909
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-35
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:14:26.924
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent Cmod A7 - 35T 210328AA0008A]. Thread: Worker-35
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:14:26.924
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Digilent Cmod A7 - 35T 210328AA0008A" && level==1}], Thread: Worker-35
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:14:26.956
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Digilent Cmod A7 - 35T 210328AA0008A" && level==1}], Result: [null,      2  xc7a35t (idcode 0362d093 irlen 6 fpga)]. Thread: Worker-35
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:14:26.956
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-35
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:14:26.971
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent Cmod A7 - 35T 210328AA0008A]. Thread: Worker-35
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:14:26.987
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Digilent Cmod A7 - 35T 210328AA0008A" && level==1}], Thread: Worker-35
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:14:27.018
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Digilent Cmod A7 - 35T 210328AA0008A" && level==1}], Result: [null,      2  xc7a35t (idcode 0362d093 irlen 6 fpga)]. Thread: Worker-35
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:14:27.018
+!MESSAGE XSCT Command: [jtag targets -set -filter {name =~ "Digilent Cmod A7 - 35T 210328AA0008A" && level == 0}], Thread: Worker-35
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:14:27.065
+!MESSAGE XSCT command with result: [jtag targets -set -filter {name =~ "Digilent Cmod A7 - 35T 210328AA0008A" && level == 0}], Result: [null, ]. Thread: Worker-35
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:14:27.065
+!MESSAGE XSCT Command: [jtag frequency], Thread: Worker-35
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:14:27.065
+!MESSAGE XSCT command with result: [jtag frequency], Result: [null, 15000000]. Thread: Worker-35
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:14:27.081
+!MESSAGE XSCT Command: [configparams mdm-detect-bscan-mask 2], Thread: Worker-35
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:14:27.081
+!MESSAGE XSCT command with result: [configparams mdm-detect-bscan-mask 2], Result: [null, ]. Thread: Worker-35
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:14:27.096
+!MESSAGE XSCT Command: [targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Cmod A7 - 35T 210328AA0008A"} -index 0], Thread: Worker-35
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:14:27.143
+!MESSAGE XSCT command with result: [targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Cmod A7 - 35T 210328AA0008A"} -index 0], Result: [null, ]. Thread: Worker-35
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:14:27.159
+!MESSAGE XSCT Command: [rst -processor], Thread: Worker-35
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:14:27.193
+!MESSAGE XSCT command with result: [rst -processor], Result: [null, ]. Thread: Worker-35
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:14:27.193
+!MESSAGE XSCT Command: [targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Cmod A7 - 35T 210328AA0008A"} -index 0], Thread: Worker-35
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:14:27.256
+!MESSAGE XSCT command with result: [targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Cmod A7 - 35T 210328AA0008A"} -index 0], Result: [null, ]. Thread: Worker-35
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:14:27.271
+!MESSAGE XSCT Command: [dow C:/FPGA_Projects/ADC_SRAM_UART/ADC_SRAM_UART.sdk/ADC_SRAM_UART/Debug/ADC_SRAM_UART.elf], Thread: Worker-35
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:14:27.349
+!MESSAGE XSCT command with result: [dow C:/FPGA_Projects/ADC_SRAM_UART/ADC_SRAM_UART.sdk/ADC_SRAM_UART/Debug/ADC_SRAM_UART.elf], Result: [null, ]. Thread: Worker-35
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:14:27.428
+!MESSAGE XSCT Command: [targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Cmod A7 - 35T 210328AA0008A"} -index 0], Thread: Worker-35
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:14:27.553
+!MESSAGE XSCT command with result: [targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Cmod A7 - 35T 210328AA0008A"} -index 0], Result: [null, ]. Thread: Worker-35
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:14:27.568
+!MESSAGE XSCT Command: [con], Thread: Worker-35
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:14:27.584
+!MESSAGE XSCT command with result: [con], Result: [null, ]. Thread: Worker-35
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:15:08.698
+!MESSAGE XSCT Command: [disconnect tcfchan#69], Thread: Thread-4357
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:15:08.713
+!MESSAGE XSCT command with result: [disconnect tcfchan#69], Result: [null, ]. Thread: Thread-4357
+
+!ENTRY com.xilinx.sdk.utils 1 0 2019-04-13 20:15:09.706
+!MESSAGE Updating toolusage
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:15:09.706
+!MESSAGE XSCT Command: [connect -url tcp:127.0.0.1:3121], Thread: Worker-35
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:15:09.752
+!MESSAGE XSCT command with result: [connect -url tcp:127.0.0.1:3121], Result: [null, tcfchan#70]. Thread: Worker-35
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:15:09.752
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-35
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:15:09.768
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent Cmod A7 - 35T 210328AA0008A]. Thread: Worker-35
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:15:09.784
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-35
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:15:09.799
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent Cmod A7 - 35T 210328AA0008A]. Thread: Worker-35
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:15:09.799
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Digilent Cmod A7 - 35T 210328AA0008A" && level==1}], Thread: Worker-35
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:15:09.831
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Digilent Cmod A7 - 35T 210328AA0008A" && level==1}], Result: [null,      2  xc7a35t (idcode 0362d093 irlen 6 fpga)]. Thread: Worker-35
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:15:09.846
+!MESSAGE XSCT Command: [targets -set -filter {jtag_cable_name =~ "Digilent Cmod A7 - 35T 210328AA0008A" && level==0} -index 0], Thread: Worker-35
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:15:09.877
+!MESSAGE XSCT command with result: [targets -set -filter {jtag_cable_name =~ "Digilent Cmod A7 - 35T 210328AA0008A" && level==0} -index 0], Result: [null, ]. Thread: Worker-35
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:15:09.893
+!MESSAGE XSCT Command: [fpga -state], Thread: Worker-35
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:15:09.893
+!MESSAGE XSCT command with result: [fpga -state], Result: [null, FPGA is configured]. Thread: Worker-35
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:15:09.893
+!MESSAGE XSCT Command: [connect -url tcp:127.0.0.1:3121], Thread: Worker-35
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:15:09.909
+!MESSAGE XSCT command with result: [connect -url tcp:127.0.0.1:3121], Result: [null, tcfchan#70]. Thread: Worker-35
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:15:09.909
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-35
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:15:09.924
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent Cmod A7 - 35T 210328AA0008A]. Thread: Worker-35
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:15:09.940
+!MESSAGE XSCT Command: [version -server], Thread: Worker-35
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:15:09.940
+!MESSAGE XSCT command with result: [version -server], Result: [null, 2018.3]. Thread: Worker-35
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:15:09.940
+!MESSAGE XSCT Command: [version], Thread: Worker-35
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:15:09.956
+!MESSAGE XSCT command with result: [version], Result: [null, xsct 2018.3
+SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.]. Thread: Worker-35
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:15:09.956
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-35
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:15:09.971
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent Cmod A7 - 35T 210328AA0008A]. Thread: Worker-35
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:15:09.971
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Digilent Cmod A7 - 35T 210328AA0008A" && level==1}], Thread: Worker-35
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:15:10.018
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Digilent Cmod A7 - 35T 210328AA0008A" && level==1}], Result: [null,      2  xc7a35t (idcode 0362d093 irlen 6 fpga)]. Thread: Worker-35
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:15:10.018
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-35
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:15:10.034
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent Cmod A7 - 35T 210328AA0008A]. Thread: Worker-35
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:15:10.049
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Digilent Cmod A7 - 35T 210328AA0008A" && level==1}], Thread: Worker-35
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:15:10.081
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Digilent Cmod A7 - 35T 210328AA0008A" && level==1}], Result: [null,      2  xc7a35t (idcode 0362d093 irlen 6 fpga)]. Thread: Worker-35
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:15:10.081
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-35
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:15:10.096
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent Cmod A7 - 35T 210328AA0008A]. Thread: Worker-35
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:15:10.112
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Digilent Cmod A7 - 35T 210328AA0008A" && level==1}], Thread: Worker-35
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:15:10.143
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Digilent Cmod A7 - 35T 210328AA0008A" && level==1}], Result: [null,      2  xc7a35t (idcode 0362d093 irlen 6 fpga)]. Thread: Worker-35
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:15:10.143
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-35
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:15:10.159
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent Cmod A7 - 35T 210328AA0008A]. Thread: Worker-35
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:15:10.174
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Digilent Cmod A7 - 35T 210328AA0008A" && level==1}], Thread: Worker-35
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:15:10.206
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Digilent Cmod A7 - 35T 210328AA0008A" && level==1}], Result: [null,      2  xc7a35t (idcode 0362d093 irlen 6 fpga)]. Thread: Worker-35
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:15:10.206
+!MESSAGE XSCT Command: [jtag targets -set -filter {name =~ "Digilent Cmod A7 - 35T 210328AA0008A" && level == 0}], Thread: Worker-35
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:15:10.237
+!MESSAGE XSCT command with result: [jtag targets -set -filter {name =~ "Digilent Cmod A7 - 35T 210328AA0008A" && level == 0}], Result: [null, ]. Thread: Worker-35
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:15:10.252
+!MESSAGE XSCT Command: [jtag frequency], Thread: Worker-35
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:15:10.252
+!MESSAGE XSCT command with result: [jtag frequency], Result: [null, 15000000]. Thread: Worker-35
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:15:10.268
+!MESSAGE XSCT Command: [configparams mdm-detect-bscan-mask 2], Thread: Worker-35
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:15:10.268
+!MESSAGE XSCT command with result: [configparams mdm-detect-bscan-mask 2], Result: [null, ]. Thread: Worker-35
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:15:10.268
+!MESSAGE XSCT Command: [targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Cmod A7 - 35T 210328AA0008A"} -index 0], Thread: Worker-35
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:15:10.331
+!MESSAGE XSCT command with result: [targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Cmod A7 - 35T 210328AA0008A"} -index 0], Result: [null, ]. Thread: Worker-35
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:15:10.331
+!MESSAGE XSCT Command: [rst -processor], Thread: Worker-35
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:15:10.367
+!MESSAGE XSCT command with result: [rst -processor], Result: [null, ]. Thread: Worker-35
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:15:10.367
+!MESSAGE XSCT Command: [targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Cmod A7 - 35T 210328AA0008A"} -index 0], Thread: Worker-35
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:15:10.430
+!MESSAGE XSCT command with result: [targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Cmod A7 - 35T 210328AA0008A"} -index 0], Result: [null, ]. Thread: Worker-35
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:15:10.445
+!MESSAGE XSCT Command: [dow C:/FPGA_Projects/ADC_SRAM_UART/ADC_SRAM_UART.sdk/ADC_SRAM_UART/Debug/ADC_SRAM_UART.elf], Thread: Worker-35
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:15:10.523
+!MESSAGE XSCT command with result: [dow C:/FPGA_Projects/ADC_SRAM_UART/ADC_SRAM_UART.sdk/ADC_SRAM_UART/Debug/ADC_SRAM_UART.elf], Result: [null, ]. Thread: Worker-35
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:15:10.617
+!MESSAGE XSCT Command: [targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Cmod A7 - 35T 210328AA0008A"} -index 0], Thread: Worker-35
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:15:10.711
+!MESSAGE XSCT command with result: [targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Cmod A7 - 35T 210328AA0008A"} -index 0], Result: [null, ]. Thread: Worker-35
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:15:10.711
+!MESSAGE XSCT Command: [con], Thread: Worker-35
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-13 20:15:10.726
+!MESSAGE XSCT command with result: [con], Result: [null, ]. Thread: Worker-35

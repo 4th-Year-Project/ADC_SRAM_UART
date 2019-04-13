@@ -144,13 +144,13 @@ int TxUART(u32 DestinationAddr){
     u64 addr = DestinationAddr;
     u16 count =0;
 
-    while(addr < (DestinationAddr + ReceiveLength* WORD_SIZE)){
+    while(addr < (DestinationAddr + MAX_DATA_BUFFER_SIZE)){
     xil_printf("%x",Xil_In32(addr));
     print("\n\r");
     addr += WORD_SIZE;
     count++;
     }
-    xil_printf("%d \n\r",count);
+    xil_printf("%x \n\r",count);
     return XST_SUCCESS;
 }
 
