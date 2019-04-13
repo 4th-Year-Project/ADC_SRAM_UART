@@ -10,6 +10,7 @@ This is the top level for the FPGA project. The aim of this is to read from the 
 
 
 ## Specs
+
 - ADCs
   - Reads from the even channels only
   - 2 MSPS sample rate
@@ -24,29 +25,29 @@ This is the top level for the FPGA project. The aim of this is to read from the 
   - Not implemented yet
 - AXI-Stream FIFO
   - 512 depth (512 samples of 4 channels)
-- (μBlaze)
+- MicroBlaze
 - SRAM
-- (μBlaze)
+- MicroBlaze
 - UART
   - 115200 baud
 
   ## Todo
-- ADC Interface
-  - Make it resettable
-  - Check Warnings
-- AXI-Stream re-clocking
+  
+* ADC Interface
+  * Make it resettable
+  * Check Warnings
+* AXI-Stream re-clocking
   - Done
-- AXI-Stream Interconnect
+* AXI-Stream Interconnect
   - Done
-- AXI-Stream Combiner
+* AXI-Stream Combiner
   - Implement in hardware
-- AXI-Stream FIFO
+* AXI-Stream FIFO
   - Done
-- (μBlaze)
-   - 
+* MicroBlaze
    - Change code to read the number of samples specified not the number of words used in the example code that was copied
-- SRAM
+* SRAM
   - Implement in hardware
-- (μBlaze)
-- UART
- - Done
+* MicroBlaze
+* UART
+  - Done
