@@ -1,0 +1,31 @@
+{
+	"version": "1.0",
+	"modules": {
+		"design_1": {
+			"proto_instances": {
+				"/FPGA_ADC_interface_0/Data_axi_stream": {
+					"interface": "xilinx.com:interface:axis:1.0",
+					"ports": {
+						"ACLK": { "actual": "CLK_2MHZ"},
+						"ARESETN": { "actual": "RESET_OUT"},
+						"TDATA": { "actual": "DATA"},
+						"TLAST": { "actual": "LAST"},
+						"TREADY": { "actual": "READY"},
+						"TVALID": { "actual": "VALID"}
+					}
+				},
+				"/axis_clock_converter_0/S_AXIS": {
+					"interface": "xilinx.com:interface:axis:1.0",
+					"ports": {
+						"ACLK": { "actual": "s_axis_aclk"},
+						"ARESETN": { "actual": "s_axis_aresetn"},
+						"TDATA": { "actual": "s_axis_tdata"},
+						"TLAST": { "actual": "s_axis_tlast"},
+						"TREADY": { "actual": "s_axis_tready"},
+						"TVALID": { "actual": "s_axis_tvalid"}
+					}
+				}
+			}
+		}
+	}
+}

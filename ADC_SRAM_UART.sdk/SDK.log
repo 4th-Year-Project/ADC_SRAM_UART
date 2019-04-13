@@ -1,0 +1,240 @@
+16:40:37 INFO  : Registering command handlers for SDK TCF services
+16:40:38 INFO  : Launching XSCT server: xsct.bat -interactive C:\FPGA_Projects\AXI_FIFO_Test\AXI_FIFO_Test.sdk\temp_xsdb_launch_script.tcl
+16:40:43 INFO  : XSCT server has started successfully.
+16:40:47 INFO  : Processing command line option -hwspec C:/FPGA_Projects/AXI_FIFO_Test/AXI_FIFO_Test.sdk/design_1_wrapper.hdf.
+16:40:47 INFO  : Successfully done setting XSCT server connection channel  
+16:40:47 INFO  : Successfully done setting SDK workspace  
+16:43:19 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+16:43:21 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Cmod A7 - 35T 210328AA0008A" && level==0} -index 0' command is executed.
+16:43:22 INFO  : FPGA configured successfully with bitstream "C:/FPGA_Projects/AXI_FIFO_Test/AXI_FIFO_Test.sdk/design_1_wrapper_hw_platform_0/download.bit"
+16:43:30 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+16:43:51 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+16:43:51 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Cmod A7 - 35T 210328AA0008A" && level==0} -index 0' command is executed.
+16:43:51 INFO  : FPGA configured successfully with bitstream "C:/FPGA_Projects/AXI_FIFO_Test/AXI_FIFO_Test.sdk/design_1_wrapper_hw_platform_0/download.bit"
+16:45:51 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Cmod A7 - 35T 210328AA0008A" && level==0} -index 0' command is executed.
+16:45:51 INFO  : 'fpga -state' command is executed.
+16:45:51 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+16:45:51 INFO  : Jtag cable 'Digilent Cmod A7 - 35T 210328AA0008A' is selected.
+16:45:51 INFO  : 'jtag frequency' command is executed.
+16:45:51 INFO  : 'configparams mdm-detect-bscan-mask 2' command is executed.
+16:45:51 INFO  : Context for processor 'microblaze_0' is selected.
+16:45:52 INFO  : Processor reset is completed for 'microblaze_0'.
+16:45:52 INFO  : Context for processor 'microblaze_0' is selected.
+16:45:52 INFO  : The application 'C:/FPGA_Projects/AXI_FIFO_Test/AXI_FIFO_Test.sdk/ADC_TO_UART/Debug/ADC_TO_UART.elf' is downloaded to processor 'microblaze_0'.
+16:45:52 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+configparams mdm-detect-bscan-mask 2
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Cmod A7 - 35T 210328AA0008A"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Cmod A7 - 35T 210328AA0008A"} -index 0
+dow C:/FPGA_Projects/AXI_FIFO_Test/AXI_FIFO_Test.sdk/ADC_TO_UART/Debug/ADC_TO_UART.elf
+----------------End of Script----------------
+
+16:45:52 INFO  : Memory regions updated for context PA
+16:45:52 INFO  : Memory regions updated for context MicroBlaze Debug Module at USER2
+16:45:52 INFO  : Context for processor 'microblaze_0' is selected.
+16:45:52 INFO  : 'con' command is executed.
+16:45:52 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Cmod A7 - 35T 210328AA0008A"} -index 0
+con
+----------------End of Script----------------
+
+16:45:52 INFO  : Launch script is exported to file 'C:\FPGA_Projects\AXI_FIFO_Test\AXI_FIFO_Test.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_adc_to_uart.elf_on_local.tcl'
+16:46:51 INFO  : Disconnected from the channel tcfchan#1.
+16:46:52 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Cmod A7 - 35T 210328AA0008A" && level==0} -index 0' command is executed.
+16:46:52 INFO  : 'fpga -state' command is executed.
+16:46:52 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+16:46:52 INFO  : Jtag cable 'Digilent Cmod A7 - 35T 210328AA0008A' is selected.
+16:46:52 INFO  : 'jtag frequency' command is executed.
+16:46:52 INFO  : 'configparams mdm-detect-bscan-mask 2' command is executed.
+16:46:52 INFO  : Context for processor 'microblaze_0' is selected.
+16:46:52 INFO  : Processor reset is completed for 'microblaze_0'.
+16:46:52 INFO  : Context for processor 'microblaze_0' is selected.
+16:46:52 INFO  : The application 'C:/FPGA_Projects/AXI_FIFO_Test/AXI_FIFO_Test.sdk/ADC_TO_UART/Debug/ADC_TO_UART.elf' is downloaded to processor 'microblaze_0'.
+16:46:52 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+configparams mdm-detect-bscan-mask 2
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Cmod A7 - 35T 210328AA0008A"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Cmod A7 - 35T 210328AA0008A"} -index 0
+dow C:/FPGA_Projects/AXI_FIFO_Test/AXI_FIFO_Test.sdk/ADC_TO_UART/Debug/ADC_TO_UART.elf
+----------------End of Script----------------
+
+16:46:52 INFO  : Memory regions updated for context PA
+16:46:52 INFO  : Memory regions updated for context MicroBlaze Debug Module at USER2
+16:46:53 INFO  : Context for processor 'microblaze_0' is selected.
+16:46:53 INFO  : 'con' command is executed.
+16:46:53 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Cmod A7 - 35T 210328AA0008A"} -index 0
+con
+----------------End of Script----------------
+
+16:46:53 INFO  : Launch script is exported to file 'C:\FPGA_Projects\AXI_FIFO_Test\AXI_FIFO_Test.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_adc_to_uart.elf_on_local.tcl'
+17:01:19 INFO  : SDK has detected change in the last modified timestamps for source hardware specification file Source:1554912057810,  Project:1554903111893
+17:01:19 INFO  : Project design_1_wrapper_hw_platform_0's source hardware specification located at C:/FPGA_Projects/AXI_FIFO_Test/AXI_FIFO_Test.sdk/design_1_wrapper.hdf is now different from the local copy.
+		 The local copy will be replaced with the source specification and your workspace will be updated.
+17:01:36 INFO  : Copied contents of C:/FPGA_Projects/AXI_FIFO_Test/AXI_FIFO_Test.sdk/design_1_wrapper.hdf into \design_1_wrapper_hw_platform_0\system.hdf.
+17:01:37 INFO  : Synchronizing projects in the workspace with the hardware platform specification changes.
+17:01:43 INFO  : 
+17:01:44 INFO  : Updating hardware inferred compiler options for ADC_TO_UART.
+17:01:44 INFO  : Clearing existing target manager status.
+17:01:44 INFO  : Closing and re-opening the MSS file of ther project ADC_TO_UART_bsp
+17:01:45 INFO  : Workspace synchronized with the new hardware specification file. Cleaning dependent projects...
+17:01:48 WARN  : Linker script will not be updated automatically. Users need to update it manually.
+17:02:13 INFO  : Disconnected from the channel tcfchan#2.
+17:02:50 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+17:02:52 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Cmod A7 - 35T 210328AA0008A" && level==0} -index 0' command is executed.
+17:02:52 INFO  : FPGA configured successfully with bitstream "C:/FPGA_Projects/AXI_FIFO_Test/AXI_FIFO_Test.sdk/design_1_wrapper_hw_platform_0/download.bit"
+17:03:08 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Cmod A7 - 35T 210328AA0008A" && level==0} -index 0' command is executed.
+17:03:08 INFO  : 'fpga -state' command is executed.
+17:03:08 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+17:03:09 INFO  : Jtag cable 'Digilent Cmod A7 - 35T 210328AA0008A' is selected.
+17:03:09 INFO  : 'jtag frequency' command is executed.
+17:03:09 INFO  : 'configparams mdm-detect-bscan-mask 2' command is executed.
+17:03:09 INFO  : Context for processor 'microblaze_0' is selected.
+17:03:09 INFO  : Processor reset is completed for 'microblaze_0'.
+17:03:09 INFO  : Context for processor 'microblaze_0' is selected.
+17:03:09 INFO  : The application 'C:/FPGA_Projects/AXI_FIFO_Test/AXI_FIFO_Test.sdk/ADC_TO_UART/Debug/ADC_TO_UART.elf' is downloaded to processor 'microblaze_0'.
+17:03:09 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+configparams mdm-detect-bscan-mask 2
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Cmod A7 - 35T 210328AA0008A"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Cmod A7 - 35T 210328AA0008A"} -index 0
+dow C:/FPGA_Projects/AXI_FIFO_Test/AXI_FIFO_Test.sdk/ADC_TO_UART/Debug/ADC_TO_UART.elf
+----------------End of Script----------------
+
+17:03:09 INFO  : Memory regions updated for context PA
+17:03:09 INFO  : Memory regions updated for context MicroBlaze Debug Module at USER2
+17:03:09 INFO  : Context for processor 'microblaze_0' is selected.
+17:03:09 INFO  : 'con' command is executed.
+17:03:09 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Cmod A7 - 35T 210328AA0008A"} -index 0
+con
+----------------End of Script----------------
+
+17:03:09 INFO  : Launch script is exported to file 'C:\FPGA_Projects\AXI_FIFO_Test\AXI_FIFO_Test.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_adc_to_uart.elf_on_local.tcl'
+17:03:19 INFO  : Disconnected from the channel tcfchan#3.
+17:03:20 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Cmod A7 - 35T 210328AA0008A" && level==0} -index 0' command is executed.
+17:03:20 INFO  : 'fpga -state' command is executed.
+17:03:20 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+17:03:21 INFO  : Jtag cable 'Digilent Cmod A7 - 35T 210328AA0008A' is selected.
+17:03:21 INFO  : 'jtag frequency' command is executed.
+17:03:21 INFO  : 'configparams mdm-detect-bscan-mask 2' command is executed.
+17:03:21 INFO  : Context for processor 'microblaze_0' is selected.
+17:03:21 INFO  : Processor reset is completed for 'microblaze_0'.
+17:03:21 INFO  : Context for processor 'microblaze_0' is selected.
+17:03:21 INFO  : The application 'C:/FPGA_Projects/AXI_FIFO_Test/AXI_FIFO_Test.sdk/ADC_TO_UART/Debug/ADC_TO_UART.elf' is downloaded to processor 'microblaze_0'.
+17:03:21 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+configparams mdm-detect-bscan-mask 2
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Cmod A7 - 35T 210328AA0008A"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Cmod A7 - 35T 210328AA0008A"} -index 0
+dow C:/FPGA_Projects/AXI_FIFO_Test/AXI_FIFO_Test.sdk/ADC_TO_UART/Debug/ADC_TO_UART.elf
+----------------End of Script----------------
+
+17:03:21 INFO  : Memory regions updated for context PA
+17:03:21 INFO  : Memory regions updated for context MicroBlaze Debug Module at USER2
+17:03:21 INFO  : Context for processor 'microblaze_0' is selected.
+17:03:22 INFO  : 'con' command is executed.
+17:03:22 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Cmod A7 - 35T 210328AA0008A"} -index 0
+con
+----------------End of Script----------------
+
+17:03:22 INFO  : Launch script is exported to file 'C:\FPGA_Projects\AXI_FIFO_Test\AXI_FIFO_Test.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_adc_to_uart.elf_on_local.tcl'
+17:03:31 INFO  : Disconnected from the channel tcfchan#4.
+17:03:32 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Cmod A7 - 35T 210328AA0008A" && level==0} -index 0' command is executed.
+17:03:32 INFO  : 'fpga -state' command is executed.
+17:03:32 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+17:03:33 INFO  : Jtag cable 'Digilent Cmod A7 - 35T 210328AA0008A' is selected.
+17:03:33 INFO  : 'jtag frequency' command is executed.
+17:03:33 INFO  : 'configparams mdm-detect-bscan-mask 2' command is executed.
+17:03:33 INFO  : Context for processor 'microblaze_0' is selected.
+17:03:33 INFO  : Processor reset is completed for 'microblaze_0'.
+17:03:33 INFO  : Context for processor 'microblaze_0' is selected.
+17:03:33 INFO  : The application 'C:/FPGA_Projects/AXI_FIFO_Test/AXI_FIFO_Test.sdk/ADC_TO_UART/Debug/ADC_TO_UART.elf' is downloaded to processor 'microblaze_0'.
+17:03:33 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+configparams mdm-detect-bscan-mask 2
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Cmod A7 - 35T 210328AA0008A"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Cmod A7 - 35T 210328AA0008A"} -index 0
+dow C:/FPGA_Projects/AXI_FIFO_Test/AXI_FIFO_Test.sdk/ADC_TO_UART/Debug/ADC_TO_UART.elf
+----------------End of Script----------------
+
+17:03:33 INFO  : Memory regions updated for context PA
+17:03:33 INFO  : Memory regions updated for context MicroBlaze Debug Module at USER2
+17:03:33 INFO  : Context for processor 'microblaze_0' is selected.
+17:03:33 INFO  : 'con' command is executed.
+17:03:33 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Cmod A7 - 35T 210328AA0008A"} -index 0
+con
+----------------End of Script----------------
+
+17:03:33 INFO  : Launch script is exported to file 'C:\FPGA_Projects\AXI_FIFO_Test\AXI_FIFO_Test.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_adc_to_uart.elf_on_local.tcl'
+17:03:42 INFO  : Disconnected from the channel tcfchan#5.
+17:03:43 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Cmod A7 - 35T 210328AA0008A" && level==0} -index 0' command is executed.
+17:03:43 INFO  : 'fpga -state' command is executed.
+17:03:43 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+17:03:43 INFO  : Jtag cable 'Digilent Cmod A7 - 35T 210328AA0008A' is selected.
+17:03:43 INFO  : 'jtag frequency' command is executed.
+17:03:43 INFO  : 'configparams mdm-detect-bscan-mask 2' command is executed.
+17:03:44 INFO  : Context for processor 'microblaze_0' is selected.
+17:03:44 INFO  : Processor reset is completed for 'microblaze_0'.
+17:03:44 INFO  : Context for processor 'microblaze_0' is selected.
+17:03:44 INFO  : The application 'C:/FPGA_Projects/AXI_FIFO_Test/AXI_FIFO_Test.sdk/ADC_TO_UART/Debug/ADC_TO_UART.elf' is downloaded to processor 'microblaze_0'.
+17:03:44 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+configparams mdm-detect-bscan-mask 2
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Cmod A7 - 35T 210328AA0008A"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Cmod A7 - 35T 210328AA0008A"} -index 0
+dow C:/FPGA_Projects/AXI_FIFO_Test/AXI_FIFO_Test.sdk/ADC_TO_UART/Debug/ADC_TO_UART.elf
+----------------End of Script----------------
+
+17:03:44 INFO  : Memory regions updated for context PA
+17:03:44 INFO  : Memory regions updated for context MicroBlaze Debug Module at USER2
+17:03:44 INFO  : Context for processor 'microblaze_0' is selected.
+17:03:44 INFO  : 'con' command is executed.
+17:03:44 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Cmod A7 - 35T 210328AA0008A"} -index 0
+con
+----------------End of Script----------------
+
+17:03:44 INFO  : Launch script is exported to file 'C:\FPGA_Projects\AXI_FIFO_Test\AXI_FIFO_Test.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_adc_to_uart.elf_on_local.tcl'
+17:05:01 INFO  : Disconnected from the channel tcfchan#6.
+17:11:47 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+17:11:47 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Cmod A7 - 35T 210328AA0008A" && level==0} -index 0' command is executed.
+17:11:48 INFO  : FPGA configured successfully with bitstream "C:/FPGA_Projects/AXI_FIFO_Test/AXI_FIFO_Test.sdk/design_1_wrapper_hw_platform_0/download.bit"
+17:11:58 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Cmod A7 - 35T 210328AA0008A" && level==0} -index 0' command is executed.
+17:11:58 INFO  : 'fpga -state' command is executed.
+17:11:58 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+17:11:59 INFO  : Jtag cable 'Digilent Cmod A7 - 35T 210328AA0008A' is selected.
+17:11:59 INFO  : 'jtag frequency' command is executed.
+17:11:59 INFO  : 'configparams mdm-detect-bscan-mask 2' command is executed.
+17:11:59 INFO  : Context for processor 'microblaze_0' is selected.
+17:11:59 INFO  : Processor reset is completed for 'microblaze_0'.
+17:11:59 INFO  : Context for processor 'microblaze_0' is selected.
+17:12:00 INFO  : The application 'C:/FPGA_Projects/AXI_FIFO_Test/AXI_FIFO_Test.sdk/ADC_TO_UART/Debug/ADC_TO_UART.elf' is downloaded to processor 'microblaze_0'.
+17:12:00 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+configparams mdm-detect-bscan-mask 2
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Cmod A7 - 35T 210328AA0008A"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Cmod A7 - 35T 210328AA0008A"} -index 0
+dow C:/FPGA_Projects/AXI_FIFO_Test/AXI_FIFO_Test.sdk/ADC_TO_UART/Debug/ADC_TO_UART.elf
+----------------End of Script----------------
+
+17:12:00 INFO  : Memory regions updated for context PA
+17:12:00 INFO  : Memory regions updated for context MicroBlaze Debug Module at USER2
+17:12:00 INFO  : Context for processor 'microblaze_0' is selected.
+17:12:00 INFO  : 'con' command is executed.
+17:12:00 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Cmod A7 - 35T 210328AA0008A"} -index 0
+con
+----------------End of Script----------------
+
+17:12:00 INFO  : Launch script is exported to file 'C:\FPGA_Projects\AXI_FIFO_Test\AXI_FIFO_Test.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_adc_to_uart.elf_on_local.tcl'
+18:19:07 INFO  : Disconnected from the channel tcfchan#7.
