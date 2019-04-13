@@ -6,30 +6,32 @@
 #include "xstatus.h"
 
 #define FIFO_DEV_ID	   	XPAR_AXI_FIFO_0_DEVICE_ID   //Device ID
-#define WORD_SIZE 8			/* Size of words in bytes */ //You c
+#define WORD_SIZE 4			/* Size of words in bytes */ //You c
 #define MAX_PACKET_LEN 4  //To be checked
-#define NO_OF_PACKETS 64  // Probably won't be used
+#define NO_OF_PACKETS 50  // Probably won't be used
 #define MAX_DATA_BUFFER_SIZE NO_OF_PACKETS*MAX_PACKET_LEN
+#define SRAM_BASE_ADDR  0x60000000
 
 #undef DEBUG
 
 /************************** Function Prototypes ******************************/
 int RxInit(XLlFifo *InstancePtr, u16 DeviceId);
-int RxADC(XLlFifo *InstancePtr, u32 *DestinationAddr);
-int TxUART(XLlFifo *InstancePtr, u32 *SourceAddr);
-
+int RxSamples(XLlFifo *InstancePtr, u32 *DestinationAddr);
+int TxUART(u32 DestinationAddr);
 /************************** Variable Definitions *****************************/
 
 XLlFifo FifoInstance;
-
+u32 SRAMBaseAddr = 0x60000000;
 u32 SourceBuffer[MAX_DATA_BUFFER_SIZE * WORD_SIZE];
 u32 DestinationBuffer[MAX_DATA_BUFFER_SIZE * WORD_SIZE];
+
 
 int main (){
   int Status;
 
   xil_printf("--- Entering main() ---\n\r");
-  //Initialise
+
+  //--- Initialise ---
   Status = RxInit(&FifoInstance, FIFO_DEV_ID);
 
   if (Status != XST_SUCCESS) {
@@ -38,22 +40,44 @@ int main (){
 	}
 
 	xil_printf("Successfully ran Initialisation of Rx Chain\n\r");
-	return XST_SUCCESS;
 
-  //Receive
+  // --- Start the ADC sampling to fill FIFO ---
+	//Wait for button?
+	xil_printf("Press sample button now\n\r");
+	//Start Sampling
 
-  //transmit
+  //--- Transfer to SRAM ---
+  if(1){
+	  xil_printf("Will transfer via SRAM\n\r");
+	  Status = RxSamples(&FifoInstance, SRAMBaseAddr);
 
-  //reset?
+  if (Status != XST_SUCCESS) {
+		xil_printf("Receiving of samples failed\n\r");
+		return XST_FAILURE;
+	}
 
+	xil_printf("Successfully ran receiving of samples\n\r");
+  }
+  else{
+	  xil_printf("Skipped transfer to SRAM\n\r");
+  }
 
+  //--- Send over UART ---
+  Status = TxUART(SRAMBaseAddr);
+  if (Status != XST_SUCCESS) {
+		xil_printf("Sending over UART Failed\n\r");
+		return XST_FAILURE;
+	}
+  xil_printf("Successfully sent over UART\n\r");
+
+  //--- reset ---
+  xil_printf("Stopping\n\r");
+  return XST_SUCCESS;
 }
 
 int RxInit(XLlFifo *InstancePtr, u16 DeviceId){
   XLlFifo_Config *Config;
 	int Status;
-	int i;
-	int Error;
 	Status = XST_SUCCESS;
 
   /* Initialise the Device Configuration Interface driver */
@@ -84,13 +108,13 @@ int RxInit(XLlFifo *InstancePtr, u16 DeviceId){
 	return Status;
 }
 
-int RxADC(XLlFifo *InstancePtr, u32 *DestinationAddr){
-  int i;
+int RxSamples(XLlFifo *InstancePtr, u32* DestinationAddr){
+    int i;
 	int Status;
 	u32 RxWord;
 	static u32 ReceiveLength;
 
-  xil_printf(" Receiving data ....\n\r");
+  xil_printf("Receiving data ....\n\r");
 
   /* Read Receive Length */
 	ReceiveLength = (XLlFifo_iRxGetLen(InstancePtr))/WORD_SIZE;
@@ -115,5 +139,13 @@ int RxADC(XLlFifo *InstancePtr, u32 *DestinationAddr){
 	return XST_SUCCESS;
 }
 
-
+int TxUART(u32 DestinationAddr){
+    u64 addr = DestinationAddr;
+    while(addr < (DestinationAddr + MAX_DATA_BUFFER_SIZE)){
+    xil_printf("%x",Xil_In32(addr));
+    print("\n\r");
+    addr += WORD_SIZE;
+    }
+    return XST_SUCCESS;
+}
 
