@@ -1,6 +1,26 @@
-17:11:57 **** Incremental Build of configuration Debug for project ADC_TO_UART ****
+09:47:56 **** Auto Build of configuration Debug for project ADC_TO_UART ****
 make all 
-make: Nothing to be done for 'all'.
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../ADC_TO_UART_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+'Finished building: ../src/helloworld.c'
+' '
+'Building file: ../src/platform.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/platform.o" -I../../ADC_TO_UART_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/platform.d" -MT"src/platform.o" -o "src/platform.o" "../src/platform.c"
+'Finished building: ../src/platform.c'
+' '
+'Building target: ADC_TO_UART.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../ADC_TO_UART_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "ADC_TO_UART.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: ADC_TO_UART.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size ADC_TO_UART.elf  |tee "ADC_TO_UART.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   2712	    268	   3108	   6088	   17c8	ADC_TO_UART.elf
+'Finished building: ADC_TO_UART.elf.size'
+' '
 
-17:11:57 Build Finished (took 397ms)
+09:48:00 Build Finished (took 3s.806ms)
 

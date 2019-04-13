@@ -12,65 +12,147 @@ Sourcing tcl script 'C:/Users/Lawrence Carslake/AppData/Roaming/Xilinx/Vivado/Vi
 source design_1_wrapper.tcl -notrace
 WARNING: [Board 49-91] Board repository path '{C:Xilinxivado-boards-master
 ewoard_files}' does not exist, it will not be used to search board files.
-create_project: Time (s): cpu = 00:00:03 ; elapsed = 00:00:05 . Memory (MB): peak = 337.219 ; gain = 91.070
 INFO: [IP_Flow 19-234] Refreshing IP repositories
 INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Lenovo Share'.
 INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/FPGA_Projects/FPGA_ADC_interface'.
 INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2018.3/data/ip'.
-update_ip_catalog: Time (s): cpu = 00:00:04 ; elapsed = 00:00:06 . Memory (MB): peak = 368.180 ; gain = 30.961
-add_files: Time (s): cpu = 00:00:07 ; elapsed = 00:00:10 . Memory (MB): peak = 428.832 ; gain = 60.652
+add_files: Time (s): cpu = 00:00:12 ; elapsed = 00:00:13 . Memory (MB): peak = 458.543 ; gain = 90.258
 Command: synth_design -top design_1_wrapper -part xc7a35tcpg236-1
 Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7a35t'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a35t'
 INFO: Launching helper process for spawning children vivado processes
-INFO: Helper process launched with PID 13112 
+INFO: Helper process launched with PID 3904 
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 526.469 ; gain = 95.914
+Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 560.512 ; gain = 100.238
 ---------------------------------------------------------------------------------
-INFO: [Synth 8-6157] synthesizing module 'design_1_wrapper' [C:/FPGA_Projects/AXI_FIFO_Test/AXI_FIFO_Test.srcs/sources_1/bd/design_1/hdl/design_1_wrapper.v:12]
-INFO: [Synth 8-6157] synthesizing module 'design_1' [C:/FPGA_Projects/AXI_FIFO_Test/AXI_FIFO_Test.srcs/sources_1/bd/design_1/synth/design_1.v:13]
-INFO: [Synth 8-6157] synthesizing module 'design_1_FPGA_ADC_interface_0_1' [C:/FPGA_Projects/AXI_FIFO_Test/AXI_FIFO_Test.runs/synth_1/.Xil/Vivado-8564-Lenovo/realtime/design_1_FPGA_ADC_interface_0_1_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'design_1_FPGA_ADC_interface_0_1' (1#1) [C:/FPGA_Projects/AXI_FIFO_Test/AXI_FIFO_Test.runs/synth_1/.Xil/Vivado-8564-Lenovo/realtime/design_1_FPGA_ADC_interface_0_1_stub.v:6]
-INFO: [Synth 8-6157] synthesizing module 'design_1_axis_clock_converter_0_0' [C:/FPGA_Projects/AXI_FIFO_Test/AXI_FIFO_Test.runs/synth_1/.Xil/Vivado-8564-Lenovo/realtime/design_1_axis_clock_converter_0_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'design_1_axis_clock_converter_0_0' (2#1) [C:/FPGA_Projects/AXI_FIFO_Test/AXI_FIFO_Test.runs/synth_1/.Xil/Vivado-8564-Lenovo/realtime/design_1_axis_clock_converter_0_0_stub.v:6]
-WARNING: [Synth 8-350] instance 'axis_clock_converter_0' of module 'design_1_axis_clock_converter_0_0' requires 12 connections, but only 9 given [C:/FPGA_Projects/AXI_FIFO_Test/AXI_FIFO_Test.srcs/sources_1/bd/design_1/synth/design_1.v:114]
-INFO: [Synth 8-6157] synthesizing module 'design_1_clk_wiz_1_0' [C:/FPGA_Projects/AXI_FIFO_Test/AXI_FIFO_Test.runs/synth_1/.Xil/Vivado-8564-Lenovo/realtime/design_1_clk_wiz_1_0_stub.v:5]
-INFO: [Synth 8-6155] done synthesizing module 'design_1_clk_wiz_1_0' (3#1) [C:/FPGA_Projects/AXI_FIFO_Test/AXI_FIFO_Test.runs/synth_1/.Xil/Vivado-8564-Lenovo/realtime/design_1_clk_wiz_1_0_stub.v:5]
-WARNING: [Synth 8-4446] all outputs are unconnected for this instance and logic may be removed [C:/FPGA_Projects/AXI_FIFO_Test/AXI_FIFO_Test.srcs/sources_1/bd/design_1/synth/design_1.v:130]
-INFO: [Synth 8-6157] synthesizing module 'design_1_ila_0_0' [C:/FPGA_Projects/AXI_FIFO_Test/AXI_FIFO_Test.runs/synth_1/.Xil/Vivado-8564-Lenovo/realtime/design_1_ila_0_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'design_1_ila_0_0' (4#1) [C:/FPGA_Projects/AXI_FIFO_Test/AXI_FIFO_Test.runs/synth_1/.Xil/Vivado-8564-Lenovo/realtime/design_1_ila_0_0_stub.v:6]
-INFO: [Synth 8-6157] synthesizing module 'design_1_mdm_0_0' [C:/FPGA_Projects/AXI_FIFO_Test/AXI_FIFO_Test.runs/synth_1/.Xil/Vivado-8564-Lenovo/realtime/design_1_mdm_0_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'design_1_mdm_0_0' (5#1) [C:/FPGA_Projects/AXI_FIFO_Test/AXI_FIFO_Test.runs/synth_1/.Xil/Vivado-8564-Lenovo/realtime/design_1_mdm_0_0_stub.v:6]
-INFO: [Synth 8-6157] synthesizing module 'design_1_microblaze_0_0' [C:/FPGA_Projects/AXI_FIFO_Test/AXI_FIFO_Test.runs/synth_1/.Xil/Vivado-8564-Lenovo/realtime/design_1_microblaze_0_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'design_1_microblaze_0_0' (6#1) [C:/FPGA_Projects/AXI_FIFO_Test/AXI_FIFO_Test.runs/synth_1/.Xil/Vivado-8564-Lenovo/realtime/design_1_microblaze_0_0_stub.v:6]
-WARNING: [Synth 8-350] instance 'microblaze_0' of module 'design_1_microblaze_0_0' requires 52 connections, but only 40 given [C:/FPGA_Projects/AXI_FIFO_Test/AXI_FIFO_Test.srcs/sources_1/bd/design_1/synth/design_1.v:155]
-INFO: [Synth 8-6157] synthesizing module 'microblaze_0_local_memory_imp_1K0VQXK' [C:/FPGA_Projects/AXI_FIFO_Test/AXI_FIFO_Test.srcs/sources_1/bd/design_1/synth/design_1.v:229]
-INFO: [Synth 8-6157] synthesizing module 'design_1_dlmb_bram_if_cntlr_0' [C:/FPGA_Projects/AXI_FIFO_Test/AXI_FIFO_Test.runs/synth_1/.Xil/Vivado-8564-Lenovo/realtime/design_1_dlmb_bram_if_cntlr_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'design_1_dlmb_bram_if_cntlr_0' (7#1) [C:/FPGA_Projects/AXI_FIFO_Test/AXI_FIFO_Test.runs/synth_1/.Xil/Vivado-8564-Lenovo/realtime/design_1_dlmb_bram_if_cntlr_0_stub.v:6]
-INFO: [Synth 8-6157] synthesizing module 'design_1_dlmb_v10_0' [C:/FPGA_Projects/AXI_FIFO_Test/AXI_FIFO_Test.runs/synth_1/.Xil/Vivado-8564-Lenovo/realtime/design_1_dlmb_v10_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'design_1_dlmb_v10_0' (8#1) [C:/FPGA_Projects/AXI_FIFO_Test/AXI_FIFO_Test.runs/synth_1/.Xil/Vivado-8564-Lenovo/realtime/design_1_dlmb_v10_0_stub.v:6]
-WARNING: [Synth 8-350] instance 'dlmb_v10' of module 'design_1_dlmb_v10_0' requires 25 connections, but only 24 given [C:/FPGA_Projects/AXI_FIFO_Test/AXI_FIFO_Test.srcs/sources_1/bd/design_1/synth/design_1.v:375]
-INFO: [Synth 8-6157] synthesizing module 'design_1_ilmb_bram_if_cntlr_0' [C:/FPGA_Projects/AXI_FIFO_Test/AXI_FIFO_Test.runs/synth_1/.Xil/Vivado-8564-Lenovo/realtime/design_1_ilmb_bram_if_cntlr_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'design_1_ilmb_bram_if_cntlr_0' (9#1) [C:/FPGA_Projects/AXI_FIFO_Test/AXI_FIFO_Test.runs/synth_1/.Xil/Vivado-8564-Lenovo/realtime/design_1_ilmb_bram_if_cntlr_0_stub.v:6]
-INFO: [Synth 8-6157] synthesizing module 'design_1_ilmb_v10_0' [C:/FPGA_Projects/AXI_FIFO_Test/AXI_FIFO_Test.runs/synth_1/.Xil/Vivado-8564-Lenovo/realtime/design_1_ilmb_v10_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'design_1_ilmb_v10_0' (10#1) [C:/FPGA_Projects/AXI_FIFO_Test/AXI_FIFO_Test.runs/synth_1/.Xil/Vivado-8564-Lenovo/realtime/design_1_ilmb_v10_0_stub.v:6]
-WARNING: [Synth 8-350] instance 'ilmb_v10' of module 'design_1_ilmb_v10_0' requires 25 connections, but only 24 given [C:/FPGA_Projects/AXI_FIFO_Test/AXI_FIFO_Test.srcs/sources_1/bd/design_1/synth/design_1.v:421]
-INFO: [Synth 8-6157] synthesizing module 'design_1_lmb_bram_0' [C:/FPGA_Projects/AXI_FIFO_Test/AXI_FIFO_Test.runs/synth_1/.Xil/Vivado-8564-Lenovo/realtime/design_1_lmb_bram_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'design_1_lmb_bram_0' (11#1) [C:/FPGA_Projects/AXI_FIFO_Test/AXI_FIFO_Test.runs/synth_1/.Xil/Vivado-8564-Lenovo/realtime/design_1_lmb_bram_0_stub.v:6]
-WARNING: [Synth 8-350] instance 'lmb_bram' of module 'design_1_lmb_bram_0' requires 16 connections, but only 14 given [C:/FPGA_Projects/AXI_FIFO_Test/AXI_FIFO_Test.srcs/sources_1/bd/design_1/synth/design_1.v:446]
-INFO: [Synth 8-6155] done synthesizing module 'microblaze_0_local_memory_imp_1K0VQXK' (12#1) [C:/FPGA_Projects/AXI_FIFO_Test/AXI_FIFO_Test.srcs/sources_1/bd/design_1/synth/design_1.v:229]
-INFO: [Synth 8-6157] synthesizing module 'design_1_rst_clk_wiz_1_100M_0' [C:/FPGA_Projects/AXI_FIFO_Test/AXI_FIFO_Test.runs/synth_1/.Xil/Vivado-8564-Lenovo/realtime/design_1_rst_clk_wiz_1_100M_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'design_1_rst_clk_wiz_1_100M_0' (13#1) [C:/FPGA_Projects/AXI_FIFO_Test/AXI_FIFO_Test.runs/synth_1/.Xil/Vivado-8564-Lenovo/realtime/design_1_rst_clk_wiz_1_100M_0_stub.v:6]
-WARNING: [Synth 8-350] instance 'rst_clk_wiz_1_100M' of module 'design_1_rst_clk_wiz_1_100M_0' requires 10 connections, but only 8 given [C:/FPGA_Projects/AXI_FIFO_Test/AXI_FIFO_Test.srcs/sources_1/bd/design_1/synth/design_1.v:218]
-INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'ila_0'. This will prevent further optimization [C:/FPGA_Projects/AXI_FIFO_Test/AXI_FIFO_Test.srcs/sources_1/bd/design_1/synth/design_1.v:130]
-INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'FPGA_ADC_interface_0'. This will prevent further optimization [C:/FPGA_Projects/AXI_FIFO_Test/AXI_FIFO_Test.srcs/sources_1/bd/design_1/synth/design_1.v:97]
-INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'rst_clk_wiz_1_100M'. This will prevent further optimization [C:/FPGA_Projects/AXI_FIFO_Test/AXI_FIFO_Test.srcs/sources_1/bd/design_1/synth/design_1.v:218]
-INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'axis_clock_converter_0'. This will prevent further optimization [C:/FPGA_Projects/AXI_FIFO_Test/AXI_FIFO_Test.srcs/sources_1/bd/design_1/synth/design_1.v:114]
-INFO: [Synth 8-6155] done synthesizing module 'design_1' (14#1) [C:/FPGA_Projects/AXI_FIFO_Test/AXI_FIFO_Test.srcs/sources_1/bd/design_1/synth/design_1.v:13]
-INFO: [Synth 8-6155] done synthesizing module 'design_1_wrapper' (15#1) [C:/FPGA_Projects/AXI_FIFO_Test/AXI_FIFO_Test.srcs/sources_1/bd/design_1/hdl/design_1_wrapper.v:12]
+INFO: [Synth 8-6157] synthesizing module 'design_1_wrapper' [C:/FPGA_Projects/ADC_SRAM_UART/ADC_SRAM_UART.srcs/sources_1/bd/design_1/hdl/design_1_wrapper.v:12]
+INFO: [Synth 8-6157] synthesizing module 'IOBUF' [C:/Xilinx/Vivado/2018.3/scripts/rt/data/unisim_comp.v:23615]
+	Parameter DRIVE bound to: 12 - type: integer 
+	Parameter IBUF_LOW_PWR bound to: TRUE - type: string 
+	Parameter IOSTANDARD bound to: DEFAULT - type: string 
+	Parameter SLEW bound to: SLOW - type: string 
+INFO: [Synth 8-6155] done synthesizing module 'IOBUF' (1#1) [C:/Xilinx/Vivado/2018.3/scripts/rt/data/unisim_comp.v:23615]
+INFO: [Synth 8-6157] synthesizing module 'design_1' [C:/FPGA_Projects/ADC_SRAM_UART/ADC_SRAM_UART.srcs/sources_1/bd/design_1/synth/design_1.v:13]
+INFO: [Synth 8-6157] synthesizing module 'design_1_FPGA_ADC_interface_0_1' [C:/FPGA_Projects/ADC_SRAM_UART/ADC_SRAM_UART.runs/synth_1/.Xil/Vivado-11996-Lenovo/realtime/design_1_FPGA_ADC_interface_0_1_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_FPGA_ADC_interface_0_1' (2#1) [C:/FPGA_Projects/ADC_SRAM_UART/ADC_SRAM_UART.runs/synth_1/.Xil/Vivado-11996-Lenovo/realtime/design_1_FPGA_ADC_interface_0_1_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'design_1_axi_emc_0_0' [C:/FPGA_Projects/ADC_SRAM_UART/ADC_SRAM_UART.runs/synth_1/.Xil/Vivado-11996-Lenovo/realtime/design_1_axi_emc_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_axi_emc_0_0' (3#1) [C:/FPGA_Projects/ADC_SRAM_UART/ADC_SRAM_UART.runs/synth_1/.Xil/Vivado-11996-Lenovo/realtime/design_1_axi_emc_0_0_stub.v:6]
+WARNING: [Synth 8-689] width (19) of port connection 'mem_a' does not match port width (32) of module 'design_1_axi_emc_0_0' [C:/FPGA_Projects/ADC_SRAM_UART/ADC_SRAM_UART.srcs/sources_1/bd/design_1/synth/design_1.v:247]
+WARNING: [Synth 8-350] instance 'axi_emc_0' of module 'design_1_axi_emc_0_0' requires 51 connections, but only 42 given [C:/FPGA_Projects/ADC_SRAM_UART/ADC_SRAM_UART.srcs/sources_1/bd/design_1/synth/design_1.v:246]
+INFO: [Synth 8-6157] synthesizing module 'design_1_axi_fifo_mm_s_0_0' [C:/FPGA_Projects/ADC_SRAM_UART/ADC_SRAM_UART.runs/synth_1/.Xil/Vivado-11996-Lenovo/realtime/design_1_axi_fifo_mm_s_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_axi_fifo_mm_s_0_0' (4#1) [C:/FPGA_Projects/ADC_SRAM_UART/ADC_SRAM_UART.runs/synth_1/.Xil/Vivado-11996-Lenovo/realtime/design_1_axi_fifo_mm_s_0_0_stub.v:6]
+WARNING: [Synth 8-350] instance 'axi_fifo_mm_s_0' of module 'design_1_axi_fifo_mm_s_0_0' requires 25 connections, but only 23 given [C:/FPGA_Projects/ADC_SRAM_UART/ADC_SRAM_UART.srcs/sources_1/bd/design_1/synth/design_1.v:289]
+INFO: [Synth 8-6157] synthesizing module 'design_1_axi_uartlite_0_0' [C:/FPGA_Projects/ADC_SRAM_UART/ADC_SRAM_UART.runs/synth_1/.Xil/Vivado-11996-Lenovo/realtime/design_1_axi_uartlite_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_axi_uartlite_0_0' (5#1) [C:/FPGA_Projects/ADC_SRAM_UART/ADC_SRAM_UART.runs/synth_1/.Xil/Vivado-11996-Lenovo/realtime/design_1_axi_uartlite_0_0_stub.v:6]
+WARNING: [Synth 8-350] instance 'axi_uartlite_0' of module 'design_1_axi_uartlite_0_0' requires 22 connections, but only 21 given [C:/FPGA_Projects/ADC_SRAM_UART/ADC_SRAM_UART.srcs/sources_1/bd/design_1/synth/design_1.v:313]
+INFO: [Synth 8-6157] synthesizing module 'design_1_axis_clock_converter_0_1' [C:/FPGA_Projects/ADC_SRAM_UART/ADC_SRAM_UART.runs/synth_1/.Xil/Vivado-11996-Lenovo/realtime/design_1_axis_clock_converter_0_1_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_axis_clock_converter_0_1' (6#1) [C:/FPGA_Projects/ADC_SRAM_UART/ADC_SRAM_UART.runs/synth_1/.Xil/Vivado-11996-Lenovo/realtime/design_1_axis_clock_converter_0_1_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'design_1_axis_interconnect_0_0' [C:/FPGA_Projects/ADC_SRAM_UART/ADC_SRAM_UART.srcs/sources_1/bd/design_1/synth/design_1.v:620]
+INFO: [Synth 8-6157] synthesizing module 's00_couplers_imp_1LLE45P' [C:/FPGA_Projects/ADC_SRAM_UART/ADC_SRAM_UART.srcs/sources_1/bd/design_1/synth/design_1.v:2114]
+INFO: [Synth 8-6157] synthesizing module 'design_1_auto_ss_k_0' [C:/FPGA_Projects/ADC_SRAM_UART/ADC_SRAM_UART.runs/synth_1/.Xil/Vivado-11996-Lenovo/realtime/design_1_auto_ss_k_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_auto_ss_k_0' (7#1) [C:/FPGA_Projects/ADC_SRAM_UART/ADC_SRAM_UART.runs/synth_1/.Xil/Vivado-11996-Lenovo/realtime/design_1_auto_ss_k_0_stub.v:6]
+WARNING: [Synth 8-350] instance 'auto_ss_k' of module 'design_1_auto_ss_k_0' requires 12 connections, but only 11 given [C:/FPGA_Projects/ADC_SRAM_UART/ADC_SRAM_UART.srcs/sources_1/bd/design_1/synth/design_1.v:2166]
+INFO: [Synth 8-6157] synthesizing module 'design_1_auto_us_0' [C:/FPGA_Projects/ADC_SRAM_UART/ADC_SRAM_UART.runs/synth_1/.Xil/Vivado-11996-Lenovo/realtime/design_1_auto_us_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_auto_us_0' (8#1) [C:/FPGA_Projects/ADC_SRAM_UART/ADC_SRAM_UART.runs/synth_1/.Xil/Vivado-11996-Lenovo/realtime/design_1_auto_us_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 's00_couplers_imp_1LLE45P' (9#1) [C:/FPGA_Projects/ADC_SRAM_UART/ADC_SRAM_UART.srcs/sources_1/bd/design_1/synth/design_1.v:2114]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_axis_interconnect_0_0' (10#1) [C:/FPGA_Projects/ADC_SRAM_UART/ADC_SRAM_UART.srcs/sources_1/bd/design_1/synth/design_1.v:620]
+INFO: [Synth 8-6157] synthesizing module 'design_1_clk_wiz_1_0' [C:/FPGA_Projects/ADC_SRAM_UART/ADC_SRAM_UART.runs/synth_1/.Xil/Vivado-11996-Lenovo/realtime/design_1_clk_wiz_1_0_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_clk_wiz_1_0' (11#1) [C:/FPGA_Projects/ADC_SRAM_UART/ADC_SRAM_UART.runs/synth_1/.Xil/Vivado-11996-Lenovo/realtime/design_1_clk_wiz_1_0_stub.v:5]
+WARNING: [Synth 8-4446] all outputs are unconnected for this instance and logic may be removed [C:/FPGA_Projects/ADC_SRAM_UART/ADC_SRAM_UART.srcs/sources_1/bd/design_1/synth/design_1.v:369]
+INFO: [Synth 8-6157] synthesizing module 'design_1_ila_0_0' [C:/FPGA_Projects/ADC_SRAM_UART/ADC_SRAM_UART.runs/synth_1/.Xil/Vivado-11996-Lenovo/realtime/design_1_ila_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_ila_0_0' (12#1) [C:/FPGA_Projects/ADC_SRAM_UART/ADC_SRAM_UART.runs/synth_1/.Xil/Vivado-11996-Lenovo/realtime/design_1_ila_0_0_stub.v:6]
+WARNING: [Synth 8-4446] all outputs are unconnected for this instance and logic may be removed [C:/FPGA_Projects/ADC_SRAM_UART/ADC_SRAM_UART.srcs/sources_1/bd/design_1/synth/design_1.v:384]
+INFO: [Synth 8-6157] synthesizing module 'design_1_ila_1_0' [C:/FPGA_Projects/ADC_SRAM_UART/ADC_SRAM_UART.runs/synth_1/.Xil/Vivado-11996-Lenovo/realtime/design_1_ila_1_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_ila_1_0' (13#1) [C:/FPGA_Projects/ADC_SRAM_UART/ADC_SRAM_UART.runs/synth_1/.Xil/Vivado-11996-Lenovo/realtime/design_1_ila_1_0_stub.v:6]
+WARNING: [Synth 8-4446] all outputs are unconnected for this instance and logic may be removed [C:/FPGA_Projects/ADC_SRAM_UART/ADC_SRAM_UART.srcs/sources_1/bd/design_1/synth/design_1.v:395]
+INFO: [Synth 8-6157] synthesizing module 'design_1_ila_2_0' [C:/FPGA_Projects/ADC_SRAM_UART/ADC_SRAM_UART.runs/synth_1/.Xil/Vivado-11996-Lenovo/realtime/design_1_ila_2_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_ila_2_0' (14#1) [C:/FPGA_Projects/ADC_SRAM_UART/ADC_SRAM_UART.runs/synth_1/.Xil/Vivado-11996-Lenovo/realtime/design_1_ila_2_0_stub.v:6]
+WARNING: [Synth 8-4446] all outputs are unconnected for this instance and logic may be removed [C:/FPGA_Projects/ADC_SRAM_UART/ADC_SRAM_UART.srcs/sources_1/bd/design_1/synth/design_1.v:406]
+INFO: [Synth 8-6157] synthesizing module 'design_1_ila_3_0' [C:/FPGA_Projects/ADC_SRAM_UART/ADC_SRAM_UART.runs/synth_1/.Xil/Vivado-11996-Lenovo/realtime/design_1_ila_3_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_ila_3_0' (15#1) [C:/FPGA_Projects/ADC_SRAM_UART/ADC_SRAM_UART.runs/synth_1/.Xil/Vivado-11996-Lenovo/realtime/design_1_ila_3_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'design_1_mdm_0_0' [C:/FPGA_Projects/ADC_SRAM_UART/ADC_SRAM_UART.runs/synth_1/.Xil/Vivado-11996-Lenovo/realtime/design_1_mdm_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_mdm_0_0' (16#1) [C:/FPGA_Projects/ADC_SRAM_UART/ADC_SRAM_UART.runs/synth_1/.Xil/Vivado-11996-Lenovo/realtime/design_1_mdm_0_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'design_1_microblaze_0_0' [C:/FPGA_Projects/ADC_SRAM_UART/ADC_SRAM_UART.runs/synth_1/.Xil/Vivado-11996-Lenovo/realtime/design_1_microblaze_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_microblaze_0_0' (17#1) [C:/FPGA_Projects/ADC_SRAM_UART/ADC_SRAM_UART.runs/synth_1/.Xil/Vivado-11996-Lenovo/realtime/design_1_microblaze_0_0_stub.v:6]
+WARNING: [Synth 8-350] instance 'microblaze_0' of module 'design_1_microblaze_0_0' requires 52 connections, but only 51 given [C:/FPGA_Projects/ADC_SRAM_UART/ADC_SRAM_UART.srcs/sources_1/bd/design_1/synth/design_1.v:430]
+INFO: [Synth 8-6157] synthesizing module 'design_1_microblaze_0_axi_periph_0' [C:/FPGA_Projects/ADC_SRAM_UART/ADC_SRAM_UART.srcs/sources_1/bd/design_1/synth/design_1.v:690]
+INFO: [Synth 8-6157] synthesizing module 'm00_couplers_imp_8RVYHO' [C:/FPGA_Projects/ADC_SRAM_UART/ADC_SRAM_UART.srcs/sources_1/bd/design_1/synth/design_1.v:1346]
+INFO: [Synth 8-6155] done synthesizing module 'm00_couplers_imp_8RVYHO' (18#1) [C:/FPGA_Projects/ADC_SRAM_UART/ADC_SRAM_UART.srcs/sources_1/bd/design_1/synth/design_1.v:1346]
+INFO: [Synth 8-6157] synthesizing module 'm01_couplers_imp_1UTB3Y5' [C:/FPGA_Projects/ADC_SRAM_UART/ADC_SRAM_UART.srcs/sources_1/bd/design_1/synth/design_1.v:1478]
+INFO: [Synth 8-6157] synthesizing module 'design_1_auto_pc_0' [C:/FPGA_Projects/ADC_SRAM_UART/ADC_SRAM_UART.runs/synth_1/.Xil/Vivado-11996-Lenovo/realtime/design_1_auto_pc_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_auto_pc_0' (19#1) [C:/FPGA_Projects/ADC_SRAM_UART/ADC_SRAM_UART.runs/synth_1/.Xil/Vivado-11996-Lenovo/realtime/design_1_auto_pc_0_stub.v:6]
+WARNING: [Synth 8-350] instance 'auto_pc' of module 'design_1_auto_pc_0' requires 56 connections, but only 52 given [C:/FPGA_Projects/ADC_SRAM_UART/ADC_SRAM_UART.srcs/sources_1/bd/design_1/synth/design_1.v:1693]
+INFO: [Synth 8-6155] done synthesizing module 'm01_couplers_imp_1UTB3Y5' (20#1) [C:/FPGA_Projects/ADC_SRAM_UART/ADC_SRAM_UART.srcs/sources_1/bd/design_1/synth/design_1.v:1478]
+INFO: [Synth 8-6157] synthesizing module 'm02_couplers_imp_7ANRHB' [C:/FPGA_Projects/ADC_SRAM_UART/ADC_SRAM_UART.srcs/sources_1/bd/design_1/synth/design_1.v:1748]
+INFO: [Synth 8-6155] done synthesizing module 'm02_couplers_imp_7ANRHB' (21#1) [C:/FPGA_Projects/ADC_SRAM_UART/ADC_SRAM_UART.srcs/sources_1/bd/design_1/synth/design_1.v:1748]
+INFO: [Synth 8-6157] synthesizing module 's00_couplers_imp_1RZP34U' [C:/FPGA_Projects/ADC_SRAM_UART/ADC_SRAM_UART.srcs/sources_1/bd/design_1/synth/design_1.v:2192]
+INFO: [Synth 8-6155] done synthesizing module 's00_couplers_imp_1RZP34U' (22#1) [C:/FPGA_Projects/ADC_SRAM_UART/ADC_SRAM_UART.srcs/sources_1/bd/design_1/synth/design_1.v:2192]
+INFO: [Synth 8-6157] synthesizing module 'design_1_xbar_0' [C:/FPGA_Projects/ADC_SRAM_UART/ADC_SRAM_UART.runs/synth_1/.Xil/Vivado-11996-Lenovo/realtime/design_1_xbar_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_xbar_0' (23#1) [C:/FPGA_Projects/ADC_SRAM_UART/ADC_SRAM_UART.runs/synth_1/.Xil/Vivado-11996-Lenovo/realtime/design_1_xbar_0_stub.v:6]
+WARNING: [Synth 8-689] width (6) of port connection 'm_axi_arprot' does not match port width (9) of module 'design_1_xbar_0' [C:/FPGA_Projects/ADC_SRAM_UART/ADC_SRAM_UART.srcs/sources_1/bd/design_1/synth/design_1.v:1307]
+WARNING: [Synth 8-689] width (6) of port connection 'm_axi_awprot' does not match port width (9) of module 'design_1_xbar_0' [C:/FPGA_Projects/ADC_SRAM_UART/ADC_SRAM_UART.srcs/sources_1/bd/design_1/synth/design_1.v:1311]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_microblaze_0_axi_periph_0' (24#1) [C:/FPGA_Projects/ADC_SRAM_UART/ADC_SRAM_UART.srcs/sources_1/bd/design_1/synth/design_1.v:690]
+INFO: [Synth 8-6157] synthesizing module 'microblaze_0_local_memory_imp_1K0VQXK' [C:/FPGA_Projects/ADC_SRAM_UART/ADC_SRAM_UART.srcs/sources_1/bd/design_1/synth/design_1.v:1880]
+INFO: [Synth 8-6157] synthesizing module 'design_1_dlmb_bram_if_cntlr_0' [C:/FPGA_Projects/ADC_SRAM_UART/ADC_SRAM_UART.runs/synth_1/.Xil/Vivado-11996-Lenovo/realtime/design_1_dlmb_bram_if_cntlr_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_dlmb_bram_if_cntlr_0' (25#1) [C:/FPGA_Projects/ADC_SRAM_UART/ADC_SRAM_UART.runs/synth_1/.Xil/Vivado-11996-Lenovo/realtime/design_1_dlmb_bram_if_cntlr_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'design_1_dlmb_v10_0' [C:/FPGA_Projects/ADC_SRAM_UART/ADC_SRAM_UART.runs/synth_1/.Xil/Vivado-11996-Lenovo/realtime/design_1_dlmb_v10_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_dlmb_v10_0' (26#1) [C:/FPGA_Projects/ADC_SRAM_UART/ADC_SRAM_UART.runs/synth_1/.Xil/Vivado-11996-Lenovo/realtime/design_1_dlmb_v10_0_stub.v:6]
+WARNING: [Synth 8-350] instance 'dlmb_v10' of module 'design_1_dlmb_v10_0' requires 25 connections, but only 24 given [C:/FPGA_Projects/ADC_SRAM_UART/ADC_SRAM_UART.srcs/sources_1/bd/design_1/synth/design_1.v:2026]
+INFO: [Synth 8-6157] synthesizing module 'design_1_ilmb_bram_if_cntlr_0' [C:/FPGA_Projects/ADC_SRAM_UART/ADC_SRAM_UART.runs/synth_1/.Xil/Vivado-11996-Lenovo/realtime/design_1_ilmb_bram_if_cntlr_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_ilmb_bram_if_cntlr_0' (27#1) [C:/FPGA_Projects/ADC_SRAM_UART/ADC_SRAM_UART.runs/synth_1/.Xil/Vivado-11996-Lenovo/realtime/design_1_ilmb_bram_if_cntlr_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'design_1_ilmb_v10_0' [C:/FPGA_Projects/ADC_SRAM_UART/ADC_SRAM_UART.runs/synth_1/.Xil/Vivado-11996-Lenovo/realtime/design_1_ilmb_v10_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_ilmb_v10_0' (28#1) [C:/FPGA_Projects/ADC_SRAM_UART/ADC_SRAM_UART.runs/synth_1/.Xil/Vivado-11996-Lenovo/realtime/design_1_ilmb_v10_0_stub.v:6]
+WARNING: [Synth 8-350] instance 'ilmb_v10' of module 'design_1_ilmb_v10_0' requires 25 connections, but only 24 given [C:/FPGA_Projects/ADC_SRAM_UART/ADC_SRAM_UART.srcs/sources_1/bd/design_1/synth/design_1.v:2072]
+INFO: [Synth 8-6157] synthesizing module 'design_1_lmb_bram_0' [C:/FPGA_Projects/ADC_SRAM_UART/ADC_SRAM_UART.runs/synth_1/.Xil/Vivado-11996-Lenovo/realtime/design_1_lmb_bram_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_lmb_bram_0' (29#1) [C:/FPGA_Projects/ADC_SRAM_UART/ADC_SRAM_UART.runs/synth_1/.Xil/Vivado-11996-Lenovo/realtime/design_1_lmb_bram_0_stub.v:6]
+WARNING: [Synth 8-350] instance 'lmb_bram' of module 'design_1_lmb_bram_0' requires 16 connections, but only 14 given [C:/FPGA_Projects/ADC_SRAM_UART/ADC_SRAM_UART.srcs/sources_1/bd/design_1/synth/design_1.v:2097]
+INFO: [Synth 8-6155] done synthesizing module 'microblaze_0_local_memory_imp_1K0VQXK' (30#1) [C:/FPGA_Projects/ADC_SRAM_UART/ADC_SRAM_UART.srcs/sources_1/bd/design_1/synth/design_1.v:1880]
+INFO: [Synth 8-6157] synthesizing module 'design_1_proc_sys_reset_0_0' [C:/FPGA_Projects/ADC_SRAM_UART/ADC_SRAM_UART.runs/synth_1/.Xil/Vivado-11996-Lenovo/realtime/design_1_proc_sys_reset_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_proc_sys_reset_0_0' (31#1) [C:/FPGA_Projects/ADC_SRAM_UART/ADC_SRAM_UART.runs/synth_1/.Xil/Vivado-11996-Lenovo/realtime/design_1_proc_sys_reset_0_0_stub.v:6]
+WARNING: [Synth 8-350] instance 'proc_sys_reset_0' of module 'design_1_proc_sys_reset_0_0' requires 10 connections, but only 7 given [C:/FPGA_Projects/ADC_SRAM_UART/ADC_SRAM_UART.srcs/sources_1/bd/design_1/synth/design_1.v:599]
+INFO: [Synth 8-6157] synthesizing module 'design_1_rst_clk_wiz_1_100M_0' [C:/FPGA_Projects/ADC_SRAM_UART/ADC_SRAM_UART.runs/synth_1/.Xil/Vivado-11996-Lenovo/realtime/design_1_rst_clk_wiz_1_100M_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_rst_clk_wiz_1_100M_0' (32#1) [C:/FPGA_Projects/ADC_SRAM_UART/ADC_SRAM_UART.runs/synth_1/.Xil/Vivado-11996-Lenovo/realtime/design_1_rst_clk_wiz_1_100M_0_stub.v:6]
+INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'ila_0'. This will prevent further optimization [C:/FPGA_Projects/ADC_SRAM_UART/ADC_SRAM_UART.srcs/sources_1/bd/design_1/synth/design_1.v:369]
+INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'FPGA_ADC_interface_0'. This will prevent further optimization [C:/FPGA_Projects/ADC_SRAM_UART/ADC_SRAM_UART.srcs/sources_1/bd/design_1/synth/design_1.v:229]
+INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'rst_clk_wiz_1_100M'. This will prevent further optimization [C:/FPGA_Projects/ADC_SRAM_UART/ADC_SRAM_UART.srcs/sources_1/bd/design_1/synth/design_1.v:607]
+INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'ila_1'. This will prevent further optimization [C:/FPGA_Projects/ADC_SRAM_UART/ADC_SRAM_UART.srcs/sources_1/bd/design_1/synth/design_1.v:384]
+INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'axis_clock_converter_0'. This will prevent further optimization [C:/FPGA_Projects/ADC_SRAM_UART/ADC_SRAM_UART.srcs/sources_1/bd/design_1/synth/design_1.v:335]
+INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'proc_sys_reset_0'. This will prevent further optimization [C:/FPGA_Projects/ADC_SRAM_UART/ADC_SRAM_UART.srcs/sources_1/bd/design_1/synth/design_1.v:599]
+INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'axi_fifo_mm_s_0'. This will prevent further optimization [C:/FPGA_Projects/ADC_SRAM_UART/ADC_SRAM_UART.srcs/sources_1/bd/design_1/synth/design_1.v:289]
+INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'axis_interconnect_0'. This will prevent further optimization [C:/FPGA_Projects/ADC_SRAM_UART/ADC_SRAM_UART.srcs/sources_1/bd/design_1/synth/design_1.v:348]
+INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'ila_2'. This will prevent further optimization [C:/FPGA_Projects/ADC_SRAM_UART/ADC_SRAM_UART.srcs/sources_1/bd/design_1/synth/design_1.v:395]
+INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'ila_3'. This will prevent further optimization [C:/FPGA_Projects/ADC_SRAM_UART/ADC_SRAM_UART.srcs/sources_1/bd/design_1/synth/design_1.v:406]
+INFO: [Synth 8-6155] done synthesizing module 'design_1' (33#1) [C:/FPGA_Projects/ADC_SRAM_UART/ADC_SRAM_UART.srcs/sources_1/bd/design_1/synth/design_1.v:13]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_wrapper' (34#1) [C:/FPGA_Projects/ADC_SRAM_UART/ADC_SRAM_UART.srcs/sources_1/bd/design_1/hdl/design_1_wrapper.v:12]
+WARNING: [Synth 8-3331] design s00_couplers_imp_1RZP34U has unconnected port M_ACLK
+WARNING: [Synth 8-3331] design s00_couplers_imp_1RZP34U has unconnected port M_ARESETN
+WARNING: [Synth 8-3331] design s00_couplers_imp_1RZP34U has unconnected port S_ACLK
+WARNING: [Synth 8-3331] design s00_couplers_imp_1RZP34U has unconnected port S_ARESETN
+WARNING: [Synth 8-3331] design m02_couplers_imp_7ANRHB has unconnected port M_ACLK
+WARNING: [Synth 8-3331] design m02_couplers_imp_7ANRHB has unconnected port M_ARESETN
+WARNING: [Synth 8-3331] design m02_couplers_imp_7ANRHB has unconnected port S_ACLK
+WARNING: [Synth 8-3331] design m02_couplers_imp_7ANRHB has unconnected port S_ARESETN
+WARNING: [Synth 8-3331] design m01_couplers_imp_1UTB3Y5 has unconnected port M_ACLK
+WARNING: [Synth 8-3331] design m01_couplers_imp_1UTB3Y5 has unconnected port M_ARESETN
+WARNING: [Synth 8-3331] design m00_couplers_imp_8RVYHO has unconnected port M_ACLK
+WARNING: [Synth 8-3331] design m00_couplers_imp_8RVYHO has unconnected port M_ARESETN
+WARNING: [Synth 8-3331] design m00_couplers_imp_8RVYHO has unconnected port S_ACLK
+WARNING: [Synth 8-3331] design m00_couplers_imp_8RVYHO has unconnected port S_ARESETN
+WARNING: [Synth 8-3331] design design_1_microblaze_0_axi_periph_0 has unconnected port M00_ACLK
+WARNING: [Synth 8-3331] design design_1_microblaze_0_axi_periph_0 has unconnected port M00_ARESETN
+WARNING: [Synth 8-3331] design design_1_microblaze_0_axi_periph_0 has unconnected port M01_ACLK
+WARNING: [Synth 8-3331] design design_1_microblaze_0_axi_periph_0 has unconnected port M01_ARESETN
+WARNING: [Synth 8-3331] design design_1_microblaze_0_axi_periph_0 has unconnected port M02_ACLK
+WARNING: [Synth 8-3331] design design_1_microblaze_0_axi_periph_0 has unconnected port M02_ARESETN
+WARNING: [Synth 8-3331] design design_1_microblaze_0_axi_periph_0 has unconnected port S00_ACLK
+WARNING: [Synth 8-3331] design design_1_microblaze_0_axi_periph_0 has unconnected port S00_ARESETN
+WARNING: [Synth 8-3331] design s00_couplers_imp_1LLE45P has unconnected port M_AXIS_ACLK
+WARNING: [Synth 8-3331] design s00_couplers_imp_1LLE45P has unconnected port M_AXIS_ARESETN
+WARNING: [Synth 8-3331] design design_1_axis_interconnect_0_0 has unconnected port ACLK
+WARNING: [Synth 8-3331] design design_1_axis_interconnect_0_0 has unconnected port ARESETN
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 581.270 ; gain = 150.715
+Finished RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 617.129 ; gain = 156.855
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -83,72 +165,98 @@ Report Check Netlist:
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 581.270 ; gain = 150.715
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 617.129 ; gain = 156.855
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 581.270 ; gain = 150.715
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 617.129 ; gain = 156.855
 ---------------------------------------------------------------------------------
+INFO: [Netlist 29-17] Analyzing 8 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Device 21-403] Loading part xc7a35tcpg236-1
 INFO: [Project 1-570] Preparing netlist for logic optimization
 
 Processing XDC Constraints
 Initializing timing engine
-Parsing XDC File [c:/FPGA_Projects/AXI_FIFO_Test/AXI_FIFO_Test.srcs/sources_1/bd/design_1/ip/design_1_mdm_0_0/design_1_mdm_0_0/design_1_mdm_0_0_in_context.xdc] for cell 'design_1_i/mdm_0'
-Finished Parsing XDC File [c:/FPGA_Projects/AXI_FIFO_Test/AXI_FIFO_Test.srcs/sources_1/bd/design_1/ip/design_1_mdm_0_0/design_1_mdm_0_0/design_1_mdm_0_0_in_context.xdc] for cell 'design_1_i/mdm_0'
-Parsing XDC File [c:/FPGA_Projects/AXI_FIFO_Test/AXI_FIFO_Test.srcs/sources_1/bd/design_1/ip/design_1_microblaze_0_0/design_1_microblaze_0_0/design_1_microblaze_0_0_in_context.xdc] for cell 'design_1_i/microblaze_0'
-Finished Parsing XDC File [c:/FPGA_Projects/AXI_FIFO_Test/AXI_FIFO_Test.srcs/sources_1/bd/design_1/ip/design_1_microblaze_0_0/design_1_microblaze_0_0/design_1_microblaze_0_0_in_context.xdc] for cell 'design_1_i/microblaze_0'
-Parsing XDC File [c:/FPGA_Projects/AXI_FIFO_Test/AXI_FIFO_Test.srcs/sources_1/bd/design_1/ip/design_1_dlmb_v10_0/design_1_dlmb_v10_0/design_1_dlmb_v10_0_in_context.xdc] for cell 'design_1_i/microblaze_0_local_memory/dlmb_v10'
-Finished Parsing XDC File [c:/FPGA_Projects/AXI_FIFO_Test/AXI_FIFO_Test.srcs/sources_1/bd/design_1/ip/design_1_dlmb_v10_0/design_1_dlmb_v10_0/design_1_dlmb_v10_0_in_context.xdc] for cell 'design_1_i/microblaze_0_local_memory/dlmb_v10'
-Parsing XDC File [c:/FPGA_Projects/AXI_FIFO_Test/AXI_FIFO_Test.srcs/sources_1/bd/design_1/ip/design_1_ilmb_v10_0/design_1_ilmb_v10_0/design_1_dlmb_v10_0_in_context.xdc] for cell 'design_1_i/microblaze_0_local_memory/ilmb_v10'
-Finished Parsing XDC File [c:/FPGA_Projects/AXI_FIFO_Test/AXI_FIFO_Test.srcs/sources_1/bd/design_1/ip/design_1_ilmb_v10_0/design_1_ilmb_v10_0/design_1_dlmb_v10_0_in_context.xdc] for cell 'design_1_i/microblaze_0_local_memory/ilmb_v10'
-Parsing XDC File [c:/FPGA_Projects/AXI_FIFO_Test/AXI_FIFO_Test.srcs/sources_1/bd/design_1/ip/design_1_dlmb_bram_if_cntlr_0/design_1_dlmb_bram_if_cntlr_0/design_1_ilmb_bram_if_cntlr_0_in_context.xdc] for cell 'design_1_i/microblaze_0_local_memory/dlmb_bram_if_cntlr'
-Finished Parsing XDC File [c:/FPGA_Projects/AXI_FIFO_Test/AXI_FIFO_Test.srcs/sources_1/bd/design_1/ip/design_1_dlmb_bram_if_cntlr_0/design_1_dlmb_bram_if_cntlr_0/design_1_ilmb_bram_if_cntlr_0_in_context.xdc] for cell 'design_1_i/microblaze_0_local_memory/dlmb_bram_if_cntlr'
-Parsing XDC File [c:/FPGA_Projects/AXI_FIFO_Test/AXI_FIFO_Test.srcs/sources_1/bd/design_1/ip/design_1_ilmb_bram_if_cntlr_0/design_1_ilmb_bram_if_cntlr_0/design_1_ilmb_bram_if_cntlr_0_in_context.xdc] for cell 'design_1_i/microblaze_0_local_memory/ilmb_bram_if_cntlr'
-Finished Parsing XDC File [c:/FPGA_Projects/AXI_FIFO_Test/AXI_FIFO_Test.srcs/sources_1/bd/design_1/ip/design_1_ilmb_bram_if_cntlr_0/design_1_ilmb_bram_if_cntlr_0/design_1_ilmb_bram_if_cntlr_0_in_context.xdc] for cell 'design_1_i/microblaze_0_local_memory/ilmb_bram_if_cntlr'
-Parsing XDC File [c:/FPGA_Projects/AXI_FIFO_Test/AXI_FIFO_Test.srcs/sources_1/bd/design_1/ip/design_1_lmb_bram_0/design_1_lmb_bram_0/design_1_lmb_bram_0_in_context.xdc] for cell 'design_1_i/microblaze_0_local_memory/lmb_bram'
-Finished Parsing XDC File [c:/FPGA_Projects/AXI_FIFO_Test/AXI_FIFO_Test.srcs/sources_1/bd/design_1/ip/design_1_lmb_bram_0/design_1_lmb_bram_0/design_1_lmb_bram_0_in_context.xdc] for cell 'design_1_i/microblaze_0_local_memory/lmb_bram'
-Parsing XDC File [c:/FPGA_Projects/AXI_FIFO_Test/AXI_FIFO_Test.srcs/sources_1/bd/design_1/ip/design_1_clk_wiz_1_0/design_1_clk_wiz_1_0/design_1_clk_wiz_1_0_in_context.xdc] for cell 'design_1_i/clk_wiz_1'
-Finished Parsing XDC File [c:/FPGA_Projects/AXI_FIFO_Test/AXI_FIFO_Test.srcs/sources_1/bd/design_1/ip/design_1_clk_wiz_1_0/design_1_clk_wiz_1_0/design_1_clk_wiz_1_0_in_context.xdc] for cell 'design_1_i/clk_wiz_1'
-Parsing XDC File [c:/FPGA_Projects/AXI_FIFO_Test/AXI_FIFO_Test.srcs/sources_1/bd/design_1/ip/design_1_rst_clk_wiz_1_100M_0/design_1_rst_clk_wiz_1_100M_0/design_1_rst_clk_wiz_1_100M_0_in_context.xdc] for cell 'design_1_i/rst_clk_wiz_1_100M'
-Finished Parsing XDC File [c:/FPGA_Projects/AXI_FIFO_Test/AXI_FIFO_Test.srcs/sources_1/bd/design_1/ip/design_1_rst_clk_wiz_1_100M_0/design_1_rst_clk_wiz_1_100M_0/design_1_rst_clk_wiz_1_100M_0_in_context.xdc] for cell 'design_1_i/rst_clk_wiz_1_100M'
-Parsing XDC File [c:/FPGA_Projects/AXI_FIFO_Test/AXI_FIFO_Test.srcs/sources_1/bd/design_1/ip/design_1_axis_clock_converter_0_0/design_1_axis_clock_converter_0_0/design_1_axis_clock_converter_0_0_in_context.xdc] for cell 'design_1_i/axis_clock_converter_0'
-Finished Parsing XDC File [c:/FPGA_Projects/AXI_FIFO_Test/AXI_FIFO_Test.srcs/sources_1/bd/design_1/ip/design_1_axis_clock_converter_0_0/design_1_axis_clock_converter_0_0/design_1_axis_clock_converter_0_0_in_context.xdc] for cell 'design_1_i/axis_clock_converter_0'
-Parsing XDC File [c:/FPGA_Projects/AXI_FIFO_Test/AXI_FIFO_Test.srcs/sources_1/bd/design_1/ip/design_1_FPGA_ADC_interface_0_1/design_1_FPGA_ADC_interface_0_1/design_1_FPGA_ADC_interface_0_1_in_context.xdc] for cell 'design_1_i/FPGA_ADC_interface_0'
-Finished Parsing XDC File [c:/FPGA_Projects/AXI_FIFO_Test/AXI_FIFO_Test.srcs/sources_1/bd/design_1/ip/design_1_FPGA_ADC_interface_0_1/design_1_FPGA_ADC_interface_0_1/design_1_FPGA_ADC_interface_0_1_in_context.xdc] for cell 'design_1_i/FPGA_ADC_interface_0'
-Parsing XDC File [c:/FPGA_Projects/AXI_FIFO_Test/AXI_FIFO_Test.srcs/sources_1/bd/design_1/ip/design_1_ila_0_0/design_1_ila_0_0/design_1_ila_0_0_in_context.xdc] for cell 'design_1_i/ila_0'
-Finished Parsing XDC File [c:/FPGA_Projects/AXI_FIFO_Test/AXI_FIFO_Test.srcs/sources_1/bd/design_1/ip/design_1_ila_0_0/design_1_ila_0_0/design_1_ila_0_0_in_context.xdc] for cell 'design_1_i/ila_0'
-Parsing XDC File [C:/FPGA_Projects/CmodA7_Master.xdc]
-Finished Parsing XDC File [C:/FPGA_Projects/CmodA7_Master.xdc]
-INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [C:/FPGA_Projects/CmodA7_Master.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/design_1_wrapper_propImpl.xdc].
+Parsing XDC File [c:/FPGA_Projects/ADC_SRAM_UART/ADC_SRAM_UART.srcs/sources_1/bd/design_1/ip/design_1_mdm_0_0/design_1_mdm_0_0/design_1_mdm_0_0_in_context.xdc] for cell 'design_1_i/mdm_0'
+Finished Parsing XDC File [c:/FPGA_Projects/ADC_SRAM_UART/ADC_SRAM_UART.srcs/sources_1/bd/design_1/ip/design_1_mdm_0_0/design_1_mdm_0_0/design_1_mdm_0_0_in_context.xdc] for cell 'design_1_i/mdm_0'
+Parsing XDC File [c:/FPGA_Projects/ADC_SRAM_UART/ADC_SRAM_UART.srcs/sources_1/bd/design_1/ip/design_1_microblaze_0_0/design_1_microblaze_0_0/design_1_microblaze_0_0_in_context.xdc] for cell 'design_1_i/microblaze_0'
+Finished Parsing XDC File [c:/FPGA_Projects/ADC_SRAM_UART/ADC_SRAM_UART.srcs/sources_1/bd/design_1/ip/design_1_microblaze_0_0/design_1_microblaze_0_0/design_1_microblaze_0_0_in_context.xdc] for cell 'design_1_i/microblaze_0'
+Parsing XDC File [c:/FPGA_Projects/ADC_SRAM_UART/ADC_SRAM_UART.srcs/sources_1/bd/design_1/ip/design_1_dlmb_v10_0/design_1_dlmb_v10_0/design_1_dlmb_v10_0_in_context.xdc] for cell 'design_1_i/microblaze_0_local_memory/dlmb_v10'
+Finished Parsing XDC File [c:/FPGA_Projects/ADC_SRAM_UART/ADC_SRAM_UART.srcs/sources_1/bd/design_1/ip/design_1_dlmb_v10_0/design_1_dlmb_v10_0/design_1_dlmb_v10_0_in_context.xdc] for cell 'design_1_i/microblaze_0_local_memory/dlmb_v10'
+Parsing XDC File [c:/FPGA_Projects/ADC_SRAM_UART/ADC_SRAM_UART.srcs/sources_1/bd/design_1/ip/design_1_ilmb_v10_0/design_1_ilmb_v10_0/design_1_dlmb_v10_0_in_context.xdc] for cell 'design_1_i/microblaze_0_local_memory/ilmb_v10'
+Finished Parsing XDC File [c:/FPGA_Projects/ADC_SRAM_UART/ADC_SRAM_UART.srcs/sources_1/bd/design_1/ip/design_1_ilmb_v10_0/design_1_ilmb_v10_0/design_1_dlmb_v10_0_in_context.xdc] for cell 'design_1_i/microblaze_0_local_memory/ilmb_v10'
+Parsing XDC File [c:/FPGA_Projects/ADC_SRAM_UART/ADC_SRAM_UART.srcs/sources_1/bd/design_1/ip/design_1_dlmb_bram_if_cntlr_0/design_1_dlmb_bram_if_cntlr_0/design_1_dlmb_bram_if_cntlr_0_in_context.xdc] for cell 'design_1_i/microblaze_0_local_memory/dlmb_bram_if_cntlr'
+Finished Parsing XDC File [c:/FPGA_Projects/ADC_SRAM_UART/ADC_SRAM_UART.srcs/sources_1/bd/design_1/ip/design_1_dlmb_bram_if_cntlr_0/design_1_dlmb_bram_if_cntlr_0/design_1_dlmb_bram_if_cntlr_0_in_context.xdc] for cell 'design_1_i/microblaze_0_local_memory/dlmb_bram_if_cntlr'
+Parsing XDC File [c:/FPGA_Projects/ADC_SRAM_UART/ADC_SRAM_UART.srcs/sources_1/bd/design_1/ip/design_1_ilmb_bram_if_cntlr_0/design_1_ilmb_bram_if_cntlr_0/design_1_ilmb_bram_if_cntlr_0_in_context.xdc] for cell 'design_1_i/microblaze_0_local_memory/ilmb_bram_if_cntlr'
+Finished Parsing XDC File [c:/FPGA_Projects/ADC_SRAM_UART/ADC_SRAM_UART.srcs/sources_1/bd/design_1/ip/design_1_ilmb_bram_if_cntlr_0/design_1_ilmb_bram_if_cntlr_0/design_1_ilmb_bram_if_cntlr_0_in_context.xdc] for cell 'design_1_i/microblaze_0_local_memory/ilmb_bram_if_cntlr'
+Parsing XDC File [c:/FPGA_Projects/ADC_SRAM_UART/ADC_SRAM_UART.srcs/sources_1/bd/design_1/ip/design_1_lmb_bram_0/design_1_lmb_bram_0/design_1_lmb_bram_0_in_context.xdc] for cell 'design_1_i/microblaze_0_local_memory/lmb_bram'
+Finished Parsing XDC File [c:/FPGA_Projects/ADC_SRAM_UART/ADC_SRAM_UART.srcs/sources_1/bd/design_1/ip/design_1_lmb_bram_0/design_1_lmb_bram_0/design_1_lmb_bram_0_in_context.xdc] for cell 'design_1_i/microblaze_0_local_memory/lmb_bram'
+Parsing XDC File [c:/FPGA_Projects/ADC_SRAM_UART/ADC_SRAM_UART.srcs/sources_1/bd/design_1/ip/design_1_clk_wiz_1_0/design_1_clk_wiz_1_0/design_1_clk_wiz_1_0_in_context.xdc] for cell 'design_1_i/clk_wiz_1'
+Finished Parsing XDC File [c:/FPGA_Projects/ADC_SRAM_UART/ADC_SRAM_UART.srcs/sources_1/bd/design_1/ip/design_1_clk_wiz_1_0/design_1_clk_wiz_1_0/design_1_clk_wiz_1_0_in_context.xdc] for cell 'design_1_i/clk_wiz_1'
+Parsing XDC File [c:/FPGA_Projects/ADC_SRAM_UART/ADC_SRAM_UART.srcs/sources_1/bd/design_1/ip/design_1_rst_clk_wiz_1_100M_0/design_1_rst_clk_wiz_1_100M_0/design_1_rst_clk_wiz_1_100M_0_in_context.xdc] for cell 'design_1_i/rst_clk_wiz_1_100M'
+Finished Parsing XDC File [c:/FPGA_Projects/ADC_SRAM_UART/ADC_SRAM_UART.srcs/sources_1/bd/design_1/ip/design_1_rst_clk_wiz_1_100M_0/design_1_rst_clk_wiz_1_100M_0/design_1_rst_clk_wiz_1_100M_0_in_context.xdc] for cell 'design_1_i/rst_clk_wiz_1_100M'
+Parsing XDC File [c:/FPGA_Projects/ADC_SRAM_UART/ADC_SRAM_UART.srcs/sources_1/bd/design_1/ip/design_1_FPGA_ADC_interface_0_1/design_1_FPGA_ADC_interface_0_1/design_1_FPGA_ADC_interface_0_1_in_context.xdc] for cell 'design_1_i/FPGA_ADC_interface_0'
+Finished Parsing XDC File [c:/FPGA_Projects/ADC_SRAM_UART/ADC_SRAM_UART.srcs/sources_1/bd/design_1/ip/design_1_FPGA_ADC_interface_0_1/design_1_FPGA_ADC_interface_0_1/design_1_FPGA_ADC_interface_0_1_in_context.xdc] for cell 'design_1_i/FPGA_ADC_interface_0'
+Parsing XDC File [c:/FPGA_Projects/ADC_SRAM_UART/ADC_SRAM_UART.srcs/sources_1/bd/design_1/ip/design_1_ila_0_0/design_1_ila_0_0/design_1_ila_0_0_in_context.xdc] for cell 'design_1_i/ila_0'
+Finished Parsing XDC File [c:/FPGA_Projects/ADC_SRAM_UART/ADC_SRAM_UART.srcs/sources_1/bd/design_1/ip/design_1_ila_0_0/design_1_ila_0_0/design_1_ila_0_0_in_context.xdc] for cell 'design_1_i/ila_0'
+Parsing XDC File [c:/FPGA_Projects/ADC_SRAM_UART/ADC_SRAM_UART.srcs/sources_1/bd/design_1/ip/design_1_proc_sys_reset_0_0/design_1_proc_sys_reset_0_0/design_1_proc_sys_reset_0_0_in_context.xdc] for cell 'design_1_i/proc_sys_reset_0'
+Finished Parsing XDC File [c:/FPGA_Projects/ADC_SRAM_UART/ADC_SRAM_UART.srcs/sources_1/bd/design_1/ip/design_1_proc_sys_reset_0_0/design_1_proc_sys_reset_0_0/design_1_proc_sys_reset_0_0_in_context.xdc] for cell 'design_1_i/proc_sys_reset_0'
+Parsing XDC File [c:/FPGA_Projects/ADC_SRAM_UART/ADC_SRAM_UART.srcs/sources_1/bd/design_1/ip/design_1_axi_uartlite_0_0/design_1_axi_uartlite_0_0/design_1_axi_uartlite_0_0_in_context.xdc] for cell 'design_1_i/axi_uartlite_0'
+Finished Parsing XDC File [c:/FPGA_Projects/ADC_SRAM_UART/ADC_SRAM_UART.srcs/sources_1/bd/design_1/ip/design_1_axi_uartlite_0_0/design_1_axi_uartlite_0_0/design_1_axi_uartlite_0_0_in_context.xdc] for cell 'design_1_i/axi_uartlite_0'
+Parsing XDC File [c:/FPGA_Projects/ADC_SRAM_UART/ADC_SRAM_UART.srcs/sources_1/bd/design_1/ip/design_1_xbar_0/design_1_xbar_0/design_1_xbar_0_in_context.xdc] for cell 'design_1_i/microblaze_0_axi_periph/xbar'
+Finished Parsing XDC File [c:/FPGA_Projects/ADC_SRAM_UART/ADC_SRAM_UART.srcs/sources_1/bd/design_1/ip/design_1_xbar_0/design_1_xbar_0/design_1_xbar_0_in_context.xdc] for cell 'design_1_i/microblaze_0_axi_periph/xbar'
+Parsing XDC File [c:/FPGA_Projects/ADC_SRAM_UART/ADC_SRAM_UART.srcs/sources_1/bd/design_1/ip/design_1_axi_emc_0_0/design_1_axi_emc_0_0/design_1_axi_emc_0_0_in_context.xdc] for cell 'design_1_i/axi_emc_0'
+Finished Parsing XDC File [c:/FPGA_Projects/ADC_SRAM_UART/ADC_SRAM_UART.srcs/sources_1/bd/design_1/ip/design_1_axi_emc_0_0/design_1_axi_emc_0_0/design_1_axi_emc_0_0_in_context.xdc] for cell 'design_1_i/axi_emc_0'
+Parsing XDC File [c:/FPGA_Projects/ADC_SRAM_UART/ADC_SRAM_UART.srcs/sources_1/bd/design_1/ip/design_1_axis_clock_converter_0_1/design_1_axis_clock_converter_0_1/design_1_axis_clock_converter_0_1_in_context.xdc] for cell 'design_1_i/axis_clock_converter_0'
+Finished Parsing XDC File [c:/FPGA_Projects/ADC_SRAM_UART/ADC_SRAM_UART.srcs/sources_1/bd/design_1/ip/design_1_axis_clock_converter_0_1/design_1_axis_clock_converter_0_1/design_1_axis_clock_converter_0_1_in_context.xdc] for cell 'design_1_i/axis_clock_converter_0'
+Parsing XDC File [c:/FPGA_Projects/ADC_SRAM_UART/ADC_SRAM_UART.srcs/sources_1/bd/design_1/ip/design_1_ila_1_0/design_1_ila_1_0/design_1_ila_1_0_in_context.xdc] for cell 'design_1_i/ila_1'
+Finished Parsing XDC File [c:/FPGA_Projects/ADC_SRAM_UART/ADC_SRAM_UART.srcs/sources_1/bd/design_1/ip/design_1_ila_1_0/design_1_ila_1_0/design_1_ila_1_0_in_context.xdc] for cell 'design_1_i/ila_1'
+Parsing XDC File [c:/FPGA_Projects/ADC_SRAM_UART/ADC_SRAM_UART.srcs/sources_1/bd/design_1/ip/design_1_ila_2_0/design_1_ila_2_0/design_1_ila_1_0_in_context.xdc] for cell 'design_1_i/ila_2'
+Finished Parsing XDC File [c:/FPGA_Projects/ADC_SRAM_UART/ADC_SRAM_UART.srcs/sources_1/bd/design_1/ip/design_1_ila_2_0/design_1_ila_2_0/design_1_ila_1_0_in_context.xdc] for cell 'design_1_i/ila_2'
+Parsing XDC File [c:/FPGA_Projects/ADC_SRAM_UART/ADC_SRAM_UART.srcs/sources_1/bd/design_1/ip/design_1_axi_fifo_mm_s_0_0/design_1_axi_fifo_mm_s_0_0/design_1_axi_fifo_mm_s_0_0_in_context.xdc] for cell 'design_1_i/axi_fifo_mm_s_0'
+Finished Parsing XDC File [c:/FPGA_Projects/ADC_SRAM_UART/ADC_SRAM_UART.srcs/sources_1/bd/design_1/ip/design_1_axi_fifo_mm_s_0_0/design_1_axi_fifo_mm_s_0_0/design_1_axi_fifo_mm_s_0_0_in_context.xdc] for cell 'design_1_i/axi_fifo_mm_s_0'
+Parsing XDC File [c:/FPGA_Projects/ADC_SRAM_UART/ADC_SRAM_UART.srcs/sources_1/bd/design_1/ip/design_1_ila_3_0/design_1_ila_3_0/design_1_ila_3_0_in_context.xdc] for cell 'design_1_i/ila_3'
+Finished Parsing XDC File [c:/FPGA_Projects/ADC_SRAM_UART/ADC_SRAM_UART.srcs/sources_1/bd/design_1/ip/design_1_ila_3_0/design_1_ila_3_0/design_1_ila_3_0_in_context.xdc] for cell 'design_1_i/ila_3'
+Parsing XDC File [c:/FPGA_Projects/ADC_SRAM_UART/ADC_SRAM_UART.srcs/sources_1/bd/design_1/ip/design_1_auto_pc_0/design_1_auto_pc_0/design_1_auto_pc_0_in_context.xdc] for cell 'design_1_i/microblaze_0_axi_periph/m01_couplers/auto_pc'
+Finished Parsing XDC File [c:/FPGA_Projects/ADC_SRAM_UART/ADC_SRAM_UART.srcs/sources_1/bd/design_1/ip/design_1_auto_pc_0/design_1_auto_pc_0/design_1_auto_pc_0_in_context.xdc] for cell 'design_1_i/microblaze_0_axi_periph/m01_couplers/auto_pc'
+Parsing XDC File [c:/FPGA_Projects/ADC_SRAM_UART/ADC_SRAM_UART.srcs/sources_1/bd/design_1/ip/design_1_auto_us_0/design_1_auto_us_0/design_1_axis_dwidth_converter_0_1_in_context.xdc] for cell 'design_1_i/axis_interconnect_0/s00_couplers/auto_us'
+Finished Parsing XDC File [c:/FPGA_Projects/ADC_SRAM_UART/ADC_SRAM_UART.srcs/sources_1/bd/design_1/ip/design_1_auto_us_0/design_1_auto_us_0/design_1_axis_dwidth_converter_0_1_in_context.xdc] for cell 'design_1_i/axis_interconnect_0/s00_couplers/auto_us'
+Parsing XDC File [c:/FPGA_Projects/ADC_SRAM_UART/ADC_SRAM_UART.srcs/sources_1/bd/design_1/ip/design_1_auto_ss_k_0/design_1_auto_ss_k_0/design_1_auto_ss_k_0_in_context.xdc] for cell 'design_1_i/axis_interconnect_0/s00_couplers/auto_ss_k'
+Finished Parsing XDC File [c:/FPGA_Projects/ADC_SRAM_UART/ADC_SRAM_UART.srcs/sources_1/bd/design_1/ip/design_1_auto_ss_k_0/design_1_auto_ss_k_0/design_1_auto_ss_k_0_in_context.xdc] for cell 'design_1_i/axis_interconnect_0/s00_couplers/auto_ss_k'
+Parsing XDC File [C:/FPGA_Projects/ADC_SRAM_UART/ADC_SRAM_UART.srcs/constrs_1/imports/FPGA_Projects/CmodA7_Master.xdc]
+Finished Parsing XDC File [C:/FPGA_Projects/ADC_SRAM_UART/ADC_SRAM_UART.srcs/constrs_1/imports/FPGA_Projects/CmodA7_Master.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [C:/FPGA_Projects/ADC_SRAM_UART/ADC_SRAM_UART.srcs/constrs_1/imports/FPGA_Projects/CmodA7_Master.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/design_1_wrapper_propImpl.xdc].
 Resolution: To avoid this warning, move constraints listed in [.Xil/design_1_wrapper_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
-Parsing XDC File [C:/FPGA_Projects/AXI_FIFO_Test/AXI_FIFO_Test.runs/synth_1/dont_touch.xdc]
-Finished Parsing XDC File [C:/FPGA_Projects/AXI_FIFO_Test/AXI_FIFO_Test.runs/synth_1/dont_touch.xdc]
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 865.063 ; gain = 0.000
+Parsing XDC File [C:/FPGA_Projects/ADC_SRAM_UART/ADC_SRAM_UART.runs/synth_1/dont_touch.xdc]
+Finished Parsing XDC File [C:/FPGA_Projects/ADC_SRAM_UART/ADC_SRAM_UART.runs/synth_1/dont_touch.xdc]
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 924.945 ; gain = 0.000
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 865.063 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 924.945 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
-No Unisim elements were transformed.
+  A total of 8 instances were transformed.
+  IOBUF => IOBUF (IBUF, OBUFT): 8 instances
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 865.063 ; gain = 0.000
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.019 . Memory (MB): peak = 865.063 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 924.945 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.025 . Memory (MB): peak = 924.945 ; gain = 0.000
 WARNING: [Timing 38-316] Clock period '100.000' specified during out-of-context synthesis of instance 'design_1_i/axis_clock_converter_0' at clock pin 'm_axis_aclk' is different from the actual clock period '10.000', this can lead to different synthesis results.
+WARNING: [Timing 38-316] Clock period '500.000' specified during out-of-context synthesis of instance 'design_1_i/ila_1' at clock pin 'clk' is different from the actual clock period '125.000', this can lead to different synthesis results.
 WARNING: [Timing 38-316] Clock period '20.000' specified during out-of-context synthesis of instance 'design_1_i/microblaze_0_local_memory/lmb_bram' at clock pin 'clka' is different from the actual clock period '10.000', this can lead to different synthesis results.
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:22 ; elapsed = 00:00:26 . Memory (MB): peak = 865.063 ; gain = 434.508
+Finished Constraint Validation : Time (s): cpu = 00:00:20 ; elapsed = 00:00:22 . Memory (MB): peak = 924.945 ; gain = 464.672
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7a35tcpg236-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:22 ; elapsed = 00:00:26 . Memory (MB): peak = 865.063 ; gain = 434.508
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:20 ; elapsed = 00:00:22 . Memory (MB): peak = 924.945 ; gain = 464.672
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
-Applied set_property IO_BUFFER_TYPE = NONE for sys_clock. (constraint file  c:/FPGA_Projects/AXI_FIFO_Test/AXI_FIFO_Test.srcs/sources_1/bd/design_1/ip/design_1_clk_wiz_1_0/design_1_clk_wiz_1_0/design_1_clk_wiz_1_0_in_context.xdc, line 4).
-Applied set_property CLOCK_BUFFER_TYPE = NONE for sys_clock. (constraint file  c:/FPGA_Projects/AXI_FIFO_Test/AXI_FIFO_Test.srcs/sources_1/bd/design_1/ip/design_1_clk_wiz_1_0/design_1_clk_wiz_1_0/design_1_clk_wiz_1_0_in_context.xdc, line 5).
+Applied set_property IO_BUFFER_TYPE = NONE for sys_clock. (constraint file  c:/FPGA_Projects/ADC_SRAM_UART/ADC_SRAM_UART.srcs/sources_1/bd/design_1/ip/design_1_clk_wiz_1_0/design_1_clk_wiz_1_0/design_1_clk_wiz_1_0_in_context.xdc, line 4).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for sys_clock. (constraint file  c:/FPGA_Projects/ADC_SRAM_UART/ADC_SRAM_UART.srcs/sources_1/bd/design_1/ip/design_1_clk_wiz_1_0/design_1_clk_wiz_1_0/design_1_clk_wiz_1_0_in_context.xdc, line 5).
 Applied set_property DONT_TOUCH = true for design_1_i. (constraint file  auto generated constraint, line ).
 Applied set_property DONT_TOUCH = true for design_1_i/mdm_0. (constraint file  auto generated constraint, line ).
 Applied set_property DONT_TOUCH = true for design_1_i/microblaze_0. (constraint file  auto generated constraint, line ).
@@ -159,14 +267,27 @@ Applied set_property DONT_TOUCH = true for design_1_i/microblaze_0_local_memory/
 Applied set_property DONT_TOUCH = true for design_1_i/microblaze_0_local_memory/lmb_bram. (constraint file  auto generated constraint, line ).
 Applied set_property DONT_TOUCH = true for design_1_i/clk_wiz_1. (constraint file  auto generated constraint, line ).
 Applied set_property DONT_TOUCH = true for design_1_i/rst_clk_wiz_1_100M. (constraint file  auto generated constraint, line ).
-Applied set_property DONT_TOUCH = true for design_1_i/axis_clock_converter_0. (constraint file  auto generated constraint, line ).
 Applied set_property DONT_TOUCH = true for design_1_i/FPGA_ADC_interface_0. (constraint file  auto generated constraint, line ).
 Applied set_property DONT_TOUCH = true for design_1_i/ila_0. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for design_1_i/proc_sys_reset_0. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for design_1_i/axi_uartlite_0. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for design_1_i/microblaze_0_axi_periph/xbar. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for design_1_i/microblaze_0_axi_periph. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for design_1_i/axi_emc_0. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for design_1_i/axis_clock_converter_0. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for design_1_i/ila_1. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for design_1_i/ila_2. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for design_1_i/axi_fifo_mm_s_0. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for design_1_i/ila_3. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for design_1_i/axis_interconnect_0. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for design_1_i/microblaze_0_axi_periph/m01_couplers/auto_pc. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for design_1_i/axis_interconnect_0/s00_couplers/auto_us. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for design_1_i/axis_interconnect_0/s00_couplers/auto_ss_k. (constraint file  auto generated constraint, line ).
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:22 ; elapsed = 00:00:26 . Memory (MB): peak = 865.063 ; gain = 434.508
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:20 ; elapsed = 00:00:22 . Memory (MB): peak = 924.945 ; gain = 464.672
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:22 ; elapsed = 00:00:26 . Memory (MB): peak = 865.063 ; gain = 434.508
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:20 ; elapsed = 00:00:23 . Memory (MB): peak = 924.945 ; gain = 464.672
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -201,8 +322,20 @@ Finished Part Resource Summary
 Start Cross Boundary and Area Optimization
 ---------------------------------------------------------------------------------
 Warning: Parallel synthesis criteria is not met 
+WARNING: [Synth 8-3331] design design_1_microblaze_0_axi_periph_0 has unconnected port M00_ACLK
+WARNING: [Synth 8-3331] design design_1_microblaze_0_axi_periph_0 has unconnected port M00_ARESETN
+WARNING: [Synth 8-3331] design design_1_microblaze_0_axi_periph_0 has unconnected port M01_ACLK
+WARNING: [Synth 8-3331] design design_1_microblaze_0_axi_periph_0 has unconnected port M01_ARESETN
+WARNING: [Synth 8-3331] design design_1_microblaze_0_axi_periph_0 has unconnected port M02_ACLK
+WARNING: [Synth 8-3331] design design_1_microblaze_0_axi_periph_0 has unconnected port M02_ARESETN
+WARNING: [Synth 8-3331] design design_1_microblaze_0_axi_periph_0 has unconnected port S00_ACLK
+WARNING: [Synth 8-3331] design design_1_microblaze_0_axi_periph_0 has unconnected port S00_ARESETN
+WARNING: [Synth 8-3331] design design_1_axis_interconnect_0_0 has unconnected port ACLK
+WARNING: [Synth 8-3331] design design_1_axis_interconnect_0_0 has unconnected port ARESETN
+WARNING: [Synth 8-3331] design design_1_axis_interconnect_0_0 has unconnected port M00_AXIS_ACLK
+WARNING: [Synth 8-3331] design design_1_axis_interconnect_0_0 has unconnected port M00_AXIS_ARESETN
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:23 ; elapsed = 00:00:27 . Memory (MB): peak = 865.063 ; gain = 434.508
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:21 ; elapsed = 00:00:24 . Memory (MB): peak = 924.945 ; gain = 464.672
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -221,13 +354,13 @@ INFO: [Synth 8-5578] Moved timing constraint from pin 'design_1_i/clk_wiz_1/clk_
 INFO: [Synth 8-5578] Moved timing constraint from pin 'design_1_i/clk_wiz_1/clk_out2' to pin 'design_1_i/clk_wiz_1/bbstub_clk_out2/O'
 INFO: [Synth 8-5819] Moved 6 constraints on hierarchical pins to their respective driving/loading pins
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:42 ; elapsed = 00:00:48 . Memory (MB): peak = 893.102 ; gain = 462.547
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:34 ; elapsed = 00:00:37 . Memory (MB): peak = 924.945 ; gain = 464.672
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:42 ; elapsed = 00:00:48 . Memory (MB): peak = 893.176 ; gain = 462.621
+Finished Timing Optimization : Time (s): cpu = 00:00:34 ; elapsed = 00:00:37 . Memory (MB): peak = 924.945 ; gain = 464.672
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -239,7 +372,7 @@ Report RTL Partitions:
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:42 ; elapsed = 00:00:48 . Memory (MB): peak = 903.426 ; gain = 472.871
+Finished Technology Mapping : Time (s): cpu = 00:00:34 ; elapsed = 00:00:37 . Memory (MB): peak = 933.219 ; gain = 472.945
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -263,7 +396,7 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:45 ; elapsed = 00:00:51 . Memory (MB): peak = 903.426 ; gain = 472.871
+Finished IO Insertion : Time (s): cpu = 00:00:36 ; elapsed = 00:00:39 . Memory (MB): peak = 933.219 ; gain = 472.945
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -276,7 +409,7 @@ Report Check Netlist:
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:45 ; elapsed = 00:00:51 . Memory (MB): peak = 903.426 ; gain = 472.871
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:36 ; elapsed = 00:00:39 . Memory (MB): peak = 933.219 ; gain = 472.945
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -288,25 +421,25 @@ Report RTL Partitions:
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:45 ; elapsed = 00:00:51 . Memory (MB): peak = 903.426 ; gain = 472.871
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:36 ; elapsed = 00:00:39 . Memory (MB): peak = 933.219 ; gain = 472.945
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:45 ; elapsed = 00:00:51 . Memory (MB): peak = 903.426 ; gain = 472.871
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:36 ; elapsed = 00:00:39 . Memory (MB): peak = 933.219 ; gain = 472.945
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:45 ; elapsed = 00:00:51 . Memory (MB): peak = 903.426 ; gain = 472.871
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:36 ; elapsed = 00:00:39 . Memory (MB): peak = 933.219 ; gain = 472.945
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:45 ; elapsed = 00:00:51 . Memory (MB): peak = 903.426 ; gain = 472.871
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:36 ; elapsed = 00:00:39 . Memory (MB): peak = 933.219 ; gain = 472.945
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -316,18 +449,29 @@ Report BlackBoxes:
 +------+----------------------------------+----------+
 |      |BlackBox name                     |Instances |
 +------+----------------------------------+----------+
-|1     |design_1_FPGA_ADC_interface_0_1   |         1|
-|2     |design_1_axis_clock_converter_0_0 |         1|
-|3     |design_1_clk_wiz_1_0              |         1|
-|4     |design_1_ila_0_0                  |         1|
-|5     |design_1_mdm_0_0                  |         1|
-|6     |design_1_microblaze_0_0           |         1|
-|7     |design_1_rst_clk_wiz_1_100M_0     |         1|
-|8     |design_1_dlmb_bram_if_cntlr_0     |         1|
-|9     |design_1_dlmb_v10_0               |         1|
-|10    |design_1_ilmb_bram_if_cntlr_0     |         1|
-|11    |design_1_ilmb_v10_0               |         1|
-|12    |design_1_lmb_bram_0               |         1|
+|1     |design_1_auto_ss_k_0              |         1|
+|2     |design_1_auto_us_0                |         1|
+|3     |design_1_xbar_0                   |         1|
+|4     |design_1_auto_pc_0                |         1|
+|5     |design_1_FPGA_ADC_interface_0_1   |         1|
+|6     |design_1_axi_emc_0_0              |         1|
+|7     |design_1_axi_fifo_mm_s_0_0        |         1|
+|8     |design_1_axi_uartlite_0_0         |         1|
+|9     |design_1_axis_clock_converter_0_1 |         1|
+|10    |design_1_clk_wiz_1_0              |         1|
+|11    |design_1_ila_0_0                  |         1|
+|12    |design_1_ila_1_0                  |         1|
+|13    |design_1_ila_2_0                  |         1|
+|14    |design_1_ila_3_0                  |         1|
+|15    |design_1_mdm_0_0                  |         1|
+|16    |design_1_microblaze_0_0           |         1|
+|17    |design_1_proc_sys_reset_0_0       |         1|
+|18    |design_1_rst_clk_wiz_1_100M_0     |         1|
+|19    |design_1_dlmb_bram_if_cntlr_0     |         1|
+|20    |design_1_dlmb_v10_0               |         1|
+|21    |design_1_ilmb_bram_if_cntlr_0     |         1|
+|22    |design_1_ilmb_v10_0               |         1|
+|23    |design_1_lmb_bram_0               |         1|
 +------+----------------------------------+----------+
 
 Report Cell Usage: 
@@ -335,49 +479,70 @@ Report Cell Usage:
 |      |Cell                              |Count |
 +------+----------------------------------+------+
 |1     |design_1_FPGA_ADC_interface_0_1   |     1|
-|2     |design_1_axis_clock_converter_0_0 |     1|
-|3     |design_1_clk_wiz_1_0              |     1|
-|4     |design_1_dlmb_bram_if_cntlr_0     |     1|
-|5     |design_1_dlmb_v10_0               |     1|
-|6     |design_1_ila_0_0                  |     1|
-|7     |design_1_ilmb_bram_if_cntlr_0     |     1|
-|8     |design_1_ilmb_v10_0               |     1|
-|9     |design_1_lmb_bram_0               |     1|
-|10    |design_1_mdm_0_0                  |     1|
-|11    |design_1_microblaze_0_0           |     1|
-|12    |design_1_rst_clk_wiz_1_100M_0     |     1|
-|13    |IBUF                              |    11|
-|14    |OBUF                              |     7|
+|2     |design_1_auto_pc_0                |     1|
+|3     |design_1_auto_ss_k_0              |     1|
+|4     |design_1_auto_us_0                |     1|
+|5     |design_1_axi_emc_0_0              |     1|
+|6     |design_1_axi_fifo_mm_s_0_0        |     1|
+|7     |design_1_axi_uartlite_0_0         |     1|
+|8     |design_1_axis_clock_converter_0_1 |     1|
+|9     |design_1_clk_wiz_1_0              |     1|
+|10    |design_1_dlmb_bram_if_cntlr_0     |     1|
+|11    |design_1_dlmb_v10_0               |     1|
+|12    |design_1_ila_0_0                  |     1|
+|13    |design_1_ila_1_0                  |     1|
+|14    |design_1_ila_2_0                  |     1|
+|15    |design_1_ila_3_0                  |     1|
+|16    |design_1_ilmb_bram_if_cntlr_0     |     1|
+|17    |design_1_ilmb_v10_0               |     1|
+|18    |design_1_lmb_bram_0               |     1|
+|19    |design_1_mdm_0_0                  |     1|
+|20    |design_1_microblaze_0_0           |     1|
+|21    |design_1_proc_sys_reset_0_0       |     1|
+|22    |design_1_rst_clk_wiz_1_100M_0     |     1|
+|23    |design_1_xbar_0                   |     1|
+|24    |IBUF                              |    12|
+|25    |IOBUF                             |     8|
+|26    |OBUF                              |    30|
 +------+----------------------------------+------+
 
 Report Instance Areas: 
 +------+------------------------------+--------------------------------------+------+
 |      |Instance                      |Module                                |Cells |
 +------+------------------------------+--------------------------------------+------+
-|1     |top                           |                                      |   787|
-|2     |  design_1_i                  |design_1                              |   769|
-|3     |    microblaze_0_local_memory |microblaze_0_local_memory_imp_1K0VQXK |   496|
+|1     |top                           |                                      |  1667|
+|2     |  design_1_i                  |design_1                              |  1617|
+|3     |    axis_interconnect_0       |design_1_axis_interconnect_0_0        |    75|
+|4     |      s00_couplers            |s00_couplers_imp_1LLE45P              |    75|
+|5     |    microblaze_0_axi_periph   |design_1_microblaze_0_axi_periph_0    |   579|
+|6     |      m01_couplers            |m01_couplers_imp_1UTB3Y5              |   205|
+|7     |    microblaze_0_local_memory |microblaze_0_local_memory_imp_1K0VQXK |   496|
 +------+------------------------------+--------------------------------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:45 ; elapsed = 00:00:51 . Memory (MB): peak = 903.426 ; gain = 472.871
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:36 ; elapsed = 00:00:39 . Memory (MB): peak = 933.219 ; gain = 472.945
 ---------------------------------------------------------------------------------
-Synthesis finished with 0 errors, 0 critical warnings and 0 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:28 ; elapsed = 00:00:37 . Memory (MB): peak = 903.426 ; gain = 189.078
-Synthesis Optimization Complete : Time (s): cpu = 00:00:45 ; elapsed = 00:00:51 . Memory (MB): peak = 903.426 ; gain = 472.871
+Synthesis finished with 0 errors, 0 critical warnings and 12 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:20 ; elapsed = 00:00:27 . Memory (MB): peak = 933.219 ; gain = 165.129
+Synthesis Optimization Complete : Time (s): cpu = 00:00:36 ; elapsed = 00:00:39 . Memory (MB): peak = 933.219 ; gain = 472.945
 INFO: [Project 1-571] Translating synthesized netlist
+INFO: [Netlist 29-17] Analyzing 8 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 911.660 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 945.039 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
-No Unisim elements were transformed.
+  A total of 8 instances were transformed.
+  IOBUF => IOBUF (IBUF, OBUFT): 8 instances
 
 INFO: [Common 17-83] Releasing license: Synthesis
-55 Infos, 10 Warnings, 0 Critical Warnings and 0 Errors encountered.
+103 Infos, 59 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:48 ; elapsed = 00:00:55 . Memory (MB): peak = 911.699 ; gain = 482.867
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 911.699 ; gain = 0.000
+synth_design: Time (s): cpu = 00:00:38 ; elapsed = 00:00:43 . Memory (MB): peak = 945.129 ; gain = 486.586
+INFO: [Common 17-600] The following parameters have non-default value.
+tcl.collectionResultDisplayLimit
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 945.129 ; gain = 0.000
 WARNING: [Constraints 18-5210] No constraints selected for write.
 Resolution: This message can indicate that there are no constraints for the design, or it can indicate that the used_in flags are set such that the constraints are ignored. This later case is used when running synth_design to not write synthesis constraints to the resulting checkpoint. Instead, project constraints are read when the synthesized design is opened.
-INFO: [Common 17-1381] The checkpoint 'C:/FPGA_Projects/AXI_FIFO_Test/AXI_FIFO_Test.runs/synth_1/design_1_wrapper.dcp' has been generated.
+INFO: [Common 17-1381] The checkpoint 'C:/FPGA_Projects/ADC_SRAM_UART/ADC_SRAM_UART.runs/synth_1/design_1_wrapper.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file design_1_wrapper_utilization_synth.rpt -pb design_1_wrapper_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Wed Apr 10 21:10:19 2019...
+INFO: [Common 17-206] Exiting Vivado at Sat Apr 13 16:25:34 2019...

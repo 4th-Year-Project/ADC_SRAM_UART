@@ -1,10 +1,10 @@
 // Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2018.3 (win64) Build 2405991 Thu Dec  6 23:38:27 MST 2018
-// Date        : Wed Apr 10 21:05:53 2019
+// Date        : Sat Apr 13 14:11:19 2019
 // Host        : Lenovo running 64-bit major release  (build 9200)
 // Command     : write_verilog -force -mode funcsim
-//               C:/FPGA_Projects/AXI_FIFO_Test/AXI_FIFO_Test.srcs/sources_1/bd/design_1/ip/design_1_FPGA_ADC_interface_0_1/design_1_FPGA_ADC_interface_0_1_sim_netlist.v
+//               C:/FPGA_Projects/ADC_SRAM_UART/ADC_SRAM_UART.srcs/sources_1/bd/design_1/ip/design_1_FPGA_ADC_interface_0_1/design_1_FPGA_ADC_interface_0_1_sim_netlist.v
 // Design      : design_1_FPGA_ADC_interface_0_1
 // Purpose     : This verilog netlist is a functional simulation representation of the design and should not be modified
 //               or synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -28,7 +28,7 @@ module design_1_FPGA_ADC_interface_0_1
     READY,
     LAST,
     CLK_2MHZ,
-    RESET_OUT,
+    RESET_OUT_INV,
     CLK_8MHZ,
     RESET,
     ENABLE);
@@ -43,13 +43,14 @@ module design_1_FPGA_ADC_interface_0_1
   (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 Data_axi_stream TVALID" *) output VALID;
   (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 Data_axi_stream TREADY" *) input READY;
   (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 Data_axi_stream TLAST" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME Data_axi_stream, HAS_TLAST 1, HAS_TKEEP 0, HAS_TSTRB 0, HAS_TREADY 1, TDATA_NUM_BYTES 1, TDEST_WIDTH 0, TID_WIDTH 0, TUSER_WIDTH 0, FREQ_HZ 2000000, PHASE 0.000, CLK_DOMAIN design_1_FPGA_ADC_interface_0_1_CLK_2MHZ, LAYERED_METADATA undef, INSERT_VIP 0" *) output LAST;
-  (* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 CLK_2MHZ CLK" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME CLK_2MHZ, ASSOCIATED_RESET RESET_OUT, ASSOCIATED_BUSIF Data_axi_stream, FREQ_HZ 2000000, PHASE 0.000, CLK_DOMAIN design_1_FPGA_ADC_interface_0_1_CLK_2MHZ, INSERT_VIP 0" *) output CLK_2MHZ;
-  (* X_INTERFACE_INFO = "xilinx.com:signal:reset:1.0 RESET_OUT RST" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME RESET_OUT, POLARITY ACTIVE_LOW, INSERT_VIP 0" *) output RESET_OUT;
+  (* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 CLK_2MHZ CLK" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME CLK_2MHZ, ASSOCIATED_RESET RESET_OUT:RESET_OUT_INV, ASSOCIATED_BUSIF Data_axi_stream, FREQ_HZ 2000000, PHASE 0.000, CLK_DOMAIN design_1_FPGA_ADC_interface_0_1_CLK_2MHZ, INSERT_VIP 0" *) output CLK_2MHZ;
+  (* X_INTERFACE_INFO = "xilinx.com:signal:reset:1.0 RESET_OUT RST" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME RESET_OUT, POLARITY ACTIVE_LOW, INSERT_VIP 0" *) output RESET_OUT_INV;
   (* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 CLK_8MHZ CLK" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME CLK_8MHZ, ASSOCIATED_RESET RESET, FREQ_HZ 8000000, PHASE 0.0, CLK_DOMAIN /clk_wiz_1_clk_out1, INSERT_VIP 0" *) input CLK_8MHZ;
   (* X_INTERFACE_INFO = "xilinx.com:signal:reset:1.0 RESET RST" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME RESET, POLARITY ACTIVE_HIGH, INSERT_VIP 0" *) input RESET;
   input ENABLE;
 
-  wire [2:0]A;
+  wire \<const0> ;
+  wire [2:1]\^A ;
   wire CLK_2MHZ;
   wire CLK_8MHZ;
   wire CONVST;
@@ -60,13 +61,23 @@ module design_1_FPGA_ADC_interface_0_1
   wire EOC;
   wire LAST;
   wire RESET;
+  wire RESET_OUT_INV;
   wire VALID;
 
+  assign A[2:1] = \^A [2:1];
+  assign A[0] = \<const0> ;
   assign CS = EOC;
   assign RD = EOC;
-  assign RESET_OUT = RESET;
+  GND GND
+       (.G(\<const0> ));
+  LUT1 #(
+    .INIT(2'h1)) 
+    RESET_OUT_INV_INST_0
+       (.I0(RESET),
+        .O(RESET_OUT_INV));
   design_1_FPGA_ADC_interface_0_1_FPGA_ADC_interface inst
-       (.CLK_2MHZ_reg_0(CLK_2MHZ),
+       (.A(\^A ),
+        .CLK_2MHZ_reg_0(CLK_2MHZ),
         .CLK_8MHZ(CLK_8MHZ),
         .CONVST(CONVST),
         .DATA(DATA),
@@ -75,7 +86,6 @@ module design_1_FPGA_ADC_interface_0_1
         .ENABLE(ENABLE),
         .EOC(EOC),
         .LAST(LAST),
-        .Q(A),
         .RESET(RESET),
         .VALID(VALID));
 endmodule
@@ -83,30 +93,31 @@ endmodule
 (* ORIG_REF_NAME = "FPGA_ADC_interface" *) 
 module design_1_FPGA_ADC_interface_0_1_FPGA_ADC_interface
    (CONVST,
-    Q,
     CLK_2MHZ_reg_0,
-    DATA,
     DONE_reg_0,
-    LAST,
     VALID,
+    LAST,
+    A,
+    DATA,
     RESET,
-    DB,
+    CLK_8MHZ,
     EOC,
     ENABLE,
-    CLK_8MHZ);
+    DB);
   output CONVST;
-  output [2:0]Q;
   output CLK_2MHZ_reg_0;
-  output [7:0]DATA;
   output DONE_reg_0;
-  output LAST;
   output VALID;
+  output LAST;
+  output [1:0]A;
+  output [7:0]DATA;
   input RESET;
-  input [7:0]DB;
+  input CLK_8MHZ;
   input EOC;
   input ENABLE;
-  input CLK_8MHZ;
+  input [7:0]DB;
 
+  wire [1:0]A;
   wire \A[2]_i_1_n_0 ;
   wire \A[2]_i_3_n_0 ;
   wire \A[2]_i_4_n_0 ;
@@ -167,25 +178,18 @@ module design_1_FPGA_ADC_interface_0_1_FPGA_ADC_interface
   wire LAST_i_1_n_0;
   wire LAST_i_2_n_0;
   wire LAST_i_3_n_0;
-  wire [2:0]Q;
   wire RESET;
   wire VALID;
   wire VALID_i_1_n_0;
-  wire [2:0]p_1_in;
+  wire [2:1]p_1_in;
   wire [3:0]\NLW_COUNTER_reg[16]_i_1_CO_UNCONNECTED ;
   wire [3:1]\NLW_COUNTER_reg[16]_i_1_O_UNCONNECTED ;
 
+  (* SOFT_HLUTNM = "soft_lutpair1" *) 
   LUT1 #(
     .INIT(2'h1)) 
-    \A[0]_i_1 
-       (.I0(Q[0]),
-        .O(p_1_in[0]));
-  (* SOFT_HLUTNM = "soft_lutpair1" *) 
-  LUT2 #(
-    .INIT(4'h6)) 
     \A[1]_i_1 
-       (.I0(Q[0]),
-        .I1(Q[1]),
+       (.I0(A[0]),
         .O(p_1_in[1]));
   LUT6 #(
     .INIT(64'h0004000000000000)) 
@@ -198,12 +202,11 @@ module design_1_FPGA_ADC_interface_0_1_FPGA_ADC_interface
         .I5(\A[2]_i_4_n_0 ),
         .O(\A[2]_i_1_n_0 ));
   (* SOFT_HLUTNM = "soft_lutpair1" *) 
-  LUT3 #(
-    .INIT(8'h78)) 
+  LUT2 #(
+    .INIT(4'h6)) 
     \A[2]_i_2 
-       (.I0(Q[0]),
-        .I1(Q[1]),
-        .I2(Q[2]),
+       (.I0(A[0]),
+        .I1(A[1]),
         .O(p_1_in[2]));
   LUT6 #(
     .INIT(64'h0000000000000001)) 
@@ -226,20 +229,12 @@ module design_1_FPGA_ADC_interface_0_1_FPGA_ADC_interface
         .O(\A[2]_i_4_n_0 ));
   FDCE #(
     .IS_C_INVERTED(1'b1)) 
-    \A_reg[0] 
-       (.C(CLK_2MHZ_reg_0),
-        .CE(\A[2]_i_1_n_0 ),
-        .CLR(RESET),
-        .D(p_1_in[0]),
-        .Q(Q[0]));
-  FDCE #(
-    .IS_C_INVERTED(1'b1)) 
     \A_reg[1] 
        (.C(CLK_2MHZ_reg_0),
         .CE(\A[2]_i_1_n_0 ),
         .CLR(RESET),
         .D(p_1_in[1]),
-        .Q(Q[1]));
+        .Q(A[0]));
   FDCE #(
     .IS_C_INVERTED(1'b1)) 
     \A_reg[2] 
@@ -247,7 +242,7 @@ module design_1_FPGA_ADC_interface_0_1_FPGA_ADC_interface
         .CE(\A[2]_i_1_n_0 ),
         .CLR(RESET),
         .D(p_1_in[2]),
-        .Q(Q[2]));
+        .Q(A[1]));
   LUT2 #(
     .INIT(4'h1)) 
     CLK_2MHZ_i_1

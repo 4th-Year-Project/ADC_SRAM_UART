@@ -104,7 +104,7 @@ ARCHITECTURE design_1_rst_clk_wiz_1_100M_0_arch OF design_1_rst_clk_wiz_1_100M_0
   ATTRIBUTE CHECK_LICENSE_TYPE : STRING;
   ATTRIBUTE CHECK_LICENSE_TYPE OF design_1_rst_clk_wiz_1_100M_0_arch : ARCHITECTURE IS "design_1_rst_clk_wiz_1_100M_0,proc_sys_reset,{}";
   ATTRIBUTE CORE_GENERATION_INFO : STRING;
-  ATTRIBUTE CORE_GENERATION_INFO OF design_1_rst_clk_wiz_1_100M_0_arch: ARCHITECTURE IS "design_1_rst_clk_wiz_1_100M_0,proc_sys_reset,{x_ipProduct=Vivado 2018.3,x_ipVendor=xilinx.com,x_ipLibrary=ip,x_ipName=proc_sys_reset,x_ipVersion=5.0,x_ipCoreRevision=13,x_ipLanguage=VERILOG,x_ipSimLanguage=MIXED,C_FAMILY=artix7,C_EXT_RST_WIDTH=4,C_AUX_RST_WIDTH=4,C_EXT_RESET_HIGH=1,C_AUX_RESET_HIGH=0,C_NUM_BUS_RST=1,C_NUM_PERP_RST=1,C_NUM_INTERCONNECT_ARESETN=1,C_NUM_PERP_ARESETN=1}";
+  ATTRIBUTE CORE_GENERATION_INFO OF design_1_rst_clk_wiz_1_100M_0_arch: ARCHITECTURE IS "design_1_rst_clk_wiz_1_100M_0,proc_sys_reset,{x_ipProduct=Vivado 2018.3,x_ipVendor=xilinx.com,x_ipLibrary=ip,x_ipName=proc_sys_reset,x_ipVersion=5.0,x_ipCoreRevision=13,x_ipLanguage=VERILOG,x_ipSimLanguage=MIXED,C_FAMILY=artix7,C_EXT_RST_WIDTH=4,C_AUX_RST_WIDTH=4,C_EXT_RESET_HIGH=1,C_AUX_RESET_HIGH=1,C_NUM_BUS_RST=1,C_NUM_PERP_RST=1,C_NUM_INTERCONNECT_ARESETN=1,C_NUM_PERP_ARESETN=1}";
   ATTRIBUTE X_INTERFACE_INFO : STRING;
   ATTRIBUTE X_INTERFACE_PARAMETER : STRING;
   ATTRIBUTE X_INTERFACE_PARAMETER OF peripheral_aresetn: SIGNAL IS "XIL_INTERFACENAME peripheral_low_rst, POLARITY ACTIVE_LOW, TYPE PERIPHERAL, INSERT_VIP 0";
@@ -119,7 +119,7 @@ ARCHITECTURE design_1_rst_clk_wiz_1_100M_0_arch OF design_1_rst_clk_wiz_1_100M_0
   ATTRIBUTE X_INTERFACE_INFO OF mb_reset: SIGNAL IS "xilinx.com:signal:reset:1.0 mb_rst RST";
   ATTRIBUTE X_INTERFACE_PARAMETER OF mb_debug_sys_rst: SIGNAL IS "XIL_INTERFACENAME dbg_reset, POLARITY ACTIVE_HIGH, INSERT_VIP 0";
   ATTRIBUTE X_INTERFACE_INFO OF mb_debug_sys_rst: SIGNAL IS "xilinx.com:signal:reset:1.0 dbg_reset RST";
-  ATTRIBUTE X_INTERFACE_PARAMETER OF aux_reset_in: SIGNAL IS "XIL_INTERFACENAME aux_reset, POLARITY ACTIVE_LOW, INSERT_VIP 0";
+  ATTRIBUTE X_INTERFACE_PARAMETER OF aux_reset_in: SIGNAL IS "XIL_INTERFACENAME aux_reset, POLARITY ACTIVE_HIGH, INSERT_VIP 0";
   ATTRIBUTE X_INTERFACE_INFO OF aux_reset_in: SIGNAL IS "xilinx.com:signal:reset:1.0 aux_reset RST";
   ATTRIBUTE X_INTERFACE_PARAMETER OF ext_reset_in: SIGNAL IS "XIL_INTERFACENAME ext_reset, BOARD.ASSOCIATED_PARAM RESET_BOARD_INTERFACE, POLARITY ACTIVE_HIGH, INSERT_VIP 0";
   ATTRIBUTE X_INTERFACE_INFO OF ext_reset_in: SIGNAL IS "xilinx.com:signal:reset:1.0 ext_reset RST";
@@ -132,7 +132,7 @@ BEGIN
       C_EXT_RST_WIDTH => 4,
       C_AUX_RST_WIDTH => 4,
       C_EXT_RESET_HIGH => '1',
-      C_AUX_RESET_HIGH => '0',
+      C_AUX_RESET_HIGH => '1',
       C_NUM_BUS_RST => 1,
       C_NUM_PERP_RST => 1,
       C_NUM_INTERCONNECT_ARESETN => 1,

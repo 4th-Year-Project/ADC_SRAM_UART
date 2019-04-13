@@ -1,0 +1,28 @@
+10:03:42 **** Auto Build of configuration Debug for project ADC_SRAM_UART ****
+make all 
+'Building file: ../src/ADC_SRAM_UART.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/ADC_SRAM_UART.o" -I../../ADC_SRAM_UART_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/ADC_SRAM_UART.d" -MT"src/ADC_SRAM_UART.o" -o "src/ADC_SRAM_UART.o" "../src/ADC_SRAM_UART.c"
+../src/ADC_SRAM_UART.c: In function 'RxInit':
+../src/ADC_SRAM_UART.c:56:6: warning: unused variable 'Error' [-Wunused-variable]
+  int Error;
+      ^~~~~
+../src/ADC_SRAM_UART.c:55:6: warning: unused variable 'i' [-Wunused-variable]
+  int i;
+      ^
+'Finished building: ../src/ADC_SRAM_UART.c'
+' '
+'Building target: ADC_SRAM_UART.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../ADC_SRAM_UART_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "ADC_SRAM_UART.elf"  ./src/ADC_SRAM_UART.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: ADC_SRAM_UART.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size ADC_SRAM_UART.elf  |tee "ADC_SRAM_UART.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   8324	    292	  19608	  28224	   6e40	ADC_SRAM_UART.elf
+'Finished building: ADC_SRAM_UART.elf.size'
+' '
+
+10:03:43 Build Finished (took 1s.339ms)
+

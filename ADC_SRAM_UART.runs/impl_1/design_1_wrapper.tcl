@@ -60,6 +60,10 @@ proc step_failed { step } {
   close $ch
 }
 
+set_msg_config -id {Common 17-41} -limit 10000000
+set_msg_config -id {HDL-1065} -limit 10000
+set_msg_config -id {Synth 8-256} -limit 10000
+set_msg_config -id {Synth 8-638} -limit 10000
 set_msg_config  -id {Synth 8-5413}  -string {{CRITICAL WARNING: [Synth 8-5413] Mix of synchronous and asynchronous control for register CONVST_reg in module FPGA_ADC_interface. [c:/FPGA_Projects/AXI_FIFO_Test/AXI_FIFO_Test.srcs/sources_1/bd/design_1/ipshared/FPGA_ADC_interface/FPGA_ADC_interface.srcs/sources_1/new/FPGA_ADC_interface.v:119]}}  -suppress 
 set_msg_config  -id {Coretcl 2-1279}  -string {{CRITICAL WARNING: [Coretcl 2-1279] The upgrade of 'design_1_FPGA_ADC_interface_0_1' has identified issues that may require user intervention. Please review the upgrade log 'c:/FPGA_Projects/AXI_FIFO_Test/ip_upgrade.log', and verify that the upgraded IP is correctly configured.}}  -suppress 
 
@@ -67,26 +71,29 @@ start_step init_design
 set ACTIVE_STEP init_design
 set rc [catch {
   create_msg_db init_design.pb
+  set_param tcl.collectionResultDisplayLimit 0
+  set_param synth.incrementalSynthesisCache {C:/Users/Lawrence Carslake/AppData/Roaming/Xilinx/Vivado/.Xil/Vivado-12712-Lenovo/incrSyn}
+  set_param xicom.use_bs_reader 1
   create_project -in_memory -part xc7a35tcpg236-1
   set_property board_part digilentinc.com:cmod_a7-35t:part0:1.1 [current_project]
   set_property design_mode GateLvl [current_fileset]
   set_param project.singleFileAddWarning.threshold 0
-  set_property webtalk.parent_dir C:/FPGA_Projects/AXI_FIFO_Test/AXI_FIFO_Test.cache/wt [current_project]
-  set_property parent.project_path C:/FPGA_Projects/AXI_FIFO_Test/AXI_FIFO_Test.xpr [current_project]
+  set_property webtalk.parent_dir C:/FPGA_Projects/ADC_SRAM_UART/ADC_SRAM_UART.cache/wt [current_project]
+  set_property parent.project_path C:/FPGA_Projects/ADC_SRAM_UART/ADC_SRAM_UART.xpr [current_project]
   set_property ip_repo_paths {
   {C:/Lenovo Share}
   C:/FPGA_Projects/FPGA_ADC_interface
 } [current_project]
   update_ip_catalog
-  set_property ip_output_repo C:/FPGA_Projects/AXI_FIFO_Test/AXI_FIFO_Test.cache/ip [current_project]
+  set_property ip_output_repo C:/FPGA_Projects/ADC_SRAM_UART/ADC_SRAM_UART.cache/ip [current_project]
   set_property ip_cache_permissions {read write} [current_project]
   set_property XPM_LIBRARIES {XPM_CDC XPM_FIFO XPM_MEMORY} [current_project]
-  add_files -quiet C:/FPGA_Projects/AXI_FIFO_Test/AXI_FIFO_Test.runs/synth_1/design_1_wrapper.dcp
+  add_files -quiet C:/FPGA_Projects/ADC_SRAM_UART/ADC_SRAM_UART.runs/synth_1/design_1_wrapper.dcp
   set_msg_config -source 4 -id {BD 41-1661} -limit 0
   set_param project.isImplRun true
-  add_files C:/FPGA_Projects/AXI_FIFO_Test/AXI_FIFO_Test.srcs/sources_1/bd/design_1/design_1.bd
+  add_files C:/FPGA_Projects/ADC_SRAM_UART/ADC_SRAM_UART.srcs/sources_1/bd/design_1/design_1.bd
   set_param project.isImplRun false
-  read_xdc C:/FPGA_Projects/CmodA7_Master.xdc
+  read_xdc C:/FPGA_Projects/ADC_SRAM_UART/ADC_SRAM_UART.srcs/constrs_1/imports/FPGA_Projects/CmodA7_Master.xdc
   set_param project.isImplRun true
   link_design -top design_1_wrapper -part xc7a35tcpg236-1
   set_param project.isImplRun false

@@ -24,7 +24,7 @@ else
 fi
 export LD_LIBRARY_PATH
 
-HD_PWD='C:/FPGA_Projects/AXI_FIFO_Test/AXI_FIFO_Test.runs/synth_1'
+HD_PWD='C:/FPGA_Projects/ADC_SRAM_UART/ADC_SRAM_UART.runs/synth_1'
 cd "$HD_PWD"
 
 HD_LOG=runme.log

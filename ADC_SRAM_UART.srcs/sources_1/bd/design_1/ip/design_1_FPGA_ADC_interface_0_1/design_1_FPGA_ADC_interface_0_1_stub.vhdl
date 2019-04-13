@@ -1,10 +1,10 @@
 -- Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2018.3 (win64) Build 2405991 Thu Dec  6 23:38:27 MST 2018
--- Date        : Wed Apr 10 21:05:53 2019
+-- Date        : Sat Apr 13 14:11:19 2019
 -- Host        : Lenovo running 64-bit major release  (build 9200)
 -- Command     : write_vhdl -force -mode synth_stub
---               C:/FPGA_Projects/AXI_FIFO_Test/AXI_FIFO_Test.srcs/sources_1/bd/design_1/ip/design_1_FPGA_ADC_interface_0_1/design_1_FPGA_ADC_interface_0_1_stub.vhdl
+--               C:/FPGA_Projects/ADC_SRAM_UART/ADC_SRAM_UART.srcs/sources_1/bd/design_1/ip/design_1_FPGA_ADC_interface_0_1/design_1_FPGA_ADC_interface_0_1_stub.vhdl
 -- Design      : design_1_FPGA_ADC_interface_0_1
 -- Purpose     : Stub declaration of top-level module interface
 -- Device      : xc7a35tcpg236-1
@@ -26,7 +26,7 @@ entity design_1_FPGA_ADC_interface_0_1 is
     READY : in STD_LOGIC;
     LAST : out STD_LOGIC;
     CLK_2MHZ : out STD_LOGIC;
-    RESET_OUT : out STD_LOGIC;
+    RESET_OUT_INV : out STD_LOGIC;
     CLK_8MHZ : in STD_LOGIC;
     RESET : in STD_LOGIC;
     ENABLE : in STD_LOGIC
@@ -38,7 +38,7 @@ architecture stub of design_1_FPGA_ADC_interface_0_1 is
 attribute syn_black_box : boolean;
 attribute black_box_pad_pin : string;
 attribute syn_black_box of stub : architecture is true;
-attribute black_box_pad_pin of stub : architecture is "CONVST,DB[7:0],EOC,CS,RD,A[2:0],DONE,DATA[7:0],VALID,READY,LAST,CLK_2MHZ,RESET_OUT,CLK_8MHZ,RESET,ENABLE";
+attribute black_box_pad_pin of stub : architecture is "CONVST,DB[7:0],EOC,CS,RD,A[2:0],DONE,DATA[7:0],VALID,READY,LAST,CLK_2MHZ,RESET_OUT_INV,CLK_8MHZ,RESET,ENABLE";
 attribute X_CORE_INFO : string;
 attribute X_CORE_INFO of stub : architecture is "FPGA_ADC_interface,Vivado 2018.3";
 begin

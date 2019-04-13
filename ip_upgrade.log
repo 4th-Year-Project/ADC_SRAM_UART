@@ -1,0 +1,113 @@
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2018.3 (win64) Build 2405991 Thu Dec  6 23:38:27 MST 2018
+| Date         : Sat Apr 13 14:09:31 2019
+| Host         : Lenovo running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7a35tcpg236-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'design_1_FPGA_ADC_interface_0_1'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of design_1_FPGA_ADC_interface_0_1 from Carslake.me:user:FPGA_ADC_interface:1.13 (Rev. 21) to Carslake.me:user:FPGA_ADC_interface:1.14 (Rev. 23)
+
+
+
+
+
+
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2018.3 (win64) Build 2405991 Thu Dec  6 23:38:27 MST 2018
+| Date         : Sat Apr 13 14:07:32 2019
+| Host         : Lenovo running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7a35tcpg236-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'design_1_FPGA_ADC_interface_0_1'
+
+1. Summary
+----------
+
+CAUTION (success, with warnings) in the upgrade of design_1_FPGA_ADC_interface_0_1 from Carslake.me:user:FPGA_ADC_interface:1.12 (Rev. 20) to Carslake.me:user:FPGA_ADC_interface:1.13 (Rev. 21)
+
+After upgrade, an IP may have parameter and port differences compared to the original customization. Please review the parameters within the IP customization GUI to ensure proper functionality. Also, please review the updated IP instantiation template to ensure proper connectivity, and update your design if required.
+
+2. Connection Warnings
+----------------------
+
+Detected external port differences while upgrading 'design_1_FPGA_ADC_interface_0_1'. These changes may impact your design.
+
+
+-Upgrade has removed port 'RESET_OUT'
+
+-Upgrade has added port 'RESET_OUT_INV'
+
+
+
+
+
+
+
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2018.3 (win64) Build 2405991 Thu Dec  6 23:38:27 MST 2018
+| Date         : Sat Apr 13 14:05:33 2019
+| Host         : Lenovo running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7a35tcpg236-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'design_1_FPGA_ADC_interface_0_1'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of design_1_FPGA_ADC_interface_0_1 from Carslake.me:user:FPGA_ADC_interface:1.11 (Rev. 19) to Carslake.me:user:FPGA_ADC_interface:1.12 (Rev. 20)
+
+
+
+
+
+
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2018.3 (win64) Build 2405991 Thu Dec  6 23:38:27 MST 2018
+| Date         : Sat Apr 13 10:23:11 2019
+| Host         : Lenovo running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7a35tcpg236-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'design_1_FPGA_ADC_interface_0_1'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of design_1_FPGA_ADC_interface_0_1 from Carslake.me:user:FPGA_ADC_interface:1.8 (Rev. 15) to Carslake.me:user:FPGA_ADC_interface:1.11 (Rev. 19)
+
+
+
+
+
+
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2018.3 (win64) Build 2405991 Thu Dec  6 23:38:27 MST 2018
+| Date         : Sat Apr 13 09:41:32 2019
+| Host         : Lenovo running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7a35tcpg236-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'design_1_FPGA_ADC_interface_0_1'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of design_1_FPGA_ADC_interface_0_1 from Carslake.me:user:FPGA_ADC_interface:1.7 (Rev. 14) to Carslake.me:user:FPGA_ADC_interface:1.8 (Rev. 15)
+

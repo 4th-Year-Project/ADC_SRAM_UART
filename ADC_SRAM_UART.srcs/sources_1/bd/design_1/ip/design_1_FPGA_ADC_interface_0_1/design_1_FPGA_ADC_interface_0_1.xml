@@ -60,7 +60,7 @@
         <spirit:parameter>
           <spirit:name>ASSOCIATED_RESET</spirit:name>
           <spirit:description>RESET_OUT</spirit:description>
-          <spirit:value spirit:id="BUSIFPARAM_VALUE.CLK_2MHZ.ASSOCIATED_RESET">RESET_OUT</spirit:value>
+          <spirit:value spirit:id="BUSIFPARAM_VALUE.CLK_2MHZ.ASSOCIATED_RESET">RESET_OUT:RESET_OUT_INV</spirit:value>
         </spirit:parameter>
         <spirit:parameter>
           <spirit:name>ASSOCIATED_BUSIF</spirit:name>
@@ -247,7 +247,7 @@
             <spirit:name>RST</spirit:name>
           </spirit:logicalPort>
           <spirit:physicalPort>
-            <spirit:name>RESET_OUT</spirit:name>
+            <spirit:name>RESET_OUT_INV</spirit:name>
           </spirit:physicalPort>
         </spirit:portMap>
       </spirit:portMaps>
@@ -348,11 +348,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Wed Apr 10 20:02:23 UTC 2019</spirit:value>
+            <spirit:value>Sat Apr 13 13:10:04 UTC 2019</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:adc67f53</spirit:value>
+            <spirit:value>9:b0d68c52</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -368,11 +368,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Wed Apr 10 20:02:23 UTC 2019</spirit:value>
+            <spirit:value>Sat Apr 13 13:10:04 UTC 2019</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:adc67f53</spirit:value>
+            <spirit:value>9:b0d68c52</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -387,11 +387,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Wed Apr 10 20:02:23 UTC 2019</spirit:value>
+            <spirit:value>Sat Apr 13 13:10:04 UTC 2019</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:b77520a7</spirit:value>
+            <spirit:value>9:ad37799c</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -407,11 +407,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Wed Apr 10 20:02:23 UTC 2019</spirit:value>
+            <spirit:value>Sat Apr 13 13:10:04 UTC 2019</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:b77520a7</spirit:value>
+            <spirit:value>9:ad37799c</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -425,11 +425,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Wed Apr 10 20:05:53 UTC 2019</spirit:value>
+            <spirit:value>Sat Apr 13 13:11:19 UTC 2019</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:adc67f53</spirit:value>
+            <spirit:value>9:b0d68c52</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -613,12 +613,12 @@
         </spirit:wire>
       </spirit:port>
       <spirit:port>
-        <spirit:name>RESET_OUT</spirit:name>
+        <spirit:name>RESET_OUT_INV</spirit:name>
         <spirit:wire>
           <spirit:direction>out</spirit:direction>
           <spirit:wireTypeDefs>
             <spirit:wireTypeDef>
-              <spirit:typeName>reg</spirit:typeName>
+              <spirit:typeName>wire</spirit:typeName>
               <spirit:viewNameRef>xilinx_anylanguagesynthesis</spirit:viewNameRef>
               <spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
             </spirit:wireTypeDef>
@@ -752,7 +752,7 @@
       </spirit:file>
     </spirit:fileSet>
   </spirit:fileSets>
-  <spirit:description>FPGA_ADC_interface_v1_0</spirit:description>
+  <spirit:description>FPGA_ADC_interface</spirit:description>
   <spirit:parameters>
     <spirit:parameter>
       <spirit:name>Component_Name</spirit:name>
@@ -766,12 +766,12 @@
   </spirit:parameters>
   <spirit:vendorExtensions>
     <xilinx:coreExtensions>
-      <xilinx:displayName>FPGA_ADC_interface_v1_0</xilinx:displayName>
+      <xilinx:displayName>FPGA_ADC_interface</xilinx:displayName>
       <xilinx:definitionSource>package_project</xilinx:definitionSource>
       <xilinx:xpmLibraries>
         <xilinx:xpmLibrary>XPM_CDC</xilinx:xpmLibrary>
       </xilinx:xpmLibraries>
-      <xilinx:coreRevision>14</xilinx:coreRevision>
+      <xilinx:coreRevision>23</xilinx:coreRevision>
       <xilinx:tags>
         <xilinx:tag xilinx:name="xilinx.com:user:FPGA_ADC_interface:1.0_ARCHIVE_LOCATION">c:/4th-year-project/fpga_adc_interface</xilinx:tag>
         <xilinx:tag xilinx:name="Lawrence Carslake:user:FPGA_ADC_interface:1.0_ARCHIVE_LOCATION">c:/4th-year-project/fpga_adc_interface</xilinx:tag>
@@ -977,6 +977,96 @@
         <xilinx:tag xilinx:name="ui.data.coregen.dd@18a8269_ARCHIVE_LOCATION">c:/FPGA_Projects/fpga_adc_interface</xilinx:tag>
         <xilinx:tag xilinx:name="ui.data.coregen.dd@21bbd4e3_ARCHIVE_LOCATION">c:/FPGA_Projects/fpga_adc_interface</xilinx:tag>
         <xilinx:tag xilinx:name="ui.data.coregen.dd@5576fd62_ARCHIVE_LOCATION">c:/FPGA_Projects/fpga_adc_interface</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@68564d_ARCHIVE_LOCATION">c:/FPGA_Projects/fpga_adc_interface</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@59de4458_ARCHIVE_LOCATION">c:/FPGA_Projects/fpga_adc_interface</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@264a4e73_ARCHIVE_LOCATION">c:/FPGA_Projects/fpga_adc_interface</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@693b0e88_ARCHIVE_LOCATION">c:/FPGA_Projects/fpga_adc_interface</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@31d9fc2d_ARCHIVE_LOCATION">c:/FPGA_Projects/fpga_adc_interface</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1749f95b_ARCHIVE_LOCATION">c:/FPGA_Projects/fpga_adc_interface</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@59a21905_ARCHIVE_LOCATION">c:/FPGA_Projects/fpga_adc_interface</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@34a4e45c_ARCHIVE_LOCATION">c:/FPGA_Projects/fpga_adc_interface</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@34aac363_ARCHIVE_LOCATION">c:/FPGA_Projects/fpga_adc_interface</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@260af172_ARCHIVE_LOCATION">c:/FPGA_Projects/fpga_adc_interface</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@780b29a2_ARCHIVE_LOCATION">c:/FPGA_Projects/fpga_adc_interface</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@34ac8136_ARCHIVE_LOCATION">c:/FPGA_Projects/fpga_adc_interface</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6e9b71db_ARCHIVE_LOCATION">c:/FPGA_Projects/fpga_adc_interface</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@45e4a1ae_ARCHIVE_LOCATION">c:/FPGA_Projects/fpga_adc_interface</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1892c4c3_ARCHIVE_LOCATION">c:/FPGA_Projects/fpga_adc_interface</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7a411c6c_ARCHIVE_LOCATION">c:/FPGA_Projects/fpga_adc_interface</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7b3c9ae4_ARCHIVE_LOCATION">c:/FPGA_Projects/fpga_adc_interface</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2b5326d8_ARCHIVE_LOCATION">c:/FPGA_Projects/fpga_adc_interface</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@19b8d40c_ARCHIVE_LOCATION">c:/FPGA_Projects/fpga_adc_interface</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2beb785_ARCHIVE_LOCATION">c:/FPGA_Projects/fpga_adc_interface</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@61acb21c_ARCHIVE_LOCATION">c:/FPGA_Projects/fpga_adc_interface</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@542bc844_ARCHIVE_LOCATION">c:/FPGA_Projects/fpga_adc_interface</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@41a84e7_ARCHIVE_LOCATION">c:/FPGA_Projects/fpga_adc_interface</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@57241150_ARCHIVE_LOCATION">c:/FPGA_Projects/fpga_adc_interface</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@72a992c7_ARCHIVE_LOCATION">c:/FPGA_Projects/fpga_adc_interface</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1860fdfd_ARCHIVE_LOCATION">c:/FPGA_Projects/fpga_adc_interface</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4adc1636_ARCHIVE_LOCATION">c:/FPGA_Projects/fpga_adc_interface</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@66862255_ARCHIVE_LOCATION">c:/FPGA_Projects/fpga_adc_interface</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@174e1989_ARCHIVE_LOCATION">c:/FPGA_Projects/fpga_adc_interface</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@30f3ede_ARCHIVE_LOCATION">c:/FPGA_Projects/fpga_adc_interface</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1aefdce2_ARCHIVE_LOCATION">c:/FPGA_Projects/fpga_adc_interface</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@31a61de9_ARCHIVE_LOCATION">c:/FPGA_Projects/fpga_adc_interface</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@14d95bd_ARCHIVE_LOCATION">c:/FPGA_Projects/fpga_adc_interface</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@48c46f56_ARCHIVE_LOCATION">c:/FPGA_Projects/fpga_adc_interface</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@62b015a6_ARCHIVE_LOCATION">c:/FPGA_Projects/fpga_adc_interface</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4d17ed2d_ARCHIVE_LOCATION">c:/FPGA_Projects/fpga_adc_interface</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5ccdd4e3_ARCHIVE_LOCATION">c:/FPGA_Projects/fpga_adc_interface</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@41d99bf3_ARCHIVE_LOCATION">c:/FPGA_Projects/fpga_adc_interface</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5373eb70_ARCHIVE_LOCATION">c:/FPGA_Projects/fpga_adc_interface</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@689e0a67_ARCHIVE_LOCATION">c:/FPGA_Projects/fpga_adc_interface</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5f911093_ARCHIVE_LOCATION">c:/FPGA_Projects/fpga_adc_interface</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@11ea7659_ARCHIVE_LOCATION">c:/FPGA_Projects/fpga_adc_interface</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@487cd759_ARCHIVE_LOCATION">c:/FPGA_Projects/fpga_adc_interface</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@47013c80_ARCHIVE_LOCATION">c:/FPGA_Projects/fpga_adc_interface</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@911c752_ARCHIVE_LOCATION">c:/FPGA_Projects/fpga_adc_interface</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@9d57ca4_ARCHIVE_LOCATION">c:/FPGA_Projects/fpga_adc_interface</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@790f85e9_ARCHIVE_LOCATION">c:/FPGA_Projects/fpga_adc_interface</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@515f040a_ARCHIVE_LOCATION">c:/FPGA_Projects/fpga_adc_interface</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@38ac3889_ARCHIVE_LOCATION">c:/FPGA_Projects/fpga_adc_interface</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@500a5c6e_ARCHIVE_LOCATION">c:/FPGA_Projects/fpga_adc_interface</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4ff67549_ARCHIVE_LOCATION">c:/FPGA_Projects/fpga_adc_interface</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@bf87f59_ARCHIVE_LOCATION">c:/FPGA_Projects/fpga_adc_interface</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@16605fdf_ARCHIVE_LOCATION">c:/FPGA_Projects/fpga_adc_interface</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4e576537_ARCHIVE_LOCATION">c:/FPGA_Projects/fpga_adc_interface</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@30ef89f6_ARCHIVE_LOCATION">c:/FPGA_Projects/fpga_adc_interface</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@f45f3ad_ARCHIVE_LOCATION">c:/FPGA_Projects/fpga_adc_interface</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5daf4595_ARCHIVE_LOCATION">c:/FPGA_Projects/fpga_adc_interface</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5ef7bbb3_ARCHIVE_LOCATION">c:/FPGA_Projects/fpga_adc_interface</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@9e75daa_ARCHIVE_LOCATION">c:/FPGA_Projects/fpga_adc_interface</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4552cfed_ARCHIVE_LOCATION">c:/FPGA_Projects/fpga_adc_interface</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@672eafcd_ARCHIVE_LOCATION">c:/FPGA_Projects/fpga_adc_interface</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@26f3ed52_ARCHIVE_LOCATION">c:/FPGA_Projects/fpga_adc_interface</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@736be4fb_ARCHIVE_LOCATION">c:/FPGA_Projects/fpga_adc_interface</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@77770684_ARCHIVE_LOCATION">c:/FPGA_Projects/fpga_adc_interface</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@53c04777_ARCHIVE_LOCATION">c:/FPGA_Projects/fpga_adc_interface</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1f8d6755_ARCHIVE_LOCATION">c:/FPGA_Projects/fpga_adc_interface</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6dc4dae3_ARCHIVE_LOCATION">c:/FPGA_Projects/fpga_adc_interface</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@37881f97_ARCHIVE_LOCATION">c:/FPGA_Projects/fpga_adc_interface</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@43978906_ARCHIVE_LOCATION">c:/FPGA_Projects/fpga_adc_interface</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@33213877_ARCHIVE_LOCATION">c:/FPGA_Projects/fpga_adc_interface</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@788a384_ARCHIVE_LOCATION">c:/FPGA_Projects/fpga_adc_interface</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1307b073_ARCHIVE_LOCATION">c:/FPGA_Projects/fpga_adc_interface</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5c3ce0b2_ARCHIVE_LOCATION">c:/FPGA_Projects/fpga_adc_interface</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6114ed2a_ARCHIVE_LOCATION">c:/FPGA_Projects/fpga_adc_interface</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@647a798b_ARCHIVE_LOCATION">c:/FPGA_Projects/fpga_adc_interface</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@38941e52_ARCHIVE_LOCATION">c:/FPGA_Projects/fpga_adc_interface</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@54f80757_ARCHIVE_LOCATION">c:/FPGA_Projects/fpga_adc_interface</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@439020f4_ARCHIVE_LOCATION">c:/FPGA_Projects/fpga_adc_interface</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@680af235_ARCHIVE_LOCATION">c:/FPGA_Projects/fpga_adc_interface</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6e306a20_ARCHIVE_LOCATION">c:/FPGA_Projects/fpga_adc_interface</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3da96e8_ARCHIVE_LOCATION">c:/FPGA_Projects/fpga_adc_interface</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@25615bc0_ARCHIVE_LOCATION">c:/FPGA_Projects/fpga_adc_interface</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6b4b8f6e_ARCHIVE_LOCATION">c:/FPGA_Projects/fpga_adc_interface</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2a1e9c22_ARCHIVE_LOCATION">c:/FPGA_Projects/fpga_adc_interface</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@99a63a8_ARCHIVE_LOCATION">c:/FPGA_Projects/fpga_adc_interface</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5babda0c_ARCHIVE_LOCATION">c:/FPGA_Projects/fpga_adc_interface</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@43e41223_ARCHIVE_LOCATION">c:/FPGA_Projects/fpga_adc_interface</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@79279afd_ARCHIVE_LOCATION">c:/FPGA_Projects/fpga_adc_interface</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@772b9fe1_ARCHIVE_LOCATION">c:/FPGA_Projects/fpga_adc_interface</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6159d97c_ARCHIVE_LOCATION">c:/FPGA_Projects/fpga_adc_interface</xilinx:tag>
       </xilinx:tags>
       <xilinx:configElementInfos>
         <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.CLK_2MHZ.CLK_DOMAIN" xilinx:valuePermission="bd_and_user"/>
@@ -992,9 +1082,9 @@
     </xilinx:coreExtensions>
     <xilinx:packagingInfo>
       <xilinx:xilinxVersion>2018.3</xilinx:xilinxVersion>
-      <xilinx:checksum xilinx:scope="busInterfaces" xilinx:value="3428a3e8"/>
-      <xilinx:checksum xilinx:scope="fileGroups" xilinx:value="d5842e20"/>
-      <xilinx:checksum xilinx:scope="ports" xilinx:value="c7688968"/>
+      <xilinx:checksum xilinx:scope="busInterfaces" xilinx:value="83a7d510"/>
+      <xilinx:checksum xilinx:scope="fileGroups" xilinx:value="dbc099c3"/>
+      <xilinx:checksum xilinx:scope="ports" xilinx:value="bf792766"/>
       <xilinx:checksum xilinx:scope="hdlParameters" xilinx:value="02226b2b"/>
       <xilinx:checksum xilinx:scope="parameters" xilinx:value="4b35172d"/>
     </xilinx:packagingInfo>

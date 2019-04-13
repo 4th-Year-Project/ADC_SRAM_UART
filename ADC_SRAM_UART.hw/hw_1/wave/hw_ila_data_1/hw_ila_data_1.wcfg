@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="C:/FPGA_Projects/ADC_SRAM_UART/ADC_SRAM_UART.hw/hw_1/wave/hw_ila_data_1/hw_ila_data_1.wdb" id="1">
+         <top_modules>
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <zoom_setting>
+      <ZoomStartTime time="0fs"></ZoomStartTime>
+      <ZoomEndTime time="1421284fs"></ZoomEndTime>
+      <Cursor1Time time="350000fs"></Cursor1Time>
+   </zoom_setting>
+   <column_width_setting>
+      <NameColumnWidth column_width="375"></NameColumnWidth>
+      <ValueColumnWidth column_width="134"></ValueColumnWidth>
+   </column_width_setting>
+   <WVObjectSize size="14" />
+   <wave_markers>
+   </wave_markers>
+   <wvobject fp_name="design_1_i/BTN1_1" type="logic">
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="ElementShortName">design_1_i/BTN1_1</obj_property>
+      <obj_property name="ObjectShortName">BTN1_1</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+      <obj_property name="label">BTN 1 ( Enable ADC Interface)</obj_property>
+   </wvobject>
+   <wvobject fp_name="design_1_i/BTN1_1" type="logic">
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="ElementShortName">design_1_i/BTN1_1</obj_property>
+      <obj_property name="ObjectShortName">BTN1_1</obj_property>
+      <obj_property name="label">BTN 1 ( Enable ADC Interface)</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject fp_name="design_1_i/DB_1" type="array">
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="ElementShortName">design_1_i/DB_1[7:0]</obj_property>
+      <obj_property name="ObjectShortName">DB_1[7:0]</obj_property>
+      <obj_property name="label">DB_1[7:0] (Direct ADC Data)</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject fp_name="design_1_i/EOC_1" type="logic">
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="ElementShortName">design_1_i/EOC_1</obj_property>
+      <obj_property name="ObjectShortName">EOC_1</obj_property>
+      <obj_property name="label">EOC</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject fp_name="design_1_i/FPGA_ADC_interface_0_A" type="array">
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="ElementShortName">design_1_i/FPGA_ADC_interface_0_A[2:0]</obj_property>
+      <obj_property name="ObjectShortName">FPGA_ADC_interface_0_A[2:0]</obj_property>
+      <obj_property name="label">A[2:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject fp_name="design_1_i/FPGA_ADC_interface_0_CLK_2MHZ" type="logic">
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="ElementShortName">design_1_i/FPGA_ADC_interface_0_CLK_2MHZ</obj_property>
+      <obj_property name="ObjectShortName">FPGA_ADC_interface_0_CLK_2MHZ</obj_property>
+      <obj_property name="label">ADC Interface CLK 2MHz</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject fp_name="design_1_i/FPGA_ADC_interface_0_CONVST" type="logic">
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="ElementShortName">design_1_i/FPGA_ADC_interface_0_CONVST</obj_property>
+      <obj_property name="ObjectShortName">FPGA_ADC_interface_0_CONVST</obj_property>
+      <obj_property name="label">CONVST</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject fp_name="design_1_i/FPGA_ADC_interface_0_CS" type="logic">
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="ElementShortName">design_1_i/FPGA_ADC_interface_0_CS</obj_property>
+      <obj_property name="ObjectShortName">FPGA_ADC_interface_0_CS</obj_property>
+      <obj_property name="label">CS</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject fp_name="design_1_i/FPGA_ADC_interface_0_DONE" type="logic">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">design_1_i/FPGA_ADC_interface_0_DONE</obj_property>
+      <obj_property name="ObjectShortName">FPGA_ADC_interface_0_DONE</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject fp_name="design_1_i/FPGA_ADC_interface_0_RD" type="logic">
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="ElementShortName">design_1_i/FPGA_ADC_interface_0_RD</obj_property>
+      <obj_property name="ObjectShortName">FPGA_ADC_interface_0_RD</obj_property>
+      <obj_property name="label">RD</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject fp_name="design_1_i/rst_clk_wiz_1_100M_peripheral_reset" type="logic">
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="ElementShortName">design_1_i/rst_clk_wiz_1_100M_peripheral_reset</obj_property>
+      <obj_property name="ObjectShortName">rst_clk_wiz_1_100M_peripheral_reset</obj_property>
+      <obj_property name="label">100M Clk Wiz reset</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject fp_name="design_1_i/proc_sys_reset_0_peripheral_reset" type="logic">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">design_1_i/proc_sys_reset_0_peripheral_reset</obj_property>
+      <obj_property name="ObjectShortName">proc_sys_reset_0_peripheral_reset</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject fp_name="design_1_i/rst_clk_wiz_1_100M_interconnect_aresetn" type="logic">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">design_1_i/rst_clk_wiz_1_100M_interconnect_aresetn</obj_property>
+      <obj_property name="ObjectShortName">rst_clk_wiz_1_100M_interconnect_aresetn</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject fp_name="design_1_i/FPGA_ADC_interface_0_RESET_OUT" type="logic">
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="ElementShortName">design_1_i/FPGA_ADC_interface_0_RESET_OUT</obj_property>
+      <obj_property name="ObjectShortName">FPGA_ADC_interface_0_RESET_OUT</obj_property>
+      <obj_property name="label">Reset Out</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+</wave_config>

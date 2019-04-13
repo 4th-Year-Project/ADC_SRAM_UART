@@ -1,10 +1,10 @@
 -- Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2018.3 (win64) Build 2405991 Thu Dec  6 23:38:27 MST 2018
--- Date        : Wed Apr 10 21:05:53 2019
+-- Date        : Sat Apr 13 14:11:19 2019
 -- Host        : Lenovo running 64-bit major release  (build 9200)
 -- Command     : write_vhdl -force -mode funcsim
---               C:/FPGA_Projects/AXI_FIFO_Test/AXI_FIFO_Test.srcs/sources_1/bd/design_1/ip/design_1_FPGA_ADC_interface_0_1/design_1_FPGA_ADC_interface_0_1_sim_netlist.vhdl
+--               C:/FPGA_Projects/ADC_SRAM_UART/ADC_SRAM_UART.srcs/sources_1/bd/design_1/ip/design_1_FPGA_ADC_interface_0_1/design_1_FPGA_ADC_interface_0_1_sim_netlist.vhdl
 -- Design      : design_1_FPGA_ADC_interface_0_1
 -- Purpose     : This VHDL netlist is a functional simulation representation of the design and should not be modified or
 --               synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -17,23 +17,24 @@ use UNISIM.VCOMPONENTS.ALL;
 entity design_1_FPGA_ADC_interface_0_1_FPGA_ADC_interface is
   port (
     CONVST : out STD_LOGIC;
-    Q : out STD_LOGIC_VECTOR ( 2 downto 0 );
     CLK_2MHZ_reg_0 : out STD_LOGIC;
-    DATA : out STD_LOGIC_VECTOR ( 7 downto 0 );
     DONE_reg_0 : out STD_LOGIC;
-    LAST : out STD_LOGIC;
     VALID : out STD_LOGIC;
+    LAST : out STD_LOGIC;
+    A : out STD_LOGIC_VECTOR ( 1 downto 0 );
+    DATA : out STD_LOGIC_VECTOR ( 7 downto 0 );
     RESET : in STD_LOGIC;
-    DB : in STD_LOGIC_VECTOR ( 7 downto 0 );
+    CLK_8MHZ : in STD_LOGIC;
     EOC : in STD_LOGIC;
     ENABLE : in STD_LOGIC;
-    CLK_8MHZ : in STD_LOGIC
+    DB : in STD_LOGIC_VECTOR ( 7 downto 0 )
   );
   attribute ORIG_REF_NAME : string;
   attribute ORIG_REF_NAME of design_1_FPGA_ADC_interface_0_1_FPGA_ADC_interface : entity is "FPGA_ADC_interface";
 end design_1_FPGA_ADC_interface_0_1_FPGA_ADC_interface;
 
 architecture STRUCTURE of design_1_FPGA_ADC_interface_0_1_FPGA_ADC_interface is
+  signal \^a\ : STD_LOGIC_VECTOR ( 1 downto 0 );
   signal \A[2]_i_1_n_0\ : STD_LOGIC;
   signal \A[2]_i_3_n_0\ : STD_LOGIC;
   signal \A[2]_i_4_n_0\ : STD_LOGIC;
@@ -89,9 +90,8 @@ architecture STRUCTURE of design_1_FPGA_ADC_interface_0_1_FPGA_ADC_interface is
   signal LAST_i_1_n_0 : STD_LOGIC;
   signal LAST_i_2_n_0 : STD_LOGIC;
   signal LAST_i_3_n_0 : STD_LOGIC;
-  signal \^q\ : STD_LOGIC_VECTOR ( 2 downto 0 );
   signal VALID_i_1_n_0 : STD_LOGIC;
-  signal p_1_in : STD_LOGIC_VECTOR ( 2 downto 0 );
+  signal p_1_in : STD_LOGIC_VECTOR ( 2 downto 1 );
   signal \NLW_COUNTER_reg[16]_i_1_CO_UNCONNECTED\ : STD_LOGIC_VECTOR ( 3 downto 0 );
   signal \NLW_COUNTER_reg[16]_i_1_O_UNCONNECTED\ : STD_LOGIC_VECTOR ( 3 downto 1 );
   attribute SOFT_HLUTNM : string;
@@ -100,26 +100,17 @@ architecture STRUCTURE of design_1_FPGA_ADC_interface_0_1_FPGA_ADC_interface is
   attribute SOFT_HLUTNM of DONE_i_5 : label is "soft_lutpair0";
   attribute SOFT_HLUTNM of LAST_i_2 : label is "soft_lutpair0";
 begin
+  A(1 downto 0) <= \^a\(1 downto 0);
   CLK_2MHZ_reg_0 <= \^clk_2mhz_reg_0\;
   CONVST <= \^convst\;
   DONE_reg_0 <= \^done_reg_0\;
   LAST <= \^last\;
-  Q(2 downto 0) <= \^q\(2 downto 0);
-\A[0]_i_1\: unisim.vcomponents.LUT1
+\A[1]_i_1\: unisim.vcomponents.LUT1
     generic map(
       INIT => X"1"
     )
         port map (
-      I0 => \^q\(0),
-      O => p_1_in(0)
-    );
-\A[1]_i_1\: unisim.vcomponents.LUT2
-    generic map(
-      INIT => X"6"
-    )
-        port map (
-      I0 => \^q\(0),
-      I1 => \^q\(1),
+      I0 => \^a\(0),
       O => p_1_in(1)
     );
 \A[2]_i_1\: unisim.vcomponents.LUT6
@@ -135,14 +126,13 @@ begin
       I5 => \A[2]_i_4_n_0\,
       O => \A[2]_i_1_n_0\
     );
-\A[2]_i_2\: unisim.vcomponents.LUT3
+\A[2]_i_2\: unisim.vcomponents.LUT2
     generic map(
-      INIT => X"78"
+      INIT => X"6"
     )
         port map (
-      I0 => \^q\(0),
-      I1 => \^q\(1),
-      I2 => \^q\(2),
+      I0 => \^a\(0),
+      I1 => \^a\(1),
       O => p_1_in(2)
     );
 \A[2]_i_3\: unisim.vcomponents.LUT6
@@ -170,17 +160,6 @@ begin
       I4 => COUNTER_reg(6),
       O => \A[2]_i_4_n_0\
     );
-\A_reg[0]\: unisim.vcomponents.FDCE
-    generic map(
-      IS_C_INVERTED => '1'
-    )
-        port map (
-      C => \^clk_2mhz_reg_0\,
-      CE => \A[2]_i_1_n_0\,
-      CLR => RESET,
-      D => p_1_in(0),
-      Q => \^q\(0)
-    );
 \A_reg[1]\: unisim.vcomponents.FDCE
     generic map(
       IS_C_INVERTED => '1'
@@ -190,7 +169,7 @@ begin
       CE => \A[2]_i_1_n_0\,
       CLR => RESET,
       D => p_1_in(1),
-      Q => \^q\(1)
+      Q => \^a\(0)
     );
 \A_reg[2]\: unisim.vcomponents.FDCE
     generic map(
@@ -201,7 +180,7 @@ begin
       CE => \A[2]_i_1_n_0\,
       CLR => RESET,
       D => p_1_in(2),
-      Q => \^q\(2)
+      Q => \^a\(1)
     );
 CLK_2MHZ_i_1: unisim.vcomponents.LUT2
     generic map(
@@ -751,7 +730,7 @@ entity design_1_FPGA_ADC_interface_0_1 is
     READY : in STD_LOGIC;
     LAST : out STD_LOGIC;
     CLK_2MHZ : out STD_LOGIC;
-    RESET_OUT : out STD_LOGIC;
+    RESET_OUT_INV : out STD_LOGIC;
     CLK_8MHZ : in STD_LOGIC;
     RESET : in STD_LOGIC;
     ENABLE : in STD_LOGIC
@@ -769,12 +748,13 @@ entity design_1_FPGA_ADC_interface_0_1 is
 end design_1_FPGA_ADC_interface_0_1;
 
 architecture STRUCTURE of design_1_FPGA_ADC_interface_0_1 is
+  signal \<const0>\ : STD_LOGIC;
+  signal \^a\ : STD_LOGIC_VECTOR ( 2 downto 1 );
   signal \^eoc\ : STD_LOGIC;
-  signal \^reset\ : STD_LOGIC;
   attribute X_INTERFACE_INFO : string;
   attribute X_INTERFACE_INFO of CLK_2MHZ : signal is "xilinx.com:signal:clock:1.0 CLK_2MHZ CLK";
   attribute X_INTERFACE_PARAMETER : string;
-  attribute X_INTERFACE_PARAMETER of CLK_2MHZ : signal is "XIL_INTERFACENAME CLK_2MHZ, ASSOCIATED_RESET RESET_OUT, ASSOCIATED_BUSIF Data_axi_stream, FREQ_HZ 2000000, PHASE 0.000, CLK_DOMAIN design_1_FPGA_ADC_interface_0_1_CLK_2MHZ, INSERT_VIP 0";
+  attribute X_INTERFACE_PARAMETER of CLK_2MHZ : signal is "XIL_INTERFACENAME CLK_2MHZ, ASSOCIATED_RESET RESET_OUT:RESET_OUT_INV, ASSOCIATED_BUSIF Data_axi_stream, FREQ_HZ 2000000, PHASE 0.000, CLK_DOMAIN design_1_FPGA_ADC_interface_0_1_CLK_2MHZ, INSERT_VIP 0";
   attribute X_INTERFACE_INFO of CLK_8MHZ : signal is "xilinx.com:signal:clock:1.0 CLK_8MHZ CLK";
   attribute X_INTERFACE_PARAMETER of CLK_8MHZ : signal is "XIL_INTERFACENAME CLK_8MHZ, ASSOCIATED_RESET RESET, FREQ_HZ 8000000, PHASE 0.0, CLK_DOMAIN /clk_wiz_1_clk_out1, INSERT_VIP 0";
   attribute X_INTERFACE_INFO of LAST : signal is "xilinx.com:interface:axis:1.0 Data_axi_stream TLAST";
@@ -782,18 +762,31 @@ architecture STRUCTURE of design_1_FPGA_ADC_interface_0_1 is
   attribute X_INTERFACE_INFO of READY : signal is "xilinx.com:interface:axis:1.0 Data_axi_stream TREADY";
   attribute X_INTERFACE_INFO of RESET : signal is "xilinx.com:signal:reset:1.0 RESET RST";
   attribute X_INTERFACE_PARAMETER of RESET : signal is "XIL_INTERFACENAME RESET, POLARITY ACTIVE_HIGH, INSERT_VIP 0";
-  attribute X_INTERFACE_INFO of RESET_OUT : signal is "xilinx.com:signal:reset:1.0 RESET_OUT RST";
-  attribute X_INTERFACE_PARAMETER of RESET_OUT : signal is "XIL_INTERFACENAME RESET_OUT, POLARITY ACTIVE_LOW, INSERT_VIP 0";
+  attribute X_INTERFACE_INFO of RESET_OUT_INV : signal is "xilinx.com:signal:reset:1.0 RESET_OUT RST";
+  attribute X_INTERFACE_PARAMETER of RESET_OUT_INV : signal is "XIL_INTERFACENAME RESET_OUT, POLARITY ACTIVE_LOW, INSERT_VIP 0";
   attribute X_INTERFACE_INFO of VALID : signal is "xilinx.com:interface:axis:1.0 Data_axi_stream TVALID";
   attribute X_INTERFACE_INFO of DATA : signal is "xilinx.com:interface:axis:1.0 Data_axi_stream TDATA";
 begin
+  A(2 downto 1) <= \^a\(2 downto 1);
+  A(0) <= \<const0>\;
   CS <= \^eoc\;
   RD <= \^eoc\;
-  RESET_OUT <= \^reset\;
   \^eoc\ <= EOC;
-  \^reset\ <= RESET;
+GND: unisim.vcomponents.GND
+     port map (
+      G => \<const0>\
+    );
+RESET_OUT_INV_INST_0: unisim.vcomponents.LUT1
+    generic map(
+      INIT => X"1"
+    )
+        port map (
+      I0 => RESET,
+      O => RESET_OUT_INV
+    );
 inst: entity work.design_1_FPGA_ADC_interface_0_1_FPGA_ADC_interface
      port map (
+      A(1 downto 0) => \^a\(2 downto 1),
       CLK_2MHZ_reg_0 => CLK_2MHZ,
       CLK_8MHZ => CLK_8MHZ,
       CONVST => CONVST,
@@ -803,8 +796,7 @@ inst: entity work.design_1_FPGA_ADC_interface_0_1_FPGA_ADC_interface
       ENABLE => ENABLE,
       EOC => \^eoc\,
       LAST => LAST,
-      Q(2 downto 0) => A(2 downto 0),
-      RESET => \^reset\,
+      RESET => RESET,
       VALID => VALID
     );
 end STRUCTURE;

@@ -238,3 +238,9 @@ con
 
 17:12:00 INFO  : Launch script is exported to file 'C:\FPGA_Projects\AXI_FIFO_Test\AXI_FIFO_Test.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_adc_to_uart.elf_on_local.tcl'
 18:19:07 INFO  : Disconnected from the channel tcfchan#7.
+09:47:20 INFO  : Registering command handlers for SDK TCF services
+09:47:21 INFO  : Launching XSCT server: xsct.bat -interactive C:\FPGA_Projects\ADC_SRAM_UART\ADC_SRAM_UART.sdk\temp_xsdb_launch_script.tcl
+09:47:28 INFO  : XSCT server has started successfully.
+09:47:28 INFO  : Successfully done setting XSCT server connection channel  
+09:47:33 INFO  : Successfully done setting SDK workspace  
+09:47:33 INFO  : Processing command line option -hwspec C:/FPGA_Projects/ADC_SRAM_UART/ADC_SRAM_UART.sdk/design_1_wrapper.hdf.

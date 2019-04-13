@@ -1,7 +1,7 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2018.3 (win64) Build 2405991 Thu Dec  6 23:38:27 MST 2018
-| Date         : Wed Apr 10 21:10:19 2019
+| Date         : Sat Apr 13 16:25:34 2019
 | Host         : Lenovo running 64-bit major release  (build 9200)
 | Command      : report_utilization -file design_1_wrapper_utilization_synth.rpt -pb design_1_wrapper_utilization_synth.pb
 | Design       : design_1_wrapper
@@ -90,7 +90,7 @@ Table of Contents
 +-----------------------------+------+-------+-----------+-------+
 |          Site Type          | Used | Fixed | Available | Util% |
 +-----------------------------+------+-------+-----------+-------+
-| Bonded IOB                  |   18 |     0 |       106 | 16.98 |
+| Bonded IOB                  |   50 |     0 |       106 | 47.17 |
 | Bonded IPADs                |    0 |     0 |        10 |  0.00 |
 | Bonded OPADs                |    0 |     0 |         4 |  0.00 |
 | PHY_CONTROL                 |    0 |     0 |         5 |  0.00 |
@@ -149,8 +149,9 @@ Table of Contents
 +----------+------+---------------------+
 | Ref Name | Used | Functional Category |
 +----------+------+---------------------+
-| IBUF     |   11 |                  IO |
-| OBUF     |    7 |                  IO |
+| OBUF     |   30 |                  IO |
+| IBUF     |   20 |                  IO |
+| OBUFT    |    8 |                  IO |
 +----------+------+---------------------+
 
 
@@ -160,17 +161,28 @@ Table of Contents
 +-----------------------------------+------+
 |              Ref Name             | Used |
 +-----------------------------------+------+
+| design_1_xbar_0                   |    1 |
 | design_1_rst_clk_wiz_1_100M_0     |    1 |
+| design_1_proc_sys_reset_0_0       |    1 |
 | design_1_microblaze_0_0           |    1 |
 | design_1_mdm_0_0                  |    1 |
 | design_1_lmb_bram_0               |    1 |
 | design_1_ilmb_v10_0               |    1 |
 | design_1_ilmb_bram_if_cntlr_0     |    1 |
+| design_1_ila_3_0                  |    1 |
+| design_1_ila_2_0                  |    1 |
+| design_1_ila_1_0                  |    1 |
 | design_1_ila_0_0                  |    1 |
 | design_1_dlmb_v10_0               |    1 |
 | design_1_dlmb_bram_if_cntlr_0     |    1 |
 | design_1_clk_wiz_1_0              |    1 |
-| design_1_axis_clock_converter_0_0 |    1 |
+| design_1_axis_clock_converter_0_1 |    1 |
+| design_1_axi_uartlite_0_0         |    1 |
+| design_1_axi_fifo_mm_s_0_0        |    1 |
+| design_1_axi_emc_0_0              |    1 |
+| design_1_auto_us_0                |    1 |
+| design_1_auto_ss_k_0              |    1 |
+| design_1_auto_pc_0                |    1 |
 | design_1_FPGA_ADC_interface_0_1   |    1 |
 +-----------------------------------+------+
 
