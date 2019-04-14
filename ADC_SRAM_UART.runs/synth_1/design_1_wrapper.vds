@@ -2,8 +2,8 @@
 # Vivado v2018.3 (64-bit)
 # SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
 # IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
-# Start of session at: Sat Apr 13 20:58:41 2019
-# Process ID: 7852
+# Start of session at: Sun Apr 14 15:40:22 2019
+# Process ID: 10676
 # Current directory: C:/FPGA_Projects/ADC_SRAM_UART/ADC_SRAM_UART.runs/synth_1
 # Command line: vivado.exe -log design_1_wrapper.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source design_1_wrapper.tcl
 # Log file: C:/FPGA_Projects/ADC_SRAM_UART/ADC_SRAM_UART.runs/synth_1/design_1_wrapper.vds
@@ -17,16 +17,16 @@ INFO: [IP_Flow 19-234] Refreshing IP repositories
 INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Lenovo Share'.
 INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/FPGA_Projects/FPGA_ADC_interface'.
 INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2018.3/data/ip'.
-update_ip_catalog: Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 369.809 ; gain = 32.199
-add_files: Time (s): cpu = 00:00:12 ; elapsed = 00:00:18 . Memory (MB): peak = 460.477 ; gain = 90.668
+update_ip_catalog: Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 367.148 ; gain = 31.879
+add_files: Time (s): cpu = 00:00:14 ; elapsed = 00:00:19 . Memory (MB): peak = 459.055 ; gain = 91.906
 Command: synth_design -top design_1_wrapper -part xc7a35tcpg236-1
 Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7a35t'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a35t'
 INFO: Launching helper process for spawning children vivado processes
-INFO: Helper process launched with PID 4528 
+INFO: Helper process launched with PID 8644 
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 561.426 ; gain = 99.230
+Starting RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 562.039 ; gain = 101.254
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-6157] synthesizing module 'design_1_wrapper' [C:/FPGA_Projects/ADC_SRAM_UART/ADC_SRAM_UART.srcs/sources_1/bd/design_1/hdl/design_1_wrapper.v:12]
 INFO: [Synth 8-6157] synthesizing module 'IOBUF' [C:/Xilinx/Vivado/2018.3/scripts/rt/data/unisim_comp.v:23615]
@@ -35,107 +35,126 @@ INFO: [Synth 8-6157] synthesizing module 'IOBUF' [C:/Xilinx/Vivado/2018.3/script
 	Parameter IOSTANDARD bound to: DEFAULT - type: string 
 	Parameter SLEW bound to: SLOW - type: string 
 INFO: [Synth 8-6155] done synthesizing module 'IOBUF' (1#1) [C:/Xilinx/Vivado/2018.3/scripts/rt/data/unisim_comp.v:23615]
-INFO: [Synth 8-6157] synthesizing module 'design_1' [C:/FPGA_Projects/ADC_SRAM_UART/ADC_SRAM_UART.srcs/sources_1/bd/design_1/synth/design_1.v:13]
-INFO: [Synth 8-6157] synthesizing module 'design_1_FPGA_ADC_interface_0_1' [C:/FPGA_Projects/ADC_SRAM_UART/ADC_SRAM_UART.runs/synth_1/.Xil/Vivado-7852-Lenovo/realtime/design_1_FPGA_ADC_interface_0_1_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'design_1_FPGA_ADC_interface_0_1' (2#1) [C:/FPGA_Projects/ADC_SRAM_UART/ADC_SRAM_UART.runs/synth_1/.Xil/Vivado-7852-Lenovo/realtime/design_1_FPGA_ADC_interface_0_1_stub.v:6]
-INFO: [Synth 8-6157] synthesizing module 'design_1_axi_emc_0_0' [C:/FPGA_Projects/ADC_SRAM_UART/ADC_SRAM_UART.runs/synth_1/.Xil/Vivado-7852-Lenovo/realtime/design_1_axi_emc_0_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'design_1_axi_emc_0_0' (3#1) [C:/FPGA_Projects/ADC_SRAM_UART/ADC_SRAM_UART.runs/synth_1/.Xil/Vivado-7852-Lenovo/realtime/design_1_axi_emc_0_0_stub.v:6]
-WARNING: [Synth 8-689] width (19) of port connection 'mem_a' does not match port width (32) of module 'design_1_axi_emc_0_0' [C:/FPGA_Projects/ADC_SRAM_UART/ADC_SRAM_UART.srcs/sources_1/bd/design_1/synth/design_1.v:291]
-WARNING: [Synth 8-350] instance 'axi_emc_0' of module 'design_1_axi_emc_0_0' requires 51 connections, but only 42 given [C:/FPGA_Projects/ADC_SRAM_UART/ADC_SRAM_UART.srcs/sources_1/bd/design_1/synth/design_1.v:290]
-INFO: [Synth 8-6157] synthesizing module 'design_1_axi_fifo_mm_s_0_0' [C:/FPGA_Projects/ADC_SRAM_UART/ADC_SRAM_UART.runs/synth_1/.Xil/Vivado-7852-Lenovo/realtime/design_1_axi_fifo_mm_s_0_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'design_1_axi_fifo_mm_s_0_0' (4#1) [C:/FPGA_Projects/ADC_SRAM_UART/ADC_SRAM_UART.runs/synth_1/.Xil/Vivado-7852-Lenovo/realtime/design_1_axi_fifo_mm_s_0_0_stub.v:6]
-WARNING: [Synth 8-350] instance 'axi_fifo_mm_s_0' of module 'design_1_axi_fifo_mm_s_0_0' requires 25 connections, but only 23 given [C:/FPGA_Projects/ADC_SRAM_UART/ADC_SRAM_UART.srcs/sources_1/bd/design_1/synth/design_1.v:333]
-INFO: [Synth 8-6157] synthesizing module 'design_1_axi_gpio_0_2' [C:/FPGA_Projects/ADC_SRAM_UART/ADC_SRAM_UART.runs/synth_1/.Xil/Vivado-7852-Lenovo/realtime/design_1_axi_gpio_0_2_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'design_1_axi_gpio_0_2' (5#1) [C:/FPGA_Projects/ADC_SRAM_UART/ADC_SRAM_UART.runs/synth_1/.Xil/Vivado-7852-Lenovo/realtime/design_1_axi_gpio_0_2_stub.v:6]
-INFO: [Synth 8-6157] synthesizing module 'design_1_axi_gpio_1_0' [C:/FPGA_Projects/ADC_SRAM_UART/ADC_SRAM_UART.runs/synth_1/.Xil/Vivado-7852-Lenovo/realtime/design_1_axi_gpio_1_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'design_1_axi_gpio_1_0' (6#1) [C:/FPGA_Projects/ADC_SRAM_UART/ADC_SRAM_UART.runs/synth_1/.Xil/Vivado-7852-Lenovo/realtime/design_1_axi_gpio_1_0_stub.v:6]
-INFO: [Synth 8-6157] synthesizing module 'design_1_axi_uartlite_0_0' [C:/FPGA_Projects/ADC_SRAM_UART/ADC_SRAM_UART.runs/synth_1/.Xil/Vivado-7852-Lenovo/realtime/design_1_axi_uartlite_0_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'design_1_axi_uartlite_0_0' (7#1) [C:/FPGA_Projects/ADC_SRAM_UART/ADC_SRAM_UART.runs/synth_1/.Xil/Vivado-7852-Lenovo/realtime/design_1_axi_uartlite_0_0_stub.v:6]
-WARNING: [Synth 8-350] instance 'axi_uartlite_0' of module 'design_1_axi_uartlite_0_0' requires 22 connections, but only 21 given [C:/FPGA_Projects/ADC_SRAM_UART/ADC_SRAM_UART.srcs/sources_1/bd/design_1/synth/design_1.v:403]
-INFO: [Synth 8-6157] synthesizing module 'design_1_axis_clock_converter_0_1' [C:/FPGA_Projects/ADC_SRAM_UART/ADC_SRAM_UART.runs/synth_1/.Xil/Vivado-7852-Lenovo/realtime/design_1_axis_clock_converter_0_1_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'design_1_axis_clock_converter_0_1' (8#1) [C:/FPGA_Projects/ADC_SRAM_UART/ADC_SRAM_UART.runs/synth_1/.Xil/Vivado-7852-Lenovo/realtime/design_1_axis_clock_converter_0_1_stub.v:6]
-INFO: [Synth 8-6157] synthesizing module 'design_1_axis_interconnect_0_0' [C:/FPGA_Projects/ADC_SRAM_UART/ADC_SRAM_UART.srcs/sources_1/bd/design_1/synth/design_1.v:748]
-INFO: [Synth 8-6157] synthesizing module 's00_couplers_imp_1LLE45P' [C:/FPGA_Projects/ADC_SRAM_UART/ADC_SRAM_UART.srcs/sources_1/bd/design_1/synth/design_1.v:2762]
-INFO: [Synth 8-6157] synthesizing module 'design_1_auto_ss_k_0' [C:/FPGA_Projects/ADC_SRAM_UART/ADC_SRAM_UART.runs/synth_1/.Xil/Vivado-7852-Lenovo/realtime/design_1_auto_ss_k_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'design_1_auto_ss_k_0' (9#1) [C:/FPGA_Projects/ADC_SRAM_UART/ADC_SRAM_UART.runs/synth_1/.Xil/Vivado-7852-Lenovo/realtime/design_1_auto_ss_k_0_stub.v:6]
-WARNING: [Synth 8-350] instance 'auto_ss_k' of module 'design_1_auto_ss_k_0' requires 12 connections, but only 11 given [C:/FPGA_Projects/ADC_SRAM_UART/ADC_SRAM_UART.srcs/sources_1/bd/design_1/synth/design_1.v:2814]
-INFO: [Synth 8-6157] synthesizing module 'design_1_auto_us_0' [C:/FPGA_Projects/ADC_SRAM_UART/ADC_SRAM_UART.runs/synth_1/.Xil/Vivado-7852-Lenovo/realtime/design_1_auto_us_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'design_1_auto_us_0' (10#1) [C:/FPGA_Projects/ADC_SRAM_UART/ADC_SRAM_UART.runs/synth_1/.Xil/Vivado-7852-Lenovo/realtime/design_1_auto_us_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 's00_couplers_imp_1LLE45P' (11#1) [C:/FPGA_Projects/ADC_SRAM_UART/ADC_SRAM_UART.srcs/sources_1/bd/design_1/synth/design_1.v:2762]
-INFO: [Synth 8-6155] done synthesizing module 'design_1_axis_interconnect_0_0' (12#1) [C:/FPGA_Projects/ADC_SRAM_UART/ADC_SRAM_UART.srcs/sources_1/bd/design_1/synth/design_1.v:748]
-INFO: [Synth 8-6157] synthesizing module 'design_1_clk_wiz_1_0' [C:/FPGA_Projects/ADC_SRAM_UART/ADC_SRAM_UART.runs/synth_1/.Xil/Vivado-7852-Lenovo/realtime/design_1_clk_wiz_1_0_stub.v:5]
-INFO: [Synth 8-6155] done synthesizing module 'design_1_clk_wiz_1_0' (13#1) [C:/FPGA_Projects/ADC_SRAM_UART/ADC_SRAM_UART.runs/synth_1/.Xil/Vivado-7852-Lenovo/realtime/design_1_clk_wiz_1_0_stub.v:5]
-WARNING: [Synth 8-4446] all outputs are unconnected for this instance and logic may be removed [C:/FPGA_Projects/ADC_SRAM_UART/ADC_SRAM_UART.srcs/sources_1/bd/design_1/synth/design_1.v:459]
-INFO: [Synth 8-6157] synthesizing module 'design_1_ila_0_0' [C:/FPGA_Projects/ADC_SRAM_UART/ADC_SRAM_UART.runs/synth_1/.Xil/Vivado-7852-Lenovo/realtime/design_1_ila_0_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'design_1_ila_0_0' (14#1) [C:/FPGA_Projects/ADC_SRAM_UART/ADC_SRAM_UART.runs/synth_1/.Xil/Vivado-7852-Lenovo/realtime/design_1_ila_0_0_stub.v:6]
-WARNING: [Synth 8-4446] all outputs are unconnected for this instance and logic may be removed [C:/FPGA_Projects/ADC_SRAM_UART/ADC_SRAM_UART.srcs/sources_1/bd/design_1/synth/design_1.v:474]
-INFO: [Synth 8-6157] synthesizing module 'design_1_ila_1_0' [C:/FPGA_Projects/ADC_SRAM_UART/ADC_SRAM_UART.runs/synth_1/.Xil/Vivado-7852-Lenovo/realtime/design_1_ila_1_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'design_1_ila_1_0' (15#1) [C:/FPGA_Projects/ADC_SRAM_UART/ADC_SRAM_UART.runs/synth_1/.Xil/Vivado-7852-Lenovo/realtime/design_1_ila_1_0_stub.v:6]
-WARNING: [Synth 8-4446] all outputs are unconnected for this instance and logic may be removed [C:/FPGA_Projects/ADC_SRAM_UART/ADC_SRAM_UART.srcs/sources_1/bd/design_1/synth/design_1.v:485]
-INFO: [Synth 8-6157] synthesizing module 'design_1_ila_2_0' [C:/FPGA_Projects/ADC_SRAM_UART/ADC_SRAM_UART.runs/synth_1/.Xil/Vivado-7852-Lenovo/realtime/design_1_ila_2_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'design_1_ila_2_0' (16#1) [C:/FPGA_Projects/ADC_SRAM_UART/ADC_SRAM_UART.runs/synth_1/.Xil/Vivado-7852-Lenovo/realtime/design_1_ila_2_0_stub.v:6]
-WARNING: [Synth 8-4446] all outputs are unconnected for this instance and logic may be removed [C:/FPGA_Projects/ADC_SRAM_UART/ADC_SRAM_UART.srcs/sources_1/bd/design_1/synth/design_1.v:496]
-INFO: [Synth 8-6157] synthesizing module 'design_1_ila_3_0' [C:/FPGA_Projects/ADC_SRAM_UART/ADC_SRAM_UART.runs/synth_1/.Xil/Vivado-7852-Lenovo/realtime/design_1_ila_3_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'design_1_ila_3_0' (17#1) [C:/FPGA_Projects/ADC_SRAM_UART/ADC_SRAM_UART.runs/synth_1/.Xil/Vivado-7852-Lenovo/realtime/design_1_ila_3_0_stub.v:6]
-INFO: [Synth 8-6157] synthesizing module 'design_1_mdm_0_0' [C:/FPGA_Projects/ADC_SRAM_UART/ADC_SRAM_UART.runs/synth_1/.Xil/Vivado-7852-Lenovo/realtime/design_1_mdm_0_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'design_1_mdm_0_0' (18#1) [C:/FPGA_Projects/ADC_SRAM_UART/ADC_SRAM_UART.runs/synth_1/.Xil/Vivado-7852-Lenovo/realtime/design_1_mdm_0_0_stub.v:6]
-INFO: [Synth 8-6157] synthesizing module 'design_1_microblaze_0_0' [C:/FPGA_Projects/ADC_SRAM_UART/ADC_SRAM_UART.runs/synth_1/.Xil/Vivado-7852-Lenovo/realtime/design_1_microblaze_0_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'design_1_microblaze_0_0' (19#1) [C:/FPGA_Projects/ADC_SRAM_UART/ADC_SRAM_UART.runs/synth_1/.Xil/Vivado-7852-Lenovo/realtime/design_1_microblaze_0_0_stub.v:6]
-WARNING: [Synth 8-350] instance 'microblaze_0' of module 'design_1_microblaze_0_0' requires 52 connections, but only 51 given [C:/FPGA_Projects/ADC_SRAM_UART/ADC_SRAM_UART.srcs/sources_1/bd/design_1/synth/design_1.v:520]
-INFO: [Synth 8-6157] synthesizing module 'design_1_microblaze_0_axi_periph_0' [C:/FPGA_Projects/ADC_SRAM_UART/ADC_SRAM_UART.srcs/sources_1/bd/design_1/synth/design_1.v:818]
-INFO: [Synth 8-6157] synthesizing module 'm00_couplers_imp_8RVYHO' [C:/FPGA_Projects/ADC_SRAM_UART/ADC_SRAM_UART.srcs/sources_1/bd/design_1/synth/design_1.v:1730]
-INFO: [Synth 8-6155] done synthesizing module 'm00_couplers_imp_8RVYHO' (20#1) [C:/FPGA_Projects/ADC_SRAM_UART/ADC_SRAM_UART.srcs/sources_1/bd/design_1/synth/design_1.v:1730]
-INFO: [Synth 8-6157] synthesizing module 'm01_couplers_imp_1UTB3Y5' [C:/FPGA_Projects/ADC_SRAM_UART/ADC_SRAM_UART.srcs/sources_1/bd/design_1/synth/design_1.v:1862]
-INFO: [Synth 8-6157] synthesizing module 'design_1_auto_pc_0' [C:/FPGA_Projects/ADC_SRAM_UART/ADC_SRAM_UART.runs/synth_1/.Xil/Vivado-7852-Lenovo/realtime/design_1_auto_pc_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'design_1_auto_pc_0' (21#1) [C:/FPGA_Projects/ADC_SRAM_UART/ADC_SRAM_UART.runs/synth_1/.Xil/Vivado-7852-Lenovo/realtime/design_1_auto_pc_0_stub.v:6]
-WARNING: [Synth 8-350] instance 'auto_pc' of module 'design_1_auto_pc_0' requires 56 connections, but only 52 given [C:/FPGA_Projects/ADC_SRAM_UART/ADC_SRAM_UART.srcs/sources_1/bd/design_1/synth/design_1.v:2077]
-INFO: [Synth 8-6155] done synthesizing module 'm01_couplers_imp_1UTB3Y5' (22#1) [C:/FPGA_Projects/ADC_SRAM_UART/ADC_SRAM_UART.srcs/sources_1/bd/design_1/synth/design_1.v:1862]
-INFO: [Synth 8-6157] synthesizing module 'm02_couplers_imp_7ANRHB' [C:/FPGA_Projects/ADC_SRAM_UART/ADC_SRAM_UART.srcs/sources_1/bd/design_1/synth/design_1.v:2132]
-INFO: [Synth 8-6155] done synthesizing module 'm02_couplers_imp_7ANRHB' (23#1) [C:/FPGA_Projects/ADC_SRAM_UART/ADC_SRAM_UART.srcs/sources_1/bd/design_1/synth/design_1.v:2132]
-INFO: [Synth 8-6157] synthesizing module 'm03_couplers_imp_1W07O72' [C:/FPGA_Projects/ADC_SRAM_UART/ADC_SRAM_UART.srcs/sources_1/bd/design_1/synth/design_1.v:2264]
-INFO: [Synth 8-6155] done synthesizing module 'm03_couplers_imp_1W07O72' (24#1) [C:/FPGA_Projects/ADC_SRAM_UART/ADC_SRAM_UART.srcs/sources_1/bd/design_1/synth/design_1.v:2264]
-INFO: [Synth 8-6157] synthesizing module 'm04_couplers_imp_5LX7BU' [C:/FPGA_Projects/ADC_SRAM_UART/ADC_SRAM_UART.srcs/sources_1/bd/design_1/synth/design_1.v:2396]
-INFO: [Synth 8-6155] done synthesizing module 'm04_couplers_imp_5LX7BU' (25#1) [C:/FPGA_Projects/ADC_SRAM_UART/ADC_SRAM_UART.srcs/sources_1/bd/design_1/synth/design_1.v:2396]
-INFO: [Synth 8-6157] synthesizing module 's00_couplers_imp_1RZP34U' [C:/FPGA_Projects/ADC_SRAM_UART/ADC_SRAM_UART.srcs/sources_1/bd/design_1/synth/design_1.v:2840]
-INFO: [Synth 8-6155] done synthesizing module 's00_couplers_imp_1RZP34U' (26#1) [C:/FPGA_Projects/ADC_SRAM_UART/ADC_SRAM_UART.srcs/sources_1/bd/design_1/synth/design_1.v:2840]
-INFO: [Synth 8-6157] synthesizing module 'design_1_xbar_0' [C:/FPGA_Projects/ADC_SRAM_UART/ADC_SRAM_UART.runs/synth_1/.Xil/Vivado-7852-Lenovo/realtime/design_1_xbar_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'design_1_xbar_0' (27#1) [C:/FPGA_Projects/ADC_SRAM_UART/ADC_SRAM_UART.runs/synth_1/.Xil/Vivado-7852-Lenovo/realtime/design_1_xbar_0_stub.v:6]
-WARNING: [Synth 8-689] width (6) of port connection 'm_axi_arprot' does not match port width (15) of module 'design_1_xbar_0' [C:/FPGA_Projects/ADC_SRAM_UART/ADC_SRAM_UART.srcs/sources_1/bd/design_1/synth/design_1.v:1691]
-WARNING: [Synth 8-689] width (6) of port connection 'm_axi_awprot' does not match port width (15) of module 'design_1_xbar_0' [C:/FPGA_Projects/ADC_SRAM_UART/ADC_SRAM_UART.srcs/sources_1/bd/design_1/synth/design_1.v:1695]
-INFO: [Synth 8-6155] done synthesizing module 'design_1_microblaze_0_axi_periph_0' (28#1) [C:/FPGA_Projects/ADC_SRAM_UART/ADC_SRAM_UART.srcs/sources_1/bd/design_1/synth/design_1.v:818]
-INFO: [Synth 8-6157] synthesizing module 'microblaze_0_local_memory_imp_1K0VQXK' [C:/FPGA_Projects/ADC_SRAM_UART/ADC_SRAM_UART.srcs/sources_1/bd/design_1/synth/design_1.v:2528]
-INFO: [Synth 8-6157] synthesizing module 'design_1_dlmb_bram_if_cntlr_0' [C:/FPGA_Projects/ADC_SRAM_UART/ADC_SRAM_UART.runs/synth_1/.Xil/Vivado-7852-Lenovo/realtime/design_1_dlmb_bram_if_cntlr_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'design_1_dlmb_bram_if_cntlr_0' (29#1) [C:/FPGA_Projects/ADC_SRAM_UART/ADC_SRAM_UART.runs/synth_1/.Xil/Vivado-7852-Lenovo/realtime/design_1_dlmb_bram_if_cntlr_0_stub.v:6]
-INFO: [Synth 8-6157] synthesizing module 'design_1_dlmb_v10_0' [C:/FPGA_Projects/ADC_SRAM_UART/ADC_SRAM_UART.runs/synth_1/.Xil/Vivado-7852-Lenovo/realtime/design_1_dlmb_v10_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'design_1_dlmb_v10_0' (30#1) [C:/FPGA_Projects/ADC_SRAM_UART/ADC_SRAM_UART.runs/synth_1/.Xil/Vivado-7852-Lenovo/realtime/design_1_dlmb_v10_0_stub.v:6]
-WARNING: [Synth 8-350] instance 'dlmb_v10' of module 'design_1_dlmb_v10_0' requires 25 connections, but only 24 given [C:/FPGA_Projects/ADC_SRAM_UART/ADC_SRAM_UART.srcs/sources_1/bd/design_1/synth/design_1.v:2674]
-INFO: [Synth 8-6157] synthesizing module 'design_1_ilmb_bram_if_cntlr_0' [C:/FPGA_Projects/ADC_SRAM_UART/ADC_SRAM_UART.runs/synth_1/.Xil/Vivado-7852-Lenovo/realtime/design_1_ilmb_bram_if_cntlr_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'design_1_ilmb_bram_if_cntlr_0' (31#1) [C:/FPGA_Projects/ADC_SRAM_UART/ADC_SRAM_UART.runs/synth_1/.Xil/Vivado-7852-Lenovo/realtime/design_1_ilmb_bram_if_cntlr_0_stub.v:6]
-INFO: [Synth 8-6157] synthesizing module 'design_1_ilmb_v10_0' [C:/FPGA_Projects/ADC_SRAM_UART/ADC_SRAM_UART.runs/synth_1/.Xil/Vivado-7852-Lenovo/realtime/design_1_ilmb_v10_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'design_1_ilmb_v10_0' (32#1) [C:/FPGA_Projects/ADC_SRAM_UART/ADC_SRAM_UART.runs/synth_1/.Xil/Vivado-7852-Lenovo/realtime/design_1_ilmb_v10_0_stub.v:6]
-WARNING: [Synth 8-350] instance 'ilmb_v10' of module 'design_1_ilmb_v10_0' requires 25 connections, but only 24 given [C:/FPGA_Projects/ADC_SRAM_UART/ADC_SRAM_UART.srcs/sources_1/bd/design_1/synth/design_1.v:2720]
-INFO: [Synth 8-6157] synthesizing module 'design_1_lmb_bram_0' [C:/FPGA_Projects/ADC_SRAM_UART/ADC_SRAM_UART.runs/synth_1/.Xil/Vivado-7852-Lenovo/realtime/design_1_lmb_bram_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'design_1_lmb_bram_0' (33#1) [C:/FPGA_Projects/ADC_SRAM_UART/ADC_SRAM_UART.runs/synth_1/.Xil/Vivado-7852-Lenovo/realtime/design_1_lmb_bram_0_stub.v:6]
-WARNING: [Synth 8-350] instance 'lmb_bram' of module 'design_1_lmb_bram_0' requires 16 connections, but only 14 given [C:/FPGA_Projects/ADC_SRAM_UART/ADC_SRAM_UART.srcs/sources_1/bd/design_1/synth/design_1.v:2745]
-INFO: [Synth 8-6155] done synthesizing module 'microblaze_0_local_memory_imp_1K0VQXK' (34#1) [C:/FPGA_Projects/ADC_SRAM_UART/ADC_SRAM_UART.srcs/sources_1/bd/design_1/synth/design_1.v:2528]
-INFO: [Synth 8-6157] synthesizing module 'design_1_proc_sys_reset_0_0' [C:/FPGA_Projects/ADC_SRAM_UART/ADC_SRAM_UART.runs/synth_1/.Xil/Vivado-7852-Lenovo/realtime/design_1_proc_sys_reset_0_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'design_1_proc_sys_reset_0_0' (35#1) [C:/FPGA_Projects/ADC_SRAM_UART/ADC_SRAM_UART.runs/synth_1/.Xil/Vivado-7852-Lenovo/realtime/design_1_proc_sys_reset_0_0_stub.v:6]
-WARNING: [Synth 8-350] instance 'proc_sys_reset_0' of module 'design_1_proc_sys_reset_0_0' requires 10 connections, but only 7 given [C:/FPGA_Projects/ADC_SRAM_UART/ADC_SRAM_UART.srcs/sources_1/bd/design_1/synth/design_1.v:727]
-INFO: [Synth 8-6157] synthesizing module 'design_1_rst_clk_wiz_1_100M_0' [C:/FPGA_Projects/ADC_SRAM_UART/ADC_SRAM_UART.runs/synth_1/.Xil/Vivado-7852-Lenovo/realtime/design_1_rst_clk_wiz_1_100M_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'design_1_rst_clk_wiz_1_100M_0' (36#1) [C:/FPGA_Projects/ADC_SRAM_UART/ADC_SRAM_UART.runs/synth_1/.Xil/Vivado-7852-Lenovo/realtime/design_1_rst_clk_wiz_1_100M_0_stub.v:6]
-INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'ila_0'. This will prevent further optimization [C:/FPGA_Projects/ADC_SRAM_UART/ADC_SRAM_UART.srcs/sources_1/bd/design_1/synth/design_1.v:459]
-INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'FPGA_ADC_interface_0'. This will prevent further optimization [C:/FPGA_Projects/ADC_SRAM_UART/ADC_SRAM_UART.srcs/sources_1/bd/design_1/synth/design_1.v:273]
-INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'rst_clk_wiz_1_100M'. This will prevent further optimization [C:/FPGA_Projects/ADC_SRAM_UART/ADC_SRAM_UART.srcs/sources_1/bd/design_1/synth/design_1.v:735]
-INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'axi_gpio_1'. This will prevent further optimization [C:/FPGA_Projects/ADC_SRAM_UART/ADC_SRAM_UART.srcs/sources_1/bd/design_1/synth/design_1.v:381]
-INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'ila_1'. This will prevent further optimization [C:/FPGA_Projects/ADC_SRAM_UART/ADC_SRAM_UART.srcs/sources_1/bd/design_1/synth/design_1.v:474]
-INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'axis_clock_converter_0'. This will prevent further optimization [C:/FPGA_Projects/ADC_SRAM_UART/ADC_SRAM_UART.srcs/sources_1/bd/design_1/synth/design_1.v:425]
-INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'proc_sys_reset_0'. This will prevent further optimization [C:/FPGA_Projects/ADC_SRAM_UART/ADC_SRAM_UART.srcs/sources_1/bd/design_1/synth/design_1.v:727]
-INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'axi_fifo_mm_s_0'. This will prevent further optimization [C:/FPGA_Projects/ADC_SRAM_UART/ADC_SRAM_UART.srcs/sources_1/bd/design_1/synth/design_1.v:333]
-INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'axis_interconnect_0'. This will prevent further optimization [C:/FPGA_Projects/ADC_SRAM_UART/ADC_SRAM_UART.srcs/sources_1/bd/design_1/synth/design_1.v:438]
-INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'ila_2'. This will prevent further optimization [C:/FPGA_Projects/ADC_SRAM_UART/ADC_SRAM_UART.srcs/sources_1/bd/design_1/synth/design_1.v:485]
-INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'ila_3'. This will prevent further optimization [C:/FPGA_Projects/ADC_SRAM_UART/ADC_SRAM_UART.srcs/sources_1/bd/design_1/synth/design_1.v:496]
-INFO: [Synth 8-6155] done synthesizing module 'design_1' (37#1) [C:/FPGA_Projects/ADC_SRAM_UART/ADC_SRAM_UART.srcs/sources_1/bd/design_1/synth/design_1.v:13]
-INFO: [Synth 8-6155] done synthesizing module 'design_1_wrapper' (38#1) [C:/FPGA_Projects/ADC_SRAM_UART/ADC_SRAM_UART.srcs/sources_1/bd/design_1/hdl/design_1_wrapper.v:12]
+INFO: [Synth 8-6157] synthesizing module 'design_1' [C:/FPGA_Projects/ADC_SRAM_UART/ADC_SRAM_UART.srcs/sources_1/bd/design_1/synth/design_1.v:14]
+INFO: [Synth 8-6157] synthesizing module 'design_1_FPGA_ADC_interface_0_1' [C:/FPGA_Projects/ADC_SRAM_UART/ADC_SRAM_UART.runs/synth_1/.Xil/Vivado-10676-Lenovo/realtime/design_1_FPGA_ADC_interface_0_1_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_FPGA_ADC_interface_0_1' (2#1) [C:/FPGA_Projects/ADC_SRAM_UART/ADC_SRAM_UART.runs/synth_1/.Xil/Vivado-10676-Lenovo/realtime/design_1_FPGA_ADC_interface_0_1_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'design_1_axi_emc_0_0' [C:/FPGA_Projects/ADC_SRAM_UART/ADC_SRAM_UART.runs/synth_1/.Xil/Vivado-10676-Lenovo/realtime/design_1_axi_emc_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_axi_emc_0_0' (3#1) [C:/FPGA_Projects/ADC_SRAM_UART/ADC_SRAM_UART.runs/synth_1/.Xil/Vivado-10676-Lenovo/realtime/design_1_axi_emc_0_0_stub.v:6]
+WARNING: [Synth 8-689] width (19) of port connection 'mem_a' does not match port width (32) of module 'design_1_axi_emc_0_0' [C:/FPGA_Projects/ADC_SRAM_UART/ADC_SRAM_UART.srcs/sources_1/bd/design_1/synth/design_1.v:295]
+WARNING: [Synth 8-350] instance 'axi_emc_0' of module 'design_1_axi_emc_0_0' requires 51 connections, but only 42 given [C:/FPGA_Projects/ADC_SRAM_UART/ADC_SRAM_UART.srcs/sources_1/bd/design_1/synth/design_1.v:294]
+INFO: [Synth 8-6157] synthesizing module 'design_1_axi_fifo_mm_s_0_0' [C:/FPGA_Projects/ADC_SRAM_UART/ADC_SRAM_UART.runs/synth_1/.Xil/Vivado-10676-Lenovo/realtime/design_1_axi_fifo_mm_s_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_axi_fifo_mm_s_0_0' (4#1) [C:/FPGA_Projects/ADC_SRAM_UART/ADC_SRAM_UART.runs/synth_1/.Xil/Vivado-10676-Lenovo/realtime/design_1_axi_fifo_mm_s_0_0_stub.v:6]
+WARNING: [Synth 8-350] instance 'axi_fifo_mm_s_0' of module 'design_1_axi_fifo_mm_s_0_0' requires 25 connections, but only 23 given [C:/FPGA_Projects/ADC_SRAM_UART/ADC_SRAM_UART.srcs/sources_1/bd/design_1/synth/design_1.v:337]
+INFO: [Synth 8-6157] synthesizing module 'design_1_axi_gpio_0_2' [C:/FPGA_Projects/ADC_SRAM_UART/ADC_SRAM_UART.runs/synth_1/.Xil/Vivado-10676-Lenovo/realtime/design_1_axi_gpio_0_2_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_axi_gpio_0_2' (5#1) [C:/FPGA_Projects/ADC_SRAM_UART/ADC_SRAM_UART.runs/synth_1/.Xil/Vivado-10676-Lenovo/realtime/design_1_axi_gpio_0_2_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'design_1_axi_gpio_1_0' [C:/FPGA_Projects/ADC_SRAM_UART/ADC_SRAM_UART.runs/synth_1/.Xil/Vivado-10676-Lenovo/realtime/design_1_axi_gpio_1_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_axi_gpio_1_0' (6#1) [C:/FPGA_Projects/ADC_SRAM_UART/ADC_SRAM_UART.runs/synth_1/.Xil/Vivado-10676-Lenovo/realtime/design_1_axi_gpio_1_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'design_1_axi_uartlite_0_0' [C:/FPGA_Projects/ADC_SRAM_UART/ADC_SRAM_UART.runs/synth_1/.Xil/Vivado-10676-Lenovo/realtime/design_1_axi_uartlite_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_axi_uartlite_0_0' (7#1) [C:/FPGA_Projects/ADC_SRAM_UART/ADC_SRAM_UART.runs/synth_1/.Xil/Vivado-10676-Lenovo/realtime/design_1_axi_uartlite_0_0_stub.v:6]
+WARNING: [Synth 8-350] instance 'axi_uartlite_0' of module 'design_1_axi_uartlite_0_0' requires 22 connections, but only 21 given [C:/FPGA_Projects/ADC_SRAM_UART/ADC_SRAM_UART.srcs/sources_1/bd/design_1/synth/design_1.v:407]
+INFO: [Synth 8-6157] synthesizing module 'design_1_axis_clock_converter_0_1' [C:/FPGA_Projects/ADC_SRAM_UART/ADC_SRAM_UART.runs/synth_1/.Xil/Vivado-10676-Lenovo/realtime/design_1_axis_clock_converter_0_1_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_axis_clock_converter_0_1' (8#1) [C:/FPGA_Projects/ADC_SRAM_UART/ADC_SRAM_UART.runs/synth_1/.Xil/Vivado-10676-Lenovo/realtime/design_1_axis_clock_converter_0_1_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'design_1_axis_interconnect_0_0' [C:/FPGA_Projects/ADC_SRAM_UART/ADC_SRAM_UART.srcs/sources_1/bd/design_1/synth/design_1.v:761]
+INFO: [Synth 8-6157] synthesizing module 's00_couplers_imp_1LLE45P' [C:/FPGA_Projects/ADC_SRAM_UART/ADC_SRAM_UART.srcs/sources_1/bd/design_1/synth/design_1.v:2775]
+INFO: [Synth 8-6157] synthesizing module 'design_1_auto_ss_k_0' [C:/FPGA_Projects/ADC_SRAM_UART/ADC_SRAM_UART.runs/synth_1/.Xil/Vivado-10676-Lenovo/realtime/design_1_auto_ss_k_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_auto_ss_k_0' (9#1) [C:/FPGA_Projects/ADC_SRAM_UART/ADC_SRAM_UART.runs/synth_1/.Xil/Vivado-10676-Lenovo/realtime/design_1_auto_ss_k_0_stub.v:6]
+WARNING: [Synth 8-350] instance 'auto_ss_k' of module 'design_1_auto_ss_k_0' requires 12 connections, but only 11 given [C:/FPGA_Projects/ADC_SRAM_UART/ADC_SRAM_UART.srcs/sources_1/bd/design_1/synth/design_1.v:2827]
+INFO: [Synth 8-6157] synthesizing module 'design_1_auto_us_0' [C:/FPGA_Projects/ADC_SRAM_UART/ADC_SRAM_UART.runs/synth_1/.Xil/Vivado-10676-Lenovo/realtime/design_1_auto_us_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_auto_us_0' (10#1) [C:/FPGA_Projects/ADC_SRAM_UART/ADC_SRAM_UART.runs/synth_1/.Xil/Vivado-10676-Lenovo/realtime/design_1_auto_us_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 's00_couplers_imp_1LLE45P' (11#1) [C:/FPGA_Projects/ADC_SRAM_UART/ADC_SRAM_UART.srcs/sources_1/bd/design_1/synth/design_1.v:2775]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_axis_interconnect_0_0' (12#1) [C:/FPGA_Projects/ADC_SRAM_UART/ADC_SRAM_UART.srcs/sources_1/bd/design_1/synth/design_1.v:761]
+INFO: [Synth 8-6157] synthesizing module 'design_1_clk_wiz_1_0' [C:/FPGA_Projects/ADC_SRAM_UART/ADC_SRAM_UART.runs/synth_1/.Xil/Vivado-10676-Lenovo/realtime/design_1_clk_wiz_1_0_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_clk_wiz_1_0' (13#1) [C:/FPGA_Projects/ADC_SRAM_UART/ADC_SRAM_UART.runs/synth_1/.Xil/Vivado-10676-Lenovo/realtime/design_1_clk_wiz_1_0_stub.v:5]
+WARNING: [Synth 8-4446] all outputs are unconnected for this instance and logic may be removed [C:/FPGA_Projects/ADC_SRAM_UART/ADC_SRAM_UART.srcs/sources_1/bd/design_1/synth/design_1.v:463]
+INFO: [Synth 8-6157] synthesizing module 'design_1_ila_0_0' [C:/FPGA_Projects/ADC_SRAM_UART/ADC_SRAM_UART.runs/synth_1/.Xil/Vivado-10676-Lenovo/realtime/design_1_ila_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_ila_0_0' (14#1) [C:/FPGA_Projects/ADC_SRAM_UART/ADC_SRAM_UART.runs/synth_1/.Xil/Vivado-10676-Lenovo/realtime/design_1_ila_0_0_stub.v:6]
+WARNING: [Synth 8-4446] all outputs are unconnected for this instance and logic may be removed [C:/FPGA_Projects/ADC_SRAM_UART/ADC_SRAM_UART.srcs/sources_1/bd/design_1/synth/design_1.v:478]
+INFO: [Synth 8-6157] synthesizing module 'design_1_ila_1_0' [C:/FPGA_Projects/ADC_SRAM_UART/ADC_SRAM_UART.runs/synth_1/.Xil/Vivado-10676-Lenovo/realtime/design_1_ila_1_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_ila_1_0' (15#1) [C:/FPGA_Projects/ADC_SRAM_UART/ADC_SRAM_UART.runs/synth_1/.Xil/Vivado-10676-Lenovo/realtime/design_1_ila_1_0_stub.v:6]
+WARNING: [Synth 8-4446] all outputs are unconnected for this instance and logic may be removed [C:/FPGA_Projects/ADC_SRAM_UART/ADC_SRAM_UART.srcs/sources_1/bd/design_1/synth/design_1.v:489]
+INFO: [Synth 8-6157] synthesizing module 'design_1_ila_2_0' [C:/FPGA_Projects/ADC_SRAM_UART/ADC_SRAM_UART.runs/synth_1/.Xil/Vivado-10676-Lenovo/realtime/design_1_ila_2_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_ila_2_0' (16#1) [C:/FPGA_Projects/ADC_SRAM_UART/ADC_SRAM_UART.runs/synth_1/.Xil/Vivado-10676-Lenovo/realtime/design_1_ila_2_0_stub.v:6]
+WARNING: [Synth 8-4446] all outputs are unconnected for this instance and logic may be removed [C:/FPGA_Projects/ADC_SRAM_UART/ADC_SRAM_UART.srcs/sources_1/bd/design_1/synth/design_1.v:500]
+INFO: [Synth 8-6157] synthesizing module 'design_1_ila_3_0' [C:/FPGA_Projects/ADC_SRAM_UART/ADC_SRAM_UART.runs/synth_1/.Xil/Vivado-10676-Lenovo/realtime/design_1_ila_3_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_ila_3_0' (17#1) [C:/FPGA_Projects/ADC_SRAM_UART/ADC_SRAM_UART.runs/synth_1/.Xil/Vivado-10676-Lenovo/realtime/design_1_ila_3_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'design_1_mdm_0_0' [C:/FPGA_Projects/ADC_SRAM_UART/ADC_SRAM_UART.runs/synth_1/.Xil/Vivado-10676-Lenovo/realtime/design_1_mdm_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_mdm_0_0' (18#1) [C:/FPGA_Projects/ADC_SRAM_UART/ADC_SRAM_UART.runs/synth_1/.Xil/Vivado-10676-Lenovo/realtime/design_1_mdm_0_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'design_1_microblaze_0_0' [C:/FPGA_Projects/ADC_SRAM_UART/ADC_SRAM_UART.runs/synth_1/.Xil/Vivado-10676-Lenovo/realtime/design_1_microblaze_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_microblaze_0_0' (19#1) [C:/FPGA_Projects/ADC_SRAM_UART/ADC_SRAM_UART.runs/synth_1/.Xil/Vivado-10676-Lenovo/realtime/design_1_microblaze_0_0_stub.v:6]
+WARNING: [Synth 8-350] instance 'microblaze_0' of module 'design_1_microblaze_0_0' requires 52 connections, but only 51 given [C:/FPGA_Projects/ADC_SRAM_UART/ADC_SRAM_UART.srcs/sources_1/bd/design_1/synth/design_1.v:524]
+INFO: [Synth 8-6157] synthesizing module 'design_1_microblaze_0_axi_periph_0' [C:/FPGA_Projects/ADC_SRAM_UART/ADC_SRAM_UART.srcs/sources_1/bd/design_1/synth/design_1.v:831]
+INFO: [Synth 8-6157] synthesizing module 'm00_couplers_imp_8RVYHO' [C:/FPGA_Projects/ADC_SRAM_UART/ADC_SRAM_UART.srcs/sources_1/bd/design_1/synth/design_1.v:1743]
+INFO: [Synth 8-6155] done synthesizing module 'm00_couplers_imp_8RVYHO' (20#1) [C:/FPGA_Projects/ADC_SRAM_UART/ADC_SRAM_UART.srcs/sources_1/bd/design_1/synth/design_1.v:1743]
+INFO: [Synth 8-6157] synthesizing module 'm01_couplers_imp_1UTB3Y5' [C:/FPGA_Projects/ADC_SRAM_UART/ADC_SRAM_UART.srcs/sources_1/bd/design_1/synth/design_1.v:1875]
+INFO: [Synth 8-6157] synthesizing module 'design_1_auto_pc_0' [C:/FPGA_Projects/ADC_SRAM_UART/ADC_SRAM_UART.runs/synth_1/.Xil/Vivado-10676-Lenovo/realtime/design_1_auto_pc_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_auto_pc_0' (21#1) [C:/FPGA_Projects/ADC_SRAM_UART/ADC_SRAM_UART.runs/synth_1/.Xil/Vivado-10676-Lenovo/realtime/design_1_auto_pc_0_stub.v:6]
+WARNING: [Synth 8-350] instance 'auto_pc' of module 'design_1_auto_pc_0' requires 56 connections, but only 52 given [C:/FPGA_Projects/ADC_SRAM_UART/ADC_SRAM_UART.srcs/sources_1/bd/design_1/synth/design_1.v:2090]
+INFO: [Synth 8-6155] done synthesizing module 'm01_couplers_imp_1UTB3Y5' (22#1) [C:/FPGA_Projects/ADC_SRAM_UART/ADC_SRAM_UART.srcs/sources_1/bd/design_1/synth/design_1.v:1875]
+INFO: [Synth 8-6157] synthesizing module 'm02_couplers_imp_7ANRHB' [C:/FPGA_Projects/ADC_SRAM_UART/ADC_SRAM_UART.srcs/sources_1/bd/design_1/synth/design_1.v:2145]
+INFO: [Synth 8-6155] done synthesizing module 'm02_couplers_imp_7ANRHB' (23#1) [C:/FPGA_Projects/ADC_SRAM_UART/ADC_SRAM_UART.srcs/sources_1/bd/design_1/synth/design_1.v:2145]
+INFO: [Synth 8-6157] synthesizing module 'm03_couplers_imp_1W07O72' [C:/FPGA_Projects/ADC_SRAM_UART/ADC_SRAM_UART.srcs/sources_1/bd/design_1/synth/design_1.v:2277]
+INFO: [Synth 8-6155] done synthesizing module 'm03_couplers_imp_1W07O72' (24#1) [C:/FPGA_Projects/ADC_SRAM_UART/ADC_SRAM_UART.srcs/sources_1/bd/design_1/synth/design_1.v:2277]
+INFO: [Synth 8-6157] synthesizing module 'm04_couplers_imp_5LX7BU' [C:/FPGA_Projects/ADC_SRAM_UART/ADC_SRAM_UART.srcs/sources_1/bd/design_1/synth/design_1.v:2409]
+INFO: [Synth 8-6155] done synthesizing module 'm04_couplers_imp_5LX7BU' (25#1) [C:/FPGA_Projects/ADC_SRAM_UART/ADC_SRAM_UART.srcs/sources_1/bd/design_1/synth/design_1.v:2409]
+INFO: [Synth 8-6157] synthesizing module 's00_couplers_imp_1RZP34U' [C:/FPGA_Projects/ADC_SRAM_UART/ADC_SRAM_UART.srcs/sources_1/bd/design_1/synth/design_1.v:2853]
+INFO: [Synth 8-6155] done synthesizing module 's00_couplers_imp_1RZP34U' (26#1) [C:/FPGA_Projects/ADC_SRAM_UART/ADC_SRAM_UART.srcs/sources_1/bd/design_1/synth/design_1.v:2853]
+INFO: [Synth 8-6157] synthesizing module 'design_1_xbar_0' [C:/FPGA_Projects/ADC_SRAM_UART/ADC_SRAM_UART.runs/synth_1/.Xil/Vivado-10676-Lenovo/realtime/design_1_xbar_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_xbar_0' (27#1) [C:/FPGA_Projects/ADC_SRAM_UART/ADC_SRAM_UART.runs/synth_1/.Xil/Vivado-10676-Lenovo/realtime/design_1_xbar_0_stub.v:6]
+WARNING: [Synth 8-689] width (6) of port connection 'm_axi_arprot' does not match port width (15) of module 'design_1_xbar_0' [C:/FPGA_Projects/ADC_SRAM_UART/ADC_SRAM_UART.srcs/sources_1/bd/design_1/synth/design_1.v:1704]
+WARNING: [Synth 8-689] width (6) of port connection 'm_axi_awprot' does not match port width (15) of module 'design_1_xbar_0' [C:/FPGA_Projects/ADC_SRAM_UART/ADC_SRAM_UART.srcs/sources_1/bd/design_1/synth/design_1.v:1708]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_microblaze_0_axi_periph_0' (28#1) [C:/FPGA_Projects/ADC_SRAM_UART/ADC_SRAM_UART.srcs/sources_1/bd/design_1/synth/design_1.v:831]
+INFO: [Synth 8-6157] synthesizing module 'microblaze_0_local_memory_imp_1K0VQXK' [C:/FPGA_Projects/ADC_SRAM_UART/ADC_SRAM_UART.srcs/sources_1/bd/design_1/synth/design_1.v:2541]
+INFO: [Synth 8-6157] synthesizing module 'design_1_dlmb_bram_if_cntlr_0' [C:/FPGA_Projects/ADC_SRAM_UART/ADC_SRAM_UART.runs/synth_1/.Xil/Vivado-10676-Lenovo/realtime/design_1_dlmb_bram_if_cntlr_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_dlmb_bram_if_cntlr_0' (29#1) [C:/FPGA_Projects/ADC_SRAM_UART/ADC_SRAM_UART.runs/synth_1/.Xil/Vivado-10676-Lenovo/realtime/design_1_dlmb_bram_if_cntlr_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'design_1_dlmb_v10_0' [C:/FPGA_Projects/ADC_SRAM_UART/ADC_SRAM_UART.runs/synth_1/.Xil/Vivado-10676-Lenovo/realtime/design_1_dlmb_v10_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_dlmb_v10_0' (30#1) [C:/FPGA_Projects/ADC_SRAM_UART/ADC_SRAM_UART.runs/synth_1/.Xil/Vivado-10676-Lenovo/realtime/design_1_dlmb_v10_0_stub.v:6]
+WARNING: [Synth 8-350] instance 'dlmb_v10' of module 'design_1_dlmb_v10_0' requires 25 connections, but only 24 given [C:/FPGA_Projects/ADC_SRAM_UART/ADC_SRAM_UART.srcs/sources_1/bd/design_1/synth/design_1.v:2687]
+INFO: [Synth 8-6157] synthesizing module 'design_1_ilmb_bram_if_cntlr_0' [C:/FPGA_Projects/ADC_SRAM_UART/ADC_SRAM_UART.runs/synth_1/.Xil/Vivado-10676-Lenovo/realtime/design_1_ilmb_bram_if_cntlr_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_ilmb_bram_if_cntlr_0' (31#1) [C:/FPGA_Projects/ADC_SRAM_UART/ADC_SRAM_UART.runs/synth_1/.Xil/Vivado-10676-Lenovo/realtime/design_1_ilmb_bram_if_cntlr_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'design_1_ilmb_v10_0' [C:/FPGA_Projects/ADC_SRAM_UART/ADC_SRAM_UART.runs/synth_1/.Xil/Vivado-10676-Lenovo/realtime/design_1_ilmb_v10_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_ilmb_v10_0' (32#1) [C:/FPGA_Projects/ADC_SRAM_UART/ADC_SRAM_UART.runs/synth_1/.Xil/Vivado-10676-Lenovo/realtime/design_1_ilmb_v10_0_stub.v:6]
+WARNING: [Synth 8-350] instance 'ilmb_v10' of module 'design_1_ilmb_v10_0' requires 25 connections, but only 24 given [C:/FPGA_Projects/ADC_SRAM_UART/ADC_SRAM_UART.srcs/sources_1/bd/design_1/synth/design_1.v:2733]
+INFO: [Synth 8-6157] synthesizing module 'design_1_lmb_bram_0' [C:/FPGA_Projects/ADC_SRAM_UART/ADC_SRAM_UART.runs/synth_1/.Xil/Vivado-10676-Lenovo/realtime/design_1_lmb_bram_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_lmb_bram_0' (33#1) [C:/FPGA_Projects/ADC_SRAM_UART/ADC_SRAM_UART.runs/synth_1/.Xil/Vivado-10676-Lenovo/realtime/design_1_lmb_bram_0_stub.v:6]
+WARNING: [Synth 8-350] instance 'lmb_bram' of module 'design_1_lmb_bram_0' requires 16 connections, but only 14 given [C:/FPGA_Projects/ADC_SRAM_UART/ADC_SRAM_UART.srcs/sources_1/bd/design_1/synth/design_1.v:2758]
+INFO: [Synth 8-6155] done synthesizing module 'microblaze_0_local_memory_imp_1K0VQXK' (34#1) [C:/FPGA_Projects/ADC_SRAM_UART/ADC_SRAM_UART.srcs/sources_1/bd/design_1/synth/design_1.v:2541]
+INFO: [Synth 8-6157] synthesizing module 'design_1_proc_sys_reset_0_0' [C:/FPGA_Projects/ADC_SRAM_UART/ADC_SRAM_UART.runs/synth_1/.Xil/Vivado-10676-Lenovo/realtime/design_1_proc_sys_reset_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_proc_sys_reset_0_0' (35#1) [C:/FPGA_Projects/ADC_SRAM_UART/ADC_SRAM_UART.runs/synth_1/.Xil/Vivado-10676-Lenovo/realtime/design_1_proc_sys_reset_0_0_stub.v:6]
+WARNING: [Synth 8-350] instance 'proc_sys_reset_0' of module 'design_1_proc_sys_reset_0_0' requires 10 connections, but only 7 given [C:/FPGA_Projects/ADC_SRAM_UART/ADC_SRAM_UART.srcs/sources_1/bd/design_1/synth/design_1.v:731]
+INFO: [Synth 8-6157] synthesizing module 'design_1_rst_clk_wiz_1_100M_0' [C:/FPGA_Projects/ADC_SRAM_UART/ADC_SRAM_UART.runs/synth_1/.Xil/Vivado-10676-Lenovo/realtime/design_1_rst_clk_wiz_1_100M_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_rst_clk_wiz_1_100M_0' (36#1) [C:/FPGA_Projects/ADC_SRAM_UART/ADC_SRAM_UART.runs/synth_1/.Xil/Vivado-10676-Lenovo/realtime/design_1_rst_clk_wiz_1_100M_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'design_1_util_vector_logic_0_0' [C:/FPGA_Projects/ADC_SRAM_UART/ADC_SRAM_UART.runs/synth_1/.Xil/Vivado-10676-Lenovo/realtime/design_1_util_vector_logic_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_util_vector_logic_0_0' (37#1) [C:/FPGA_Projects/ADC_SRAM_UART/ADC_SRAM_UART.runs/synth_1/.Xil/Vivado-10676-Lenovo/realtime/design_1_util_vector_logic_0_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'design_1_xlslice_0_0' [c:/FPGA_Projects/ADC_SRAM_UART/ADC_SRAM_UART.srcs/sources_1/bd/design_1/ip/design_1_xlslice_0_0/synth/design_1_xlslice_0_0.v:57]
+INFO: [Synth 8-6157] synthesizing module 'xlslice_v1_0_1_xlslice' [c:/FPGA_Projects/ADC_SRAM_UART/ADC_SRAM_UART.srcs/sources_1/bd/design_1/ipshared/f3db/hdl/xlslice_v1_0_vl_rfs.v:13]
+	Parameter DIN_WIDTH bound to: 2 - type: integer 
+	Parameter DIN_FROM bound to: 0 - type: integer 
+	Parameter DIN_TO bound to: 0 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'xlslice_v1_0_1_xlslice' (38#1) [c:/FPGA_Projects/ADC_SRAM_UART/ADC_SRAM_UART.srcs/sources_1/bd/design_1/ipshared/f3db/hdl/xlslice_v1_0_vl_rfs.v:13]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_xlslice_0_0' (39#1) [c:/FPGA_Projects/ADC_SRAM_UART/ADC_SRAM_UART.srcs/sources_1/bd/design_1/ip/design_1_xlslice_0_0/synth/design_1_xlslice_0_0.v:57]
+INFO: [Synth 8-6157] synthesizing module 'design_1_xlslice_0_1' [c:/FPGA_Projects/ADC_SRAM_UART/ADC_SRAM_UART.srcs/sources_1/bd/design_1/ip/design_1_xlslice_0_1/synth/design_1_xlslice_0_1.v:57]
+INFO: [Synth 8-6157] synthesizing module 'xlslice_v1_0_1_xlslice__parameterized0' [c:/FPGA_Projects/ADC_SRAM_UART/ADC_SRAM_UART.srcs/sources_1/bd/design_1/ipshared/f3db/hdl/xlslice_v1_0_vl_rfs.v:13]
+	Parameter DIN_WIDTH bound to: 2 - type: integer 
+	Parameter DIN_FROM bound to: 1 - type: integer 
+	Parameter DIN_TO bound to: 1 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'xlslice_v1_0_1_xlslice__parameterized0' (39#1) [c:/FPGA_Projects/ADC_SRAM_UART/ADC_SRAM_UART.srcs/sources_1/bd/design_1/ipshared/f3db/hdl/xlslice_v1_0_vl_rfs.v:13]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_xlslice_0_1' (40#1) [c:/FPGA_Projects/ADC_SRAM_UART/ADC_SRAM_UART.srcs/sources_1/bd/design_1/ip/design_1_xlslice_0_1/synth/design_1_xlslice_0_1.v:57]
+INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'ila_0'. This will prevent further optimization [C:/FPGA_Projects/ADC_SRAM_UART/ADC_SRAM_UART.srcs/sources_1/bd/design_1/synth/design_1.v:463]
+INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'FPGA_ADC_interface_0'. This will prevent further optimization [C:/FPGA_Projects/ADC_SRAM_UART/ADC_SRAM_UART.srcs/sources_1/bd/design_1/synth/design_1.v:277]
+INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'rst_clk_wiz_1_100M'. This will prevent further optimization [C:/FPGA_Projects/ADC_SRAM_UART/ADC_SRAM_UART.srcs/sources_1/bd/design_1/synth/design_1.v:739]
+INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'xlslice_0'. This will prevent further optimization [C:/FPGA_Projects/ADC_SRAM_UART/ADC_SRAM_UART.srcs/sources_1/bd/design_1/synth/design_1.v:753]
+INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'ila_1'. This will prevent further optimization [C:/FPGA_Projects/ADC_SRAM_UART/ADC_SRAM_UART.srcs/sources_1/bd/design_1/synth/design_1.v:478]
+INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'axis_clock_converter_0'. This will prevent further optimization [C:/FPGA_Projects/ADC_SRAM_UART/ADC_SRAM_UART.srcs/sources_1/bd/design_1/synth/design_1.v:429]
+INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'proc_sys_reset_0'. This will prevent further optimization [C:/FPGA_Projects/ADC_SRAM_UART/ADC_SRAM_UART.srcs/sources_1/bd/design_1/synth/design_1.v:731]
+INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'axi_gpio_1'. This will prevent further optimization [C:/FPGA_Projects/ADC_SRAM_UART/ADC_SRAM_UART.srcs/sources_1/bd/design_1/synth/design_1.v:385]
+INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'axi_fifo_mm_s_0'. This will prevent further optimization [C:/FPGA_Projects/ADC_SRAM_UART/ADC_SRAM_UART.srcs/sources_1/bd/design_1/synth/design_1.v:337]
+INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'axis_interconnect_0'. This will prevent further optimization [C:/FPGA_Projects/ADC_SRAM_UART/ADC_SRAM_UART.srcs/sources_1/bd/design_1/synth/design_1.v:442]
+INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'ila_2'. This will prevent further optimization [C:/FPGA_Projects/ADC_SRAM_UART/ADC_SRAM_UART.srcs/sources_1/bd/design_1/synth/design_1.v:489]
+INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'ila_3'. This will prevent further optimization [C:/FPGA_Projects/ADC_SRAM_UART/ADC_SRAM_UART.srcs/sources_1/bd/design_1/synth/design_1.v:500]
+INFO: [Synth 8-6155] done synthesizing module 'design_1' (41#1) [C:/FPGA_Projects/ADC_SRAM_UART/ADC_SRAM_UART.srcs/sources_1/bd/design_1/synth/design_1.v:14]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_wrapper' (42#1) [C:/FPGA_Projects/ADC_SRAM_UART/ADC_SRAM_UART.srcs/sources_1/bd/design_1/hdl/design_1_wrapper.v:12]
+WARNING: [Synth 8-3331] design xlslice_v1_0_1_xlslice__parameterized0 has unconnected port Din[0]
+WARNING: [Synth 8-3331] design xlslice_v1_0_1_xlslice has unconnected port Din[1]
 WARNING: [Synth 8-3331] design s00_couplers_imp_1RZP34U has unconnected port M_ACLK
 WARNING: [Synth 8-3331] design s00_couplers_imp_1RZP34U has unconnected port M_ARESETN
 WARNING: [Synth 8-3331] design s00_couplers_imp_1RZP34U has unconnected port S_ACLK
@@ -175,7 +194,7 @@ WARNING: [Synth 8-3331] design s00_couplers_imp_1LLE45P has unconnected port M_A
 WARNING: [Synth 8-3331] design design_1_axis_interconnect_0_0 has unconnected port ACLK
 WARNING: [Synth 8-3331] design design_1_axis_interconnect_0_0 has unconnected port ARESETN
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 618.344 ; gain = 156.148
+Finished RTL Elaboration : Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 618.641 ; gain = 157.855
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -188,10 +207,10 @@ Report Check Netlist:
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 618.344 ; gain = 156.148
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 618.641 ; gain = 157.855
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 618.344 ; gain = 156.148
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 618.641 ; gain = 157.855
 ---------------------------------------------------------------------------------
 INFO: [Netlist 29-17] Analyzing 10 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
@@ -244,6 +263,8 @@ Parsing XDC File [c:/FPGA_Projects/ADC_SRAM_UART/ADC_SRAM_UART.srcs/sources_1/bd
 Finished Parsing XDC File [c:/FPGA_Projects/ADC_SRAM_UART/ADC_SRAM_UART.srcs/sources_1/bd/design_1/ip/design_1_axi_gpio_0_2/design_1_axi_gpio_0_2/design_1_axi_gpio_0_2_in_context.xdc] for cell 'design_1_i/axi_gpio_0'
 Parsing XDC File [c:/FPGA_Projects/ADC_SRAM_UART/ADC_SRAM_UART.srcs/sources_1/bd/design_1/ip/design_1_axi_gpio_1_0/design_1_axi_gpio_1_0/design_1_axi_gpio_1_0_in_context.xdc] for cell 'design_1_i/axi_gpio_1'
 Finished Parsing XDC File [c:/FPGA_Projects/ADC_SRAM_UART/ADC_SRAM_UART.srcs/sources_1/bd/design_1/ip/design_1_axi_gpio_1_0/design_1_axi_gpio_1_0/design_1_axi_gpio_1_0_in_context.xdc] for cell 'design_1_i/axi_gpio_1'
+Parsing XDC File [c:/FPGA_Projects/ADC_SRAM_UART/ADC_SRAM_UART.srcs/sources_1/bd/design_1/ip/design_1_util_vector_logic_0_0/design_1_util_vector_logic_0_0/design_1_util_vector_logic_0_0_in_context.xdc] for cell 'design_1_i/util_vector_logic_0'
+Finished Parsing XDC File [c:/FPGA_Projects/ADC_SRAM_UART/ADC_SRAM_UART.srcs/sources_1/bd/design_1/ip/design_1_util_vector_logic_0_0/design_1_util_vector_logic_0_0/design_1_util_vector_logic_0_0_in_context.xdc] for cell 'design_1_i/util_vector_logic_0'
 Parsing XDC File [c:/FPGA_Projects/ADC_SRAM_UART/ADC_SRAM_UART.srcs/sources_1/bd/design_1/ip/design_1_auto_pc_0/design_1_auto_pc_0/design_1_auto_pc_0_in_context.xdc] for cell 'design_1_i/microblaze_0_axi_periph/m01_couplers/auto_pc'
 Finished Parsing XDC File [c:/FPGA_Projects/ADC_SRAM_UART/ADC_SRAM_UART.srcs/sources_1/bd/design_1/ip/design_1_auto_pc_0/design_1_auto_pc_0/design_1_auto_pc_0_in_context.xdc] for cell 'design_1_i/microblaze_0_axi_periph/m01_couplers/auto_pc'
 Parsing XDC File [c:/FPGA_Projects/ADC_SRAM_UART/ADC_SRAM_UART.srcs/sources_1/bd/design_1/ip/design_1_auto_us_0/design_1_auto_us_0/design_1_axis_dwidth_converter_0_1_in_context.xdc] for cell 'design_1_i/axis_interconnect_0/s00_couplers/auto_us'
@@ -256,28 +277,28 @@ INFO: [Project 1-236] Implementation specific constraints were found while readi
 Resolution: To avoid this warning, move constraints listed in [.Xil/design_1_wrapper_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
 Parsing XDC File [C:/FPGA_Projects/ADC_SRAM_UART/ADC_SRAM_UART.runs/synth_1/dont_touch.xdc]
 Finished Parsing XDC File [C:/FPGA_Projects/ADC_SRAM_UART/ADC_SRAM_UART.runs/synth_1/dont_touch.xdc]
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 916.371 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 916.293 ; gain = 0.000
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 916.371 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 916.293 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
   A total of 10 instances were transformed.
   IOBUF => IOBUF (IBUF, OBUFT): 10 instances
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 916.371 ; gain = 0.000
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.022 . Memory (MB): peak = 916.371 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 916.293 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.028 . Memory (MB): peak = 916.293 ; gain = 0.000
 WARNING: [Timing 38-316] Clock period '100.000' specified during out-of-context synthesis of instance 'design_1_i/axis_clock_converter_0' at clock pin 'm_axis_aclk' is different from the actual clock period '10.000', this can lead to different synthesis results.
 WARNING: [Timing 38-316] Clock period '500.000' specified during out-of-context synthesis of instance 'design_1_i/ila_1' at clock pin 'clk' is different from the actual clock period '125.000', this can lead to different synthesis results.
 WARNING: [Timing 38-316] Clock period '20.000' specified during out-of-context synthesis of instance 'design_1_i/microblaze_0_local_memory/lmb_bram' at clock pin 'clka' is different from the actual clock period '10.000', this can lead to different synthesis results.
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:20 ; elapsed = 00:00:23 . Memory (MB): peak = 916.371 ; gain = 454.176
+Finished Constraint Validation : Time (s): cpu = 00:00:27 ; elapsed = 00:00:30 . Memory (MB): peak = 916.293 ; gain = 455.508
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7a35tcpg236-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:20 ; elapsed = 00:00:23 . Memory (MB): peak = 916.371 ; gain = 454.176
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:27 ; elapsed = 00:00:30 . Memory (MB): peak = 916.293 ; gain = 455.508
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
@@ -309,14 +330,17 @@ Applied set_property DONT_TOUCH = true for design_1_i/ila_3. (constraint file  a
 Applied set_property DONT_TOUCH = true for design_1_i/axis_interconnect_0. (constraint file  auto generated constraint, line ).
 Applied set_property DONT_TOUCH = true for design_1_i/axi_gpio_0. (constraint file  auto generated constraint, line ).
 Applied set_property DONT_TOUCH = true for design_1_i/axi_gpio_1. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for design_1_i/xlslice_0. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for design_1_i/xlslice_1. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for design_1_i/util_vector_logic_0. (constraint file  auto generated constraint, line ).
 Applied set_property DONT_TOUCH = true for design_1_i/microblaze_0_axi_periph/m01_couplers/auto_pc. (constraint file  auto generated constraint, line ).
 Applied set_property DONT_TOUCH = true for design_1_i/axis_interconnect_0/s00_couplers/auto_us. (constraint file  auto generated constraint, line ).
 Applied set_property DONT_TOUCH = true for design_1_i/axis_interconnect_0/s00_couplers/auto_ss_k. (constraint file  auto generated constraint, line ).
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:21 ; elapsed = 00:00:23 . Memory (MB): peak = 916.371 ; gain = 454.176
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:28 ; elapsed = 00:00:30 . Memory (MB): peak = 916.293 ; gain = 455.508
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:21 ; elapsed = 00:00:24 . Memory (MB): peak = 916.371 ; gain = 454.176
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:28 ; elapsed = 00:00:31 . Memory (MB): peak = 916.293 ; gain = 455.508
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -351,6 +375,8 @@ Finished Part Resource Summary
 Start Cross Boundary and Area Optimization
 ---------------------------------------------------------------------------------
 Warning: Parallel synthesis criteria is not met 
+WARNING: [Synth 8-3331] design design_1_xlslice_0_1 has unconnected port Din[0]
+WARNING: [Synth 8-3331] design design_1_xlslice_0_0 has unconnected port Din[1]
 WARNING: [Synth 8-3331] design design_1_microblaze_0_axi_periph_0 has unconnected port M00_ACLK
 WARNING: [Synth 8-3331] design design_1_microblaze_0_axi_periph_0 has unconnected port M00_ARESETN
 WARNING: [Synth 8-3331] design design_1_microblaze_0_axi_periph_0 has unconnected port M01_ACLK
@@ -368,7 +394,7 @@ WARNING: [Synth 8-3331] design design_1_axis_interconnect_0_0 has unconnected po
 WARNING: [Synth 8-3331] design design_1_axis_interconnect_0_0 has unconnected port M00_AXIS_ACLK
 WARNING: [Synth 8-3331] design design_1_axis_interconnect_0_0 has unconnected port M00_AXIS_ARESETN
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:22 ; elapsed = 00:00:25 . Memory (MB): peak = 916.371 ; gain = 454.176
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:30 ; elapsed = 00:00:33 . Memory (MB): peak = 916.293 ; gain = 455.508
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -387,13 +413,13 @@ INFO: [Synth 8-5578] Moved timing constraint from pin 'design_1_i/clk_wiz_1/clk_
 INFO: [Synth 8-5578] Moved timing constraint from pin 'design_1_i/clk_wiz_1/clk_out2' to pin 'design_1_i/clk_wiz_1/bbstub_clk_out2/O'
 INFO: [Synth 8-5819] Moved 6 constraints on hierarchical pins to their respective driving/loading pins
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:37 ; elapsed = 00:00:41 . Memory (MB): peak = 922.754 ; gain = 460.559
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:46 ; elapsed = 00:00:49 . Memory (MB): peak = 923.887 ; gain = 463.102
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:37 ; elapsed = 00:00:41 . Memory (MB): peak = 923.051 ; gain = 460.855
+Finished Timing Optimization : Time (s): cpu = 00:00:46 ; elapsed = 00:00:49 . Memory (MB): peak = 924.184 ; gain = 463.398
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -405,7 +431,7 @@ Report RTL Partitions:
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:38 ; elapsed = 00:00:42 . Memory (MB): peak = 933.492 ; gain = 471.297
+Finished Technology Mapping : Time (s): cpu = 00:00:46 ; elapsed = 00:00:49 . Memory (MB): peak = 934.633 ; gain = 473.848
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -429,7 +455,7 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:40 ; elapsed = 00:00:45 . Memory (MB): peak = 933.492 ; gain = 471.297
+Finished IO Insertion : Time (s): cpu = 00:00:48 ; elapsed = 00:00:52 . Memory (MB): peak = 934.633 ; gain = 473.848
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -442,7 +468,7 @@ Report Check Netlist:
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:40 ; elapsed = 00:00:45 . Memory (MB): peak = 933.492 ; gain = 471.297
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:48 ; elapsed = 00:00:52 . Memory (MB): peak = 934.633 ; gain = 473.848
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -454,25 +480,25 @@ Report RTL Partitions:
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:40 ; elapsed = 00:00:45 . Memory (MB): peak = 933.492 ; gain = 471.297
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:48 ; elapsed = 00:00:52 . Memory (MB): peak = 934.633 ; gain = 473.848
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:40 ; elapsed = 00:00:45 . Memory (MB): peak = 933.492 ; gain = 471.297
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:48 ; elapsed = 00:00:52 . Memory (MB): peak = 934.633 ; gain = 473.848
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:40 ; elapsed = 00:00:45 . Memory (MB): peak = 933.492 ; gain = 471.297
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:48 ; elapsed = 00:00:52 . Memory (MB): peak = 934.633 ; gain = 473.848
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:40 ; elapsed = 00:00:45 . Memory (MB): peak = 933.492 ; gain = 471.297
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:48 ; elapsed = 00:00:52 . Memory (MB): peak = 934.633 ; gain = 473.848
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -502,11 +528,12 @@ Report BlackBoxes:
 |18    |design_1_microblaze_0_0           |         1|
 |19    |design_1_proc_sys_reset_0_0       |         1|
 |20    |design_1_rst_clk_wiz_1_100M_0     |         1|
-|21    |design_1_dlmb_bram_if_cntlr_0     |         1|
-|22    |design_1_dlmb_v10_0               |         1|
-|23    |design_1_ilmb_bram_if_cntlr_0     |         1|
-|24    |design_1_ilmb_v10_0               |         1|
-|25    |design_1_lmb_bram_0               |         1|
+|21    |design_1_util_vector_logic_0_0    |         1|
+|22    |design_1_dlmb_bram_if_cntlr_0     |         1|
+|23    |design_1_dlmb_v10_0               |         1|
+|24    |design_1_ilmb_bram_if_cntlr_0     |         1|
+|25    |design_1_ilmb_v10_0               |         1|
+|26    |design_1_lmb_bram_0               |         1|
 +------+----------------------------------+----------+
 
 Report Cell Usage: 
@@ -537,47 +564,50 @@ Report Cell Usage:
 |22    |design_1_microblaze_0_0           |     1|
 |23    |design_1_proc_sys_reset_0_0       |     1|
 |24    |design_1_rst_clk_wiz_1_100M_0     |     1|
-|25    |design_1_xbar_0                   |     1|
-|26    |IBUF                              |    12|
-|27    |IOBUF                             |    10|
-|28    |OBUF                              |    29|
+|25    |design_1_util_vector_logic_0_0    |     1|
+|26    |design_1_xbar_0                   |     1|
+|27    |IBUF                              |    12|
+|28    |IOBUF                             |    10|
+|29    |OBUF                              |    29|
 +------+----------------------------------+------+
 
 Report Instance Areas: 
 +------+------------------------------+--------------------------------------+------+
 |      |Instance                      |Module                                |Cells |
 +------+------------------------------+--------------------------------------+------+
-|1     |top                           |                                      |  1977|
-|2     |  design_1_i                  |design_1                              |  1926|
+|1     |top                           |                                      |  1979|
+|2     |  design_1_i                  |design_1                              |  1928|
 |3     |    axis_interconnect_0       |design_1_axis_interconnect_0_0        |    75|
 |4     |      s00_couplers            |s00_couplers_imp_1LLE45P              |    75|
 |5     |    microblaze_0_axi_periph   |design_1_microblaze_0_axi_periph_0    |   801|
 |6     |      m01_couplers            |m01_couplers_imp_1UTB3Y5              |   205|
-|7     |    microblaze_0_local_memory |microblaze_0_local_memory_imp_1K0VQXK |   496|
+|7     |    xlslice_0                 |design_1_xlslice_0_0                  |     0|
+|8     |    xlslice_1                 |design_1_xlslice_0_1                  |     0|
+|9     |    microblaze_0_local_memory |microblaze_0_local_memory_imp_1K0VQXK |   496|
 +------+------------------------------+--------------------------------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:40 ; elapsed = 00:00:45 . Memory (MB): peak = 933.492 ; gain = 471.297
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:48 ; elapsed = 00:00:52 . Memory (MB): peak = 934.633 ; gain = 473.848
 ---------------------------------------------------------------------------------
-Synthesis finished with 0 errors, 0 critical warnings and 16 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:25 ; elapsed = 00:00:33 . Memory (MB): peak = 933.492 ; gain = 173.270
-Synthesis Optimization Complete : Time (s): cpu = 00:00:41 ; elapsed = 00:00:45 . Memory (MB): peak = 933.492 ; gain = 471.297
+Synthesis finished with 0 errors, 0 critical warnings and 18 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:27 ; elapsed = 00:00:36 . Memory (MB): peak = 934.633 ; gain = 176.195
+Synthesis Optimization Complete : Time (s): cpu = 00:00:49 ; elapsed = 00:00:52 . Memory (MB): peak = 934.633 ; gain = 473.848
 INFO: [Project 1-571] Translating synthesized netlist
 INFO: [Netlist 29-17] Analyzing 10 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 945.156 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 947.332 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
   A total of 10 instances were transformed.
   IOBUF => IOBUF (IBUF, OBUFT): 10 instances
 
 INFO: [Common 17-83] Releasing license: Synthesis
-112 Infos, 75 Warnings, 0 Critical Warnings and 0 Errors encountered.
+123 Infos, 79 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:45 ; elapsed = 00:00:51 . Memory (MB): peak = 945.188 ; gain = 484.711
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 945.188 ; gain = 0.000
+synth_design: Time (s): cpu = 00:00:53 ; elapsed = 00:00:57 . Memory (MB): peak = 947.348 ; gain = 488.293
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 947.348 ; gain = 0.000
 WARNING: [Constraints 18-5210] No constraints selected for write.
 Resolution: This message can indicate that there are no constraints for the design, or it can indicate that the used_in flags are set such that the constraints are ignored. This later case is used when running synth_design to not write synthesis constraints to the resulting checkpoint. Instead, project constraints are read when the synthesized design is opened.
 INFO: [Common 17-1381] The checkpoint 'C:/FPGA_Projects/ADC_SRAM_UART/ADC_SRAM_UART.runs/synth_1/design_1_wrapper.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file design_1_wrapper_utilization_synth.rpt -pb design_1_wrapper_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Sat Apr 13 21:00:06 2019...
+INFO: [Common 17-206] Exiting Vivado at Sun Apr 14 15:41:54 2019...

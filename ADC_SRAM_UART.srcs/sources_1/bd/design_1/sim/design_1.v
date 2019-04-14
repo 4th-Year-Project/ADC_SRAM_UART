@@ -1,7 +1,7 @@
 //Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2018.3 (win64) Build 2405991 Thu Dec  6 23:38:27 MST 2018
-//Date        : Sat Apr 13 20:57:29 2019
+//Date        : Sun Apr 14 15:36:50 2019
 //Host        : Lenovo running 64-bit major release  (build 9200)
 //Command     : generate_target design_1.bd
 //Design      : design_1
@@ -9,7 +9,8 @@
 //--------------------------------------------------------------------------------
 `timescale 1 ps / 1 ps
 
-(* CORE_GENERATION_INFO = "design_1,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=design_1,x_ipVersion=1.00.a,x_ipLanguage=VERILOG,numBlks=35,numReposBlks=25,numNonXlnxBlks=1,numHierBlks=10,maxHierDepth=1,numSysgenBlks=0,numHlsBlks=0,numHdlrefBlks=0,numPkgbdBlks=0,bdsource=USER,da_axi4_cnt=11,da_board_cnt=7,da_clkrst_cnt=43,da_mb_cnt=1,synth_mode=OOC_per_IP}" *) (* HW_HANDOFF = "design_1.hwdef" *) 
+/* Reset from microblaze logic */
+(* CORE_GENERATION_INFO = "design_1,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=design_1,x_ipVersion=1.00.a,x_ipLanguage=VERILOG,numBlks=38,numReposBlks=28,numNonXlnxBlks=1,numHierBlks=10,maxHierDepth=1,numSysgenBlks=0,numHlsBlks=0,numHdlrefBlks=0,numPkgbdBlks=0,bdsource=USER,da_axi4_cnt=11,da_board_cnt=7,da_clkrst_cnt=43,da_mb_cnt=1,synth_mode=OOC_per_IP}" *) (* HW_HANDOFF = "design_1.hwdef" *) 
 module design_1
    (A,
     CONVST,
@@ -80,6 +81,7 @@ module design_1
   wire [1:0]axi_gpio_0_GPIO2_TRI_O;
   wire [1:0]axi_gpio_0_GPIO2_TRI_T;
   wire axi_gpio_0_GPIO_TRI_I;
+  wire [1:0]axi_gpio_1_gpio2_io_o;
   wire axi_uartlite_0_UART_RxD;
   wire axi_uartlite_0_UART_TxD;
   wire [7:0]axis_clock_converter_0_M_AXIS_TDATA;
@@ -248,6 +250,8 @@ module design_1
   wire [0:0]rst_clk_wiz_1_100M_peripheral_aresetn;
   wire [0:0]rst_clk_wiz_1_100M_peripheral_reset;
   wire sys_clock_1;
+  wire [0:0]util_vector_logic_0_Res;
+  wire [0:0]xlslice_1_Dout;
 
   assign A[2:0] = FPGA_ADC_interface_0_A;
   assign CONVST = FPGA_ADC_interface_0_CONVST;
@@ -379,7 +383,7 @@ module design_1
         .s_axi_wstrb(microblaze_0_axi_periph_M03_AXI_WSTRB),
         .s_axi_wvalid(microblaze_0_axi_periph_M03_AXI_WVALID));
   design_1_axi_gpio_1_0 axi_gpio_1
-       (.gpio2_io_o(BTN1_1),
+       (.gpio2_io_o(axi_gpio_1_gpio2_io_o),
         .gpio_io_i(FPGA_ADC_interface_0_DONE),
         .s_axi_aclk(clk_wiz_1_clk_out1),
         .s_axi_araddr(microblaze_0_axi_periph_M04_AXI_ARADDR[8:0]),
@@ -725,7 +729,7 @@ module design_1
         .LMB_Clk(clk_wiz_1_clk_out1),
         .SYS_Rst(rst_clk_wiz_1_100M_bus_struct_reset));
   design_1_proc_sys_reset_0_0 proc_sys_reset_0
-       (.aux_reset_in(1'b1),
+       (.aux_reset_in(util_vector_logic_0_Res),
         .dcm_locked(clk_wiz_1_locked),
         .ext_reset_in(Net),
         .mb_debug_sys_rst(mdm_1_debug_sys_rst),
@@ -743,6 +747,15 @@ module design_1
         .peripheral_aresetn(rst_clk_wiz_1_100M_peripheral_aresetn),
         .peripheral_reset(rst_clk_wiz_1_100M_peripheral_reset),
         .slowest_sync_clk(clk_wiz_1_clk_out1));
+  design_1_util_vector_logic_0_0 util_vector_logic_0
+       (.Op1(xlslice_1_Dout),
+        .Res(util_vector_logic_0_Res));
+  design_1_xlslice_0_0 xlslice_0
+       (.Din(axi_gpio_1_gpio2_io_o),
+        .Dout(BTN1_1));
+  design_1_xlslice_0_1 xlslice_1
+       (.Din(axi_gpio_1_gpio2_io_o),
+        .Dout(xlslice_1_Dout));
 endmodule
 
 module design_1_axis_interconnect_0_0

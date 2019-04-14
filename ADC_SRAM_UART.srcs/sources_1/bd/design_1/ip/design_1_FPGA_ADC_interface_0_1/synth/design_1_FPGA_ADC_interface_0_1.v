@@ -104,7 +104,7 @@ input wire RESET;
 input wire ENABLE;
 
   FPGA_ADC_interface #(
-    .MAXSAMPLES(200)
+    .MAXSAMPLES(32000)
   ) inst (
     .CONVST(CONVST),
     .DB(DB),

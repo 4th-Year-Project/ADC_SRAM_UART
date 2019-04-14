@@ -1,7 +1,7 @@
 // Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2018.3 (win64) Build 2405991 Thu Dec  6 23:38:27 MST 2018
-// Date        : Sat Apr 13 14:11:19 2019
+// Date        : Sun Apr 14 15:39:25 2019
 // Host        : Lenovo running 64-bit major release  (build 9200)
 // Command     : write_verilog -force -mode synth_stub
 //               C:/FPGA_Projects/ADC_SRAM_UART/ADC_SRAM_UART.srcs/sources_1/bd/design_1/ip/design_1_FPGA_ADC_interface_0_1/design_1_FPGA_ADC_interface_0_1_stub.v

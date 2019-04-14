@@ -352,7 +352,7 @@
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:b0d68c52</spirit:value>
+            <spirit:value>9:5bdf6379</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -368,11 +368,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Sat Apr 13 13:10:04 UTC 2019</spirit:value>
+            <spirit:value>Sun Apr 14 14:36:51 UTC 2019</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:b0d68c52</spirit:value>
+            <spirit:value>9:5bdf6379</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -391,7 +391,7 @@
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:ad37799c</spirit:value>
+            <spirit:value>9:dcaed069</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -407,11 +407,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Sat Apr 13 13:10:04 UTC 2019</spirit:value>
+            <spirit:value>Sun Apr 14 14:36:51 UTC 2019</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:ad37799c</spirit:value>
+            <spirit:value>9:dcaed069</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -425,11 +425,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Sat Apr 13 13:11:19 UTC 2019</spirit:value>
+            <spirit:value>Sun Apr 14 14:39:25 UTC 2019</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:b0d68c52</spirit:value>
+            <spirit:value>9:5bdf6379</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -672,7 +672,7 @@
       <spirit:modelParameter xsi:type="spirit:nameValueTypeType" spirit:dataType="integer">
         <spirit:name>MAXSAMPLES</spirit:name>
         <spirit:displayName>Maxsamples</spirit:displayName>
-        <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.MAXSAMPLES">200</spirit:value>
+        <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.MAXSAMPLES">32000</spirit:value>
       </spirit:modelParameter>
     </spirit:modelParameters>
   </spirit:model>
@@ -761,7 +761,7 @@
     <spirit:parameter>
       <spirit:name>MAXSAMPLES</spirit:name>
       <spirit:displayName>Number of samples</spirit:displayName>
-      <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.MAXSAMPLES" spirit:minimum="200" spirit:maximum="100000" spirit:rangeType="long">200</spirit:value>
+      <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.MAXSAMPLES" spirit:minimum="200" spirit:maximum="100000" spirit:rangeType="long">32000</spirit:value>
     </spirit:parameter>
   </spirit:parameters>
   <spirit:vendorExtensions>
@@ -1078,6 +1078,7 @@
         <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.DATA_AXI_STREAM.TID_WIDTH" xilinx:valueSource="constant" xilinx:valuePermission="bd_and_user"/>
         <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.DATA_AXI_STREAM.TUSER_WIDTH" xilinx:valueSource="constant" xilinx:valuePermission="bd_and_user"/>
         <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.RESET.POLARITY" xilinx:valueSource="constant_prop" xilinx:valuePermission="bd_and_user"/>
+        <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.MAXSAMPLES" xilinx:valueSource="user"/>
       </xilinx:configElementInfos>
     </xilinx:coreExtensions>
     <xilinx:packagingInfo>

@@ -2720,7 +2720,7 @@ If the number of packets received is one, then this register returns the value o
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:a3469cf6</spirit:value>
+            <spirit:value>9:94ba3236</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -2734,11 +2734,11 @@ If the number of packets received is one, then this register returns the value o
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Sat Apr 13 10:54:27 UTC 2019</spirit:value>
+            <spirit:value>Sun Apr 14 14:36:53 UTC 2019</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:a3469cf6</spirit:value>
+            <spirit:value>9:94ba3236</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -2754,11 +2754,11 @@ If the number of packets received is one, then this register returns the value o
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Sat Apr 13 10:54:27 UTC 2019</spirit:value>
+            <spirit:value>Sun Apr 14 14:36:53 UTC 2019</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:a3469cf6</spirit:value>
+            <spirit:value>9:94ba3236</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -2789,7 +2789,7 @@ If the number of packets received is one, then this register returns the value o
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:7965f8bf</spirit:value>
+            <spirit:value>9:2bc59a96</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -2805,11 +2805,11 @@ If the number of packets received is one, then this register returns the value o
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Sat Apr 13 10:54:27 UTC 2019</spirit:value>
+            <spirit:value>Sun Apr 14 14:36:53 UTC 2019</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:7965f8bf</spirit:value>
+            <spirit:value>9:2bc59a96</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -2823,11 +2823,11 @@ If the number of packets received is one, then this register returns the value o
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Sat Apr 13 12:02:20 UTC 2019</spirit:value>
+            <spirit:value>Sun Apr 14 14:40:18 UTC 2019</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:a3469cf6</spirit:value>
+            <spirit:value>9:94ba3236</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -4985,7 +4985,7 @@ If the number of packets received is one, then this register returns the value o
       <spirit:modelParameter spirit:dataType="integer">
         <spirit:name>C_RX_FIFO_DEPTH</spirit:name>
         <spirit:displayName>Rx Fifo Depth</spirit:displayName>
-        <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.C_RX_FIFO_DEPTH">512</spirit:value>
+        <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.C_RX_FIFO_DEPTH">8192</spirit:value>
       </spirit:modelParameter>
       <spirit:modelParameter spirit:dataType="integer">
         <spirit:name>C_TX_FIFO_PF_THRESHOLD</spirit:name>
@@ -5000,7 +5000,7 @@ If the number of packets received is one, then this register returns the value o
       <spirit:modelParameter spirit:dataType="integer">
         <spirit:name>C_RX_FIFO_PF_THRESHOLD</spirit:name>
         <spirit:displayName>RX PF Threshold</spirit:displayName>
-        <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.C_RX_FIFO_PF_THRESHOLD" spirit:minimum="10" spirit:maximum="131067" spirit:rangeType="long">507</spirit:value>
+        <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.C_RX_FIFO_PF_THRESHOLD" spirit:minimum="10" spirit:maximum="131067" spirit:rangeType="long">8100</spirit:value>
       </spirit:modelParameter>
       <spirit:modelParameter spirit:dataType="integer">
         <spirit:name>C_RX_FIFO_PE_THRESHOLD</spirit:name>
@@ -5336,6 +5336,18 @@ If the number of packets received is one, then this register returns the value o
         <spirit:logicalName>xil_defaultlib</spirit:logicalName>
       </spirit:file>
       <spirit:file>
+        <spirit:name>design_1_axi_fifo_mm_s_0_0_stub.v</spirit:name>
+        <spirit:fileType>verilogSource</spirit:fileType>
+        <spirit:userFileType>USED_IN_synth_blackbox_stub</spirit:userFileType>
+        <spirit:logicalName>xil_defaultlib</spirit:logicalName>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>design_1_axi_fifo_mm_s_0_0_stub.vhdl</spirit:name>
+        <spirit:fileType>vhdlSource</spirit:fileType>
+        <spirit:userFileType>USED_IN_synth_blackbox_stub</spirit:userFileType>
+        <spirit:logicalName>xil_defaultlib</spirit:logicalName>
+      </spirit:file>
+      <spirit:file>
         <spirit:name>design_1_axi_fifo_mm_s_0_0_sim_netlist.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_simulation</spirit:userFileType>
@@ -5347,18 +5359,6 @@ If the number of packets received is one, then this register returns the value o
         <spirit:fileType>vhdlSource</spirit:fileType>
         <spirit:userFileType>USED_IN_simulation</spirit:userFileType>
         <spirit:userFileType>USED_IN_single_language</spirit:userFileType>
-        <spirit:logicalName>xil_defaultlib</spirit:logicalName>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>design_1_axi_fifo_mm_s_0_0_stub.v</spirit:name>
-        <spirit:fileType>verilogSource</spirit:fileType>
-        <spirit:userFileType>USED_IN_synth_blackbox_stub</spirit:userFileType>
-        <spirit:logicalName>xil_defaultlib</spirit:logicalName>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>design_1_axi_fifo_mm_s_0_0_stub.vhdl</spirit:name>
-        <spirit:fileType>vhdlSource</spirit:fileType>
-        <spirit:userFileType>USED_IN_synth_blackbox_stub</spirit:userFileType>
         <spirit:logicalName>xil_defaultlib</spirit:logicalName>
       </spirit:file>
     </spirit:fileSet>
@@ -5410,12 +5410,12 @@ If the number of packets received is one, then this register returns the value o
     <spirit:parameter>
       <spirit:name>C_RX_FIFO_PE_THRESHOLD</spirit:name>
       <spirit:displayName>Receive Fifo Programable Empty Threshold</spirit:displayName>
-      <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.C_RX_FIFO_PE_THRESHOLD" spirit:order="1800" spirit:minimum="2" spirit:maximum="502" spirit:rangeType="long">5</spirit:value>
+      <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.C_RX_FIFO_PE_THRESHOLD" spirit:order="1800" spirit:minimum="2" spirit:maximum="8182" spirit:rangeType="long">5</spirit:value>
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>C_RX_FIFO_PF_THRESHOLD</spirit:name>
       <spirit:displayName>Receive Fifo Programable Full Threshold</spirit:displayName>
-      <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.C_RX_FIFO_PF_THRESHOLD" spirit:order="1700" spirit:minimum="10" spirit:maximum="507" spirit:rangeType="long">507</spirit:value>
+      <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.C_RX_FIFO_PF_THRESHOLD" spirit:order="1700" spirit:minimum="10" spirit:maximum="8187" spirit:rangeType="long">8100</spirit:value>
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>C_TX_FIFO_PE_THRESHOLD</spirit:name>
@@ -5430,7 +5430,7 @@ If the number of packets received is one, then this register returns the value o
     <spirit:parameter>
       <spirit:name>C_RX_FIFO_DEPTH</spirit:name>
       <spirit:displayName>Receive Fifo Depth</spirit:displayName>
-      <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.C_RX_FIFO_DEPTH" spirit:choiceRef="choice_list_cb97c1b0" spirit:order="1400">512</spirit:value>
+      <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.C_RX_FIFO_DEPTH" spirit:choiceRef="choice_list_cb97c1b0" spirit:order="1400">8192</spirit:value>
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>C_TX_FIFO_DEPTH</spirit:name>
@@ -5616,6 +5616,9 @@ If the number of packets received is one, then this register returns the value o
         <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.C_BASEADDR" xilinx:valueSource="propagated"/>
         <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.C_DATA_INTERFACE_TYPE" xilinx:valueSource="user"/>
         <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.C_HIGHADDR" xilinx:valueSource="propagated"/>
+        <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.C_RX_FIFO_DEPTH" xilinx:valueSource="user"/>
+        <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.C_RX_FIFO_PE_THRESHOLD" xilinx:valueSource="user"/>
+        <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.C_RX_FIFO_PF_THRESHOLD" xilinx:valueSource="user"/>
         <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.C_USE_TX_CTRL" xilinx:valueSource="user"/>
         <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.C_USE_TX_DATA" xilinx:valueSource="user"/>
       </xilinx:configElementInfos>

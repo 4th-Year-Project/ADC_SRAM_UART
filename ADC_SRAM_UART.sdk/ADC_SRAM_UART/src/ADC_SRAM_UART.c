@@ -11,93 +11,83 @@
 #define WORD_SIZE 4			/* Size of words in bytes */
 #define MAX_PACKET_LEN 4
 #define NO_OF_PACKETS 50
-#define MAX_DATA_BUFFER_SIZE NO_OF_PACKETS*MAX_PACKET_LEN
-#define SRAM_BASE_ADDR  0x60000000
+#define BTN1_MASK 0b1		/* Bit mask for BTN1 (gpio0 bit 0) */
+#define DONE_MASK 0b1  	/* Bit mask for ADC Interface DONE (gpio0 bit 0) */
 
 #undef DEBUG
 
 /************************** Function Prototypes ******************************/
+int GPIOInit(XGpio *Instance0Ptr, XGpio *Instance1Ptr);
 int RxInit(XLlFifo *InstancePtr, u16 DeviceId);
 int RxSamples(XLlFifo *InstancePtr, u32 *DestinationAddr);
 int TxUART(u32 DestinationAddr);
+int Reset(void);
+
 /************************** Variable Definitions *****************************/
 
 XLlFifo FifoInstance;
+XGpio gpio0; // the gpio0 struct for LEDs and buttons
+XGpio gpio1; // gpio struct for internal devices
 u32 SRAMBaseAddr = 0x60000000;
-u32 SourceBuffer[MAX_DATA_BUFFER_SIZE * WORD_SIZE];
-u32 DestinationBuffer[MAX_DATA_BUFFER_SIZE * WORD_SIZE];
 
 static u32 ReceiveLength;
 
+/******************************* Functions ***********************************/
 int main (){
   int Status;
 
-  xil_printf("--- Entering main() ---\n\r");
+/*--- Initialise ---*/
+  u32 read = 0;
 
-  //--- Initialise ---
-  u32 btn = 0;
-  u32 led;
-  XGpio gpio; // the GPIO struct for LEDs and buttons
-  XGpio gpio1; // GPIO struct for internal devices
-  XGpio_Initialize(&gpio, 0); //inits the GPIO for LEDs and BUttons
-  XGpio_Initialize(&gpio1,1); //Initis the GPIO for internal devices
-  XGpio_SetDataDirection(&gpio, 2, 0x00000000); // set LED GPIO channel tristates to All Output
-  XGpio_SetDataDirection(&gpio, 1, 0xFFFFFFFF); // set BTN GPIO channel tristates to All Input
-  XGpio_SetDataDirection(&gpio1, 2, 0x00000000); // set internal outputs GPIO channel tristates to All output
-  XGpio_SetDataDirection(&gpio1, 1, 0xFFFFFFFF); // set internal inputs GPIO channel tristates to All Input
-
-  Status = RxInit(&FifoInstance, FIFO_DEV_ID);
-
+  Status = GPIOInit(&gpio0, &gpio1); //Init GPIO blocks
   if (Status != XST_SUCCESS) {
-		xil_printf("Initialisation of Rx Chain failed\n\r");
+		xil_printf("Initialisation of XGpio\n\r");
 		return XST_FAILURE;
 	}
+  xil_printf("Successfully ran Initialisation of XGpio\n\r");
 
-	xil_printf("Successfully ran Initialisation of Rx Chain\n\r");
+  Status = RxInit(&FifoInstance, FIFO_DEV_ID); // Initaise Rx chain
+  if (Status != XST_SUCCESS) {
+		xil_printf("Initialisation of Rx chain failed\n\r");
+		return XST_FAILURE;
+	}
+  xil_printf("Successfully ran Initialisation of Rx chain\n\r");
+  XGpio_DiscreteWrite(&gpio0, 2, 0b1); //Turn on LED1 (to show programming is successful)
 
-  // --- Start the ADC sampling to fill FIFO ---
+/*--- Start the ADC sampling to fill FIFO ---*/
 	xil_printf("Press sample button now\n\r");
-	//Wait for button
-		while (1){
-			btn = XGpio_DiscreteRead(&gpio, 1);
-			if ((btn & 1) !=0 ){
-				xil_printf("BTN1 Pressed\n\r");
-				btn = 0;
-				led = 0b1;  //turns on LED 1
-				XGpio_DiscreteWrite(&gpio, 2, led);
-				break;
-			}
+	//Wait for button 1 press
+	while (1){
+		read = XGpio_DiscreteRead(&gpio0, 1);
+		if ((read & BTN1_MASK) !=0 ){
+			xil_printf("BTN1 Pressed\n\r");
+			break;
 		}
+	}
 	//Start Sampling
-		XGpio_DiscreteWrite(&gpio1, 2, 0b1); //Sends enable signal
-		XGpio_DiscreteWrite(&gpio, 2, 0b10); //Turn on LED2
-
-	//wait for sampling to finish
-		while (1){
-			btn = XGpio_DiscreteRead(&gpio1, 1);
-			if (btn != 0){
-				xil_printf("Sampling done\n\r");
-				XGpio_DiscreteWrite(&gpio, 2, 0b11); //Turn on LED2
-				break;
-			}
+	XGpio_DiscreteWrite(&gpio1, 2, 0b1); //Sends enable signal to ADC Interface
+	XGpio_DiscreteWrite(&gpio0, 2, 0b10); //Turn on LED2
+	//Waits for sampling to finish
+	while (1){
+		read = XGpio_DiscreteRead(&gpio1, 1);
+		if ((read & DONE_MASK)!= 0){
+			xil_printf("Sampling done\n\r");
+			XGpio_DiscreteWrite(&gpio0, 2, 0b11); //Turn on LED2
+			break;
 		}
-  //--- Transfer to SRAM ---
-  if(1){
-	  xil_printf("Will transfer via SRAM\n\r");
-	  Status = RxSamples(&FifoInstance, SRAMBaseAddr);
+	}
 
+/*--- Transfer to SRAM ---*/
+  xil_printf("Will transfer via SRAM\n\r");
+  Status = RxSamples(&FifoInstance, SRAMBaseAddr);
   if (Status != XST_SUCCESS) {
 		xil_printf("Receiving of samples failed\n\r");
 		return XST_FAILURE;
 	}
+  xil_printf("Successfully ran receiving of samples\n\r");
 
-	xil_printf("Successfully ran receiving of samples\n\r");
-  }
-  else{
-	  xil_printf("Skipped transfer to SRAM\n\r");
-  }
 
-  //--- Send over UART ---
+/*--- Send over UART ---*/
   Status = TxUART(SRAMBaseAddr);
   if (Status != XST_SUCCESS) {
 		xil_printf("Sending over UART Failed\n\r");
@@ -105,9 +95,20 @@ int main (){
 	}
   xil_printf("Successfully sent over UART\n\r");
 
-  //--- reset ---
-  xil_printf("Stopping\n\r");
+/*--- Reset ---*/
+  xil_printf("Resetting\n\r");
+  Reset();
   return XST_SUCCESS;
+  }
+
+int GPIOInit(XGpio *Instance0Ptr, XGpio *Instance1Ptr){
+	  XGpio_Initialize(Instance0Ptr, 0); //inits the gpio0 for LEDs and BUttons
+	  XGpio_Initialize(Instance1Ptr,1); //Initis the gpio0 for internal devices
+	  XGpio_SetDataDirection(Instance0Ptr, 2, 0x00000000); // set LED gpio0 channel tristates to All Output
+	  XGpio_SetDataDirection(Instance0Ptr, 1, 0xFFFFFFFF); // set BTN gpio0 channel tristates to All Input
+	  XGpio_SetDataDirection(Instance1Ptr, 2, 0x00000000); // set internal outputs gpio0 channel tristates to All output
+	  XGpio_SetDataDirection(Instance1Ptr, 1, 0xFFFFFFFF); // set internal inputs gpio0 channel tristates to All Input
+	  return XST_SUCCESS;
 }
 
 int RxInit(XLlFifo *InstancePtr, u16 DeviceId){
@@ -140,6 +141,7 @@ int RxInit(XLlFifo *InstancePtr, u16 DeviceId){
 			    XLlFifo_Status(InstancePtr));
 		return XST_FAILURE;
 	}
+
 	return Status;
 }
 
@@ -175,16 +177,21 @@ int RxSamples(XLlFifo *InstancePtr, u32* DestinationAddr){
 }
 
 int TxUART(u32 DestinationAddr){
-    u64 addr = DestinationAddr;
-    u16 count =0;
+    u32 addr = DestinationAddr;
+    u16 count = 0;
+
+    print("RAWDATA\n\r"); //Keyword for Matlab GUI
 
     while(addr < (DestinationAddr + ReceiveLength* WORD_SIZE)){
-    xil_printf("%x",Xil_In32(addr));
+    xil_printf("%08x",Xil_In32(addr));
     print("\n\r");
     addr += WORD_SIZE;
-    count++;
     }
-    xil_printf("%d \n\r",count);
+
     return XST_SUCCESS;
+}
+
+int Reset(){
+	XGpio_DiscreteWrite(&gpio1, 2, 0b10); //Pulls RESET high
 }
 
