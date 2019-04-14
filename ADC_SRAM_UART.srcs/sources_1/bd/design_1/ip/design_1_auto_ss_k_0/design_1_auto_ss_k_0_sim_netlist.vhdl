@@ -1,10 +1,10 @@
 -- Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2018.3 (win64) Build 2405991 Thu Dec  6 23:38:27 MST 2018
--- Date        : Sat Apr 13 16:24:22 2019
+-- Date        : Sat Apr 13 16:24:21 2019
 -- Host        : Lenovo running 64-bit major release  (build 9200)
--- Command     : write_vhdl -force -mode funcsim
---               c:/FPGA_Projects/ADC_SRAM_UART/ADC_SRAM_UART.srcs/sources_1/bd/design_1/ip/design_1_auto_ss_k_0/design_1_auto_ss_k_0_sim_netlist.vhdl
+-- Command     : write_vhdl -force -mode funcsim -rename_top design_1_auto_ss_k_0 -prefix
+--               design_1_auto_ss_k_0_ design_1_auto_ss_k_0_sim_netlist.vhdl
 -- Design      : design_1_auto_ss_k_0
 -- Purpose     : This VHDL netlist is a functional simulation representation of the design and should not be modified or
 --               synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -21,8 +21,6 @@ entity design_1_auto_ss_k_0_axis_subset_converter_v1_1_18_core is
     s_axis_tkeep : in STD_LOGIC_VECTOR ( 3 downto 0 );
     m_axis_tready : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of design_1_auto_ss_k_0_axis_subset_converter_v1_1_18_core : entity is "axis_subset_converter_v1_1_18_core";
 end design_1_auto_ss_k_0_axis_subset_converter_v1_1_18_core;
 
 architecture STRUCTURE of design_1_auto_ss_k_0_axis_subset_converter_v1_1_18_core is
@@ -133,8 +131,6 @@ entity design_1_auto_ss_k_0_top_design_1_auto_ss_k_0 is
   attribute G_TASK_SEVERITY_INFO of design_1_auto_ss_k_0_top_design_1_auto_ss_k_0 : entity is 0;
   attribute G_TASK_SEVERITY_WARNING : integer;
   attribute G_TASK_SEVERITY_WARNING of design_1_auto_ss_k_0_top_design_1_auto_ss_k_0 : entity is 1;
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of design_1_auto_ss_k_0_top_design_1_auto_ss_k_0 : entity is "top_design_1_auto_ss_k_0";
 end design_1_auto_ss_k_0_top_design_1_auto_ss_k_0;
 
 architecture STRUCTURE of design_1_auto_ss_k_0_top_design_1_auto_ss_k_0 is

@@ -3,14 +3,41 @@
 // Tool Version: Vivado v.2018.3 (win64) Build 2405991 Thu Dec  6 23:38:27 MST 2018
 // Date        : Sat Apr 13 16:24:21 2019
 // Host        : Lenovo running 64-bit major release  (build 9200)
-// Command     : write_verilog -force -mode funcsim
-//               c:/FPGA_Projects/ADC_SRAM_UART/ADC_SRAM_UART.srcs/sources_1/bd/design_1/ip/design_1_auto_ss_k_0/design_1_auto_ss_k_0_sim_netlist.v
+// Command     : write_verilog -force -mode funcsim -rename_top design_1_auto_ss_k_0 -prefix
+//               design_1_auto_ss_k_0_ design_1_auto_ss_k_0_sim_netlist.v
 // Design      : design_1_auto_ss_k_0
 // Purpose     : This verilog netlist is a functional simulation representation of the design and should not be modified
 //               or synthesized. This netlist cannot be used for SDF annotated simulation.
 // Device      : xc7a35tcpg236-1
 // --------------------------------------------------------------------------------
 `timescale 1 ps / 1 ps
+
+module design_1_auto_ss_k_0_axis_subset_converter_v1_1_18_core
+   (sparse_tkeep_removed,
+    s_axis_tvalid,
+    s_axis_tkeep,
+    m_axis_tready);
+  output sparse_tkeep_removed;
+  input s_axis_tvalid;
+  input [3:0]s_axis_tkeep;
+  input m_axis_tready;
+
+  wire m_axis_tready;
+  wire [3:0]s_axis_tkeep;
+  wire s_axis_tvalid;
+  wire sparse_tkeep_removed;
+
+  LUT6 #(
+    .INIT(64'h2AAAAAAA00000000)) 
+    \/i_ 
+       (.I0(s_axis_tvalid),
+        .I1(s_axis_tkeep[1]),
+        .I2(s_axis_tkeep[0]),
+        .I3(s_axis_tkeep[3]),
+        .I4(s_axis_tkeep[2]),
+        .I5(m_axis_tready),
+        .O(sparse_tkeep_removed));
+endmodule
 
 (* CHECK_LICENSE_TYPE = "design_1_auto_ss_k_0,top_design_1_auto_ss_k_0,{}" *) (* DowngradeIPIdentifiedWarnings = "yes" *) (* X_CORE_INFO = "top_design_1_auto_ss_k_0,Vivado 2018.3" *) 
 (* NotValidForBitStream *)
@@ -116,34 +143,6 @@ module design_1_auto_ss_k_0
         .transfer_dropped(NLW_inst_transfer_dropped_UNCONNECTED));
 endmodule
 
-(* ORIG_REF_NAME = "axis_subset_converter_v1_1_18_core" *) 
-module design_1_auto_ss_k_0_axis_subset_converter_v1_1_18_core
-   (sparse_tkeep_removed,
-    s_axis_tvalid,
-    s_axis_tkeep,
-    m_axis_tready);
-  output sparse_tkeep_removed;
-  input s_axis_tvalid;
-  input [3:0]s_axis_tkeep;
-  input m_axis_tready;
-
-  wire m_axis_tready;
-  wire [3:0]s_axis_tkeep;
-  wire s_axis_tvalid;
-  wire sparse_tkeep_removed;
-
-  LUT6 #(
-    .INIT(64'h2AAAAAAA00000000)) 
-    \/i_ 
-       (.I0(s_axis_tvalid),
-        .I1(s_axis_tkeep[1]),
-        .I2(s_axis_tkeep[0]),
-        .I3(s_axis_tkeep[3]),
-        .I4(s_axis_tkeep[2]),
-        .I5(m_axis_tready),
-        .O(sparse_tkeep_removed));
-endmodule
-
 (* C_DEFAULT_TLAST = "0" *) (* C_FAMILY = "artix7" *) (* C_M_AXIS_SIGNAL_SET = "32'b00000000000000000000000000010011" *) 
 (* C_M_AXIS_TDATA_WIDTH = "32" *) (* C_M_AXIS_TDEST_WIDTH = "1" *) (* C_M_AXIS_TID_WIDTH = "1" *) 
 (* C_M_AXIS_TUSER_WIDTH = "1" *) (* C_S_AXIS_SIGNAL_SET = "32'b00000000000000000000000000011011" *) (* C_S_AXIS_TDATA_WIDTH = "32" *) 
@@ -154,7 +153,7 @@ endmodule
 (* G_MASK_SS_TDEST = "64" *) (* G_MASK_SS_TID = "32" *) (* G_MASK_SS_TKEEP = "8" *) 
 (* G_MASK_SS_TLAST = "16" *) (* G_MASK_SS_TREADY = "1" *) (* G_MASK_SS_TSTRB = "4" *) 
 (* G_MASK_SS_TUSER = "128" *) (* G_TASK_SEVERITY_ERR = "2" *) (* G_TASK_SEVERITY_INFO = "0" *) 
-(* G_TASK_SEVERITY_WARNING = "1" *) (* ORIG_REF_NAME = "top_design_1_auto_ss_k_0" *) 
+(* G_TASK_SEVERITY_WARNING = "1" *) 
 module design_1_auto_ss_k_0_top_design_1_auto_ss_k_0
    (aclk,
     aresetn,

@@ -1,8 +1,4 @@
 set_property SRC_FILE_INFO {cfile:C:/FPGA_Projects/ADC_SRAM_UART/ADC_SRAM_UART.srcs/constrs_1/imports/FPGA_Projects/CmodA7_Master.xdc rfile:../../../ADC_SRAM_UART.srcs/constrs_1/imports/FPGA_Projects/CmodA7_Master.xdc id:1} [current_design]
-set_property src_info {type:XDC file:1 line:11 export:INPUT save:INPUT read:READ} [current_design]
-set_property -dict {PACKAGE_PIN C16 IOSTANDARD LVCMOS33} [get_ports LED1]
-set_property src_info {type:XDC file:1 line:20 export:INPUT save:INPUT read:READ} [current_design]
-set_property -dict {PACKAGE_PIN B18 IOSTANDARD LVCMOS33} [get_ports BTN1]
 set_property src_info {type:XDC file:1 line:44 export:INPUT save:INPUT read:READ} [current_design]
 set_property -dict {PACKAGE_PIN M3 IOSTANDARD LVCMOS33} [get_ports {A[0]}]
 set_property src_info {type:XDC file:1 line:45 export:INPUT save:INPUT read:READ} [current_design]

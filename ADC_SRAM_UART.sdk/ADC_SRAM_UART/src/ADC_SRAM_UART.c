@@ -1,9 +1,11 @@
 #include "xparameters.h"
+#include "xgpio.h"
 #include "xil_exception.h"
 #include "xstreamer.h"
 #include "xil_cache.h"
 #include "xllfifo.h"
 #include "xstatus.h"
+
 
 #define FIFO_DEV_ID	   	XPAR_AXI_FIFO_0_DEVICE_ID   //Device ID
 #define WORD_SIZE 4			/* Size of words in bytes */
@@ -33,6 +35,17 @@ int main (){
   xil_printf("--- Entering main() ---\n\r");
 
   //--- Initialise ---
+  u32 btn = 0;
+  u32 led;
+  XGpio gpio; // the GPIO struct for LEDs and buttons
+  XGpio gpio1; // GPIO struct for internal devices
+  XGpio_Initialize(&gpio, 0); //inits the GPIO for LEDs and BUttons
+  XGpio_Initialize(&gpio1,1); //Initis the GPIO for internal devices
+  XGpio_SetDataDirection(&gpio, 2, 0x00000000); // set LED GPIO channel tristates to All Output
+  XGpio_SetDataDirection(&gpio, 1, 0xFFFFFFFF); // set BTN GPIO channel tristates to All Input
+  XGpio_SetDataDirection(&gpio1, 2, 0x00000000); // set internal outputs GPIO channel tristates to All output
+  XGpio_SetDataDirection(&gpio1, 1, 0xFFFFFFFF); // set internal inputs GPIO channel tristates to All Input
+
   Status = RxInit(&FifoInstance, FIFO_DEV_ID);
 
   if (Status != XST_SUCCESS) {
@@ -43,10 +56,31 @@ int main (){
 	xil_printf("Successfully ran Initialisation of Rx Chain\n\r");
 
   // --- Start the ADC sampling to fill FIFO ---
-	//Wait for button?
 	xil_printf("Press sample button now\n\r");
+	//Wait for button
+		while (1){
+			btn = XGpio_DiscreteRead(&gpio, 1);
+			if ((btn & 1) !=0 ){
+				xil_printf("BTN1 Pressed\n\r");
+				btn = 0;
+				led = 0b1;  //turns on LED 1
+				XGpio_DiscreteWrite(&gpio, 2, led);
+				break;
+			}
+		}
 	//Start Sampling
+		XGpio_DiscreteWrite(&gpio1, 2, 0b1); //Sends enable signal
+		XGpio_DiscreteWrite(&gpio, 2, 0b10); //Turn on LED2
 
+	//wait for sampling to finish
+		while (1){
+			btn = XGpio_DiscreteRead(&gpio1, 1);
+			if (btn != 0){
+				xil_printf("Sampling done\n\r");
+				XGpio_DiscreteWrite(&gpio, 2, 0b11); //Turn on LED2
+				break;
+			}
+		}
   //--- Transfer to SRAM ---
   if(1){
 	  xil_printf("Will transfer via SRAM\n\r");

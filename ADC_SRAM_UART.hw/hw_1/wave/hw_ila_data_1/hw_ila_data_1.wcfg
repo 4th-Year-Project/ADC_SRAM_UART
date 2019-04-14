@@ -10,16 +10,14 @@
    </db_ref_list>
    <zoom_setting>
       <ZoomStartTime time="0fs"></ZoomStartTime>
-      <ZoomEndTime time="1024001fs"></ZoomEndTime>
+      <ZoomEndTime time="8551fs"></ZoomEndTime>
       <Cursor1Time time="301000fs"></Cursor1Time>
    </zoom_setting>
    <column_width_setting>
       <NameColumnWidth column_width="375"></NameColumnWidth>
-      <ValueColumnWidth column_width="130"></ValueColumnWidth>
+      <ValueColumnWidth column_width="126"></ValueColumnWidth>
    </column_width_setting>
    <WVObjectSize size="14" />
-   <wave_markers>
-   </wave_markers>
    <wvobject fp_name="design_1_i/BTN1_1" type="logic">
       <obj_property name="DisplayName">label</obj_property>
       <obj_property name="ElementShortName">design_1_i/BTN1_1</obj_property>

@@ -1,1598 +1,654 @@
-18:15:12 **** Incremental Build of configuration Debug for project ADC_SRAM_UART ****
-make all 
-make: Nothing to be done for 'all'.
-18:15:41 **** Incremental Build of configuration Debug for project ADC_SRAM_UART ****
-make all 
-'Building file: ../src/ADC_SRAM_UART.c'
-'Invoking: MicroBlaze gcc compiler'
-mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/ADC_SRAM_UART.o" -I../../ADC_SRAM_UART_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/ADC_SRAM_UART.d" -MT"src/ADC_SRAM_UART.o" -o "src/ADC_SRAM_UART.o" "../src/ADC_SRAM_UART.c"
-../src/ADC_SRAM_UART.c: In function 'main':
-../src/ADC_SRAM_UART.c:13:24: warning: passing argument 2 of 'RxSamples' makes pointer from integer without a cast [-Wint-conversion]
- #define SRAM_BASE_ADDR 0x60000000
-                        ^
-../src/ADC_SRAM_UART.c:46:37: note: in expansion of macro 'SRAM_BASE_ADDR'
-   Status = RxSamples(&FifoInstance, SRAM_BASE_ADDR);
-                                     ^~~~~~~~~~~~~~
-../src/ADC_SRAM_UART.c:19:5: note: expected 'u32 * {aka long unsigned int *}' but argument is of type 'int'
- int RxSamples(XLlFifo *InstancePtr, u32 *DestinationAddr);
-     ^~~~~~~~~
-'Finished building: ../src/ADC_SRAM_UART.c'
-' '
-'Building target: ADC_SRAM_UART.elf'
-'Invoking: MicroBlaze gcc linker'
-mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../ADC_SRAM_UART_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "ADC_SRAM_UART.elf"  ./src/ADC_SRAM_UART.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
-'Finished building target: ADC_SRAM_UART.elf'
-' '
-'Invoking: MicroBlaze Print Size'
-mb-size ADC_SRAM_UART.elf  |tee "ADC_SRAM_UART.elf.size"
-   text	   data	    bss	    dec	    hex	filename
-   8988	    292	   9624	  18904	   49d8	ADC_SRAM_UART.elf
-'Finished building: ADC_SRAM_UART.elf.size'
-' '
-18:17:04 **** Incremental Build of configuration Debug for project ADC_SRAM_UART ****
-make all 
-make: Nothing to be done for 'all'.
-18:17:22 **** Incremental Build of configuration Debug for project ADC_SRAM_UART ****
-make all 
-make: Nothing to be done for 'all'.
-18:18:39 **** Incremental Build of configuration Debug for project ADC_SRAM_UART ****
-make all 
-make: Nothing to be done for 'all'.
-18:20:18 **** Incremental Build of configuration Debug for project ADC_SRAM_UART ****
-make all 
-make: Nothing to be done for 'all'.
-18:22:03 **** Incremental Build of configuration Debug for project ADC_SRAM_UART ****
-make all 
-make: Nothing to be done for 'all'.
-18:22:15 **** Incremental Build of configuration Debug for project ADC_SRAM_UART ****
-make all 
-make: Nothing to be done for 'all'.
-18:25:08 **** Incremental Build of configuration Debug for project ADC_SRAM_UART ****
-make all 
-make: Nothing to be done for 'all'.
-18:26:19 **** Incremental Build of configuration Debug for project ADC_SRAM_UART ****
-make all 
-make: Nothing to be done for 'all'.
-18:44:47 **** Incremental Build of configuration Debug for project ADC_SRAM_UART ****
+14:06:49 **** Build of project ADC_SRAM_UART_bsp ****
+make -k all 
+"Running Make include in microblaze_0/libsrc/bram_v4_2/src"
+make -C microblaze_0/libsrc/bram_v4_2/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Running Make include in microblaze_0/libsrc/cpu_v2_8/src"
+make -C microblaze_0/libsrc/cpu_v2_8/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Running Make include in microblaze_0/libsrc/gpio_v4_3/src"
+make -C microblaze_0/libsrc/gpio_v4_3/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Running Make include in microblaze_0/libsrc/llfifo_v5_2/src"
+make -C microblaze_0/libsrc/llfifo_v5_2/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Running Make include in microblaze_0/libsrc/standalone_v6_8/src"
+make -C microblaze_0/libsrc/standalone_v6_8/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Running Make include in microblaze_0/libsrc/uartlite_v3_2/src"
+make -C microblaze_0/libsrc/uartlite_v3_2/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Running Make libs in microblaze_0/libsrc/bram_v4_2/src"
+make -C microblaze_0/libsrc/bram_v4_2/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Compiling bram"
+mb-ar: creating ../../../lib/libxil.a
+"Running Make libs in microblaze_0/libsrc/cpu_v2_8/src"
+make -C microblaze_0/libsrc/cpu_v2_8/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Compiling cpu"
+"Running Make libs in microblaze_0/libsrc/gpio_v4_3/src"
+make -C microblaze_0/libsrc/gpio_v4_3/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Compiling gpio"
+"Running Make libs in microblaze_0/libsrc/llfifo_v5_2/src"
+make -C microblaze_0/libsrc/llfifo_v5_2/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Compiling llfifo"
+"Running Make libs in microblaze_0/libsrc/standalone_v6_8/src"
+make -C microblaze_0/libsrc/standalone_v6_8/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Compiling standalone";
+microblaze_sleep.c:77:9: note: #pragma message: For the sleep routines, assembly instructions are used
+ #pragma message ("For the sleep routines, assembly instructions are used")
+         ^~~~~~~
+"Running Make libs in microblaze_0/libsrc/uartlite_v3_2/src"
+make -C microblaze_0/libsrc/uartlite_v3_2/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Compiling uartlite"
+'Finished building libraries'
+
+**** Build of configuration Debug for project ADC_SRAM_UART ****
+
+Nothing to build for project ADC_SRAM_UART
+14:07:58 **** Auto Build of configuration Debug for project ADC_SRAM_UART ****
 make all 
 'Building file: ../src/ADC_SRAM_UART.c'
 'Invoking: MicroBlaze gcc compiler'
 mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/ADC_SRAM_UART.o" -I../../ADC_SRAM_UART_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/ADC_SRAM_UART.d" -MT"src/ADC_SRAM_UART.o" -o "src/ADC_SRAM_UART.o" "../src/ADC_SRAM_UART.c"
 ../src/ADC_SRAM_UART.c: In function 'main':
-../src/ADC_SRAM_UART.c:13:24: warning: passing argument 2 of 'RxSamples' makes pointer from integer without a cast [-Wint-conversion]
- #define SRAM_BASE_ADDR 0x60000000
-                        ^
-../src/ADC_SRAM_UART.c:51:38: note: in expansion of macro 'SRAM_BASE_ADDR'
-    Status = RxSamples(&FifoInstance, SRAM_BASE_ADDR);
-                                      ^~~~~~~~~~~~~~
-../src/ADC_SRAM_UART.c:19:5: note: expected 'u32 * {aka long unsigned int *}' but argument is of type 'int'
- int RxSamples(XLlFifo *InstancePtr, u32 *DestinationAddr);
-     ^~~~~~~~~
-../src/ADC_SRAM_UART.c:13:24: warning: passing argument 1 of 'TxUART' makes pointer from integer without a cast [-Wint-conversion]
- #define SRAM_BASE_ADDR 0x60000000
-                        ^
-../src/ADC_SRAM_UART.c:66:19: note: in expansion of macro 'SRAM_BASE_ADDR'
-   Status = TxUART(SRAM_BASE_ADDR);
-                   ^~~~~~~~~~~~~~
-../src/ADC_SRAM_UART.c:20:5: note: expected 'u32 * {aka long unsigned int *}' but argument is of type 'int'
- int TxUART(u32 *SourceAddr);
-     ^~~~~~
-../src/ADC_SRAM_UART.c: In function 'TxUART':
-../src/ADC_SRAM_UART.c:144:2: error: 'Addr' undeclared (first use in this function)
-  Addr = SourceAddr;
-  ^~~~
-../src/ADC_SRAM_UART.c:144:2: note: each undeclared identifier is reported only once for each function it appears in
-../src/ADC_SRAM_UART.c:145:28: error: 'RecieveLength' undeclared (first use in this function)
-  while(Addr < SourceAddr + RecieveLength){
-                            ^~~~~~~~~~~~~
-make: *** [src/subdir.mk:26: src/ADC_SRAM_UART.o] Error 1
-18:45:23 **** Incremental Build of configuration Debug for project ADC_SRAM_UART ****
-make all 
-'Building file: ../src/ADC_SRAM_UART.c'
-'Invoking: MicroBlaze gcc compiler'
-mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/ADC_SRAM_UART.o" -I../../ADC_SRAM_UART_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/ADC_SRAM_UART.d" -MT"src/ADC_SRAM_UART.o" -o "src/ADC_SRAM_UART.o" "../src/ADC_SRAM_UART.c"
-../src/ADC_SRAM_UART.c: In function 'main':
-../src/ADC_SRAM_UART.c:13:24: warning: passing argument 2 of 'RxSamples' makes pointer from integer without a cast [-Wint-conversion]
- #define SRAM_BASE_ADDR 0x60000000
-                        ^
-../src/ADC_SRAM_UART.c:51:38: note: in expansion of macro 'SRAM_BASE_ADDR'
-    Status = RxSamples(&FifoInstance, SRAM_BASE_ADDR);
-                                      ^~~~~~~~~~~~~~
-../src/ADC_SRAM_UART.c:19:5: note: expected 'u32 * {aka long unsigned int *}' but argument is of type 'int'
- int RxSamples(XLlFifo *InstancePtr, u32 *DestinationAddr);
-     ^~~~~~~~~
-../src/ADC_SRAM_UART.c:13:24: warning: passing argument 1 of 'TxUART' makes pointer from integer without a cast [-Wint-conversion]
- #define SRAM_BASE_ADDR 0x60000000
-                        ^
-../src/ADC_SRAM_UART.c:66:19: note: in expansion of macro 'SRAM_BASE_ADDR'
-   Status = TxUART(SRAM_BASE_ADDR);
-                   ^~~~~~~~~~~~~~
-../src/ADC_SRAM_UART.c:20:5: note: expected 'u32 * {aka long unsigned int *}' but argument is of type 'int'
- int TxUART(u32 *SourceAddr);
-     ^~~~~~
-../src/ADC_SRAM_UART.c: In function 'TxUART':
-../src/ADC_SRAM_UART.c:144:2: error: 'Addr' undeclared (first use in this function)
-  Addr = SourceAddr;
-  ^~~~
-../src/ADC_SRAM_UART.c:144:2: note: each undeclared identifier is reported only once for each function it appears in
-../src/ADC_SRAM_UART.c:145:28: error: 'RecieveLength' undeclared (first use in this function)
-  while(Addr < SourceAddr + RecieveLength){
-                            ^~~~~~~~~~~~~
-make: *** [src/subdir.mk:26: src/ADC_SRAM_UART.o] Error 1
-18:45:41 **** Incremental Build of configuration Debug for project ADC_SRAM_UART ****
-make all 
-'Building file: ../src/ADC_SRAM_UART.c'
-'Invoking: MicroBlaze gcc compiler'
-mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/ADC_SRAM_UART.o" -I../../ADC_SRAM_UART_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/ADC_SRAM_UART.d" -MT"src/ADC_SRAM_UART.o" -o "src/ADC_SRAM_UART.o" "../src/ADC_SRAM_UART.c"
-../src/ADC_SRAM_UART.c: In function 'main':
-../src/ADC_SRAM_UART.c:13:24: warning: passing argument 2 of 'RxSamples' makes pointer from integer without a cast [-Wint-conversion]
- #define SRAM_BASE_ADDR 0x60000000
-                        ^
-../src/ADC_SRAM_UART.c:51:38: note: in expansion of macro 'SRAM_BASE_ADDR'
-    Status = RxSamples(&FifoInstance, SRAM_BASE_ADDR);
-                                      ^~~~~~~~~~~~~~
-../src/ADC_SRAM_UART.c:19:5: note: expected 'u32 * {aka long unsigned int *}' but argument is of type 'int'
- int RxSamples(XLlFifo *InstancePtr, u32 *DestinationAddr);
-     ^~~~~~~~~
-../src/ADC_SRAM_UART.c:13:24: warning: passing argument 1 of 'TxUART' makes pointer from integer without a cast [-Wint-conversion]
- #define SRAM_BASE_ADDR 0x60000000
-                        ^
-../src/ADC_SRAM_UART.c:66:19: note: in expansion of macro 'SRAM_BASE_ADDR'
-   Status = TxUART(SRAM_BASE_ADDR);
-                   ^~~~~~~~~~~~~~
-../src/ADC_SRAM_UART.c:20:5: note: expected 'u32 * {aka long unsigned int *}' but argument is of type 'int'
- int TxUART(u32 *SourceAddr);
-     ^~~~~~
-../src/ADC_SRAM_UART.c: In function 'TxUART':
-../src/ADC_SRAM_UART.c:144:2: error: 'Addr' undeclared (first use in this function)
-  Addr = SourceAddr;
-  ^~~~
-../src/ADC_SRAM_UART.c:144:2: note: each undeclared identifier is reported only once for each function it appears in
-../src/ADC_SRAM_UART.c:145:28: error: 'RecieveLength' undeclared (first use in this function)
-  while(Addr < SourceAddr + RecieveLength){
-                            ^~~~~~~~~~~~~
-make: *** [src/subdir.mk:26: src/ADC_SRAM_UART.o] Error 1
-18:46:21 **** Incremental Build of configuration Debug for project ADC_SRAM_UART ****
-make all 
-'Building file: ../src/ADC_SRAM_UART.c'
-'Invoking: MicroBlaze gcc compiler'
-mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/ADC_SRAM_UART.o" -I../../ADC_SRAM_UART_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/ADC_SRAM_UART.d" -MT"src/ADC_SRAM_UART.o" -o "src/ADC_SRAM_UART.o" "../src/ADC_SRAM_UART.c"
-../src/ADC_SRAM_UART.c: In function 'main':
-../src/ADC_SRAM_UART.c:13:24: warning: passing argument 2 of 'RxSamples' makes pointer from integer without a cast [-Wint-conversion]
- #define SRAM_BASE_ADDR 0x60000000
-                        ^
-../src/ADC_SRAM_UART.c:51:38: note: in expansion of macro 'SRAM_BASE_ADDR'
-    Status = RxSamples(&FifoInstance, SRAM_BASE_ADDR);
-                                      ^~~~~~~~~~~~~~
-../src/ADC_SRAM_UART.c:19:5: note: expected 'u32 * {aka long unsigned int *}' but argument is of type 'int'
- int RxSamples(XLlFifo *InstancePtr, u32 *DestinationAddr);
-     ^~~~~~~~~
-../src/ADC_SRAM_UART.c:13:24: warning: passing argument 1 of 'TxUART' makes pointer from integer without a cast [-Wint-conversion]
- #define SRAM_BASE_ADDR 0x60000000
-                        ^
-../src/ADC_SRAM_UART.c:66:19: note: in expansion of macro 'SRAM_BASE_ADDR'
-   Status = TxUART(SRAM_BASE_ADDR);
-                   ^~~~~~~~~~~~~~
-../src/ADC_SRAM_UART.c:20:5: note: expected 'u32 * {aka long unsigned int *}' but argument is of type 'int'
- int TxUART(u32 *SourceAddr);
-     ^~~~~~
-../src/ADC_SRAM_UART.c: In function 'TxUART':
-../src/ADC_SRAM_UART.c:144:2: error: 'Addr' undeclared (first use in this function)
-  Addr = SourceAddr;
-  ^~~~
-../src/ADC_SRAM_UART.c:144:2: note: each undeclared identifier is reported only once for each function it appears in
-../src/ADC_SRAM_UART.c:145:28: error: 'RecieveLength' undeclared (first use in this function)
-  while(Addr < SourceAddr + RecieveLength){
-                            ^~~~~~~~~~~~~
-make: *** [src/subdir.mk:26: src/ADC_SRAM_UART.o] Error 1
-18:46:28 **** Incremental Build of configuration Debug for project ADC_SRAM_UART ****
-make all 
-'Building file: ../src/ADC_SRAM_UART.c'
-'Invoking: MicroBlaze gcc compiler'
-mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/ADC_SRAM_UART.o" -I../../ADC_SRAM_UART_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/ADC_SRAM_UART.d" -MT"src/ADC_SRAM_UART.o" -o "src/ADC_SRAM_UART.o" "../src/ADC_SRAM_UART.c"
-../src/ADC_SRAM_UART.c: In function 'main':
-../src/ADC_SRAM_UART.c:13:24: warning: passing argument 2 of 'RxSamples' makes pointer from integer without a cast [-Wint-conversion]
- #define SRAM_BASE_ADDR 0x60000000
-                        ^
-../src/ADC_SRAM_UART.c:51:38: note: in expansion of macro 'SRAM_BASE_ADDR'
-    Status = RxSamples(&FifoInstance, SRAM_BASE_ADDR);
-                                      ^~~~~~~~~~~~~~
-../src/ADC_SRAM_UART.c:19:5: note: expected 'u32 * {aka long unsigned int *}' but argument is of type 'int'
- int RxSamples(XLlFifo *InstancePtr, u32 *DestinationAddr);
-     ^~~~~~~~~
-../src/ADC_SRAM_UART.c:13:24: warning: passing argument 1 of 'TxUART' makes pointer from integer without a cast [-Wint-conversion]
- #define SRAM_BASE_ADDR 0x60000000
-                        ^
-../src/ADC_SRAM_UART.c:66:19: note: in expansion of macro 'SRAM_BASE_ADDR'
-   Status = TxUART(SRAM_BASE_ADDR);
-                   ^~~~~~~~~~~~~~
-../src/ADC_SRAM_UART.c:20:5: note: expected 'u32 * {aka long unsigned int *}' but argument is of type 'int'
- int TxUART(u32 *SourceAddr);
-     ^~~~~~
-../src/ADC_SRAM_UART.c: In function 'TxUART':
-../src/ADC_SRAM_UART.c:144:2: error: 'Addr' undeclared (first use in this function)
-  Addr = SourceAddr;
-  ^~~~
-../src/ADC_SRAM_UART.c:144:2: note: each undeclared identifier is reported only once for each function it appears in
-../src/ADC_SRAM_UART.c:145:28: error: 'RecieveLength' undeclared (first use in this function)
-  while(Addr < SourceAddr + RecieveLength){
-                            ^~~~~~~~~~~~~
-make: *** [src/subdir.mk:26: src/ADC_SRAM_UART.o] Error 1
-18:46:56 **** Incremental Build of configuration Debug for project ADC_SRAM_UART ****
-make all 
-'Building file: ../src/ADC_SRAM_UART.c'
-'Invoking: MicroBlaze gcc compiler'
-mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/ADC_SRAM_UART.o" -I../../ADC_SRAM_UART_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/ADC_SRAM_UART.d" -MT"src/ADC_SRAM_UART.o" -o "src/ADC_SRAM_UART.o" "../src/ADC_SRAM_UART.c"
-../src/ADC_SRAM_UART.c: In function 'main':
-../src/ADC_SRAM_UART.c:13:24: warning: passing argument 2 of 'RxSamples' makes pointer from integer without a cast [-Wint-conversion]
- #define SRAM_BASE_ADDR 0x60000000
-                        ^
-../src/ADC_SRAM_UART.c:51:38: note: in expansion of macro 'SRAM_BASE_ADDR'
-    Status = RxSamples(&FifoInstance, SRAM_BASE_ADDR);
-                                      ^~~~~~~~~~~~~~
-../src/ADC_SRAM_UART.c:19:5: note: expected 'u32 * {aka long unsigned int *}' but argument is of type 'int'
- int RxSamples(XLlFifo *InstancePtr, u32 *DestinationAddr);
-     ^~~~~~~~~
-../src/ADC_SRAM_UART.c:13:24: warning: passing argument 1 of 'TxUART' makes pointer from integer without a cast [-Wint-conversion]
- #define SRAM_BASE_ADDR 0x60000000
-                        ^
-../src/ADC_SRAM_UART.c:66:19: note: in expansion of macro 'SRAM_BASE_ADDR'
-   Status = TxUART(SRAM_BASE_ADDR);
-                   ^~~~~~~~~~~~~~
-../src/ADC_SRAM_UART.c:20:5: note: expected 'u32 * {aka long unsigned int *}' but argument is of type 'int'
- int TxUART(u32 *SourceAddr);
-     ^~~~~~
-../src/ADC_SRAM_UART.c: In function 'TxUART':
-../src/ADC_SRAM_UART.c:144:2: error: 'Addr' undeclared (first use in this function)
-  Addr = SourceAddr;
-  ^~~~
-../src/ADC_SRAM_UART.c:144:2: note: each undeclared identifier is reported only once for each function it appears in
-../src/ADC_SRAM_UART.c:145:28: error: 'RecieveLength' undeclared (first use in this function)
-  while(Addr < SourceAddr + RecieveLength){
-                            ^~~~~~~~~~~~~
-make: *** [src/subdir.mk:26: src/ADC_SRAM_UART.o] Error 1
-18:47:14 **** Incremental Build of configuration Debug for project ADC_SRAM_UART ****
-make all 
-'Building file: ../src/ADC_SRAM_UART.c'
-'Invoking: MicroBlaze gcc compiler'
-mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/ADC_SRAM_UART.o" -I../../ADC_SRAM_UART_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/ADC_SRAM_UART.d" -MT"src/ADC_SRAM_UART.o" -o "src/ADC_SRAM_UART.o" "../src/ADC_SRAM_UART.c"
-../src/ADC_SRAM_UART.c: In function 'main':
-../src/ADC_SRAM_UART.c:13:24: warning: passing argument 2 of 'RxSamples' makes pointer from integer without a cast [-Wint-conversion]
- #define SRAM_BASE_ADDR 0x60000000
-                        ^
-../src/ADC_SRAM_UART.c:51:38: note: in expansion of macro 'SRAM_BASE_ADDR'
-    Status = RxSamples(&FifoInstance, SRAM_BASE_ADDR);
-                                      ^~~~~~~~~~~~~~
-../src/ADC_SRAM_UART.c:19:5: note: expected 'u32 * {aka long unsigned int *}' but argument is of type 'int'
- int RxSamples(XLlFifo *InstancePtr, u32 *DestinationAddr);
-     ^~~~~~~~~
-../src/ADC_SRAM_UART.c:13:24: warning: passing argument 1 of 'TxUART' makes pointer from integer without a cast [-Wint-conversion]
- #define SRAM_BASE_ADDR 0x60000000
-                        ^
-../src/ADC_SRAM_UART.c:66:19: note: in expansion of macro 'SRAM_BASE_ADDR'
-   Status = TxUART(SRAM_BASE_ADDR);
-                   ^~~~~~~~~~~~~~
-../src/ADC_SRAM_UART.c:20:5: note: expected 'u32 * {aka long unsigned int *}' but argument is of type 'int'
- int TxUART(u32 *SourceAddr);
-     ^~~~~~
-../src/ADC_SRAM_UART.c: In function 'TxUART':
-../src/ADC_SRAM_UART.c:144:2: error: 'Addr' undeclared (first use in this function)
-  Addr = SourceAddr;
-  ^~~~
-../src/ADC_SRAM_UART.c:144:2: note: each undeclared identifier is reported only once for each function it appears in
-../src/ADC_SRAM_UART.c:145:28: error: 'RecieveLength' undeclared (first use in this function)
-  while(Addr < SourceAddr + RecieveLength){
-                            ^~~~~~~~~~~~~
-make: *** [src/subdir.mk:26: src/ADC_SRAM_UART.o] Error 1
-18:48:02 **** Auto Build of configuration Debug for project ADC_SRAM_UART ****
-make all 
-'Building file: ../src/ADC_SRAM_UART.c'
-'Invoking: MicroBlaze gcc compiler'
-mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/ADC_SRAM_UART.o" -I../../ADC_SRAM_UART_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/ADC_SRAM_UART.d" -MT"src/ADC_SRAM_UART.o" -o "src/ADC_SRAM_UART.o" "../src/ADC_SRAM_UART.c"
-../src/ADC_SRAM_UART.c: In function 'main':
-../src/ADC_SRAM_UART.c:13:24: warning: passing argument 2 of 'RxSamples' makes pointer from integer without a cast [-Wint-conversion]
- #define SRAM_BASE_ADDR 0x60000000
-                        ^
-../src/ADC_SRAM_UART.c:51:38: note: in expansion of macro 'SRAM_BASE_ADDR'
-    Status = RxSamples(&FifoInstance, SRAM_BASE_ADDR);
-                                      ^~~~~~~~~~~~~~
-../src/ADC_SRAM_UART.c:19:5: note: expected 'u32 * {aka long unsigned int *}' but argument is of type 'int'
- int RxSamples(XLlFifo *InstancePtr, u32 *DestinationAddr);
-     ^~~~~~~~~
-../src/ADC_SRAM_UART.c:13:24: warning: passing argument 1 of 'TxUART' makes pointer from integer without a cast [-Wint-conversion]
- #define SRAM_BASE_ADDR 0x60000000
-                        ^
-../src/ADC_SRAM_UART.c:66:19: note: in expansion of macro 'SRAM_BASE_ADDR'
-   Status = TxUART(SRAM_BASE_ADDR);
-                   ^~~~~~~~~~~~~~
-../src/ADC_SRAM_UART.c:20:5: note: expected 'u32 * {aka long unsigned int *}' but argument is of type 'int'
- int TxUART(u32 *SourceAddr);
-     ^~~~~~
-../src/ADC_SRAM_UART.c: In function 'TxUART':
-../src/ADC_SRAM_UART.c:145:7: warning: assignment makes integer from pointer without a cast [-Wint-conversion]
-  Addr = SourceAddr;
-       ^
-../src/ADC_SRAM_UART.c:146:28: error: 'RecieveLength' undeclared (first use in this function)
-  while(Addr < SourceAddr + RecieveLength){
-                            ^~~~~~~~~~~~~
-../src/ADC_SRAM_UART.c:146:28: note: each undeclared identifier is reported only once for each function it appears in
-make: *** [src/subdir.mk:26: src/ADC_SRAM_UART.o] Error 1
-18:48:56 **** Auto Build of configuration Debug for project ADC_SRAM_UART ****
-make all 
-'Building file: ../src/ADC_SRAM_UART.c'
-'Invoking: MicroBlaze gcc compiler'
-mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/ADC_SRAM_UART.o" -I../../ADC_SRAM_UART_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/ADC_SRAM_UART.d" -MT"src/ADC_SRAM_UART.o" -o "src/ADC_SRAM_UART.o" "../src/ADC_SRAM_UART.c"
-../src/ADC_SRAM_UART.c: In function 'main':
-../src/ADC_SRAM_UART.c:13:24: warning: passing argument 2 of 'RxSamples' makes pointer from integer without a cast [-Wint-conversion]
- #define SRAM_BASE_ADDR 0x60000000
-                        ^
-../src/ADC_SRAM_UART.c:53:38: note: in expansion of macro 'SRAM_BASE_ADDR'
-    Status = RxSamples(&FifoInstance, SRAM_BASE_ADDR);
-                                      ^~~~~~~~~~~~~~
-../src/ADC_SRAM_UART.c:19:5: note: expected 'u32 * {aka long unsigned int *}' but argument is of type 'int'
- int RxSamples(XLlFifo *InstancePtr, u32 *DestinationAddr);
-     ^~~~~~~~~
-../src/ADC_SRAM_UART.c:13:24: warning: passing argument 1 of 'TxUART' makes pointer from integer without a cast [-Wint-conversion]
- #define SRAM_BASE_ADDR 0x60000000
-                        ^
-../src/ADC_SRAM_UART.c:68:19: note: in expansion of macro 'SRAM_BASE_ADDR'
-   Status = TxUART(SRAM_BASE_ADDR);
-                   ^~~~~~~~~~~~~~
-../src/ADC_SRAM_UART.c:20:5: note: expected 'u32 * {aka long unsigned int *}' but argument is of type 'int'
- int TxUART(u32 *SourceAddr);
-     ^~~~~~
-../src/ADC_SRAM_UART.c: In function 'TxUART':
-../src/ADC_SRAM_UART.c:148:28: error: 'RecieveLength' undeclared (first use in this function); did you mean 'ReceiveLength'?
-  while(Addr < SourceAddr + RecieveLength){
-                            ^~~~~~~~~~~~~
-                            ReceiveLength
-../src/ADC_SRAM_UART.c:148:28: note: each undeclared identifier is reported only once for each function it appears in
-At top level:
-../src/ADC_SRAM_UART.c:29:12: warning: 'ReceiveLength' defined but not used [-Wunused-variable]
- static u32 ReceiveLength;
-            ^~~~~~~~~~~~~
-make: *** [src/subdir.mk:26: src/ADC_SRAM_UART.o] Error 1
-18:49:14 **** Auto Build of configuration Debug for project ADC_SRAM_UART ****
-make all 
-'Building file: ../src/ADC_SRAM_UART.c'
-'Invoking: MicroBlaze gcc compiler'
-mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/ADC_SRAM_UART.o" -I../../ADC_SRAM_UART_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/ADC_SRAM_UART.d" -MT"src/ADC_SRAM_UART.o" -o "src/ADC_SRAM_UART.o" "../src/ADC_SRAM_UART.c"
-../src/ADC_SRAM_UART.c: In function 'main':
-../src/ADC_SRAM_UART.c:13:24: warning: passing argument 2 of 'RxSamples' makes pointer from integer without a cast [-Wint-conversion]
- #define SRAM_BASE_ADDR 0x60000000
-                        ^
-../src/ADC_SRAM_UART.c:53:38: note: in expansion of macro 'SRAM_BASE_ADDR'
-    Status = RxSamples(&FifoInstance, SRAM_BASE_ADDR);
-                                      ^~~~~~~~~~~~~~
-../src/ADC_SRAM_UART.c:19:5: note: expected 'u32 * {aka long unsigned int *}' but argument is of type 'int'
- int RxSamples(XLlFifo *InstancePtr, u32 *DestinationAddr);
-     ^~~~~~~~~
-../src/ADC_SRAM_UART.c:13:24: warning: passing argument 1 of 'TxUART' makes pointer from integer without a cast [-Wint-conversion]
- #define SRAM_BASE_ADDR 0x60000000
-                        ^
-../src/ADC_SRAM_UART.c:68:19: note: in expansion of macro 'SRAM_BASE_ADDR'
-   Status = TxUART(SRAM_BASE_ADDR);
-                   ^~~~~~~~~~~~~~
-../src/ADC_SRAM_UART.c:20:5: note: expected 'u32 * {aka long unsigned int *}' but argument is of type 'int'
- int TxUART(u32 *SourceAddr);
-     ^~~~~~
-../src/ADC_SRAM_UART.c: In function 'TxUART':
-../src/ADC_SRAM_UART.c:148:28: error: 'ReciveLength' undeclared (first use in this function); did you mean 'ReceiveLength'?
-  while(Addr < SourceAddr + ReciveLength){
-                            ^~~~~~~~~~~~
-                            ReceiveLength
-../src/ADC_SRAM_UART.c:148:28: note: each undeclared identifier is reported only once for each function it appears in
-At top level:
-../src/ADC_SRAM_UART.c:29:12: warning: 'ReceiveLength' defined but not used [-Wunused-variable]
- static u32 ReceiveLength;
-            ^~~~~~~~~~~~~
-make: *** [src/subdir.mk:26: src/ADC_SRAM_UART.o] Error 1
-18:49:23 **** Auto Build of configuration Debug for project ADC_SRAM_UART ****
-make all 
-'Building file: ../src/ADC_SRAM_UART.c'
-'Invoking: MicroBlaze gcc compiler'
-mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/ADC_SRAM_UART.o" -I../../ADC_SRAM_UART_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/ADC_SRAM_UART.d" -MT"src/ADC_SRAM_UART.o" -o "src/ADC_SRAM_UART.o" "../src/ADC_SRAM_UART.c"
-../src/ADC_SRAM_UART.c: In function 'main':
-../src/ADC_SRAM_UART.c:13:24: warning: passing argument 2 of 'RxSamples' makes pointer from integer without a cast [-Wint-conversion]
- #define SRAM_BASE_ADDR 0x60000000
-                        ^
-../src/ADC_SRAM_UART.c:53:38: note: in expansion of macro 'SRAM_BASE_ADDR'
-    Status = RxSamples(&FifoInstance, SRAM_BASE_ADDR);
-                                      ^~~~~~~~~~~~~~
-../src/ADC_SRAM_UART.c:19:5: note: expected 'u32 * {aka long unsigned int *}' but argument is of type 'int'
- int RxSamples(XLlFifo *InstancePtr, u32 *DestinationAddr);
-     ^~~~~~~~~
-../src/ADC_SRAM_UART.c:13:24: warning: passing argument 1 of 'TxUART' makes pointer from integer without a cast [-Wint-conversion]
- #define SRAM_BASE_ADDR 0x60000000
-                        ^
-../src/ADC_SRAM_UART.c:68:19: note: in expansion of macro 'SRAM_BASE_ADDR'
-   Status = TxUART(SRAM_BASE_ADDR);
-                   ^~~~~~~~~~~~~~
-../src/ADC_SRAM_UART.c:20:5: note: expected 'u32 * {aka long unsigned int *}' but argument is of type 'int'
- int TxUART(u32 *SourceAddr);
-     ^~~~~~
-../src/ADC_SRAM_UART.c: In function 'TxUART':
-../src/ADC_SRAM_UART.c:148:13: warning: comparison between pointer and integer
-  while(Addr < SourceAddr + ReceiveLength){
-             ^
-'Finished building: ../src/ADC_SRAM_UART.c'
-' '
-'Building target: ADC_SRAM_UART.elf'
-'Invoking: MicroBlaze gcc linker'
-mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../ADC_SRAM_UART_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "ADC_SRAM_UART.elf"  ./src/ADC_SRAM_UART.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
-'Finished building target: ADC_SRAM_UART.elf'
-' '
-'Invoking: MicroBlaze Print Size'
-mb-size ADC_SRAM_UART.elf  |tee "ADC_SRAM_UART.elf.size"
-   text	   data	    bss	    dec	    hex	filename
-   9072	    292	   9620	  18984	   4a28	ADC_SRAM_UART.elf
-'Finished building: ADC_SRAM_UART.elf.size'
-' '
-18:49:36 **** Auto Build of configuration Debug for project ADC_SRAM_UART ****
-make all 
-'Building file: ../src/ADC_SRAM_UART.c'
-'Invoking: MicroBlaze gcc compiler'
-mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/ADC_SRAM_UART.o" -I../../ADC_SRAM_UART_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/ADC_SRAM_UART.d" -MT"src/ADC_SRAM_UART.o" -o "src/ADC_SRAM_UART.o" "../src/ADC_SRAM_UART.c"
-../src/ADC_SRAM_UART.c: In function 'main':
-../src/ADC_SRAM_UART.c:13:24: warning: passing argument 2 of 'RxSamples' makes pointer from integer without a cast [-Wint-conversion]
- #define SRAM_BASE_ADDR 0x60000000
-                        ^
-../src/ADC_SRAM_UART.c:53:38: note: in expansion of macro 'SRAM_BASE_ADDR'
-    Status = RxSamples(&FifoInstance, SRAM_BASE_ADDR);
-                                      ^~~~~~~~~~~~~~
-../src/ADC_SRAM_UART.c:19:5: note: expected 'u32 * {aka long unsigned int *}' but argument is of type 'int'
- int RxSamples(XLlFifo *InstancePtr, u32 *DestinationAddr);
-     ^~~~~~~~~
-../src/ADC_SRAM_UART.c:13:24: warning: passing argument 1 of 'TxUART' makes pointer from integer without a cast [-Wint-conversion]
- #define SRAM_BASE_ADDR 0x60000000
-                        ^
-../src/ADC_SRAM_UART.c:68:19: note: in expansion of macro 'SRAM_BASE_ADDR'
-   Status = TxUART(SRAM_BASE_ADDR);
-                   ^~~~~~~~~~~~~~
-../src/ADC_SRAM_UART.c:20:5: note: expected 'u32 * {aka long unsigned int *}' but argument is of type 'int'
- int TxUART(u32 *SourceAddr);
-     ^~~~~~
-../src/ADC_SRAM_UART.c: In function 'TxUART':
-../src/ADC_SRAM_UART.c:148:29: error: invalid type argument of unary '*' (have 'u32 {aka long unsigned int}')
-  while(Addr < *SourceAddr + *ReceiveLength){
-                             ^~~~~~~~~~~~~~
-make: *** [src/subdir.mk:26: src/ADC_SRAM_UART.o] Error 1
-18:49:41 **** Auto Build of configuration Debug for project ADC_SRAM_UART ****
-make all 
-'Building file: ../src/ADC_SRAM_UART.c'
-'Invoking: MicroBlaze gcc compiler'
-mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/ADC_SRAM_UART.o" -I../../ADC_SRAM_UART_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/ADC_SRAM_UART.d" -MT"src/ADC_SRAM_UART.o" -o "src/ADC_SRAM_UART.o" "../src/ADC_SRAM_UART.c"
-../src/ADC_SRAM_UART.c: In function 'main':
-../src/ADC_SRAM_UART.c:13:24: warning: passing argument 2 of 'RxSamples' makes pointer from integer without a cast [-Wint-conversion]
- #define SRAM_BASE_ADDR 0x60000000
-                        ^
-../src/ADC_SRAM_UART.c:53:38: note: in expansion of macro 'SRAM_BASE_ADDR'
-    Status = RxSamples(&FifoInstance, SRAM_BASE_ADDR);
-                                      ^~~~~~~~~~~~~~
-../src/ADC_SRAM_UART.c:19:5: note: expected 'u32 * {aka long unsigned int *}' but argument is of type 'int'
- int RxSamples(XLlFifo *InstancePtr, u32 *DestinationAddr);
-     ^~~~~~~~~
-../src/ADC_SRAM_UART.c:13:24: warning: passing argument 1 of 'TxUART' makes pointer from integer without a cast [-Wint-conversion]
- #define SRAM_BASE_ADDR 0x60000000
-                        ^
-../src/ADC_SRAM_UART.c:68:19: note: in expansion of macro 'SRAM_BASE_ADDR'
-   Status = TxUART(SRAM_BASE_ADDR);
-                   ^~~~~~~~~~~~~~
-../src/ADC_SRAM_UART.c:20:5: note: expected 'u32 * {aka long unsigned int *}' but argument is of type 'int'
- int TxUART(u32 *SourceAddr);
-     ^~~~~~
-'Finished building: ../src/ADC_SRAM_UART.c'
-' '
-'Building target: ADC_SRAM_UART.elf'
-'Invoking: MicroBlaze gcc linker'
-mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../ADC_SRAM_UART_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "ADC_SRAM_UART.elf"  ./src/ADC_SRAM_UART.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
-'Finished building target: ADC_SRAM_UART.elf'
-' '
-'Invoking: MicroBlaze Print Size'
-mb-size ADC_SRAM_UART.elf  |tee "ADC_SRAM_UART.elf.size"
-   text	   data	    bss	    dec	    hex	filename
-   9072	    292	   9620	  18984	   4a28	ADC_SRAM_UART.elf
-'Finished building: ADC_SRAM_UART.elf.size'
-' '
-18:50:14 **** Incremental Build of configuration Debug for project ADC_SRAM_UART ****
-make all 
-make: Nothing to be done for 'all'.
-18:51:23 **** Auto Build of configuration Debug for project ADC_SRAM_UART ****
-make all 
-'Building file: ../src/ADC_SRAM_UART.c'
-'Invoking: MicroBlaze gcc compiler'
-mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/ADC_SRAM_UART.o" -I../../ADC_SRAM_UART_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/ADC_SRAM_UART.d" -MT"src/ADC_SRAM_UART.o" -o "src/ADC_SRAM_UART.o" "../src/ADC_SRAM_UART.c"
-../src/ADC_SRAM_UART.c: In function 'main':
-../src/ADC_SRAM_UART.c:13:24: warning: passing argument 2 of 'RxSamples' makes pointer from integer without a cast [-Wint-conversion]
- #define SRAM_BASE_ADDR 0x60000000
-                        ^
-../src/ADC_SRAM_UART.c:53:38: note: in expansion of macro 'SRAM_BASE_ADDR'
-    Status = RxSamples(&FifoInstance, SRAM_BASE_ADDR);
-                                      ^~~~~~~~~~~~~~
-../src/ADC_SRAM_UART.c:19:5: note: expected 'u32 * {aka long unsigned int *}' but argument is of type 'int'
- int RxSamples(XLlFifo *InstancePtr, u32 *DestinationAddr);
-     ^~~~~~~~~
-../src/ADC_SRAM_UART.c:13:24: warning: passing argument 1 of 'TxUART' makes pointer from integer without a cast [-Wint-conversion]
- #define SRAM_BASE_ADDR 0x60000000
-                        ^
-../src/ADC_SRAM_UART.c:68:19: note: in expansion of macro 'SRAM_BASE_ADDR'
-   Status = TxUART(SRAM_BASE_ADDR);
-                   ^~~~~~~~~~~~~~
-../src/ADC_SRAM_UART.c:20:5: note: expected 'u32 * {aka long unsigned int *}' but argument is of type 'int'
- int TxUART(u32 *SourceAddr);
-     ^~~~~~
-../src/ADC_SRAM_UART.c: In function 'TxUART':
-../src/ADC_SRAM_UART.c:147:7: warning: assignment makes integer from pointer without a cast [-Wint-conversion]
-  Addr = SourceAddr;
-       ^
-../src/ADC_SRAM_UART.c:148:13: warning: comparison between pointer and integer
-  while(Addr < SourceAddr + ReceiveLength){
-             ^
-'Finished building: ../src/ADC_SRAM_UART.c'
-' '
-'Building target: ADC_SRAM_UART.elf'
-'Invoking: MicroBlaze gcc linker'
-mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../ADC_SRAM_UART_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "ADC_SRAM_UART.elf"  ./src/ADC_SRAM_UART.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
-'Finished building target: ADC_SRAM_UART.elf'
-' '
-'Invoking: MicroBlaze Print Size'
-mb-size ADC_SRAM_UART.elf  |tee "ADC_SRAM_UART.elf.size"
-   text	   data	    bss	    dec	    hex	filename
-   9072	    292	   9620	  18984	   4a28	ADC_SRAM_UART.elf
-'Finished building: ADC_SRAM_UART.elf.size'
-' '
-18:51:53 **** Auto Build of configuration Debug for project ADC_SRAM_UART ****
-make all 
-'Building file: ../src/ADC_SRAM_UART.c'
-'Invoking: MicroBlaze gcc compiler'
-mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/ADC_SRAM_UART.o" -I../../ADC_SRAM_UART_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/ADC_SRAM_UART.d" -MT"src/ADC_SRAM_UART.o" -o "src/ADC_SRAM_UART.o" "../src/ADC_SRAM_UART.c"
-../src/ADC_SRAM_UART.c: In function 'main':
-../src/ADC_SRAM_UART.c:13:24: warning: passing argument 2 of 'RxSamples' makes pointer from integer without a cast [-Wint-conversion]
- #define SRAM_BASE_ADDR 0x60000000
-                        ^
-../src/ADC_SRAM_UART.c:53:38: note: in expansion of macro 'SRAM_BASE_ADDR'
-    Status = RxSamples(&FifoInstance, SRAM_BASE_ADDR);
-                                      ^~~~~~~~~~~~~~
-../src/ADC_SRAM_UART.c:19:5: note: expected 'u32 * {aka long unsigned int *}' but argument is of type 'int'
- int RxSamples(XLlFifo *InstancePtr, u32 *DestinationAddr);
-     ^~~~~~~~~
-../src/ADC_SRAM_UART.c:13:24: warning: passing argument 1 of 'TxUART' makes pointer from integer without a cast [-Wint-conversion]
- #define SRAM_BASE_ADDR 0x60000000
-                        ^
-../src/ADC_SRAM_UART.c:68:19: note: in expansion of macro 'SRAM_BASE_ADDR'
-   Status = TxUART(SRAM_BASE_ADDR);
-                   ^~~~~~~~~~~~~~
-../src/ADC_SRAM_UART.c:20:5: note: expected 'u32 * {aka long unsigned int *}' but argument is of type 'int'
- int TxUART(u32 *SourceAddr);
-     ^~~~~~
-../src/ADC_SRAM_UART.c: At top level:
-../src/ADC_SRAM_UART.c:143:5: error: conflicting types for 'TxUART'
- int TxUART(u32 SourceAddr){
-     ^~~~~~
-../src/ADC_SRAM_UART.c:20:5: note: previous declaration of 'TxUART' was here
- int TxUART(u32 *SourceAddr);
-     ^~~~~~
-make: *** [src/subdir.mk:26: src/ADC_SRAM_UART.o] Error 1
-18:52:00 **** Auto Build of configuration Debug for project ADC_SRAM_UART ****
-make all 
-'Building file: ../src/ADC_SRAM_UART.c'
-'Invoking: MicroBlaze gcc compiler'
-mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/ADC_SRAM_UART.o" -I../../ADC_SRAM_UART_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/ADC_SRAM_UART.d" -MT"src/ADC_SRAM_UART.o" -o "src/ADC_SRAM_UART.o" "../src/ADC_SRAM_UART.c"
-../src/ADC_SRAM_UART.c: In function 'main':
-../src/ADC_SRAM_UART.c:13:24: warning: passing argument 2 of 'RxSamples' makes pointer from integer without a cast [-Wint-conversion]
- #define SRAM_BASE_ADDR 0x60000000
-                        ^
-../src/ADC_SRAM_UART.c:53:38: note: in expansion of macro 'SRAM_BASE_ADDR'
-    Status = RxSamples(&FifoInstance, SRAM_BASE_ADDR);
-                                      ^~~~~~~~~~~~~~
-../src/ADC_SRAM_UART.c:19:5: note: expected 'u32 * {aka long unsigned int *}' but argument is of type 'int'
- int RxSamples(XLlFifo *InstancePtr, u32 *DestinationAddr);
-     ^~~~~~~~~
-'Finished building: ../src/ADC_SRAM_UART.c'
-' '
-'Building target: ADC_SRAM_UART.elf'
-'Invoking: MicroBlaze gcc linker'
-mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../ADC_SRAM_UART_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "ADC_SRAM_UART.elf"  ./src/ADC_SRAM_UART.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
-'Finished building target: ADC_SRAM_UART.elf'
-' '
-'Invoking: MicroBlaze Print Size'
-mb-size ADC_SRAM_UART.elf  |tee "ADC_SRAM_UART.elf.size"
-   text	   data	    bss	    dec	    hex	filename
-   9072	    292	   9620	  18984	   4a28	ADC_SRAM_UART.elf
-'Finished building: ADC_SRAM_UART.elf.size'
-' '
-18:52:21 **** Incremental Build of configuration Debug for project ADC_SRAM_UART ****
-make all 
-make: Nothing to be done for 'all'.
-18:52:28 **** Incremental Build of configuration Debug for project ADC_SRAM_UART ****
-make all 
-make: Nothing to be done for 'all'.
-19:08:54 **** Auto Build of configuration Debug for project ADC_SRAM_UART ****
-make all 
-'Building file: ../src/ADC_SRAM_UART.c'
-'Invoking: MicroBlaze gcc compiler'
-mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/ADC_SRAM_UART.o" -I../../ADC_SRAM_UART_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/ADC_SRAM_UART.d" -MT"src/ADC_SRAM_UART.o" -o "src/ADC_SRAM_UART.o" "../src/ADC_SRAM_UART.c"
-../src/ADC_SRAM_UART.c: In function 'main':
-../src/ADC_SRAM_UART.c:13:24: warning: passing argument 2 of 'RxSamples' makes pointer from integer without a cast [-Wint-conversion]
- #define SRAM_BASE_ADDR 0x60000000
-                        ^
-../src/ADC_SRAM_UART.c:53:38: note: in expansion of macro 'SRAM_BASE_ADDR'
-    Status = RxSamples(&FifoInstance, SRAM_BASE_ADDR);
-                                      ^~~~~~~~~~~~~~
-../src/ADC_SRAM_UART.c:19:5: note: expected 'u32 * {aka long unsigned int *}' but argument is of type 'int'
- int RxSamples(XLlFifo *InstancePtr, u32 *DestinationAddr);
-     ^~~~~~~~~
-At top level:
-../src/ADC_SRAM_UART.c:29:12: warning: 'ReceiveLength' defined but not used [-Wunused-variable]
- static u32 ReceiveLength;
-            ^~~~~~~~~~~~~
-'Finished building: ../src/ADC_SRAM_UART.c'
-' '
-'Building target: ADC_SRAM_UART.elf'
-'Invoking: MicroBlaze gcc linker'
-mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../ADC_SRAM_UART_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "ADC_SRAM_UART.elf"  ./src/ADC_SRAM_UART.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
-'Finished building target: ADC_SRAM_UART.elf'
-' '
-'Invoking: MicroBlaze Print Size'
-mb-size ADC_SRAM_UART.elf  |tee "ADC_SRAM_UART.elf.size"
-   text	   data	    bss	    dec	    hex	filename
-   9072	    292	   9620	  18984	   4a28	ADC_SRAM_UART.elf
-'Finished building: ADC_SRAM_UART.elf.size'
-' '
-19:24:33 **** Incremental Build of configuration Debug for project ADC_SRAM_UART ****
-make all 
-make: Nothing to be done for 'all'.
-19:24:42 **** Incremental Build of configuration Debug for project ADC_SRAM_UART ****
-make all 
-make: Nothing to be done for 'all'.
-19:26:21 **** Incremental Build of configuration Debug for project ADC_SRAM_UART ****
-make all 
-'Building file: ../src/ADC_SRAM_UART.c'
-'Invoking: MicroBlaze gcc compiler'
-mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/ADC_SRAM_UART.o" -I../../ADC_SRAM_UART_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/ADC_SRAM_UART.d" -MT"src/ADC_SRAM_UART.o" -o "src/ADC_SRAM_UART.o" "../src/ADC_SRAM_UART.c"
-../src/ADC_SRAM_UART.c: In function 'main':
-../src/ADC_SRAM_UART.c:13:24: warning: passing argument 2 of 'RxSamples' makes pointer from integer without a cast [-Wint-conversion]
- #define SRAM_BASE_ADDR 0x60000000
-                        ^
-../src/ADC_SRAM_UART.c:53:38: note: in expansion of macro 'SRAM_BASE_ADDR'
-    Status = RxSamples(&FifoInstance, SRAM_BASE_ADDR);
-                                      ^~~~~~~~~~~~~~
-../src/ADC_SRAM_UART.c:19:5: note: expected 'u32 * {aka long unsigned int *}' but argument is of type 'int'
- int RxSamples(XLlFifo *InstancePtr, u32 *DestinationAddr);
-     ^~~~~~~~~
-At top level:
-../src/ADC_SRAM_UART.c:29:12: warning: 'ReceiveLength' defined but not used [-Wunused-variable]
- static u32 ReceiveLength;
-            ^~~~~~~~~~~~~
-'Finished building: ../src/ADC_SRAM_UART.c'
-' '
-'Building target: ADC_SRAM_UART.elf'
-'Invoking: MicroBlaze gcc linker'
-mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../ADC_SRAM_UART_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "ADC_SRAM_UART.elf"  ./src/ADC_SRAM_UART.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
-'Finished building target: ADC_SRAM_UART.elf'
-' '
-'Invoking: MicroBlaze Print Size'
-mb-size ADC_SRAM_UART.elf  |tee "ADC_SRAM_UART.elf.size"
-   text	   data	    bss	    dec	    hex	filename
-   9072	    292	   9620	  18984	   4a28	ADC_SRAM_UART.elf
-'Finished building: ADC_SRAM_UART.elf.size'
-' '
-19:27:35 **** Incremental Build of configuration Debug for project ADC_SRAM_UART ****
-make all 
-'Building file: ../src/ADC_SRAM_UART.c'
-'Invoking: MicroBlaze gcc compiler'
-mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/ADC_SRAM_UART.o" -I../../ADC_SRAM_UART_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/ADC_SRAM_UART.d" -MT"src/ADC_SRAM_UART.o" -o "src/ADC_SRAM_UART.o" "../src/ADC_SRAM_UART.c"
-../src/ADC_SRAM_UART.c: In function 'main':
-../src/ADC_SRAM_UART.c:52:3: error: expected ';' before 'if'
-   if(1){
-   ^~
-At top level:
-../src/ADC_SRAM_UART.c:29:12: warning: 'ReceiveLength' defined but not used [-Wunused-variable]
- static u32 ReceiveLength;
-            ^~~~~~~~~~~~~
-make: *** [src/subdir.mk:26: src/ADC_SRAM_UART.o] Error 1
-19:27:45 **** Incremental Build of configuration Debug for project ADC_SRAM_UART ****
-make all 
-'Building file: ../src/ADC_SRAM_UART.c'
-'Invoking: MicroBlaze gcc compiler'
-mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/ADC_SRAM_UART.o" -I../../ADC_SRAM_UART_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/ADC_SRAM_UART.d" -MT"src/ADC_SRAM_UART.o" -o "src/ADC_SRAM_UART.o" "../src/ADC_SRAM_UART.c"
-../src/ADC_SRAM_UART.c: In function 'main':
-../src/ADC_SRAM_UART.c:13:24: warning: passing argument 2 of 'RxSamples' makes pointer from integer without a cast [-Wint-conversion]
- #define SRAM_BASE_ADDR 0x60000000
-                        ^
-../src/ADC_SRAM_UART.c:54:38: note: in expansion of macro 'SRAM_BASE_ADDR'
-    Status = RxSamples(&FifoInstance, SRAM_BASE_ADDR);
-                                      ^~~~~~~~~~~~~~
-../src/ADC_SRAM_UART.c:19:5: note: expected 'u32 * {aka long unsigned int *}' but argument is of type 'int'
- int RxSamples(XLlFifo *InstancePtr, u32 *DestinationAddr);
-     ^~~~~~~~~
-At top level:
-../src/ADC_SRAM_UART.c:29:12: warning: 'ReceiveLength' defined but not used [-Wunused-variable]
- static u32 ReceiveLength;
-            ^~~~~~~~~~~~~
-'Finished building: ../src/ADC_SRAM_UART.c'
-' '
-'Building target: ADC_SRAM_UART.elf'
-'Invoking: MicroBlaze gcc linker'
-mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../ADC_SRAM_UART_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "ADC_SRAM_UART.elf"  ./src/ADC_SRAM_UART.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
-'Finished building target: ADC_SRAM_UART.elf'
-' '
-'Invoking: MicroBlaze Print Size'
-mb-size ADC_SRAM_UART.elf  |tee "ADC_SRAM_UART.elf.size"
-   text	   data	    bss	    dec	    hex	filename
-   9120	    292	   9620	  19032	   4a58	ADC_SRAM_UART.elf
-'Finished building: ADC_SRAM_UART.elf.size'
-' '
-19:27:57 **** Incremental Build of configuration Debug for project ADC_SRAM_UART ****
-make all 
-make: Nothing to be done for 'all'.
-19:30:43 **** Incremental Build of configuration Debug for project ADC_SRAM_UART ****
-make all 
-'Building file: ../src/ADC_SRAM_UART.c'
-'Invoking: MicroBlaze gcc compiler'
-mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/ADC_SRAM_UART.o" -I../../ADC_SRAM_UART_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/ADC_SRAM_UART.d" -MT"src/ADC_SRAM_UART.o" -o "src/ADC_SRAM_UART.o" "../src/ADC_SRAM_UART.c"
-../src/ADC_SRAM_UART.c: In function 'main':
-../src/ADC_SRAM_UART.c:13:24: warning: passing argument 2 of 'RxSamples' makes pointer from integer without a cast [-Wint-conversion]
- #define SRAM_BASE_ADDR 0x60000000
-                        ^
-../src/ADC_SRAM_UART.c:54:38: note: in expansion of macro 'SRAM_BASE_ADDR'
-    Status = RxSamples(&FifoInstance, SRAM_BASE_ADDR);
-                                      ^~~~~~~~~~~~~~
-../src/ADC_SRAM_UART.c:19:5: note: expected 'u32 * {aka long unsigned int *}' but argument is of type 'int'
- int RxSamples(XLlFifo *InstancePtr, u32 *DestinationAddr);
-     ^~~~~~~~~
-At top level:
-../src/ADC_SRAM_UART.c:29:12: warning: 'ReceiveLength' defined but not used [-Wunused-variable]
- static u32 ReceiveLength;
-            ^~~~~~~~~~~~~
-'Finished building: ../src/ADC_SRAM_UART.c'
-' '
-'Building target: ADC_SRAM_UART.elf'
-'Invoking: MicroBlaze gcc linker'
-mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../ADC_SRAM_UART_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "ADC_SRAM_UART.elf"  ./src/ADC_SRAM_UART.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
-'Finished building target: ADC_SRAM_UART.elf'
-' '
-'Invoking: MicroBlaze Print Size'
-mb-size ADC_SRAM_UART.elf  |tee "ADC_SRAM_UART.elf.size"
-   text	   data	    bss	    dec	    hex	filename
-   9120	    292	   9620	  19032	   4a58	ADC_SRAM_UART.elf
-'Finished building: ADC_SRAM_UART.elf.size'
-' '
-19:32:39 **** Incremental Build of configuration Debug for project ADC_SRAM_UART ****
-make all 
-'Building file: ../src/ADC_SRAM_UART.c'
-'Invoking: MicroBlaze gcc compiler'
-mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/ADC_SRAM_UART.o" -I../../ADC_SRAM_UART_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/ADC_SRAM_UART.d" -MT"src/ADC_SRAM_UART.o" -o "src/ADC_SRAM_UART.o" "../src/ADC_SRAM_UART.c"
-../src/ADC_SRAM_UART.c: In function 'main':
-../src/ADC_SRAM_UART.c:13:24: warning: passing argument 2 of 'RxSamples' makes pointer from integer without a cast [-Wint-conversion]
- #define SRAM_BASE_ADDR 0x60000000
-                        ^
-../src/ADC_SRAM_UART.c:54:38: note: in expansion of macro 'SRAM_BASE_ADDR'
-    Status = RxSamples(&FifoInstance, SRAM_BASE_ADDR);
-                                      ^~~~~~~~~~~~~~
-../src/ADC_SRAM_UART.c:19:5: note: expected 'u32 * {aka long unsigned int *}' but argument is of type 'int'
- int RxSamples(XLlFifo *InstancePtr, u32 *DestinationAddr);
-     ^~~~~~~~~
-../src/ADC_SRAM_UART.c: In function 'TxUART':
-../src/ADC_SRAM_UART.c:150:30: error: expected expression before ';' token
-  for(u32 i = 0x60000000; i < ;)
-                              ^
-At top level:
-../src/ADC_SRAM_UART.c:29:12: warning: 'ReceiveLength' defined but not used [-Wunused-variable]
- static u32 ReceiveLength;
-            ^~~~~~~~~~~~~
-make: *** [src/subdir.mk:26: src/ADC_SRAM_UART.o] Error 1
-19:32:53 **** Incremental Build of configuration Debug for project ADC_SRAM_UART ****
-make all 
-'Building file: ../src/ADC_SRAM_UART.c'
-'Invoking: MicroBlaze gcc compiler'
-mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/ADC_SRAM_UART.o" -I../../ADC_SRAM_UART_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/ADC_SRAM_UART.d" -MT"src/ADC_SRAM_UART.o" -o "src/ADC_SRAM_UART.o" "../src/ADC_SRAM_UART.c"
-../src/ADC_SRAM_UART.c: In function 'main':
-../src/ADC_SRAM_UART.c:13:24: warning: passing argument 2 of 'RxSamples' makes pointer from integer without a cast [-Wint-conversion]
- #define SRAM_BASE_ADDR 0x60000000
-                        ^
-../src/ADC_SRAM_UART.c:54:38: note: in expansion of macro 'SRAM_BASE_ADDR'
-    Status = RxSamples(&FifoInstance, SRAM_BASE_ADDR);
-                                      ^~~~~~~~~~~~~~
-../src/ADC_SRAM_UART.c:19:5: note: expected 'u32 * {aka long unsigned int *}' but argument is of type 'int'
- int RxSamples(XLlFifo *InstancePtr, u32 *DestinationAddr);
-     ^~~~~~~~~
-../src/ADC_SRAM_UART.c: In function 'TxUART':
-../src/ADC_SRAM_UART.c:150:30: error: expected expression before ';' token
-  for(u32 i = 0x60000000; i < ;)
-                              ^
-At top level:
-../src/ADC_SRAM_UART.c:29:12: warning: 'ReceiveLength' defined but not used [-Wunused-variable]
- static u32 ReceiveLength;
-            ^~~~~~~~~~~~~
-make: *** [src/subdir.mk:26: src/ADC_SRAM_UART.o] Error 1
-19:33:42 **** Auto Build of configuration Debug for project ADC_SRAM_UART ****
-make all 
-'Building file: ../src/ADC_SRAM_UART.c'
-'Invoking: MicroBlaze gcc compiler'
-mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/ADC_SRAM_UART.o" -I../../ADC_SRAM_UART_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/ADC_SRAM_UART.d" -MT"src/ADC_SRAM_UART.o" -o "src/ADC_SRAM_UART.o" "../src/ADC_SRAM_UART.c"
-../src/ADC_SRAM_UART.c: In function 'main':
-../src/ADC_SRAM_UART.c:13:24: warning: passing argument 2 of 'RxSamples' makes pointer from integer without a cast [-Wint-conversion]
- #define SRAM_BASE_ADDR 0x60000000
-                        ^
-../src/ADC_SRAM_UART.c:54:38: note: in expansion of macro 'SRAM_BASE_ADDR'
-    Status = RxSamples(&FifoInstance, SRAM_BASE_ADDR);
-                                      ^~~~~~~~~~~~~~
-../src/ADC_SRAM_UART.c:19:5: note: expected 'u32 * {aka long unsigned int *}' but argument is of type 'int'
- int RxSamples(XLlFifo *InstancePtr, u32 *DestinationAddr);
-     ^~~~~~~~~
-At top level:
-../src/ADC_SRAM_UART.c:29:12: warning: 'ReceiveLength' defined but not used [-Wunused-variable]
- static u32 ReceiveLength;
-            ^~~~~~~~~~~~~
-'Finished building: ../src/ADC_SRAM_UART.c'
-' '
-'Building target: ADC_SRAM_UART.elf'
-'Invoking: MicroBlaze gcc linker'
-mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../ADC_SRAM_UART_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "ADC_SRAM_UART.elf"  ./src/ADC_SRAM_UART.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
-'Finished building target: ADC_SRAM_UART.elf'
-' '
-'Invoking: MicroBlaze Print Size'
-mb-size ADC_SRAM_UART.elf  |tee "ADC_SRAM_UART.elf.size"
-   text	   data	    bss	    dec	    hex	filename
-   9120	    292	   9620	  19032	   4a58	ADC_SRAM_UART.elf
-'Finished building: ADC_SRAM_UART.elf.size'
-' '
-19:33:47 **** Incremental Build of configuration Debug for project ADC_SRAM_UART ****
-make all 
-make: Nothing to be done for 'all'.
-19:34:01 **** Incremental Build of configuration Debug for project ADC_SRAM_UART ****
-make all 
-make: Nothing to be done for 'all'.
-19:34:56 **** Auto Build of configuration Debug for project ADC_SRAM_UART ****
-make all 
-'Building file: ../src/ADC_SRAM_UART.c'
-'Invoking: MicroBlaze gcc compiler'
-mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/ADC_SRAM_UART.o" -I../../ADC_SRAM_UART_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/ADC_SRAM_UART.d" -MT"src/ADC_SRAM_UART.o" -o "src/ADC_SRAM_UART.o" "../src/ADC_SRAM_UART.c"
-../src/ADC_SRAM_UART.c: In function 'main':
-../src/ADC_SRAM_UART.c:13:24: warning: passing argument 2 of 'RxSamples' makes pointer from integer without a cast [-Wint-conversion]
- #define SRAM_BASE_ADDR 0x60000000
-                        ^
-../src/ADC_SRAM_UART.c:53:38: note: in expansion of macro 'SRAM_BASE_ADDR'
-    Status = RxSamples(&FifoInstance, SRAM_BASE_ADDR);
-                                      ^~~~~~~~~~~~~~
-../src/ADC_SRAM_UART.c:19:5: note: expected 'u32 * {aka long unsigned int *}' but argument is of type 'int'
- int RxSamples(XLlFifo *InstancePtr, u32 *DestinationAddr);
-     ^~~~~~~~~
-At top level:
-../src/ADC_SRAM_UART.c:28:12: warning: 'ReceiveLength' defined but not used [-Wunused-variable]
- static u32 ReceiveLength;
-            ^~~~~~~~~~~~~
-'Finished building: ../src/ADC_SRAM_UART.c'
-' '
-'Building target: ADC_SRAM_UART.elf'
-'Invoking: MicroBlaze gcc linker'
-mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../ADC_SRAM_UART_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "ADC_SRAM_UART.elf"  ./src/ADC_SRAM_UART.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
-'Finished building target: ADC_SRAM_UART.elf'
-' '
-'Invoking: MicroBlaze Print Size'
-mb-size ADC_SRAM_UART.elf  |tee "ADC_SRAM_UART.elf.size"
-   text	   data	    bss	    dec	    hex	filename
-   9084	    292	   9624	  19000	   4a38	ADC_SRAM_UART.elf
-'Finished building: ADC_SRAM_UART.elf.size'
-' '
-19:35:40 **** Incremental Build of configuration Debug for project ADC_SRAM_UART ****
-make all 
-'Building file: ../src/ADC_SRAM_UART.c'
-'Invoking: MicroBlaze gcc compiler'
-mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/ADC_SRAM_UART.o" -I../../ADC_SRAM_UART_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/ADC_SRAM_UART.d" -MT"src/ADC_SRAM_UART.o" -o "src/ADC_SRAM_UART.o" "../src/ADC_SRAM_UART.c"
-../src/ADC_SRAM_UART.c: In function 'main':
-../src/ADC_SRAM_UART.c:13:24: warning: passing argument 2 of 'RxSamples' makes pointer from integer without a cast [-Wint-conversion]
- #define SRAM_BASE_ADDR 0x60000000
-                        ^
-../src/ADC_SRAM_UART.c:53:38: note: in expansion of macro 'SRAM_BASE_ADDR'
-    Status = RxSamples(&FifoInstance, SRAM_BASE_ADDR);
-                                      ^~~~~~~~~~~~~~
-../src/ADC_SRAM_UART.c:19:5: note: expected 'u32 * {aka long unsigned int *}' but argument is of type 'int'
- int RxSamples(XLlFifo *InstancePtr, u32 *DestinationAddr);
-     ^~~~~~~~~
-../src/ADC_SRAM_UART.c:68:28: error: invalid type argument of unary '*' (have 'int')
-   xil_printf("%x",Xil_In32(*(0x60000000)));
-                            ^~~~~~~~~~~~~
-At top level:
-../src/ADC_SRAM_UART.c:28:12: warning: 'ReceiveLength' defined but not used [-Wunused-variable]
- static u32 ReceiveLength;
-            ^~~~~~~~~~~~~
-make: *** [src/subdir.mk:26: src/ADC_SRAM_UART.o] Error 1
-19:35:57 **** Auto Build of configuration Debug for project ADC_SRAM_UART ****
-make all 
-'Building file: ../src/ADC_SRAM_UART.c'
-'Invoking: MicroBlaze gcc compiler'
-mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/ADC_SRAM_UART.o" -I../../ADC_SRAM_UART_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/ADC_SRAM_UART.d" -MT"src/ADC_SRAM_UART.o" -o "src/ADC_SRAM_UART.o" "../src/ADC_SRAM_UART.c"
-../src/ADC_SRAM_UART.c: In function 'main':
-../src/ADC_SRAM_UART.c:13:24: warning: passing argument 2 of 'RxSamples' makes pointer from integer without a cast [-Wint-conversion]
- #define SRAM_BASE_ADDR 0x60000000
-                        ^
-../src/ADC_SRAM_UART.c:53:38: note: in expansion of macro 'SRAM_BASE_ADDR'
-    Status = RxSamples(&FifoInstance, SRAM_BASE_ADDR);
-                                      ^~~~~~~~~~~~~~
-../src/ADC_SRAM_UART.c:19:5: note: expected 'u32 * {aka long unsigned int *}' but argument is of type 'int'
- int RxSamples(XLlFifo *InstancePtr, u32 *DestinationAddr);
-     ^~~~~~~~~
-At top level:
-../src/ADC_SRAM_UART.c:28:12: warning: 'ReceiveLength' defined but not used [-Wunused-variable]
- static u32 ReceiveLength;
-            ^~~~~~~~~~~~~
-'Finished building: ../src/ADC_SRAM_UART.c'
-' '
-'Building target: ADC_SRAM_UART.elf'
-'Invoking: MicroBlaze gcc linker'
-mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../ADC_SRAM_UART_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "ADC_SRAM_UART.elf"  ./src/ADC_SRAM_UART.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
-'Finished building target: ADC_SRAM_UART.elf'
-' '
-'Invoking: MicroBlaze Print Size'
-mb-size ADC_SRAM_UART.elf  |tee "ADC_SRAM_UART.elf.size"
-   text	   data	    bss	    dec	    hex	filename
-   9084	    292	   9624	  19000	   4a38	ADC_SRAM_UART.elf
-'Finished building: ADC_SRAM_UART.elf.size'
-' '
-19:36:17 **** Auto Build of configuration Debug for project ADC_SRAM_UART ****
-make all 
-'Building file: ../src/ADC_SRAM_UART.c'
-'Invoking: MicroBlaze gcc compiler'
-mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/ADC_SRAM_UART.o" -I../../ADC_SRAM_UART_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/ADC_SRAM_UART.d" -MT"src/ADC_SRAM_UART.o" -o "src/ADC_SRAM_UART.o" "../src/ADC_SRAM_UART.c"
-../src/ADC_SRAM_UART.c: In function 'main':
-../src/ADC_SRAM_UART.c:13:24: warning: passing argument 2 of 'RxSamples' makes pointer from integer without a cast [-Wint-conversion]
- #define SRAM_BASE_ADDR 0x60000000
-                        ^
-../src/ADC_SRAM_UART.c:52:38: note: in expansion of macro 'SRAM_BASE_ADDR'
-    Status = RxSamples(&FifoInstance, SRAM_BASE_ADDR);
-                                      ^~~~~~~~~~~~~~
-../src/ADC_SRAM_UART.c:19:5: note: expected 'u32 * {aka long unsigned int *}' but argument is of type 'int'
- int RxSamples(XLlFifo *InstancePtr, u32 *DestinationAddr);
-     ^~~~~~~~~
-'Finished building: ../src/ADC_SRAM_UART.c'
-' '
-'Building target: ADC_SRAM_UART.elf'
-'Invoking: MicroBlaze gcc linker'
-mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../ADC_SRAM_UART_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "ADC_SRAM_UART.elf"  ./src/ADC_SRAM_UART.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
-'Finished building target: ADC_SRAM_UART.elf'
-' '
-'Invoking: MicroBlaze Print Size'
-mb-size ADC_SRAM_UART.elf  |tee "ADC_SRAM_UART.elf.size"
-   text	   data	    bss	    dec	    hex	filename
-   9084	    292	   9624	  19000	   4a38	ADC_SRAM_UART.elf
-'Finished building: ADC_SRAM_UART.elf.size'
-' '
-19:36:38 **** Auto Build of configuration Debug for project ADC_SRAM_UART ****
-make all 
-'Building file: ../src/ADC_SRAM_UART.c'
-'Invoking: MicroBlaze gcc compiler'
-mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/ADC_SRAM_UART.o" -I../../ADC_SRAM_UART_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/ADC_SRAM_UART.d" -MT"src/ADC_SRAM_UART.o" -o "src/ADC_SRAM_UART.o" "../src/ADC_SRAM_UART.c"
-../src/ADC_SRAM_UART.c: In function 'main':
-../src/ADC_SRAM_UART.c:52:38: error: invalid type argument of unary '*' (have 'int')
-    Status = RxSamples(&FifoInstance, *SRAM_BASE_ADDR);
-                                      ^
-make: *** [src/subdir.mk:26: src/ADC_SRAM_UART.o] Error 1
-19:36:51 **** Auto Build of configuration Debug for project ADC_SRAM_UART ****
-make all 
-'Building file: ../src/ADC_SRAM_UART.c'
-'Invoking: MicroBlaze gcc compiler'
-mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/ADC_SRAM_UART.o" -I../../ADC_SRAM_UART_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/ADC_SRAM_UART.d" -MT"src/ADC_SRAM_UART.o" -o "src/ADC_SRAM_UART.o" "../src/ADC_SRAM_UART.c"
-../src/ADC_SRAM_UART.c: In function 'main':
-../src/ADC_SRAM_UART.c:13:24: error: 'uint32' undeclared (first use in this function); did you mean 'sint32'?
- #define SRAM_BASE_ADDR uint32 0x60000000
-                        ^
-../src/ADC_SRAM_UART.c:52:38: note: in expansion of macro 'SRAM_BASE_ADDR'
-    Status = RxSamples(&FifoInstance, SRAM_BASE_ADDR);
-                                      ^~~~~~~~~~~~~~
-../src/ADC_SRAM_UART.c:13:24: note: each undeclared identifier is reported only once for each function it appears in
- #define SRAM_BASE_ADDR uint32 0x60000000
-                        ^
-../src/ADC_SRAM_UART.c:52:38: note: in expansion of macro 'SRAM_BASE_ADDR'
-    Status = RxSamples(&FifoInstance, SRAM_BASE_ADDR);
-                                      ^~~~~~~~~~~~~~
-../src/ADC_SRAM_UART.c:13:31: error: expected ')' before numeric constant
- #define SRAM_BASE_ADDR uint32 0x60000000
-                               ^
-../src/ADC_SRAM_UART.c:52:38: note: in expansion of macro 'SRAM_BASE_ADDR'
-    Status = RxSamples(&FifoInstance, SRAM_BASE_ADDR);
-                                      ^~~~~~~~~~~~~~
-make: *** [src/subdir.mk:26: src/ADC_SRAM_UART.o] Error 1
-19:37:39 **** Auto Build of configuration Debug for project ADC_SRAM_UART ****
-make all 
-'Building file: ../src/ADC_SRAM_UART.c'
-'Invoking: MicroBlaze gcc compiler'
-mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/ADC_SRAM_UART.o" -I../../ADC_SRAM_UART_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/ADC_SRAM_UART.d" -MT"src/ADC_SRAM_UART.o" -o "src/ADC_SRAM_UART.o" "../src/ADC_SRAM_UART.c"
-../src/ADC_SRAM_UART.c: In function 'main':
-../src/ADC_SRAM_UART.c:13:25: warning: passing argument 2 of 'RxSamples' makes pointer from integer without a cast [-Wint-conversion]
- #define SRAM_BASE_ADDR  0x60000000
-                         ^
-../src/ADC_SRAM_UART.c:52:38: note: in expansion of macro 'SRAM_BASE_ADDR'
-    Status = RxSamples(&FifoInstance, SRAM_BASE_ADDR);
-                                      ^~~~~~~~~~~~~~
-../src/ADC_SRAM_UART.c:19:5: note: expected 'u32 * {aka long unsigned int *}' but argument is of type 'int'
- int RxSamples(XLlFifo *InstancePtr, u32 *DestinationAddr);
-     ^~~~~~~~~
-'Finished building: ../src/ADC_SRAM_UART.c'
-' '
-'Building target: ADC_SRAM_UART.elf'
-'Invoking: MicroBlaze gcc linker'
-mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../ADC_SRAM_UART_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "ADC_SRAM_UART.elf"  ./src/ADC_SRAM_UART.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
-'Finished building target: ADC_SRAM_UART.elf'
-' '
-'Invoking: MicroBlaze Print Size'
-mb-size ADC_SRAM_UART.elf  |tee "ADC_SRAM_UART.elf.size"
-   text	   data	    bss	    dec	    hex	filename
-   9084	    292	   9624	  19000	   4a38	ADC_SRAM_UART.elf
-'Finished building: ADC_SRAM_UART.elf.size'
-' '
-19:38:31 **** Auto Build of configuration Debug for project ADC_SRAM_UART ****
-make all 
-'Building file: ../src/ADC_SRAM_UART.c'
-'Invoking: MicroBlaze gcc compiler'
-mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/ADC_SRAM_UART.o" -I../../ADC_SRAM_UART_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/ADC_SRAM_UART.d" -MT"src/ADC_SRAM_UART.o" -o "src/ADC_SRAM_UART.o" "../src/ADC_SRAM_UART.c"
-../src/ADC_SRAM_UART.c: In function 'main':
-../src/ADC_SRAM_UART.c:52:38: error: invalid type argument of unary '*' (have 'u32 {aka long unsigned int}')
-    Status = RxSamples(&FifoInstance, *SRAMBaseAddr);
-                                      ^~~~~~~~~~~~~
-make: *** [src/subdir.mk:26: src/ADC_SRAM_UART.o] Error 1
-19:38:34 **** Auto Build of configuration Debug for project ADC_SRAM_UART ****
-make all 
-'Building file: ../src/ADC_SRAM_UART.c'
-'Invoking: MicroBlaze gcc compiler'
-mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/ADC_SRAM_UART.o" -I../../ADC_SRAM_UART_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/ADC_SRAM_UART.d" -MT"src/ADC_SRAM_UART.o" -o "src/ADC_SRAM_UART.o" "../src/ADC_SRAM_UART.c"
-../src/ADC_SRAM_UART.c: In function 'main':
-../src/ADC_SRAM_UART.c:52:38: warning: passing argument 2 of 'RxSamples' makes pointer from integer without a cast [-Wint-conversion]
+../src/ADC_SRAM_UART.c:82:38: warning: passing argument 2 of 'RxSamples' makes pointer from integer without a cast [-Wint-conversion]
     Status = RxSamples(&FifoInstance, SRAMBaseAddr);
                                       ^~~~~~~~~~~~
-../src/ADC_SRAM_UART.c:19:5: note: expected 'u32 * {aka long unsigned int *}' but argument is of type 'u32 {aka long unsigned int}'
+../src/ADC_SRAM_UART.c:21:5: note: expected 'u32 * {aka long unsigned int *}' but argument is of type 'u32 {aka long unsigned int}'
  int RxSamples(XLlFifo *InstancePtr, u32 *DestinationAddr);
      ^~~~~~~~~
 'Finished building: ../src/ADC_SRAM_UART.c'
 ' '
 'Building target: ADC_SRAM_UART.elf'
 'Invoking: MicroBlaze gcc linker'
-mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../ADC_SRAM_UART_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "ADC_SRAM_UART.elf"  ./src/ADC_SRAM_UART.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../ADC_SRAM_UART_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "ADC_SRAM_UART.elf"  ./src/ADC_SRAM_UART.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
 'Finished building target: ADC_SRAM_UART.elf'
 ' '
 'Invoking: MicroBlaze Print Size'
 mb-size ADC_SRAM_UART.elf  |tee "ADC_SRAM_UART.elf.size"
    text	   data	    bss	    dec	    hex	filename
-   9088	    296	   9616	  19000	   4a38	ADC_SRAM_UART.elf
+  11052	    328	   9620	  21000	   5208	ADC_SRAM_UART.elf
 'Finished building: ADC_SRAM_UART.elf.size'
 ' '
-19:42:20 **** Auto Build of configuration Debug for project ADC_SRAM_UART ****
+14:08:01 **** Auto Build of configuration Debug for project ADC_SRAM_UART ****
+make all 
+make: Nothing to be done for 'all'.
+14:08:10 **** Incremental Build of configuration Debug for project ADC_SRAM_UART ****
+make all 
+make: Nothing to be done for 'all'.
+14:08:37 **** Incremental Build of configuration Debug for project ADC_SRAM_UART ****
+make all 
+make: Nothing to be done for 'all'.
+14:09:22 **** Incremental Build of configuration Debug for project ADC_SRAM_UART ****
+make all 
+make: Nothing to be done for 'all'.
+14:09:29 **** Incremental Build of configuration Debug for project ADC_SRAM_UART ****
+make all 
+make: Nothing to be done for 'all'.
+14:10:10 **** Incremental Build of configuration Debug for project ADC_SRAM_UART ****
+make all 
+make: Nothing to be done for 'all'.
+14:11:01 **** Incremental Build of configuration Debug for project ADC_SRAM_UART ****
+make all 
+make: Nothing to be done for 'all'.
+14:11:32 **** Incremental Build of configuration Debug for project ADC_SRAM_UART ****
+make all 
+make: Nothing to be done for 'all'.
+14:11:45 **** Incremental Build of configuration Debug for project ADC_SRAM_UART ****
+make all 
+make: Nothing to be done for 'all'.
+14:13:05 **** Auto Build of configuration Debug for project ADC_SRAM_UART ****
 make all 
 'Building file: ../src/ADC_SRAM_UART.c'
 'Invoking: MicroBlaze gcc compiler'
 mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/ADC_SRAM_UART.o" -I../../ADC_SRAM_UART_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/ADC_SRAM_UART.d" -MT"src/ADC_SRAM_UART.o" -o "src/ADC_SRAM_UART.o" "../src/ADC_SRAM_UART.c"
 ../src/ADC_SRAM_UART.c: In function 'main':
-../src/ADC_SRAM_UART.c:52:38: warning: passing argument 2 of 'RxSamples' makes pointer from integer without a cast [-Wint-conversion]
+../src/ADC_SRAM_UART.c:84:38: warning: passing argument 2 of 'RxSamples' makes pointer from integer without a cast [-Wint-conversion]
     Status = RxSamples(&FifoInstance, SRAMBaseAddr);
                                       ^~~~~~~~~~~~
-../src/ADC_SRAM_UART.c:19:5: note: expected 'u32 * {aka long unsigned int *}' but argument is of type 'u32 {aka long unsigned int}'
+../src/ADC_SRAM_UART.c:21:5: note: expected 'u32 * {aka long unsigned int *}' but argument is of type 'u32 {aka long unsigned int}'
  int RxSamples(XLlFifo *InstancePtr, u32 *DestinationAddr);
      ^~~~~~~~~
 'Finished building: ../src/ADC_SRAM_UART.c'
 ' '
 'Building target: ADC_SRAM_UART.elf'
 'Invoking: MicroBlaze gcc linker'
-mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../ADC_SRAM_UART_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "ADC_SRAM_UART.elf"  ./src/ADC_SRAM_UART.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../ADC_SRAM_UART_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "ADC_SRAM_UART.elf"  ./src/ADC_SRAM_UART.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
 'Finished building target: ADC_SRAM_UART.elf'
 ' '
 'Invoking: MicroBlaze Print Size'
 mb-size ADC_SRAM_UART.elf  |tee "ADC_SRAM_UART.elf.size"
    text	   data	    bss	    dec	    hex	filename
-   9088	    296	   9616	  19000	   4a38	ADC_SRAM_UART.elf
+  11088	    328	   9616	  21032	   5228	ADC_SRAM_UART.elf
 'Finished building: ADC_SRAM_UART.elf.size'
 ' '
-19:43:50 **** Incremental Build of configuration Debug for project ADC_SRAM_UART ****
-make all 
-make: Nothing to be done for 'all'.
-19:44:03 **** Incremental Build of configuration Debug for project ADC_SRAM_UART ****
-make all 
-make: Nothing to be done for 'all'.
-19:44:36 **** Incremental Build of configuration Debug for project ADC_SRAM_UART ****
-make all 
-make: Nothing to be done for 'all'.
-19:44:43 **** Incremental Build of configuration Debug for project ADC_SRAM_UART ****
-make all 
-make: Nothing to be done for 'all'.
-19:45:11 **** Incremental Build of configuration Debug for project ADC_SRAM_UART ****
-make all 
-make: Nothing to be done for 'all'.
-19:45:27 **** Incremental Build of configuration Debug for project ADC_SRAM_UART ****
-make all 
-make: Nothing to be done for 'all'.
-19:46:35 **** Incremental Build of configuration Debug for project ADC_SRAM_UART ****
+14:13:55 **** Auto Build of configuration Debug for project ADC_SRAM_UART ****
 make all 
 'Building file: ../src/ADC_SRAM_UART.c'
 'Invoking: MicroBlaze gcc compiler'
 mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/ADC_SRAM_UART.o" -I../../ADC_SRAM_UART_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/ADC_SRAM_UART.d" -MT"src/ADC_SRAM_UART.o" -o "src/ADC_SRAM_UART.o" "../src/ADC_SRAM_UART.c"
 ../src/ADC_SRAM_UART.c: In function 'main':
-../src/ADC_SRAM_UART.c:52:38: warning: passing argument 2 of 'RxSamples' makes pointer from integer without a cast [-Wint-conversion]
+../src/ADC_SRAM_UART.c:85:38: warning: passing argument 2 of 'RxSamples' makes pointer from integer without a cast [-Wint-conversion]
     Status = RxSamples(&FifoInstance, SRAMBaseAddr);
                                       ^~~~~~~~~~~~
-../src/ADC_SRAM_UART.c:19:5: note: expected 'u32 * {aka long unsigned int *}' but argument is of type 'u32 {aka long unsigned int}'
+../src/ADC_SRAM_UART.c:21:5: note: expected 'u32 * {aka long unsigned int *}' but argument is of type 'u32 {aka long unsigned int}'
  int RxSamples(XLlFifo *InstancePtr, u32 *DestinationAddr);
      ^~~~~~~~~
 'Finished building: ../src/ADC_SRAM_UART.c'
 ' '
 'Building target: ADC_SRAM_UART.elf'
 'Invoking: MicroBlaze gcc linker'
-mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../ADC_SRAM_UART_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "ADC_SRAM_UART.elf"  ./src/ADC_SRAM_UART.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../ADC_SRAM_UART_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "ADC_SRAM_UART.elf"  ./src/ADC_SRAM_UART.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
 'Finished building target: ADC_SRAM_UART.elf'
 ' '
 'Invoking: MicroBlaze Print Size'
 mb-size ADC_SRAM_UART.elf  |tee "ADC_SRAM_UART.elf.size"
    text	   data	    bss	    dec	    hex	filename
-   9320	    296	   9616	  19232	   4b20	ADC_SRAM_UART.elf
+  11120	    328	   9616	  21064	   5248	ADC_SRAM_UART.elf
 'Finished building: ADC_SRAM_UART.elf.size'
 ' '
-19:47:17 **** Incremental Build of configuration Debug for project ADC_SRAM_UART ****
+14:13:57 **** Incremental Build of configuration Debug for project ADC_SRAM_UART ****
 make all 
 make: Nothing to be done for 'all'.
-19:49:18 **** Incremental Build of configuration Debug for project ADC_SRAM_UART ****
+14:14:25 **** Incremental Build of configuration Debug for project ADC_SRAM_UART ****
+make all 
+make: Nothing to be done for 'all'.
+14:14:57 **** Incremental Build of configuration Debug for project ADC_SRAM_UART ****
+make all 
+make: Nothing to be done for 'all'.
+14:15:15 **** Incremental Build of configuration Debug for project ADC_SRAM_UART ****
+make all 
+make: Nothing to be done for 'all'.
+14:15:26 **** Incremental Build of configuration Debug for project ADC_SRAM_UART ****
+make all 
+make: Nothing to be done for 'all'.
+14:16:26 **** Auto Build of configuration Debug for project ADC_SRAM_UART ****
 make all 
 'Building file: ../src/ADC_SRAM_UART.c'
 'Invoking: MicroBlaze gcc compiler'
 mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/ADC_SRAM_UART.o" -I../../ADC_SRAM_UART_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/ADC_SRAM_UART.d" -MT"src/ADC_SRAM_UART.o" -o "src/ADC_SRAM_UART.o" "../src/ADC_SRAM_UART.c"
 ../src/ADC_SRAM_UART.c: In function 'main':
-../src/ADC_SRAM_UART.c:52:38: warning: passing argument 2 of 'RxSamples' makes pointer from integer without a cast [-Wint-conversion]
+../src/ADC_SRAM_UART.c:86:38: warning: passing argument 2 of 'RxSamples' makes pointer from integer without a cast [-Wint-conversion]
     Status = RxSamples(&FifoInstance, SRAMBaseAddr);
                                       ^~~~~~~~~~~~
-../src/ADC_SRAM_UART.c:19:5: note: expected 'u32 * {aka long unsigned int *}' but argument is of type 'u32 {aka long unsigned int}'
- int RxSamples(XLlFifo *InstancePtr, u32 *DestinationAddr);
-     ^~~~~~~~~
-../src/ADC_SRAM_UART.c:66:12: warning: implicit declaration of function 'TxUART'; did you mean 'XST_UART'? [-Wimplicit-function-declaration]
-   Status = TxUART(0x60000000);
-            ^~~~~~
-            XST_UART
-../src/ADC_SRAM_UART.c:76:1: error: expected ';' before '}' token
- }
- ^
-make: *** [src/subdir.mk:26: src/ADC_SRAM_UART.o] Error 1
-19:49:33 **** Auto Build of configuration Debug for project ADC_SRAM_UART ****
-make all 
-'Building file: ../src/ADC_SRAM_UART.c'
-'Invoking: MicroBlaze gcc compiler'
-mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/ADC_SRAM_UART.o" -I../../ADC_SRAM_UART_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/ADC_SRAM_UART.d" -MT"src/ADC_SRAM_UART.o" -o "src/ADC_SRAM_UART.o" "../src/ADC_SRAM_UART.c"
-../src/ADC_SRAM_UART.c: In function 'main':
-../src/ADC_SRAM_UART.c:52:38: warning: passing argument 2 of 'RxSamples' makes pointer from integer without a cast [-Wint-conversion]
-    Status = RxSamples(&FifoInstance, SRAMBaseAddr);
-                                      ^~~~~~~~~~~~
-../src/ADC_SRAM_UART.c:19:5: note: expected 'u32 * {aka long unsigned int *}' but argument is of type 'u32 {aka long unsigned int}'
- int RxSamples(XLlFifo *InstancePtr, u32 *DestinationAddr);
-     ^~~~~~~~~
-../src/ADC_SRAM_UART.c:76:1: error: expected ';' before '}' token
- }
- ^
-make: *** [src/subdir.mk:26: src/ADC_SRAM_UART.o] Error 1
-19:49:55 **** Auto Build of configuration Debug for project ADC_SRAM_UART ****
-make all 
-'Building file: ../src/ADC_SRAM_UART.c'
-'Invoking: MicroBlaze gcc compiler'
-mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/ADC_SRAM_UART.o" -I../../ADC_SRAM_UART_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/ADC_SRAM_UART.d" -MT"src/ADC_SRAM_UART.o" -o "src/ADC_SRAM_UART.o" "../src/ADC_SRAM_UART.c"
-../src/ADC_SRAM_UART.c: In function 'main':
-../src/ADC_SRAM_UART.c:52:38: warning: passing argument 2 of 'RxSamples' makes pointer from integer without a cast [-Wint-conversion]
-    Status = RxSamples(&FifoInstance, SRAMBaseAddr);
-                                      ^~~~~~~~~~~~
-../src/ADC_SRAM_UART.c:19:5: note: expected 'u32 * {aka long unsigned int *}' but argument is of type 'u32 {aka long unsigned int}'
+../src/ADC_SRAM_UART.c:21:5: note: expected 'u32 * {aka long unsigned int *}' but argument is of type 'u32 {aka long unsigned int}'
  int RxSamples(XLlFifo *InstancePtr, u32 *DestinationAddr);
      ^~~~~~~~~
 'Finished building: ../src/ADC_SRAM_UART.c'
 ' '
 'Building target: ADC_SRAM_UART.elf'
 'Invoking: MicroBlaze gcc linker'
-mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../ADC_SRAM_UART_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "ADC_SRAM_UART.elf"  ./src/ADC_SRAM_UART.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../ADC_SRAM_UART_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "ADC_SRAM_UART.elf"  ./src/ADC_SRAM_UART.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
 'Finished building target: ADC_SRAM_UART.elf'
 ' '
 'Invoking: MicroBlaze Print Size'
 mb-size ADC_SRAM_UART.elf  |tee "ADC_SRAM_UART.elf.size"
    text	   data	    bss	    dec	    hex	filename
-   9236	    296	   9620	  19152	   4ad0	ADC_SRAM_UART.elf
+  11124	    328	   9620	  21072	   5250	ADC_SRAM_UART.elf
 'Finished building: ADC_SRAM_UART.elf.size'
 ' '
-19:50:25 **** Incremental Build of configuration Debug for project ADC_SRAM_UART ****
-make all 
-make: Nothing to be done for 'all'.
-19:50:30 **** Incremental Build of configuration Debug for project ADC_SRAM_UART ****
-make all 
-make: Nothing to be done for 'all'.
-19:50:47 **** Incremental Build of configuration Debug for project ADC_SRAM_UART ****
-make all 
-make: Nothing to be done for 'all'.
-19:51:03 **** Incremental Build of configuration Debug for project ADC_SRAM_UART ****
-make all 
-make: Nothing to be done for 'all'.
-19:51:16 **** Incremental Build of configuration Debug for project ADC_SRAM_UART ****
-make all 
-make: Nothing to be done for 'all'.
-19:54:16 **** Auto Build of configuration Debug for project ADC_SRAM_UART ****
+14:16:31 **** Auto Build of configuration Debug for project ADC_SRAM_UART ****
 make all 
 'Building file: ../src/ADC_SRAM_UART.c'
 'Invoking: MicroBlaze gcc compiler'
 mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/ADC_SRAM_UART.o" -I../../ADC_SRAM_UART_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/ADC_SRAM_UART.d" -MT"src/ADC_SRAM_UART.o" -o "src/ADC_SRAM_UART.o" "../src/ADC_SRAM_UART.c"
 ../src/ADC_SRAM_UART.c: In function 'main':
-../src/ADC_SRAM_UART.c:52:38: warning: passing argument 2 of 'RxSamples' makes pointer from integer without a cast [-Wint-conversion]
+../src/ADC_SRAM_UART.c:86:38: warning: passing argument 2 of 'RxSamples' makes pointer from integer without a cast [-Wint-conversion]
     Status = RxSamples(&FifoInstance, SRAMBaseAddr);
                                       ^~~~~~~~~~~~
-../src/ADC_SRAM_UART.c:19:5: note: expected 'u32 * {aka long unsigned int *}' but argument is of type 'u32 {aka long unsigned int}'
- int RxSamples(XLlFifo *InstancePtr, u32 *DestinationAddr);
-     ^~~~~~~~~
-../src/ADC_SRAM_UART.c: In function 'TxUART':
-../src/ADC_SRAM_UART.c:150:1: warning: control reaches end of non-void function [-Wreturn-type]
- }
- ^
-'Finished building: ../src/ADC_SRAM_UART.c'
-' '
-'Building target: ADC_SRAM_UART.elf'
-'Invoking: MicroBlaze gcc linker'
-mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../ADC_SRAM_UART_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "ADC_SRAM_UART.elf"  ./src/ADC_SRAM_UART.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
-'Finished building target: ADC_SRAM_UART.elf'
-' '
-'Invoking: MicroBlaze Print Size'
-mb-size ADC_SRAM_UART.elf  |tee "ADC_SRAM_UART.elf.size"
-   text	   data	    bss	    dec	    hex	filename
-   9572	    296	   9620	  19488	   4c20	ADC_SRAM_UART.elf
-'Finished building: ADC_SRAM_UART.elf.size'
-' '
-19:54:37 **** Incremental Build of configuration Debug for project ADC_SRAM_UART ****
-make all 
-make: Nothing to be done for 'all'.
-19:55:47 **** Incremental Build of configuration Debug for project ADC_SRAM_UART ****
-make all 
-'Building file: ../src/ADC_SRAM_UART.c'
-'Invoking: MicroBlaze gcc compiler'
-mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/ADC_SRAM_UART.o" -I../../ADC_SRAM_UART_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/ADC_SRAM_UART.d" -MT"src/ADC_SRAM_UART.o" -o "src/ADC_SRAM_UART.o" "../src/ADC_SRAM_UART.c"
-../src/ADC_SRAM_UART.c: In function 'main':
-../src/ADC_SRAM_UART.c:52:38: warning: passing argument 2 of 'RxSamples' makes pointer from integer without a cast [-Wint-conversion]
-    Status = RxSamples(&FifoInstance, SRAMBaseAddr);
-                                      ^~~~~~~~~~~~
-../src/ADC_SRAM_UART.c:19:5: note: expected 'u32 * {aka long unsigned int *}' but argument is of type 'u32 {aka long unsigned int}'
+../src/ADC_SRAM_UART.c:21:5: note: expected 'u32 * {aka long unsigned int *}' but argument is of type 'u32 {aka long unsigned int}'
  int RxSamples(XLlFifo *InstancePtr, u32 *DestinationAddr);
      ^~~~~~~~~
 'Finished building: ../src/ADC_SRAM_UART.c'
 ' '
 'Building target: ADC_SRAM_UART.elf'
 'Invoking: MicroBlaze gcc linker'
-mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../ADC_SRAM_UART_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "ADC_SRAM_UART.elf"  ./src/ADC_SRAM_UART.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../ADC_SRAM_UART_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "ADC_SRAM_UART.elf"  ./src/ADC_SRAM_UART.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
 'Finished building target: ADC_SRAM_UART.elf'
 ' '
 'Invoking: MicroBlaze Print Size'
 mb-size ADC_SRAM_UART.elf  |tee "ADC_SRAM_UART.elf.size"
    text	   data	    bss	    dec	    hex	filename
-   9572	    296	   9620	  19488	   4c20	ADC_SRAM_UART.elf
+  11124	    328	   9620	  21072	   5250	ADC_SRAM_UART.elf
 'Finished building: ADC_SRAM_UART.elf.size'
 ' '
-19:55:58 **** Incremental Build of configuration Debug for project ADC_SRAM_UART ****
+14:16:36 **** Incremental Build of configuration Debug for project ADC_SRAM_UART ****
 make all 
 make: Nothing to be done for 'all'.
-19:56:32 **** Incremental Build of configuration Debug for project ADC_SRAM_UART ****
+14:16:46 **** Incremental Build of configuration Debug for project ADC_SRAM_UART ****
 make all 
 make: Nothing to be done for 'all'.
-19:57:19 **** Auto Build of configuration Debug for project ADC_SRAM_UART ****
+14:19:25 **** Incremental Build of configuration Debug for project ADC_SRAM_UART ****
 make all 
 'Building file: ../src/ADC_SRAM_UART.c'
 'Invoking: MicroBlaze gcc compiler'
 mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/ADC_SRAM_UART.o" -I../../ADC_SRAM_UART_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/ADC_SRAM_UART.d" -MT"src/ADC_SRAM_UART.o" -o "src/ADC_SRAM_UART.o" "../src/ADC_SRAM_UART.c"
 ../src/ADC_SRAM_UART.c: In function 'main':
-../src/ADC_SRAM_UART.c:52:38: warning: passing argument 2 of 'RxSamples' makes pointer from integer without a cast [-Wint-conversion]
+../src/ADC_SRAM_UART.c:86:38: warning: passing argument 2 of 'RxSamples' makes pointer from integer without a cast [-Wint-conversion]
     Status = RxSamples(&FifoInstance, SRAMBaseAddr);
                                       ^~~~~~~~~~~~
-../src/ADC_SRAM_UART.c:19:5: note: expected 'u32 * {aka long unsigned int *}' but argument is of type 'u32 {aka long unsigned int}'
+../src/ADC_SRAM_UART.c:21:5: note: expected 'u32 * {aka long unsigned int *}' but argument is of type 'u32 {aka long unsigned int}'
  int RxSamples(XLlFifo *InstancePtr, u32 *DestinationAddr);
      ^~~~~~~~~
 'Finished building: ../src/ADC_SRAM_UART.c'
 ' '
 'Building target: ADC_SRAM_UART.elf'
 'Invoking: MicroBlaze gcc linker'
-mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../ADC_SRAM_UART_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "ADC_SRAM_UART.elf"  ./src/ADC_SRAM_UART.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../ADC_SRAM_UART_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "ADC_SRAM_UART.elf"  ./src/ADC_SRAM_UART.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
 'Finished building target: ADC_SRAM_UART.elf'
 ' '
 'Invoking: MicroBlaze Print Size'
 mb-size ADC_SRAM_UART.elf  |tee "ADC_SRAM_UART.elf.size"
    text	   data	    bss	    dec	    hex	filename
-   9564	    296	   9620	  19480	   4c18	ADC_SRAM_UART.elf
+  11124	    328	   9620	  21072	   5250	ADC_SRAM_UART.elf
 'Finished building: ADC_SRAM_UART.elf.size'
 ' '
-19:57:39 **** Incremental Build of configuration Debug for project ADC_SRAM_UART ****
-make all 
-make: Nothing to be done for 'all'.
-19:58:41 **** Auto Build of configuration Debug for project ADC_SRAM_UART ****
+14:22:35 **** Incremental Build of configuration Debug for project ADC_SRAM_UART ****
 make all 
 'Building file: ../src/ADC_SRAM_UART.c'
 'Invoking: MicroBlaze gcc compiler'
 mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/ADC_SRAM_UART.o" -I../../ADC_SRAM_UART_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/ADC_SRAM_UART.d" -MT"src/ADC_SRAM_UART.o" -o "src/ADC_SRAM_UART.o" "../src/ADC_SRAM_UART.c"
 ../src/ADC_SRAM_UART.c: In function 'main':
-../src/ADC_SRAM_UART.c:52:38: warning: passing argument 2 of 'RxSamples' makes pointer from integer without a cast [-Wint-conversion]
+../src/ADC_SRAM_UART.c:63:7: warning: suggest parentheses around assignment used as truth value [-Wparentheses]
+   if (btn = 1){
+       ^~~
+../src/ADC_SRAM_UART.c:85:38: warning: passing argument 2 of 'RxSamples' makes pointer from integer without a cast [-Wint-conversion]
     Status = RxSamples(&FifoInstance, SRAMBaseAddr);
                                       ^~~~~~~~~~~~
-../src/ADC_SRAM_UART.c:19:5: note: expected 'u32 * {aka long unsigned int *}' but argument is of type 'u32 {aka long unsigned int}'
+../src/ADC_SRAM_UART.c:21:5: note: expected 'u32 * {aka long unsigned int *}' but argument is of type 'u32 {aka long unsigned int}'
  int RxSamples(XLlFifo *InstancePtr, u32 *DestinationAddr);
      ^~~~~~~~~
 'Finished building: ../src/ADC_SRAM_UART.c'
 ' '
 'Building target: ADC_SRAM_UART.elf'
 'Invoking: MicroBlaze gcc linker'
-mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../ADC_SRAM_UART_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "ADC_SRAM_UART.elf"  ./src/ADC_SRAM_UART.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../ADC_SRAM_UART_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "ADC_SRAM_UART.elf"  ./src/ADC_SRAM_UART.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
 'Finished building target: ADC_SRAM_UART.elf'
 ' '
 'Invoking: MicroBlaze Print Size'
 mb-size ADC_SRAM_UART.elf  |tee "ADC_SRAM_UART.elf.size"
    text	   data	    bss	    dec	    hex	filename
-   9572	    296	   9620	  19488	   4c20	ADC_SRAM_UART.elf
+  11124	    328	   9620	  21072	   5250	ADC_SRAM_UART.elf
 'Finished building: ADC_SRAM_UART.elf.size'
 ' '
-19:58:48 **** Incremental Build of configuration Debug for project ADC_SRAM_UART ****
-make all 
-make: Nothing to be done for 'all'.
-20:02:34 **** Auto Build of configuration Debug for project ADC_SRAM_UART ****
+14:22:54 **** Auto Build of configuration Debug for project ADC_SRAM_UART ****
 make all 
 'Building file: ../src/ADC_SRAM_UART.c'
 'Invoking: MicroBlaze gcc compiler'
 mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/ADC_SRAM_UART.o" -I../../ADC_SRAM_UART_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/ADC_SRAM_UART.d" -MT"src/ADC_SRAM_UART.o" -o "src/ADC_SRAM_UART.o" "../src/ADC_SRAM_UART.c"
 ../src/ADC_SRAM_UART.c: In function 'main':
-../src/ADC_SRAM_UART.c:53:38: warning: passing argument 2 of 'RxSamples' makes pointer from integer without a cast [-Wint-conversion]
+../src/ADC_SRAM_UART.c:85:38: warning: passing argument 2 of 'RxSamples' makes pointer from integer without a cast [-Wint-conversion]
     Status = RxSamples(&FifoInstance, SRAMBaseAddr);
                                       ^~~~~~~~~~~~
-../src/ADC_SRAM_UART.c:19:5: note: expected 'u32 * {aka long unsigned int *}' but argument is of type 'u32 {aka long unsigned int}'
+../src/ADC_SRAM_UART.c:21:5: note: expected 'u32 * {aka long unsigned int *}' but argument is of type 'u32 {aka long unsigned int}'
  int RxSamples(XLlFifo *InstancePtr, u32 *DestinationAddr);
      ^~~~~~~~~
 'Finished building: ../src/ADC_SRAM_UART.c'
 ' '
 'Building target: ADC_SRAM_UART.elf'
 'Invoking: MicroBlaze gcc linker'
-mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../ADC_SRAM_UART_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "ADC_SRAM_UART.elf"  ./src/ADC_SRAM_UART.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../ADC_SRAM_UART_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "ADC_SRAM_UART.elf"  ./src/ADC_SRAM_UART.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
 'Finished building target: ADC_SRAM_UART.elf'
 ' '
 'Invoking: MicroBlaze Print Size'
 mb-size ADC_SRAM_UART.elf  |tee "ADC_SRAM_UART.elf.size"
    text	   data	    bss	    dec	    hex	filename
-   9572	    296	   9620	  19488	   4c20	ADC_SRAM_UART.elf
+  11128	    328	   9616	  21072	   5250	ADC_SRAM_UART.elf
 'Finished building: ADC_SRAM_UART.elf.size'
 ' '
-20:02:37 **** Incremental Build of configuration Debug for project ADC_SRAM_UART ****
+14:22:58 **** Incremental Build of configuration Debug for project ADC_SRAM_UART ****
 make all 
 make: Nothing to be done for 'all'.
-20:02:41 **** Incremental Build of configuration Debug for project ADC_SRAM_UART ****
+14:24:00 **** Incremental Build of configuration Debug for project ADC_SRAM_UART ****
 make all 
 make: Nothing to be done for 'all'.
-20:03:08 **** Incremental Build of configuration Debug for project ADC_SRAM_UART ****
-make all 
-make: Nothing to be done for 'all'.
-20:03:23 **** Incremental Build of configuration Debug for project ADC_SRAM_UART ****
-make all 
-make: Nothing to be done for 'all'.
-20:04:25 **** Incremental Build of configuration Debug for project ADC_SRAM_UART ****
-make all 
-make: Nothing to be done for 'all'.
-20:04:30 **** Incremental Build of configuration Debug for project ADC_SRAM_UART ****
-make all 
-make: Nothing to be done for 'all'.
-20:05:26 **** Auto Build of configuration Debug for project ADC_SRAM_UART ****
+14:25:39 **** Auto Build of configuration Debug for project ADC_SRAM_UART ****
 make all 
 'Building file: ../src/ADC_SRAM_UART.c'
 'Invoking: MicroBlaze gcc compiler'
 mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/ADC_SRAM_UART.o" -I../../ADC_SRAM_UART_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/ADC_SRAM_UART.d" -MT"src/ADC_SRAM_UART.o" -o "src/ADC_SRAM_UART.o" "../src/ADC_SRAM_UART.c"
 ../src/ADC_SRAM_UART.c: In function 'main':
-../src/ADC_SRAM_UART.c:53:38: warning: passing argument 2 of 'RxSamples' makes pointer from integer without a cast [-Wint-conversion]
+../src/ADC_SRAM_UART.c:85:38: warning: passing argument 2 of 'RxSamples' makes pointer from integer without a cast [-Wint-conversion]
     Status = RxSamples(&FifoInstance, SRAMBaseAddr);
                                       ^~~~~~~~~~~~
-../src/ADC_SRAM_UART.c:19:5: note: expected 'u32 * {aka long unsigned int *}' but argument is of type 'u32 {aka long unsigned int}'
+../src/ADC_SRAM_UART.c:21:5: note: expected 'u32 * {aka long unsigned int *}' but argument is of type 'u32 {aka long unsigned int}'
  int RxSamples(XLlFifo *InstancePtr, u32 *DestinationAddr);
      ^~~~~~~~~
 'Finished building: ../src/ADC_SRAM_UART.c'
 ' '
 'Building target: ADC_SRAM_UART.elf'
 'Invoking: MicroBlaze gcc linker'
-mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../ADC_SRAM_UART_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "ADC_SRAM_UART.elf"  ./src/ADC_SRAM_UART.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../ADC_SRAM_UART_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "ADC_SRAM_UART.elf"  ./src/ADC_SRAM_UART.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
 'Finished building target: ADC_SRAM_UART.elf'
 ' '
 'Invoking: MicroBlaze Print Size'
 mb-size ADC_SRAM_UART.elf  |tee "ADC_SRAM_UART.elf.size"
    text	   data	    bss	    dec	    hex	filename
-   9580	    296	   9620	  19496	   4c28	ADC_SRAM_UART.elf
+  11124	    328	   9620	  21072	   5250	ADC_SRAM_UART.elf
 'Finished building: ADC_SRAM_UART.elf.size'
 ' '
-20:05:42 **** Incremental Build of configuration Debug for project ADC_SRAM_UART ****
+14:25:42 **** Incremental Build of configuration Debug for project ADC_SRAM_UART ****
 make all 
 make: Nothing to be done for 'all'.
-20:05:49 **** Incremental Build of configuration Debug for project ADC_SRAM_UART ****
+14:26:01 **** Incremental Build of configuration Debug for project ADC_SRAM_UART ****
 make all 
 make: Nothing to be done for 'all'.
-20:06:51 **** Incremental Build of configuration Debug for project ADC_SRAM_UART ****
+14:26:37 **** Incremental Build of configuration Debug for project ADC_SRAM_UART ****
+make all 
+make: Nothing to be done for 'all'.
+14:28:15 **** Auto Build of configuration Debug for project ADC_SRAM_UART ****
 make all 
 'Building file: ../src/ADC_SRAM_UART.c'
 'Invoking: MicroBlaze gcc compiler'
 mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/ADC_SRAM_UART.o" -I../../ADC_SRAM_UART_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/ADC_SRAM_UART.d" -MT"src/ADC_SRAM_UART.o" -o "src/ADC_SRAM_UART.o" "../src/ADC_SRAM_UART.c"
 ../src/ADC_SRAM_UART.c: In function 'main':
-../src/ADC_SRAM_UART.c:53:38: warning: passing argument 2 of 'RxSamples' makes pointer from integer without a cast [-Wint-conversion]
+../src/ADC_SRAM_UART.c:85:38: warning: passing argument 2 of 'RxSamples' makes pointer from integer without a cast [-Wint-conversion]
     Status = RxSamples(&FifoInstance, SRAMBaseAddr);
                                       ^~~~~~~~~~~~
-../src/ADC_SRAM_UART.c:19:5: note: expected 'u32 * {aka long unsigned int *}' but argument is of type 'u32 {aka long unsigned int}'
+../src/ADC_SRAM_UART.c:21:5: note: expected 'u32 * {aka long unsigned int *}' but argument is of type 'u32 {aka long unsigned int}'
  int RxSamples(XLlFifo *InstancePtr, u32 *DestinationAddr);
      ^~~~~~~~~
 'Finished building: ../src/ADC_SRAM_UART.c'
 ' '
 'Building target: ADC_SRAM_UART.elf'
 'Invoking: MicroBlaze gcc linker'
-mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../ADC_SRAM_UART_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "ADC_SRAM_UART.elf"  ./src/ADC_SRAM_UART.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../ADC_SRAM_UART_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "ADC_SRAM_UART.elf"  ./src/ADC_SRAM_UART.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
 'Finished building target: ADC_SRAM_UART.elf'
 ' '
 'Invoking: MicroBlaze Print Size'
 mb-size ADC_SRAM_UART.elf  |tee "ADC_SRAM_UART.elf.size"
    text	   data	    bss	    dec	    hex	filename
-   9592	    296	   9616	  19504	   4c30	ADC_SRAM_UART.elf
+   9440	    324	   9620	  19384	   4bb8	ADC_SRAM_UART.elf
 'Finished building: ADC_SRAM_UART.elf.size'
 ' '
-20:07:01 **** Incremental Build of configuration Debug for project ADC_SRAM_UART ****
+14:28:17 **** Incremental Build of configuration Debug for project ADC_SRAM_UART ****
 make all 
 make: Nothing to be done for 'all'.
-20:08:44 **** Auto Build of configuration Debug for project ADC_SRAM_UART ****
+14:33:15 **** Auto Build of configuration Debug for project ADC_SRAM_UART ****
 make all 
 'Building file: ../src/ADC_SRAM_UART.c'
 'Invoking: MicroBlaze gcc compiler'
 mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/ADC_SRAM_UART.o" -I../../ADC_SRAM_UART_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/ADC_SRAM_UART.d" -MT"src/ADC_SRAM_UART.o" -o "src/ADC_SRAM_UART.o" "../src/ADC_SRAM_UART.c"
 ../src/ADC_SRAM_UART.c: In function 'main':
-../src/ADC_SRAM_UART.c:53:38: warning: passing argument 2 of 'RxSamples' makes pointer from integer without a cast [-Wint-conversion]
+../src/ADC_SRAM_UART.c:85:38: warning: passing argument 2 of 'RxSamples' makes pointer from integer without a cast [-Wint-conversion]
     Status = RxSamples(&FifoInstance, SRAMBaseAddr);
                                       ^~~~~~~~~~~~
-../src/ADC_SRAM_UART.c:19:5: note: expected 'u32 * {aka long unsigned int *}' but argument is of type 'u32 {aka long unsigned int}'
+../src/ADC_SRAM_UART.c:21:5: note: expected 'u32 * {aka long unsigned int *}' but argument is of type 'u32 {aka long unsigned int}'
  int RxSamples(XLlFifo *InstancePtr, u32 *DestinationAddr);
      ^~~~~~~~~
 'Finished building: ../src/ADC_SRAM_UART.c'
 ' '
 'Building target: ADC_SRAM_UART.elf'
 'Invoking: MicroBlaze gcc linker'
-mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../ADC_SRAM_UART_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "ADC_SRAM_UART.elf"  ./src/ADC_SRAM_UART.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../ADC_SRAM_UART_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "ADC_SRAM_UART.elf"  ./src/ADC_SRAM_UART.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
 'Finished building target: ADC_SRAM_UART.elf'
 ' '
 'Invoking: MicroBlaze Print Size'
 mb-size ADC_SRAM_UART.elf  |tee "ADC_SRAM_UART.elf.size"
    text	   data	    bss	    dec	    hex	filename
-   9644	    296	   9620	  19560	   4c68	ADC_SRAM_UART.elf
+  11128	    328	   9616	  21072	   5250	ADC_SRAM_UART.elf
 'Finished building: ADC_SRAM_UART.elf.size'
 ' '
-20:08:50 **** Incremental Build of configuration Debug for project ADC_SRAM_UART ****
+14:33:37 **** Incremental Build of configuration Debug for project ADC_SRAM_UART ****
 make all 
 make: Nothing to be done for 'all'.
-20:09:40 **** Auto Build of configuration Debug for project ADC_SRAM_UART ****
+14:38:04 **** Auto Build of configuration Debug for project ADC_SRAM_UART ****
 make all 
 'Building file: ../src/ADC_SRAM_UART.c'
 'Invoking: MicroBlaze gcc compiler'
 mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/ADC_SRAM_UART.o" -I../../ADC_SRAM_UART_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/ADC_SRAM_UART.d" -MT"src/ADC_SRAM_UART.o" -o "src/ADC_SRAM_UART.o" "../src/ADC_SRAM_UART.c"
 ../src/ADC_SRAM_UART.c: In function 'main':
-../src/ADC_SRAM_UART.c:53:38: warning: passing argument 2 of 'RxSamples' makes pointer from integer without a cast [-Wint-conversion]
+../src/ADC_SRAM_UART.c:63:14: warning: passing argument 1 of 'xil_printf' makes pointer from integer without a cast [-Wint-conversion]
+   xil_printf(btn);
+              ^~~
+In file included from ../../ADC_SRAM_UART_bsp/microblaze_0/include/xil_io.h:61:0,
+                 from ../../ADC_SRAM_UART_bsp/microblaze_0/include/xgpio_l.h:83,
+                 from ../../ADC_SRAM_UART_bsp/microblaze_0/include/xgpio.h:132,
+                 from ../src/ADC_SRAM_UART.c:2:
+../../ADC_SRAM_UART_bsp/microblaze_0/include/xil_printf.h:39:6: note: expected 'const char8 * {aka const char *}' but argument is of type 'u32 {aka long unsigned int}'
+ void xil_printf( const char8 *ctrl1, ...);
+      ^~~~~~~~~~
+../src/ADC_SRAM_UART.c:87:38: warning: passing argument 2 of 'RxSamples' makes pointer from integer without a cast [-Wint-conversion]
     Status = RxSamples(&FifoInstance, SRAMBaseAddr);
                                       ^~~~~~~~~~~~
-../src/ADC_SRAM_UART.c:19:5: note: expected 'u32 * {aka long unsigned int *}' but argument is of type 'u32 {aka long unsigned int}'
+../src/ADC_SRAM_UART.c:21:5: note: expected 'u32 * {aka long unsigned int *}' but argument is of type 'u32 {aka long unsigned int}'
  int RxSamples(XLlFifo *InstancePtr, u32 *DestinationAddr);
      ^~~~~~~~~
 'Finished building: ../src/ADC_SRAM_UART.c'
 ' '
 'Building target: ADC_SRAM_UART.elf'
 'Invoking: MicroBlaze gcc linker'
-mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../ADC_SRAM_UART_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "ADC_SRAM_UART.elf"  ./src/ADC_SRAM_UART.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../ADC_SRAM_UART_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "ADC_SRAM_UART.elf"  ./src/ADC_SRAM_UART.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
 'Finished building target: ADC_SRAM_UART.elf'
 ' '
 'Invoking: MicroBlaze Print Size'
 mb-size ADC_SRAM_UART.elf  |tee "ADC_SRAM_UART.elf.size"
    text	   data	    bss	    dec	    hex	filename
-   9624	    296	   9616	  19536	   4c50	ADC_SRAM_UART.elf
+  11148	    328	   9620	  21096	   5268	ADC_SRAM_UART.elf
 'Finished building: ADC_SRAM_UART.elf.size'
 ' '
-20:09:47 **** Incremental Build of configuration Debug for project ADC_SRAM_UART ****
-make all 
-make: Nothing to be done for 'all'.
-20:10:33 **** Incremental Build of configuration Debug for project ADC_SRAM_UART ****
-make all 
-make: Nothing to be done for 'all'.
-20:10:51 **** Incremental Build of configuration Debug for project ADC_SRAM_UART ****
-make all 
-make: Nothing to be done for 'all'.
-20:12:03 **** Auto Build of configuration Debug for project ADC_SRAM_UART ****
+14:38:18 **** Auto Build of configuration Debug for project ADC_SRAM_UART ****
 make all 
 'Building file: ../src/ADC_SRAM_UART.c'
 'Invoking: MicroBlaze gcc compiler'
 mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/ADC_SRAM_UART.o" -I../../ADC_SRAM_UART_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/ADC_SRAM_UART.d" -MT"src/ADC_SRAM_UART.o" -o "src/ADC_SRAM_UART.o" "../src/ADC_SRAM_UART.c"
 ../src/ADC_SRAM_UART.c: In function 'main':
-../src/ADC_SRAM_UART.c:53:38: warning: passing argument 2 of 'RxSamples' makes pointer from integer without a cast [-Wint-conversion]
+../src/ADC_SRAM_UART.c:63:14: warning: passing argument 1 of 'xil_printf' from incompatible pointer type [-Wincompatible-pointer-types]
+   xil_printf(&btn);
+              ^
+In file included from ../../ADC_SRAM_UART_bsp/microblaze_0/include/xil_io.h:61:0,
+                 from ../../ADC_SRAM_UART_bsp/microblaze_0/include/xgpio_l.h:83,
+                 from ../../ADC_SRAM_UART_bsp/microblaze_0/include/xgpio.h:132,
+                 from ../src/ADC_SRAM_UART.c:2:
+../../ADC_SRAM_UART_bsp/microblaze_0/include/xil_printf.h:39:6: note: expected 'const char8 * {aka const char *}' but argument is of type 'u32 * {aka long unsigned int *}'
+ void xil_printf( const char8 *ctrl1, ...);
+      ^~~~~~~~~~
+../src/ADC_SRAM_UART.c:87:38: warning: passing argument 2 of 'RxSamples' makes pointer from integer without a cast [-Wint-conversion]
     Status = RxSamples(&FifoInstance, SRAMBaseAddr);
                                       ^~~~~~~~~~~~
-../src/ADC_SRAM_UART.c:19:5: note: expected 'u32 * {aka long unsigned int *}' but argument is of type 'u32 {aka long unsigned int}'
+../src/ADC_SRAM_UART.c:21:5: note: expected 'u32 * {aka long unsigned int *}' but argument is of type 'u32 {aka long unsigned int}'
  int RxSamples(XLlFifo *InstancePtr, u32 *DestinationAddr);
      ^~~~~~~~~
 'Finished building: ../src/ADC_SRAM_UART.c'
 ' '
 'Building target: ADC_SRAM_UART.elf'
 'Invoking: MicroBlaze gcc linker'
-mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../ADC_SRAM_UART_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "ADC_SRAM_UART.elf"  ./src/ADC_SRAM_UART.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../ADC_SRAM_UART_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "ADC_SRAM_UART.elf"  ./src/ADC_SRAM_UART.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
 'Finished building target: ADC_SRAM_UART.elf'
 ' '
 'Invoking: MicroBlaze Print Size'
 mb-size ADC_SRAM_UART.elf  |tee "ADC_SRAM_UART.elf.size"
    text	   data	    bss	    dec	    hex	filename
-   9624	    296	   9616	  19536	   4c50	ADC_SRAM_UART.elf
+  11148	    328	   9620	  21096	   5268	ADC_SRAM_UART.elf
 'Finished building: ADC_SRAM_UART.elf.size'
 ' '
-20:12:10 **** Incremental Build of configuration Debug for project ADC_SRAM_UART ****
+14:38:21 **** Auto Build of configuration Debug for project ADC_SRAM_UART ****
+make all 
+'Building file: ../src/ADC_SRAM_UART.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/ADC_SRAM_UART.o" -I../../ADC_SRAM_UART_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/ADC_SRAM_UART.d" -MT"src/ADC_SRAM_UART.o" -o "src/ADC_SRAM_UART.o" "../src/ADC_SRAM_UART.c"
+../src/ADC_SRAM_UART.c: In function 'main':
+../src/ADC_SRAM_UART.c:63:14: error: invalid type argument of unary '*' (have 'u32 {aka long unsigned int}')
+   xil_printf(*btn);
+              ^~~~
+../src/ADC_SRAM_UART.c:87:38: warning: passing argument 2 of 'RxSamples' makes pointer from integer without a cast [-Wint-conversion]
+    Status = RxSamples(&FifoInstance, SRAMBaseAddr);
+                                      ^~~~~~~~~~~~
+../src/ADC_SRAM_UART.c:21:5: note: expected 'u32 * {aka long unsigned int *}' but argument is of type 'u32 {aka long unsigned int}'
+ int RxSamples(XLlFifo *InstancePtr, u32 *DestinationAddr);
+     ^~~~~~~~~
+make: *** [src/subdir.mk:23: src/ADC_SRAM_UART.o] Error 1
+14:38:45 **** Auto Build of configuration Debug for project ADC_SRAM_UART ****
+make all 
+'Building file: ../src/ADC_SRAM_UART.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/ADC_SRAM_UART.o" -I../../ADC_SRAM_UART_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/ADC_SRAM_UART.d" -MT"src/ADC_SRAM_UART.o" -o "src/ADC_SRAM_UART.o" "../src/ADC_SRAM_UART.c"
+../src/ADC_SRAM_UART.c: In function 'main':
+../src/ADC_SRAM_UART.c:63:14: warning: multi-character character constant [-Wmultichar]
+   xil_printf('%x'btn);
+              ^~~~
+../src/ADC_SRAM_UART.c:63:18: error: expected ')' before 'btn'
+   xil_printf('%x'btn);
+                  ^~~
+../src/ADC_SRAM_UART.c:63:14: warning: passing argument 1 of 'xil_printf' makes pointer from integer without a cast [-Wint-conversion]
+   xil_printf('%x'btn);
+              ^~~~
+In file included from ../../ADC_SRAM_UART_bsp/microblaze_0/include/xil_io.h:61:0,
+                 from ../../ADC_SRAM_UART_bsp/microblaze_0/include/xgpio_l.h:83,
+                 from ../../ADC_SRAM_UART_bsp/microblaze_0/include/xgpio.h:132,
+                 from ../src/ADC_SRAM_UART.c:2:
+../../ADC_SRAM_UART_bsp/microblaze_0/include/xil_printf.h:39:6: note: expected 'const char8 * {aka const char *}' but argument is of type 'int'
+ void xil_printf( const char8 *ctrl1, ...);
+      ^~~~~~~~~~
+../src/ADC_SRAM_UART.c:87:38: warning: passing argument 2 of 'RxSamples' makes pointer from integer without a cast [-Wint-conversion]
+    Status = RxSamples(&FifoInstance, SRAMBaseAddr);
+                                      ^~~~~~~~~~~~
+../src/ADC_SRAM_UART.c:21:5: note: expected 'u32 * {aka long unsigned int *}' but argument is of type 'u32 {aka long unsigned int}'
+ int RxSamples(XLlFifo *InstancePtr, u32 *DestinationAddr);
+     ^~~~~~~~~
+make: *** [src/subdir.mk:23: src/ADC_SRAM_UART.o] Error 1
+14:38:48 **** Auto Build of configuration Debug for project ADC_SRAM_UART ****
+make all 
+'Building file: ../src/ADC_SRAM_UART.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/ADC_SRAM_UART.o" -I../../ADC_SRAM_UART_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/ADC_SRAM_UART.d" -MT"src/ADC_SRAM_UART.o" -o "src/ADC_SRAM_UART.o" "../src/ADC_SRAM_UART.c"
+../src/ADC_SRAM_UART.c: In function 'main':
+../src/ADC_SRAM_UART.c:63:14: warning: multi-character character constant [-Wmultichar]
+   xil_printf('%x',btn);
+              ^~~~
+../src/ADC_SRAM_UART.c:63:14: warning: passing argument 1 of 'xil_printf' makes pointer from integer without a cast [-Wint-conversion]
+In file included from ../../ADC_SRAM_UART_bsp/microblaze_0/include/xil_io.h:61:0,
+                 from ../../ADC_SRAM_UART_bsp/microblaze_0/include/xgpio_l.h:83,
+                 from ../../ADC_SRAM_UART_bsp/microblaze_0/include/xgpio.h:132,
+                 from ../src/ADC_SRAM_UART.c:2:
+../../ADC_SRAM_UART_bsp/microblaze_0/include/xil_printf.h:39:6: note: expected 'const char8 * {aka const char *}' but argument is of type 'int'
+ void xil_printf( const char8 *ctrl1, ...);
+      ^~~~~~~~~~
+../src/ADC_SRAM_UART.c:87:38: warning: passing argument 2 of 'RxSamples' makes pointer from integer without a cast [-Wint-conversion]
+    Status = RxSamples(&FifoInstance, SRAMBaseAddr);
+                                      ^~~~~~~~~~~~
+../src/ADC_SRAM_UART.c:21:5: note: expected 'u32 * {aka long unsigned int *}' but argument is of type 'u32 {aka long unsigned int}'
+ int RxSamples(XLlFifo *InstancePtr, u32 *DestinationAddr);
+     ^~~~~~~~~
+'Finished building: ../src/ADC_SRAM_UART.c'
+' '
+'Building target: ADC_SRAM_UART.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../ADC_SRAM_UART_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "ADC_SRAM_UART.elf"  ./src/ADC_SRAM_UART.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: ADC_SRAM_UART.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size ADC_SRAM_UART.elf  |tee "ADC_SRAM_UART.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  11148	    328	   9620	  21096	   5268	ADC_SRAM_UART.elf
+'Finished building: ADC_SRAM_UART.elf.size'
+' '
+14:38:58 **** Auto Build of configuration Debug for project ADC_SRAM_UART ****
+make all 
+'Building file: ../src/ADC_SRAM_UART.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/ADC_SRAM_UART.o" -I../../ADC_SRAM_UART_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/ADC_SRAM_UART.d" -MT"src/ADC_SRAM_UART.o" -o "src/ADC_SRAM_UART.o" "../src/ADC_SRAM_UART.c"
+../src/ADC_SRAM_UART.c: In function 'main':
+../src/ADC_SRAM_UART.c:87:38: warning: passing argument 2 of 'RxSamples' makes pointer from integer without a cast [-Wint-conversion]
+    Status = RxSamples(&FifoInstance, SRAMBaseAddr);
+                                      ^~~~~~~~~~~~
+../src/ADC_SRAM_UART.c:21:5: note: expected 'u32 * {aka long unsigned int *}' but argument is of type 'u32 {aka long unsigned int}'
+ int RxSamples(XLlFifo *InstancePtr, u32 *DestinationAddr);
+     ^~~~~~~~~
+'Finished building: ../src/ADC_SRAM_UART.c'
+' '
+'Building target: ADC_SRAM_UART.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../ADC_SRAM_UART_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "ADC_SRAM_UART.elf"  ./src/ADC_SRAM_UART.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: ADC_SRAM_UART.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size ADC_SRAM_UART.elf  |tee "ADC_SRAM_UART.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  11152	    328	   9616	  21096	   5268	ADC_SRAM_UART.elf
+'Finished building: ADC_SRAM_UART.elf.size'
+' '
+14:39:04 **** Incremental Build of configuration Debug for project ADC_SRAM_UART ****
 make all 
 make: Nothing to be done for 'all'.
-20:13:56 **** Auto Build of configuration Debug for project ADC_SRAM_UART ****
+14:42:46 **** Incremental Build of configuration Debug for project ADC_SRAM_UART ****
 make all 
 'Building file: ../src/ADC_SRAM_UART.c'
 'Invoking: MicroBlaze gcc compiler'
 mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/ADC_SRAM_UART.o" -I../../ADC_SRAM_UART_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/ADC_SRAM_UART.d" -MT"src/ADC_SRAM_UART.o" -o "src/ADC_SRAM_UART.o" "../src/ADC_SRAM_UART.c"
 ../src/ADC_SRAM_UART.c: In function 'main':
-../src/ADC_SRAM_UART.c:53:38: warning: passing argument 2 of 'RxSamples' makes pointer from integer without a cast [-Wint-conversion]
+../src/ADC_SRAM_UART.c:87:38: warning: passing argument 2 of 'RxSamples' makes pointer from integer without a cast [-Wint-conversion]
     Status = RxSamples(&FifoInstance, SRAMBaseAddr);
                                       ^~~~~~~~~~~~
-../src/ADC_SRAM_UART.c:19:5: note: expected 'u32 * {aka long unsigned int *}' but argument is of type 'u32 {aka long unsigned int}'
+../src/ADC_SRAM_UART.c:21:5: note: expected 'u32 * {aka long unsigned int *}' but argument is of type 'u32 {aka long unsigned int}'
  int RxSamples(XLlFifo *InstancePtr, u32 *DestinationAddr);
      ^~~~~~~~~
 'Finished building: ../src/ADC_SRAM_UART.c'
 ' '
 'Building target: ADC_SRAM_UART.elf'
 'Invoking: MicroBlaze gcc linker'
-mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../ADC_SRAM_UART_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "ADC_SRAM_UART.elf"  ./src/ADC_SRAM_UART.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../ADC_SRAM_UART_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "ADC_SRAM_UART.elf"  ./src/ADC_SRAM_UART.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
 'Finished building target: ADC_SRAM_UART.elf'
 ' '
 'Invoking: MicroBlaze Print Size'
 mb-size ADC_SRAM_UART.elf  |tee "ADC_SRAM_UART.elf.size"
    text	   data	    bss	    dec	    hex	filename
-   9624	    296	   9616	  19536	   4c50	ADC_SRAM_UART.elf
+  11156	    328	   9620	  21104	   5270	ADC_SRAM_UART.elf
 'Finished building: ADC_SRAM_UART.elf.size'
 ' '
-20:14:20 **** Auto Build of configuration Debug for project ADC_SRAM_UART ****
-make all 
-'Building file: ../src/ADC_SRAM_UART.c'
-'Invoking: MicroBlaze gcc compiler'
-mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/ADC_SRAM_UART.o" -I../../ADC_SRAM_UART_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/ADC_SRAM_UART.d" -MT"src/ADC_SRAM_UART.o" -o "src/ADC_SRAM_UART.o" "../src/ADC_SRAM_UART.c"
-../src/ADC_SRAM_UART.c: In function 'main':
-../src/ADC_SRAM_UART.c:53:38: warning: passing argument 2 of 'RxSamples' makes pointer from integer without a cast [-Wint-conversion]
-    Status = RxSamples(&FifoInstance, SRAMBaseAddr);
-                                      ^~~~~~~~~~~~
-../src/ADC_SRAM_UART.c:19:5: note: expected 'u32 * {aka long unsigned int *}' but argument is of type 'u32 {aka long unsigned int}'
- int RxSamples(XLlFifo *InstancePtr, u32 *DestinationAddr);
-     ^~~~~~~~~
-'Finished building: ../src/ADC_SRAM_UART.c'
-' '
-'Building target: ADC_SRAM_UART.elf'
-'Invoking: MicroBlaze gcc linker'
-mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../ADC_SRAM_UART_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "ADC_SRAM_UART.elf"  ./src/ADC_SRAM_UART.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
-'Finished building target: ADC_SRAM_UART.elf'
-' '
-'Invoking: MicroBlaze Print Size'
-mb-size ADC_SRAM_UART.elf  |tee "ADC_SRAM_UART.elf.size"
-   text	   data	    bss	    dec	    hex	filename
-   9632	    296	   9616	  19544	   4c58	ADC_SRAM_UART.elf
-'Finished building: ADC_SRAM_UART.elf.size'
-' '
-20:14:24 **** Incremental Build of configuration Debug for project ADC_SRAM_UART ****
+14:42:57 **** Incremental Build of configuration Debug for project ADC_SRAM_UART ****
 make all 
 make: Nothing to be done for 'all'.
-20:15:02 **** Auto Build of configuration Debug for project ADC_SRAM_UART ****
+14:43:17 **** Incremental Build of configuration Debug for project ADC_SRAM_UART ****
+make all 
+make: Nothing to be done for 'all'.
+14:45:35 **** Incremental Build of configuration Debug for project ADC_SRAM_UART ****
 make all 
 'Building file: ../src/ADC_SRAM_UART.c'
 'Invoking: MicroBlaze gcc compiler'
 mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/ADC_SRAM_UART.o" -I../../ADC_SRAM_UART_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/ADC_SRAM_UART.d" -MT"src/ADC_SRAM_UART.o" -o "src/ADC_SRAM_UART.o" "../src/ADC_SRAM_UART.c"
 ../src/ADC_SRAM_UART.c: In function 'main':
-../src/ADC_SRAM_UART.c:53:38: warning: passing argument 2 of 'RxSamples' makes pointer from integer without a cast [-Wint-conversion]
+../src/ADC_SRAM_UART.c:87:38: warning: passing argument 2 of 'RxSamples' makes pointer from integer without a cast [-Wint-conversion]
     Status = RxSamples(&FifoInstance, SRAMBaseAddr);
                                       ^~~~~~~~~~~~
-../src/ADC_SRAM_UART.c:19:5: note: expected 'u32 * {aka long unsigned int *}' but argument is of type 'u32 {aka long unsigned int}'
+../src/ADC_SRAM_UART.c:21:5: note: expected 'u32 * {aka long unsigned int *}' but argument is of type 'u32 {aka long unsigned int}'
  int RxSamples(XLlFifo *InstancePtr, u32 *DestinationAddr);
      ^~~~~~~~~
 'Finished building: ../src/ADC_SRAM_UART.c'
 ' '
 'Building target: ADC_SRAM_UART.elf'
 'Invoking: MicroBlaze gcc linker'
-mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../ADC_SRAM_UART_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "ADC_SRAM_UART.elf"  ./src/ADC_SRAM_UART.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../ADC_SRAM_UART_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "ADC_SRAM_UART.elf"  ./src/ADC_SRAM_UART.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
 'Finished building target: ADC_SRAM_UART.elf'
 ' '
 'Invoking: MicroBlaze Print Size'
 mb-size ADC_SRAM_UART.elf  |tee "ADC_SRAM_UART.elf.size"
    text	   data	    bss	    dec	    hex	filename
-   9644	    296	   9620	  19560	   4c68	ADC_SRAM_UART.elf
+  11136	    328	   9616	  21080	   5258	ADC_SRAM_UART.elf
 'Finished building: ADC_SRAM_UART.elf.size'
 ' '
-20:15:07 **** Incremental Build of configuration Debug for project ADC_SRAM_UART ****
+14:46:42 **** Incremental Build of configuration Debug for project ADC_SRAM_UART ****
+make all 
+make: Nothing to be done for 'all'.
+14:49:16 **** Auto Build of configuration Debug for project ADC_SRAM_UART ****
+make all 
+'Building file: ../src/ADC_SRAM_UART.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/ADC_SRAM_UART.o" -I../../ADC_SRAM_UART_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/ADC_SRAM_UART.d" -MT"src/ADC_SRAM_UART.o" -o "src/ADC_SRAM_UART.o" "../src/ADC_SRAM_UART.c"
+../src/ADC_SRAM_UART.c: In function 'main':
+../src/ADC_SRAM_UART.c:87:38: warning: passing argument 2 of 'RxSamples' makes pointer from integer without a cast [-Wint-conversion]
+    Status = RxSamples(&FifoInstance, SRAMBaseAddr);
+                                      ^~~~~~~~~~~~
+../src/ADC_SRAM_UART.c:21:5: note: expected 'u32 * {aka long unsigned int *}' but argument is of type 'u32 {aka long unsigned int}'
+ int RxSamples(XLlFifo *InstancePtr, u32 *DestinationAddr);
+     ^~~~~~~~~
+'Finished building: ../src/ADC_SRAM_UART.c'
+' '
+'Building target: ADC_SRAM_UART.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../ADC_SRAM_UART_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "ADC_SRAM_UART.elf"  ./src/ADC_SRAM_UART.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: ADC_SRAM_UART.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size ADC_SRAM_UART.elf  |tee "ADC_SRAM_UART.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  11184	    328	   9616	  21128	   5288	ADC_SRAM_UART.elf
+'Finished building: ADC_SRAM_UART.elf.size'
+' '
+14:49:20 **** Incremental Build of configuration Debug for project ADC_SRAM_UART ****
 make all 
 make: Nothing to be done for 'all'.

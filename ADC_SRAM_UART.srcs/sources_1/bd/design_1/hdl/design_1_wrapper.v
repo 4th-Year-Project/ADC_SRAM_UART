@@ -1,7 +1,7 @@
 //Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2018.3 (win64) Build 2405991 Thu Dec  6 23:38:27 MST 2018
-//Date        : Sat Apr 13 16:23:16 2019
+//Date        : Sat Apr 13 20:57:29 2019
 //Host        : Lenovo running 64-bit major release  (build 9200)
 //Command     : generate_target design_1_wrapper.bd
 //Design      : design_1_wrapper
@@ -11,47 +11,45 @@
 
 module design_1_wrapper
    (A,
-    BTN1,
     CONVST,
     CS,
     DB,
     EOC,
-    LED1,
     RD,
     cellular_ram_addr,
     cellular_ram_ce_n,
     cellular_ram_dq_io,
     cellular_ram_oen,
     cellular_ram_wen,
+    led_2bits_tri_io,
+    push_buttons_1bit_tri_i,
     reset,
     sys_clock,
     usb_uart_rxd,
     usb_uart_txd);
   output [2:0]A;
-  input BTN1;
   output CONVST;
   output CS;
   input [7:0]DB;
   input EOC;
-  output LED1;
   output RD;
   output [18:0]cellular_ram_addr;
   output cellular_ram_ce_n;
   inout [7:0]cellular_ram_dq_io;
   output cellular_ram_oen;
   output cellular_ram_wen;
+  inout [1:0]led_2bits_tri_io;
+  input push_buttons_1bit_tri_i;
   input reset;
   input sys_clock;
   input usb_uart_rxd;
   output usb_uart_txd;
 
   wire [2:0]A;
-  wire BTN1;
   wire CONVST;
   wire CS;
   wire [7:0]DB;
   wire EOC;
-  wire LED1;
   wire RD;
   wire [18:0]cellular_ram_addr;
   wire cellular_ram_ce_n;
@@ -89,6 +87,15 @@ module design_1_wrapper
   wire [7:7]cellular_ram_dq_t_7;
   wire cellular_ram_oen;
   wire cellular_ram_wen;
+  wire [0:0]led_2bits_tri_i_0;
+  wire [1:1]led_2bits_tri_i_1;
+  wire [0:0]led_2bits_tri_io_0;
+  wire [1:1]led_2bits_tri_io_1;
+  wire [0:0]led_2bits_tri_o_0;
+  wire [1:1]led_2bits_tri_o_1;
+  wire [0:0]led_2bits_tri_t_0;
+  wire [1:1]led_2bits_tri_t_1;
+  wire push_buttons_1bit_tri_i;
   wire reset;
   wire sys_clock;
   wire usb_uart_rxd;
@@ -136,12 +143,10 @@ module design_1_wrapper
         .T(cellular_ram_dq_t_7));
   design_1 design_1_i
        (.A(A),
-        .BTN1(BTN1),
         .CONVST(CONVST),
         .CS(CS),
         .DB(DB),
         .EOC(EOC),
-        .LED1(LED1),
         .RD(RD),
         .cellular_ram_addr(cellular_ram_addr),
         .cellular_ram_ce_n(cellular_ram_ce_n),
@@ -150,8 +155,22 @@ module design_1_wrapper
         .cellular_ram_dq_t({cellular_ram_dq_t_7,cellular_ram_dq_t_6,cellular_ram_dq_t_5,cellular_ram_dq_t_4,cellular_ram_dq_t_3,cellular_ram_dq_t_2,cellular_ram_dq_t_1,cellular_ram_dq_t_0}),
         .cellular_ram_oen(cellular_ram_oen),
         .cellular_ram_wen(cellular_ram_wen),
+        .led_2bits_tri_i({led_2bits_tri_i_1,led_2bits_tri_i_0}),
+        .led_2bits_tri_o({led_2bits_tri_o_1,led_2bits_tri_o_0}),
+        .led_2bits_tri_t({led_2bits_tri_t_1,led_2bits_tri_t_0}),
+        .push_buttons_1bit_tri_i(push_buttons_1bit_tri_i),
         .reset(reset),
         .sys_clock(sys_clock),
         .usb_uart_rxd(usb_uart_rxd),
         .usb_uart_txd(usb_uart_txd));
+  IOBUF led_2bits_tri_iobuf_0
+       (.I(led_2bits_tri_o_0),
+        .IO(led_2bits_tri_io[0]),
+        .O(led_2bits_tri_i_0),
+        .T(led_2bits_tri_t_0));
+  IOBUF led_2bits_tri_iobuf_1
+       (.I(led_2bits_tri_o_1),
+        .IO(led_2bits_tri_io[1]),
+        .O(led_2bits_tri_i_1),
+        .T(led_2bits_tri_t_1));
 endmodule

@@ -9,17 +9,15 @@
       </db_ref>
    </db_ref_list>
    <zoom_setting>
-      <ZoomStartTime time="98000fs"></ZoomStartTime>
-      <ZoomEndTime time="945001fs"></ZoomEndTime>
+      <ZoomStartTime time="0fs"></ZoomStartTime>
+      <ZoomEndTime time="8501fs"></ZoomEndTime>
       <Cursor1Time time="562000fs"></Cursor1Time>
    </zoom_setting>
    <column_width_setting>
       <NameColumnWidth column_width="380"></NameColumnWidth>
-      <ValueColumnWidth column_width="130"></ValueColumnWidth>
+      <ValueColumnWidth column_width="126"></ValueColumnWidth>
    </column_width_setting>
    <WVObjectSize size="6" />
-   <wave_markers>
-   </wave_markers>
    <wvobject fp_name="design_1_i/axis_clock_converter_0_M_AXIS_TREADY" type="logic">
       <obj_property name="DisplayName">FullPathName</obj_property>
       <obj_property name="ElementShortName">design_1_i/axis_clock_converter_0_M_AXIS_TREADY</obj_property>

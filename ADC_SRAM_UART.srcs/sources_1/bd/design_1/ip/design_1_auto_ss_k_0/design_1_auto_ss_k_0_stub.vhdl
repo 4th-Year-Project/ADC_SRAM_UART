@@ -3,8 +3,8 @@
 -- Tool Version: Vivado v.2018.3 (win64) Build 2405991 Thu Dec  6 23:38:27 MST 2018
 -- Date        : Sat Apr 13 16:24:21 2019
 -- Host        : Lenovo running 64-bit major release  (build 9200)
--- Command     : write_vhdl -force -mode synth_stub
---               c:/FPGA_Projects/ADC_SRAM_UART/ADC_SRAM_UART.srcs/sources_1/bd/design_1/ip/design_1_auto_ss_k_0/design_1_auto_ss_k_0_stub.vhdl
+-- Command     : write_vhdl -force -mode synth_stub -rename_top design_1_auto_ss_k_0 -prefix
+--               design_1_auto_ss_k_0_ design_1_auto_ss_k_0_stub.vhdl
 -- Design      : design_1_auto_ss_k_0
 -- Purpose     : Stub declaration of top-level module interface
 -- Device      : xc7a35tcpg236-1
