@@ -1,4 +1,6 @@
-﻿# ADC SRAM UART
+
+
+# ADC SRAM UART
 This is the top level for the FPGA project. The aim of this is to read from the two ADCs, using the AXI stream FIFO and then into SRAM. The SRAM Can then be read slowly back to the PC over UART.
 
 ## How to use
@@ -8,7 +10,8 @@ This is the top level for the FPGA project. The aim of this is to read from the 
 4. Reset is BTN0, Sample and send is BTN1
 
 ## LEDs
-| LED | Meaning |
+| LEDs lit | Meaning |
+|--|--|
 | No LEDs | No power - Check USB |
 | Orange LED | FPGA Programming Done |
 | Red LED | Board has power |
@@ -17,6 +20,7 @@ This is the top level for the FPGA project. The aim of this is to read from the 
 | Green LED1 & LED2 | Sampling finished |
 | Orange LED by USB | Serial data being sent |
 | No Green LEDs | Microblaze not programmed |
+|RGB LED| Not used |
 
 ## Specs
 * ADCs
@@ -38,12 +42,12 @@ This is the top level for the FPGA project. The aim of this is to read from the 
   * Controls GPIO
       * GPIO Channel 1:
          * bit 0: BTN 1 (Used to start samplng)
-      * GPIO Channel 2: 
+      * GPIO Channel 2:
          * bit 0: LED1
          * bit 1: LED2
       * GPIO1 Channel 1:
          * bit 0: ADC_INTERFACE DONE
-      * GPIO1 Channel 1: 
+      * GPIO1 Channel 1:
          * bit 0: ADC_INTERFACE ENABLE
          * bit 1: RESET (Active high)
 * SRAM
