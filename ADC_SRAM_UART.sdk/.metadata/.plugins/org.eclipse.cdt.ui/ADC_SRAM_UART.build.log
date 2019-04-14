@@ -1,4 +1,4 @@
-21:12:06 **** Incremental Build of configuration Debug for project ADC_SRAM_UART ****
+21:23:05 **** Auto Build of configuration Debug for project ADC_SRAM_UART ****
 make all 
 'Building file: ../src/ADC_SRAM_UART.c'
 'Invoking: MicroBlaze gcc compiler'
@@ -32,5 +32,5 @@ mb-size ADC_SRAM_UART.elf  |tee "ADC_SRAM_UART.elf.size"
 'Finished building: ADC_SRAM_UART.elf.size'
 ' '
 
-21:12:07 Build Finished (took 1s.216ms)
+21:23:07 Build Finished (took 1s.209ms)
 

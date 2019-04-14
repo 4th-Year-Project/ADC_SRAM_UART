@@ -9,6 +9,8 @@
 
 #define FIFO_DEV_ID	   	XPAR_AXI_FIFO_0_DEVICE_ID   //Device ID
 #define WORD_SIZE 4			/* Size of words in bytes */
+#define MAX_PACKET_LEN 4
+#define NO_OF_PACKETS 50
 #define BTN1_MASK 0b1		/* Bit mask for BTN1 (gpio0 bit 0) */
 #define DONE_MASK 0b1  	/* Bit mask for ADC Interface DONE (gpio0 bit 0) */
 
