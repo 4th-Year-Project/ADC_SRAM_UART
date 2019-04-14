@@ -17,7 +17,6 @@ proc create_report { reportName command } {
     send_msg_id runtcl-5 warning "$msg"
   }
 }
-set_msg_config -id {Common 17-41} -limit 10000000
 set_msg_config  -id {Synth 8-5413}  -string {{CRITICAL WARNING: [Synth 8-5413] Mix of synchronous and asynchronous control for register CONVST_reg in module FPGA_ADC_interface. [c:/FPGA_Projects/AXI_FIFO_Test/AXI_FIFO_Test.srcs/sources_1/bd/design_1/ipshared/FPGA_ADC_interface/FPGA_ADC_interface.srcs/sources_1/new/FPGA_ADC_interface.v:119]}}  -suppress 
 set_msg_config  -id {Coretcl 2-1279}  -string {{CRITICAL WARNING: [Coretcl 2-1279] The upgrade of 'design_1_FPGA_ADC_interface_0_1' has identified issues that may require user intervention. Please review the upgrade log 'c:/FPGA_Projects/AXI_FIFO_Test/ip_upgrade.log', and verify that the upgraded IP is correctly configured.}}  -suppress 
 create_project -in_memory -part xc7a35tcpg236-1

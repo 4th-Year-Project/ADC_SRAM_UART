@@ -1,7 +1,7 @@
 -- Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2018.3 (win64) Build 2405991 Thu Dec  6 23:38:27 MST 2018
--- Date        : Sat Apr 13 14:11:19 2019
+-- Date        : Sun Apr 14 15:39:25 2019
 -- Host        : Lenovo running 64-bit major release  (build 9200)
 -- Command     : write_vhdl -force -mode funcsim
 --               C:/FPGA_Projects/ADC_SRAM_UART/ADC_SRAM_UART.srcs/sources_1/bd/design_1/ip/design_1_FPGA_ADC_interface_0_1/design_1_FPGA_ADC_interface_0_1_sim_netlist.vhdl
@@ -37,7 +37,6 @@ architecture STRUCTURE of design_1_FPGA_ADC_interface_0_1_FPGA_ADC_interface is
   signal \^a\ : STD_LOGIC_VECTOR ( 1 downto 0 );
   signal \A[2]_i_1_n_0\ : STD_LOGIC;
   signal \A[2]_i_3_n_0\ : STD_LOGIC;
-  signal \A[2]_i_4_n_0\ : STD_LOGIC;
   signal CLK_2MHZ_i_1_n_0 : STD_LOGIC;
   signal \^clk_2mhz_reg_0\ : STD_LOGIC;
   signal CLK_4MHZ : STD_LOGIC;
@@ -83,8 +82,6 @@ architecture STRUCTURE of design_1_FPGA_ADC_interface_0_1_FPGA_ADC_interface is
   signal DONE_i_1_n_0 : STD_LOGIC;
   signal DONE_i_2_n_0 : STD_LOGIC;
   signal DONE_i_3_n_0 : STD_LOGIC;
-  signal DONE_i_4_n_0 : STD_LOGIC;
-  signal DONE_i_5_n_0 : STD_LOGIC;
   signal \^done_reg_0\ : STD_LOGIC;
   signal \^last\ : STD_LOGIC;
   signal LAST_i_1_n_0 : STD_LOGIC;
@@ -95,10 +92,8 @@ architecture STRUCTURE of design_1_FPGA_ADC_interface_0_1_FPGA_ADC_interface is
   signal \NLW_COUNTER_reg[16]_i_1_CO_UNCONNECTED\ : STD_LOGIC_VECTOR ( 3 downto 0 );
   signal \NLW_COUNTER_reg[16]_i_1_O_UNCONNECTED\ : STD_LOGIC_VECTOR ( 3 downto 1 );
   attribute SOFT_HLUTNM : string;
-  attribute SOFT_HLUTNM of \A[1]_i_1\ : label is "soft_lutpair1";
-  attribute SOFT_HLUTNM of \A[2]_i_2\ : label is "soft_lutpair1";
-  attribute SOFT_HLUTNM of DONE_i_5 : label is "soft_lutpair0";
-  attribute SOFT_HLUTNM of LAST_i_2 : label is "soft_lutpair0";
+  attribute SOFT_HLUTNM of \A[1]_i_1\ : label is "soft_lutpair0";
+  attribute SOFT_HLUTNM of \A[2]_i_2\ : label is "soft_lutpair0";
 begin
   A(1 downto 0) <= \^a\(1 downto 0);
   CLK_2MHZ_reg_0 <= \^clk_2mhz_reg_0\;
@@ -115,15 +110,15 @@ begin
     );
 \A[2]_i_1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"0004000000000000"
+      INIT => X"000F000000010000"
     )
         port map (
       I0 => COUNTER_reg(8),
-      I1 => ENABLE,
-      I2 => COUNTER_reg(10),
-      I3 => COUNTER_reg(9),
-      I4 => \A[2]_i_3_n_0\,
-      I5 => \A[2]_i_4_n_0\,
+      I1 => COUNTER_reg(9),
+      I2 => COUNTER_reg(16),
+      I3 => COUNTER_reg(15),
+      I4 => ENABLE,
+      I5 => \A[2]_i_3_n_0\,
       O => \A[2]_i_1_n_0\
     );
 \A[2]_i_2\: unisim.vcomponents.LUT2
@@ -135,30 +130,17 @@ begin
       I1 => \^a\(1),
       O => p_1_in(2)
     );
-\A[2]_i_3\: unisim.vcomponents.LUT6
+\A[2]_i_3\: unisim.vcomponents.LUT5
     generic map(
-      INIT => X"0000000000000001"
+      INIT => X"7FFFFFFF"
     )
         port map (
-      I0 => COUNTER_reg(11),
-      I1 => COUNTER_reg(12),
-      I2 => COUNTER_reg(13),
-      I3 => COUNTER_reg(14),
-      I4 => COUNTER_reg(16),
-      I5 => COUNTER_reg(15),
+      I0 => COUNTER_reg(10),
+      I1 => COUNTER_reg(13),
+      I2 => COUNTER_reg(14),
+      I3 => COUNTER_reg(12),
+      I4 => COUNTER_reg(11),
       O => \A[2]_i_3_n_0\
-    );
-\A[2]_i_4\: unisim.vcomponents.LUT5
-    generic map(
-      INIT => X"01FFFFFF"
-    )
-        port map (
-      I0 => COUNTER_reg(3),
-      I1 => COUNTER_reg(4),
-      I2 => COUNTER_reg(5),
-      I3 => COUNTER_reg(7),
-      I4 => COUNTER_reg(6),
-      O => \A[2]_i_4_n_0\
     );
 \A_reg[1]\: unisim.vcomponents.FDCE
     generic map(
@@ -227,8 +209,8 @@ CONVST_i_1: unisim.vcomponents.LUT3
       INIT => X"F7"
     )
         port map (
-      I0 => ENABLE,
-      I1 => \^convst\,
+      I0 => \^convst\,
+      I1 => ENABLE,
       I2 => \^done_reg_0\,
       O => CONVST_i_1_n_0
     );
@@ -579,62 +561,42 @@ CONVST_reg: unisim.vcomponents.FDPE
       Q => DATA(7),
       R => RESET
     );
-DONE_i_1: unisim.vcomponents.LUT5
+DONE_i_1: unisim.vcomponents.LUT4
     generic map(
-      INIT => X"FFFF1000"
+      INIT => X"FF08"
     )
         port map (
       I0 => DONE_i_2_n_0,
       I1 => DONE_i_3_n_0,
-      I2 => DONE_i_4_n_0,
-      I3 => DONE_i_5_n_0,
-      I4 => \^done_reg_0\,
+      I2 => \A[2]_i_3_n_0\,
+      I3 => \^done_reg_0\,
       O => DONE_i_1_n_0
     );
-DONE_i_2: unisim.vcomponents.LUT4
+DONE_i_2: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"FFFE"
+      INIT => X"0000000100000000"
     )
         port map (
-      I0 => COUNTER_reg(10),
-      I1 => COUNTER_reg(9),
-      I2 => COUNTER_reg(12),
-      I3 => COUNTER_reg(11),
+      I0 => COUNTER_reg(6),
+      I1 => COUNTER_reg(7),
+      I2 => COUNTER_reg(4),
+      I3 => COUNTER_reg(5),
+      I4 => COUNTER_reg(9),
+      I5 => COUNTER_reg(8),
       O => DONE_i_2_n_0
     );
-DONE_i_3: unisim.vcomponents.LUT4
+DONE_i_3: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"FFFE"
-    )
-        port map (
-      I0 => COUNTER_reg(16),
-      I1 => COUNTER_reg(15),
-      I2 => COUNTER_reg(14),
-      I3 => COUNTER_reg(13),
-      O => DONE_i_3_n_0
-    );
-DONE_i_4: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"0002000000000000"
-    )
-        port map (
-      I0 => COUNTER_reg(3),
-      I1 => COUNTER_reg(4),
-      I2 => COUNTER_reg(5),
-      I3 => COUNTER_reg(8),
-      I4 => COUNTER_reg(7),
-      I5 => COUNTER_reg(6),
-      O => DONE_i_4_n_0
-    );
-DONE_i_5: unisim.vcomponents.LUT3
-    generic map(
-      INIT => X"01"
+      INIT => X"0000000000000001"
     )
         port map (
       I0 => COUNTER_reg(2),
-      I1 => COUNTER_reg(1),
+      I1 => COUNTER_reg(3),
       I2 => COUNTER_reg(0),
-      O => DONE_i_5_n_0
+      I3 => COUNTER_reg(1),
+      I4 => COUNTER_reg(16),
+      I5 => COUNTER_reg(15),
+      O => DONE_i_3_n_0
     );
 DONE_reg: unisim.vcomponents.FDCE
     generic map(
@@ -647,40 +609,42 @@ DONE_reg: unisim.vcomponents.FDCE
       D => DONE_i_1_n_0,
       Q => \^done_reg_0\
     );
-LAST_i_1: unisim.vcomponents.LUT6
+LAST_i_1: unisim.vcomponents.LUT5
     generic map(
-      INIT => X"888888888888B888"
+      INIT => X"8B888888"
     )
         port map (
       I0 => \^last\,
       I1 => RESET,
-      I2 => LAST_i_2_n_0,
-      I3 => LAST_i_3_n_0,
-      I4 => DONE_i_3_n_0,
-      I5 => DONE_i_2_n_0,
+      I2 => \A[2]_i_3_n_0\,
+      I3 => LAST_i_2_n_0,
+      I4 => LAST_i_3_n_0,
       O => LAST_i_1_n_0
     );
-LAST_i_2: unisim.vcomponents.LUT3
+LAST_i_2: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"80"
+      INIT => X"0000000000008000"
     )
         port map (
       I0 => COUNTER_reg(2),
-      I1 => COUNTER_reg(1),
+      I1 => COUNTER_reg(3),
       I2 => COUNTER_reg(0),
+      I3 => COUNTER_reg(1),
+      I4 => COUNTER_reg(16),
+      I5 => COUNTER_reg(15),
       O => LAST_i_2_n_0
     );
 LAST_i_3: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"0001000000000000"
+      INIT => X"0000000000008000"
     )
         port map (
-      I0 => COUNTER_reg(3),
-      I1 => COUNTER_reg(4),
-      I2 => COUNTER_reg(5),
-      I3 => COUNTER_reg(8),
-      I4 => COUNTER_reg(7),
-      I5 => COUNTER_reg(6),
+      I0 => COUNTER_reg(6),
+      I1 => COUNTER_reg(7),
+      I2 => COUNTER_reg(4),
+      I3 => COUNTER_reg(5),
+      I4 => COUNTER_reg(9),
+      I5 => COUNTER_reg(8),
       O => LAST_i_3_n_0
     );
 LAST_reg: unisim.vcomponents.FDCE

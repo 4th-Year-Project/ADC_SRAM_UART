@@ -1,7 +1,7 @@
 // Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2018.3 (win64) Build 2405991 Thu Dec  6 23:38:27 MST 2018
-// Date        : Sat Apr 13 14:11:19 2019
+// Date        : Sun Apr 14 15:39:25 2019
 // Host        : Lenovo running 64-bit major release  (build 9200)
 // Command     : write_verilog -force -mode funcsim
 //               C:/FPGA_Projects/ADC_SRAM_UART/ADC_SRAM_UART.srcs/sources_1/bd/design_1/ip/design_1_FPGA_ADC_interface_0_1/design_1_FPGA_ADC_interface_0_1_sim_netlist.v
@@ -120,7 +120,6 @@ module design_1_FPGA_ADC_interface_0_1_FPGA_ADC_interface
   wire [1:0]A;
   wire \A[2]_i_1_n_0 ;
   wire \A[2]_i_3_n_0 ;
-  wire \A[2]_i_4_n_0 ;
   wire CLK_2MHZ_i_1_n_0;
   wire CLK_2MHZ_reg_0;
   wire CLK_4MHZ;
@@ -169,8 +168,6 @@ module design_1_FPGA_ADC_interface_0_1_FPGA_ADC_interface
   wire DONE_i_1_n_0;
   wire DONE_i_2_n_0;
   wire DONE_i_3_n_0;
-  wire DONE_i_4_n_0;
-  wire DONE_i_5_n_0;
   wire DONE_reg_0;
   wire ENABLE;
   wire EOC;
@@ -185,48 +182,38 @@ module design_1_FPGA_ADC_interface_0_1_FPGA_ADC_interface
   wire [3:0]\NLW_COUNTER_reg[16]_i_1_CO_UNCONNECTED ;
   wire [3:1]\NLW_COUNTER_reg[16]_i_1_O_UNCONNECTED ;
 
-  (* SOFT_HLUTNM = "soft_lutpair1" *) 
+  (* SOFT_HLUTNM = "soft_lutpair0" *) 
   LUT1 #(
     .INIT(2'h1)) 
     \A[1]_i_1 
        (.I0(A[0]),
         .O(p_1_in[1]));
   LUT6 #(
-    .INIT(64'h0004000000000000)) 
+    .INIT(64'h000F000000010000)) 
     \A[2]_i_1 
        (.I0(COUNTER_reg[8]),
-        .I1(ENABLE),
-        .I2(COUNTER_reg[10]),
-        .I3(COUNTER_reg[9]),
-        .I4(\A[2]_i_3_n_0 ),
-        .I5(\A[2]_i_4_n_0 ),
+        .I1(COUNTER_reg[9]),
+        .I2(COUNTER_reg[16]),
+        .I3(COUNTER_reg[15]),
+        .I4(ENABLE),
+        .I5(\A[2]_i_3_n_0 ),
         .O(\A[2]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair1" *) 
+  (* SOFT_HLUTNM = "soft_lutpair0" *) 
   LUT2 #(
     .INIT(4'h6)) 
     \A[2]_i_2 
        (.I0(A[0]),
         .I1(A[1]),
         .O(p_1_in[2]));
-  LUT6 #(
-    .INIT(64'h0000000000000001)) 
-    \A[2]_i_3 
-       (.I0(COUNTER_reg[11]),
-        .I1(COUNTER_reg[12]),
-        .I2(COUNTER_reg[13]),
-        .I3(COUNTER_reg[14]),
-        .I4(COUNTER_reg[16]),
-        .I5(COUNTER_reg[15]),
-        .O(\A[2]_i_3_n_0 ));
   LUT5 #(
-    .INIT(32'h01FFFFFF)) 
-    \A[2]_i_4 
-       (.I0(COUNTER_reg[3]),
-        .I1(COUNTER_reg[4]),
-        .I2(COUNTER_reg[5]),
-        .I3(COUNTER_reg[7]),
-        .I4(COUNTER_reg[6]),
-        .O(\A[2]_i_4_n_0 ));
+    .INIT(32'h7FFFFFFF)) 
+    \A[2]_i_3 
+       (.I0(COUNTER_reg[10]),
+        .I1(COUNTER_reg[13]),
+        .I2(COUNTER_reg[14]),
+        .I3(COUNTER_reg[12]),
+        .I4(COUNTER_reg[11]),
+        .O(\A[2]_i_3_n_0 ));
   FDCE #(
     .IS_C_INVERTED(1'b1)) 
     \A_reg[1] 
@@ -274,8 +261,8 @@ module design_1_FPGA_ADC_interface_0_1_FPGA_ADC_interface
   LUT3 #(
     .INIT(8'hF7)) 
     CONVST_i_1
-       (.I0(ENABLE),
-        .I1(CONVST),
+       (.I0(CONVST),
+        .I1(ENABLE),
         .I2(DONE_reg_0),
         .O(CONVST_i_1_n_0));
   FDPE CONVST_reg
@@ -513,49 +500,34 @@ module design_1_FPGA_ADC_interface_0_1_FPGA_ADC_interface
         .D(DB[7]),
         .Q(DATA[7]),
         .R(RESET));
-  LUT5 #(
-    .INIT(32'hFFFF1000)) 
+  LUT4 #(
+    .INIT(16'hFF08)) 
     DONE_i_1
        (.I0(DONE_i_2_n_0),
         .I1(DONE_i_3_n_0),
-        .I2(DONE_i_4_n_0),
-        .I3(DONE_i_5_n_0),
-        .I4(DONE_reg_0),
+        .I2(\A[2]_i_3_n_0 ),
+        .I3(DONE_reg_0),
         .O(DONE_i_1_n_0));
-  LUT4 #(
-    .INIT(16'hFFFE)) 
-    DONE_i_2
-       (.I0(COUNTER_reg[10]),
-        .I1(COUNTER_reg[9]),
-        .I2(COUNTER_reg[12]),
-        .I3(COUNTER_reg[11]),
-        .O(DONE_i_2_n_0));
-  LUT4 #(
-    .INIT(16'hFFFE)) 
-    DONE_i_3
-       (.I0(COUNTER_reg[16]),
-        .I1(COUNTER_reg[15]),
-        .I2(COUNTER_reg[14]),
-        .I3(COUNTER_reg[13]),
-        .O(DONE_i_3_n_0));
   LUT6 #(
-    .INIT(64'h0002000000000000)) 
-    DONE_i_4
-       (.I0(COUNTER_reg[3]),
-        .I1(COUNTER_reg[4]),
-        .I2(COUNTER_reg[5]),
-        .I3(COUNTER_reg[8]),
-        .I4(COUNTER_reg[7]),
-        .I5(COUNTER_reg[6]),
-        .O(DONE_i_4_n_0));
-  (* SOFT_HLUTNM = "soft_lutpair0" *) 
-  LUT3 #(
-    .INIT(8'h01)) 
-    DONE_i_5
+    .INIT(64'h0000000100000000)) 
+    DONE_i_2
+       (.I0(COUNTER_reg[6]),
+        .I1(COUNTER_reg[7]),
+        .I2(COUNTER_reg[4]),
+        .I3(COUNTER_reg[5]),
+        .I4(COUNTER_reg[9]),
+        .I5(COUNTER_reg[8]),
+        .O(DONE_i_2_n_0));
+  LUT6 #(
+    .INIT(64'h0000000000000001)) 
+    DONE_i_3
        (.I0(COUNTER_reg[2]),
-        .I1(COUNTER_reg[1]),
+        .I1(COUNTER_reg[3]),
         .I2(COUNTER_reg[0]),
-        .O(DONE_i_5_n_0));
+        .I3(COUNTER_reg[1]),
+        .I4(COUNTER_reg[16]),
+        .I5(COUNTER_reg[15]),
+        .O(DONE_i_3_n_0));
   FDCE #(
     .IS_C_INVERTED(1'b1)) 
     DONE_reg
@@ -564,33 +536,34 @@ module design_1_FPGA_ADC_interface_0_1_FPGA_ADC_interface
         .CLR(RESET),
         .D(DONE_i_1_n_0),
         .Q(DONE_reg_0));
-  LUT6 #(
-    .INIT(64'h888888888888B888)) 
+  LUT5 #(
+    .INIT(32'h8B888888)) 
     LAST_i_1
        (.I0(LAST),
         .I1(RESET),
-        .I2(LAST_i_2_n_0),
-        .I3(LAST_i_3_n_0),
-        .I4(DONE_i_3_n_0),
-        .I5(DONE_i_2_n_0),
+        .I2(\A[2]_i_3_n_0 ),
+        .I3(LAST_i_2_n_0),
+        .I4(LAST_i_3_n_0),
         .O(LAST_i_1_n_0));
-  (* SOFT_HLUTNM = "soft_lutpair0" *) 
-  LUT3 #(
-    .INIT(8'h80)) 
+  LUT6 #(
+    .INIT(64'h0000000000008000)) 
     LAST_i_2
        (.I0(COUNTER_reg[2]),
-        .I1(COUNTER_reg[1]),
+        .I1(COUNTER_reg[3]),
         .I2(COUNTER_reg[0]),
+        .I3(COUNTER_reg[1]),
+        .I4(COUNTER_reg[16]),
+        .I5(COUNTER_reg[15]),
         .O(LAST_i_2_n_0));
   LUT6 #(
-    .INIT(64'h0001000000000000)) 
+    .INIT(64'h0000000000008000)) 
     LAST_i_3
-       (.I0(COUNTER_reg[3]),
-        .I1(COUNTER_reg[4]),
-        .I2(COUNTER_reg[5]),
-        .I3(COUNTER_reg[8]),
-        .I4(COUNTER_reg[7]),
-        .I5(COUNTER_reg[6]),
+       (.I0(COUNTER_reg[6]),
+        .I1(COUNTER_reg[7]),
+        .I2(COUNTER_reg[4]),
+        .I3(COUNTER_reg[5]),
+        .I4(COUNTER_reg[9]),
+        .I5(COUNTER_reg[8]),
         .O(LAST_i_3_n_0));
   FDCE #(
     .IS_C_INVERTED(1'b1)) 

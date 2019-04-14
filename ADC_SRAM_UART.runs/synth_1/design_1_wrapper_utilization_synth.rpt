@@ -1,7 +1,7 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2018.3 (win64) Build 2405991 Thu Dec  6 23:38:27 MST 2018
-| Date         : Sat Apr 13 21:00:05 2019
+| Date         : Sun Apr 14 15:41:54 2019
 | Host         : Lenovo running 64-bit major release  (build 9200)
 | Command      : report_utilization -file design_1_wrapper_utilization_synth.rpt -pb design_1_wrapper_utilization_synth.pb
 | Design       : design_1_wrapper
@@ -162,6 +162,7 @@ Table of Contents
 |              Ref Name             | Used |
 +-----------------------------------+------+
 | design_1_xbar_0                   |    1 |
+| design_1_util_vector_logic_0_0    |    1 |
 | design_1_rst_clk_wiz_1_100M_0     |    1 |
 | design_1_proc_sys_reset_0_0       |    1 |
 | design_1_microblaze_0_0           |    1 |
