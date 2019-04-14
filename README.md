@@ -32,8 +32,7 @@ This is the top level for the FPGA project. The aim of this is to read from the 
       * GPIO1 Channel 1:
          * bit 1: ADC_INTERFACE DONE
       * GPIO1 Channel 1: 
-         * bit 1: RESET
-         * bit 2: ADC_INTERFACE ENABLE
+         * bit 1: ADC_INTERFACE ENABLE
 * SRAM
 * MicroBlaze
 * UART
