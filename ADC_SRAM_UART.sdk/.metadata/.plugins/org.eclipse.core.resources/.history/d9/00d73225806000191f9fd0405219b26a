@@ -37,8 +37,6 @@ int main (){
 /*--- Initialise ---*/
   u32 read = 0;
 
-  xil_printf("RESET\n\r");
-
   Status = GPIOInit(&gpio0, &gpio1); //Init GPIO blocks
   if (Status != XST_SUCCESS) {
 		xil_printf("Initialisation of XGpio\n\r");
