@@ -22,6 +22,23 @@ This is the top level for the FPGA project. The aim of this is to read from the 
 | No Green LEDs | Microblaze not programmed |
 |RGB LED| Not used |
 
+## GPIOs
+| GPIO/bit  | Connection  | Explanation                      |
+|-----------|-------------|----------------------------------|
+| *GPIO0 ch1* |             | *External inputs*              |
+| bit 0     | BTN1        | Start External sampling          |
+| *GPIO0 ch2* |             | *External outputs*             |
+| bit 0     | LED1        | See LED table                    |
+| bit 1     | LED2        | See LED table                    |
+| *GPIO1 ch1* |             | *Internal inputs*              |
+| bit 0     | ADC1_DONE   | ADC1 completed sampling          |
+| bit 1     | ADC2_DONE   | ADC2 completed sampling          |
+| *GPIO1 ch2* |             | *Internal outputs*             |
+| bit 0     | RESET       | For software reset (Active high) |
+| bit 1     | ADC1_ENABLE | ADC1 start sampling              |
+| bit 2     | ADC2_ENABLE | ADC2 start sampling              |
+
+
 ## Specs
 * ADCs
   * Reads from the even channels only
@@ -40,18 +57,7 @@ This is the top level for the FPGA project. The aim of this is to read from the 
   * 8192 sample depth (32bit width)
 * MicroBlaze
   * Controls GPIO
-      * GPIO Channel 1:
-         * bit 0: BTN 1 (Used to start samplng)
-      * GPIO Channel 2:
-         * bit 0: LED1 (See LED table above)
-         * bit 1: LED2
-      * GPIO1 Channel 1:
-         * bit 0: ADC1_INTERFACE DONE
-	 * bit 1: ADC2_INTERFACE DONE
-      * GPIO1 Channel 1:
-	 * bit 0: RESET (Active high)
-         * bit 1: ADC1_INTERFACE ENABLE
-	 * bit 2: ADC2_INTERFACE ENABLE
+
 * SRAM
 * MicroBlaze
 * UART

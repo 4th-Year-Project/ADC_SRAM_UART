@@ -2,10 +2,10 @@
 <Root MajorVersion="0" MinorVersion="36">
   <CompositeFile CompositeFileTopName="design_1" CanBeSetAsTop="false" CanDisplayChildGraph="true">
     <Description>Composite Fileset</Description>
-    <Generation Name="SYNTHESIS" State="GENERATED" Timestamp="1555252617"/>
-    <Generation Name="IMPLEMENTATION" State="GENERATED" Timestamp="1555252617"/>
-    <Generation Name="SIMULATION" State="GENERATED" Timestamp="1555252617"/>
-    <Generation Name="HW_HANDOFF" State="GENERATED" Timestamp="1555252617"/>
+    <Generation Name="SYNTHESIS" State="GENERATED" Timestamp="1556182034"/>
+    <Generation Name="IMPLEMENTATION" State="GENERATED" Timestamp="1556182034"/>
+    <Generation Name="SIMULATION" State="GENERATED" Timestamp="1556182034"/>
+    <Generation Name="HW_HANDOFF" State="GENERATED" Timestamp="1556182034"/>
     <FileCollection Name="SOURCES" Type="SOURCES">
       <File Name="ip\design_1_mdm_0_0\design_1_mdm_0_0.xci" Type="IP">
         <Instance HierarchyPath="mdm_0"/>
@@ -64,7 +64,7 @@
         <UsedIn Val="SIMULATION"/>
       </File>
       <File Name="ip\design_1_clk_wiz_1_0\design_1_clk_wiz_1_0.xci" Type="IP">
-        <Instance HierarchyPath="clk_wiz_1"/>
+        <Instance HierarchyPath="clocking_and_reset/clk_wiz_1"/>
         <Properties IsEditable="false" IsVisible="true" Timestamp="1554926539" IsTrackable="true" IsStatusTracked="true"/>
         <Library Name="xil_defaultlib"/>
         <UsedIn Val="SYNTHESIS"/>
@@ -72,7 +72,7 @@
         <UsedIn Val="SIMULATION"/>
       </File>
       <File Name="ip\design_1_rst_clk_wiz_1_100M_0\design_1_rst_clk_wiz_1_100M_0.xci" Type="IP">
-        <Instance HierarchyPath="rst_clk_wiz_1_100M"/>
+        <Instance HierarchyPath="clocking_and_reset/rst_clk_wiz_1_100M"/>
         <Properties IsEditable="false" IsVisible="true" Timestamp="1554802422" IsTrackable="true" IsStatusTracked="true"/>
         <Library Name="xil_defaultlib"/>
         <UsedIn Val="SYNTHESIS"/>
@@ -80,23 +80,15 @@
         <UsedIn Val="SIMULATION"/>
       </File>
       <File Name="ip\design_1_FPGA_ADC_interface_0_1\design_1_FPGA_ADC_interface_0_1.xci" Type="IP">
-        <Instance HierarchyPath="FPGA_ADC_interface_0"/>
+        <Instance HierarchyPath="ADC1/FPGA_ADC_interface_0"/>
         <Properties IsEditable="false" IsVisible="true" Timestamp="1554926540" IsTrackable="true" IsStatusTracked="true"/>
         <Library Name="xil_defaultlib"/>
         <UsedIn Val="SYNTHESIS"/>
         <UsedIn Val="IMPLEMENTATION"/>
         <UsedIn Val="SIMULATION"/>
       </File>
-      <File Name="ip\design_1_ila_0_0\design_1_ila_0_0.xci" Type="IP">
-        <Instance HierarchyPath="ila_0"/>
-        <Properties IsEditable="false" IsVisible="true" Timestamp="1554926539" IsTrackable="true" IsStatusTracked="true"/>
-        <Library Name="xil_defaultlib"/>
-        <UsedIn Val="SYNTHESIS"/>
-        <UsedIn Val="IMPLEMENTATION"/>
-        <UsedIn Val="SIMULATION"/>
-      </File>
       <File Name="ip\design_1_proc_sys_reset_0_0\design_1_proc_sys_reset_0_0.xci" Type="IP">
-        <Instance HierarchyPath="proc_sys_reset_0"/>
+        <Instance HierarchyPath="clocking_and_reset/proc_sys_reset_0"/>
         <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
         <Library Name="xil_defaultlib"/>
         <UsedIn Val="SYNTHESIS"/>
@@ -120,6 +112,7 @@
         <UsedIn Val="SIMULATION"/>
       </File>
       <File Name="ip\design_1_microblaze_0_axi_periph_0\design_1_microblaze_0_axi_periph_0.xci" Type="IP">
+        <Instance HierarchyPath="microblaze_0_axi_periph"/>
         <Properties IsEditable="false" IsVisible="false" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
         <Library Name="xil_defaultlib"/>
         <UsedIn Val="SYNTHESIS"/>
@@ -135,23 +128,7 @@
         <UsedIn Val="SIMULATION"/>
       </File>
       <File Name="ip\design_1_axis_clock_converter_0_1\design_1_axis_clock_converter_0_1.xci" Type="IP">
-        <Instance HierarchyPath="axis_clock_converter_0"/>
-        <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
-        <Library Name="xil_defaultlib"/>
-        <UsedIn Val="SYNTHESIS"/>
-        <UsedIn Val="IMPLEMENTATION"/>
-        <UsedIn Val="SIMULATION"/>
-      </File>
-      <File Name="ip\design_1_ila_1_0\design_1_ila_1_0.xci" Type="IP">
-        <Instance HierarchyPath="ila_1"/>
-        <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
-        <Library Name="xil_defaultlib"/>
-        <UsedIn Val="SYNTHESIS"/>
-        <UsedIn Val="IMPLEMENTATION"/>
-        <UsedIn Val="SIMULATION"/>
-      </File>
-      <File Name="ip\design_1_ila_2_0\design_1_ila_2_0.xci" Type="IP">
-        <Instance HierarchyPath="ila_2"/>
+        <Instance HierarchyPath="ADC1/axis_clock_converter_0"/>
         <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
         <Library Name="xil_defaultlib"/>
         <UsedIn Val="SYNTHESIS"/>
@@ -159,15 +136,7 @@
         <UsedIn Val="SIMULATION"/>
       </File>
       <File Name="ip\design_1_axi_fifo_mm_s_0_0\design_1_axi_fifo_mm_s_0_0.xci" Type="IP">
-        <Instance HierarchyPath="axi_fifo_mm_s_0"/>
-        <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
-        <Library Name="xil_defaultlib"/>
-        <UsedIn Val="SYNTHESIS"/>
-        <UsedIn Val="IMPLEMENTATION"/>
-        <UsedIn Val="SIMULATION"/>
-      </File>
-      <File Name="ip\design_1_ila_3_0\design_1_ila_3_0.xci" Type="IP">
-        <Instance HierarchyPath="ila_3"/>
+        <Instance HierarchyPath="ADC1/axi_fifo_mm_s_0"/>
         <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
         <Library Name="xil_defaultlib"/>
         <UsedIn Val="SYNTHESIS"/>
@@ -186,6 +155,7 @@
         <UsedIn Val="SIMULATION"/>
       </File>
       <File Name="ip\design_1_axis_interconnect_0_0\design_1_axis_interconnect_0_0.xci" Type="IP">
+        <Instance HierarchyPath="ADC1/axis_interconnect_0"/>
         <Properties IsEditable="false" IsVisible="false" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
         <Library Name="xil_defaultlib"/>
         <UsedIn Val="SYNTHESIS"/>
@@ -217,7 +187,7 @@
         <UsedIn Val="SIMULATION"/>
       </File>
       <File Name="ip\design_1_xlslice_0_1\design_1_xlslice_0_1.xci" Type="IP">
-        <Instance HierarchyPath="xlslice_1"/>
+        <Instance HierarchyPath="clocking_and_reset/xlslice_1"/>
         <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
         <Library Name="xil_defaultlib"/>
         <UsedIn Val="SYNTHESIS"/>
@@ -225,7 +195,7 @@
         <UsedIn Val="SIMULATION"/>
       </File>
       <File Name="ip\design_1_util_vector_logic_0_0\design_1_util_vector_logic_0_0.xci" Type="IP">
-        <Instance HierarchyPath="util_vector_logic_0"/>
+        <Instance HierarchyPath="clocking_and_reset/util_vector_logic_0"/>
         <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
         <Library Name="xil_defaultlib"/>
         <UsedIn Val="SYNTHESIS"/>
@@ -241,7 +211,7 @@
         <UsedIn Val="SIMULATION"/>
       </File>
       <File Name="ip\design_1_auto_us_0\design_1_auto_us_0.xci" Type="IP">
-        <Instance HierarchyPath="axis_interconnect_0/s00_couplers/auto_us"/>
+        <Instance HierarchyPath="ADC1/axis_interconnect_0/s00_couplers/auto_us"/>
         <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
         <Library Name="xil_defaultlib"/>
         <UsedIn Val="SYNTHESIS"/>
@@ -249,7 +219,71 @@
         <UsedIn Val="SIMULATION"/>
       </File>
       <File Name="ip\design_1_auto_ss_k_0\design_1_auto_ss_k_0.xci" Type="IP">
-        <Instance HierarchyPath="axis_interconnect_0/s00_couplers/auto_ss_k"/>
+        <Instance HierarchyPath="ADC1/axis_interconnect_0/s00_couplers/auto_ss_k"/>
+        <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
+        <Library Name="xil_defaultlib"/>
+        <UsedIn Val="SYNTHESIS"/>
+        <UsedIn Val="IMPLEMENTATION"/>
+        <UsedIn Val="SIMULATION"/>
+      </File>
+      <File Name="ip\design_1_FPGA_ADC_interface_0_0\design_1_FPGA_ADC_interface_0_0.xci" Type="IP">
+        <Instance HierarchyPath="ADC2/FPGA_ADC_interface_0"/>
+        <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
+        <Library Name="xil_defaultlib"/>
+        <UsedIn Val="SYNTHESIS"/>
+        <UsedIn Val="IMPLEMENTATION"/>
+        <UsedIn Val="SIMULATION"/>
+      </File>
+      <File Name="ip\design_1_axi_fifo_mm_s_0_1\design_1_axi_fifo_mm_s_0_1.xci" Type="IP">
+        <Instance HierarchyPath="ADC2/axi_fifo_mm_s_0"/>
+        <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
+        <Library Name="xil_defaultlib"/>
+        <UsedIn Val="SYNTHESIS"/>
+        <UsedIn Val="IMPLEMENTATION"/>
+        <UsedIn Val="SIMULATION"/>
+      </File>
+      <File Name="ip\design_1_axis_clock_converter_0_0\design_1_axis_clock_converter_0_0.xci" Type="IP">
+        <Instance HierarchyPath="ADC2/axis_clock_converter_0"/>
+        <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
+        <Library Name="xil_defaultlib"/>
+        <UsedIn Val="SYNTHESIS"/>
+        <UsedIn Val="IMPLEMENTATION"/>
+        <UsedIn Val="SIMULATION"/>
+      </File>
+      <File Name="ip\design_1_auto_us_1\design_1_auto_us_1.xci" Type="IP">
+        <Instance HierarchyPath="ADC2/axis_interconnect_0/s00_couplers/auto_us"/>
+        <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
+        <Library Name="xil_defaultlib"/>
+        <UsedIn Val="SYNTHESIS"/>
+        <UsedIn Val="IMPLEMENTATION"/>
+        <UsedIn Val="SIMULATION"/>
+      </File>
+      <File Name="ip\design_1_auto_ss_k_1\design_1_auto_ss_k_1.xci" Type="IP">
+        <Instance HierarchyPath="ADC2/axis_interconnect_0/s00_couplers/auto_ss_k"/>
+        <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
+        <Library Name="xil_defaultlib"/>
+        <UsedIn Val="SYNTHESIS"/>
+        <UsedIn Val="IMPLEMENTATION"/>
+        <UsedIn Val="SIMULATION"/>
+      </File>
+      <File Name="ip\design_1_axis_interconnect_0_1\design_1_axis_interconnect_0_1.xci" Type="IP">
+        <Instance HierarchyPath="ADC2/axis_interconnect_0"/>
+        <Properties IsEditable="false" IsVisible="false" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
+        <Library Name="xil_defaultlib"/>
+        <UsedIn Val="SYNTHESIS"/>
+        <UsedIn Val="IMPLEMENTATION"/>
+        <UsedIn Val="SIMULATION"/>
+      </File>
+      <File Name="ip\design_1_xlslice_0_2\design_1_xlslice_0_2.xci" Type="IP">
+        <Instance HierarchyPath="xlslice_2"/>
+        <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
+        <Library Name="xil_defaultlib"/>
+        <UsedIn Val="SYNTHESIS"/>
+        <UsedIn Val="IMPLEMENTATION"/>
+        <UsedIn Val="SIMULATION"/>
+      </File>
+      <File Name="ip\design_1_xlconcat_0_0\design_1_xlconcat_0_0.xci" Type="IP">
+        <Instance HierarchyPath="xlconcat_0"/>
         <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
         <Library Name="xil_defaultlib"/>
         <UsedIn Val="SYNTHESIS"/>

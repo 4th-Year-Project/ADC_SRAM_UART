@@ -7,10 +7,22 @@
 #include "xstatus.h"
 
 
-#define FIFO_DEV_ID	   	XPAR_AXI_FIFO_0_DEVICE_ID   //Device ID
-#define WORD_SIZE 4			/* Size of words in bytes */
-#define BTN1_MASK 0b1		/* Bit mask for BTN1 (gpio0 bit 0) */
-#define DONE_MASK 0b1  	/* Bit mask for ADC Interface DONE (gpio0 bit 0) */
+#define ADC1_FIFO_DEV_ID	   	XPAR_AXI_FIFO_0_DEVICE_ID   /* ADC1 Fifo instance */
+#define ADC2_FIFO_DEV_ID	   	XPAR_AXI_FIFO_1_DEVICE_ID   /* ADC2 Fifo instance */
+
+#define BTN1_MASK 0b1				/* Bit mask for BTN1*/
+#define LED1_MASK 0b1				/* Bit mask for BTN1*/
+#define LED2_MASK 0b10				/* Bit mask for BTN1*/
+#define ADC1_DONE_MASK 0b1  		/* Bit mask for ADC 1  DONE */
+#define ADC2_DONE_MASK 0b10  		/* Bit mask for ADC 2 DONE */
+#define ADCs_DONE_MASK (ADC1_DONE_MASK|ADC2_DONE_MASK)  		/* Bit mask all ADCs DONE */
+#define ADC1_ENABLE_MASK 0b10  		/* Bit mask for ADC 1 ENABLE */
+#define ADC2_ENABLE_MASK 0b100  	/* Bit mask for ADC 2 ENABLE */
+#define ADCs_ENABLE_MASK (ADC1_ENABLE_MASK|ADC2_ENABLE_MASK) 	/* Bit mask for all ADCs ENABLE */
+#define RESETE_MASK 0b1  			/* Bit mask for Software Reset */
+
+#define WORD_SIZE 4					/* Size of words in bytes */
+#define SAMPLES_PER_ADC 32000		/* Total number of samples per ADC*/
 
 #undef DEBUG
 
@@ -23,7 +35,8 @@ int Reset(void);
 
 /************************** Variable Definitions *****************************/
 
-XLlFifo FifoInstance;
+XLlFifo FifoInstance1;
+XLlFifo FifoInstance2;
 XGpio gpio0; // the gpio0 struct for LEDs and buttons
 XGpio gpio1; // gpio struct for internal devices
 u32 SRAMBaseAddr = 0x60000000;
@@ -46,13 +59,24 @@ int main (){
 	}
   xil_printf("Successfully ran Initialisation of XGpio\n\r");
 
-  Status = RxInit(&FifoInstance, FIFO_DEV_ID); // Initaise Rx chain
+  Status = RxInit(&FifoInstance1, ADC1_FIFO_DEV_ID); // Initaise ADC1 Rx chain
   if (Status != XST_SUCCESS) {
-		xil_printf("Initialisation of Rx chain failed\n\r");
+		xil_printf("Initialisation of ADC1 Rx chain failed\n\r");
 		return XST_FAILURE;
 	}
-  xil_printf("Successfully ran Initialisation of Rx chain\n\r");
-  XGpio_DiscreteWrite(&gpio0, 2, 0b1); //Turn on LED1 (to show programming is successful)
+  xil_printf("Successfully ran Initialisation of ADC1 Rx chain\n\r");
+
+  Status = RxInit(&FifoInstance2, ADC2_FIFO_DEV_ID); // Initaise ADC2 Rx chain
+  if (Status != XST_SUCCESS) {
+		xil_printf("Initialisation of ADC2 Rx chain failed\n\r");
+		return XST_FAILURE;
+	}
+  xil_printf("Successfully ran Initialisation of ADC2 Rx chain\n\r");
+
+  xil_printf("Successfully ran Initialisation of all ADCs Rx chain\n\r");
+
+
+  XGpio_DiscreteWrite(&gpio0, 2, LED1_MASK); //Turn on LED1 (to show programming is successful)
 
 /*--- Start the ADC sampling to fill FIFO ---*/
 	xil_printf("Press sample button now\n\r");
@@ -65,35 +89,52 @@ int main (){
 		}
 	}
 	//Start Sampling
-	XGpio_DiscreteWrite(&gpio1, 2, 0b1); //Sends enable signal to ADC Interface
-	XGpio_DiscreteWrite(&gpio0, 2, 0b10); //Turn on LED2
+	XGpio_DiscreteWrite(&gpio1, 2, ADCs_ENABLE_MASK ); //Sends enable signal to ADCs
+	XGpio_DiscreteWrite(&gpio0, 2, LED2_MASK); //Turn on LED2
 	//Waits for sampling to finish
 	while (1){
 		read = XGpio_DiscreteRead(&gpio1, 1);
-		if ((read & DONE_MASK)!= 0){
+		if ((read & ADCs_DONE_MASK) == ADCs_DONE_MASK){
 			xil_printf("Sampling done\n\r");
-			XGpio_DiscreteWrite(&gpio0, 2, 0b11); //Turn on LED2
+			XGpio_DiscreteWrite(&gpio0, 2, (LED1_MASK | LED2_MASK)); //Turn on LED2
 			break;
+
 		}
 	}
 
 /*--- Transfer to SRAM ---*/
   xil_printf("Will transfer via SRAM\n\r");
-  Status = RxSamples(&FifoInstance, SRAMBaseAddr);
+
+  Status = RxSamples(&FifoInstance1, SRAMBaseAddr);
   if (Status != XST_SUCCESS) {
-		xil_printf("Receiving of samples failed\n\r");
+		xil_printf("Receiving of ADC1 samples failed\n\r");
 		return XST_FAILURE;
 	}
-  xil_printf("Successfully ran receiving of samples\n\r");
+  xil_printf("Successfully ran receiving of ADC1 samples\n\r");
 
+  Status = RxSamples(&FifoInstance2, SRAMBaseAddr + (SAMPLES_PER_ADC));
+  if (Status != XST_SUCCESS) {
+		xil_printf("Receiving of ADC2 samples failed\n\r");
+		return XST_FAILURE;
+	}
+  xil_printf("Successfully ran receiving of ADC2 samples\n\r");
 
 /*--- Send over UART ---*/
-  Status = TxUART(SRAMBaseAddr);
+  xil_printf("ADC1 ");
+  Status = TxUART(SRAMBaseAddr); //Send ADC1 data over UART
   if (Status != XST_SUCCESS) {
-		xil_printf("Sending over UART Failed\n\r");
+		xil_printf("Sending ADC1 over UART Failed\n\r");
 		return XST_FAILURE;
 	}
-  xil_printf("Successfully sent over UART\n\r");
+  xil_printf("Successfully sent ADC1 over UART\n\r");
+
+  xil_printf("ADC2 ");
+  Status = TxUART(SRAMBaseAddr + SAMPLES_PER_ADC); //Send ADC1 data over UART
+  if (Status != XST_SUCCESS) {
+		xil_printf("Sending ADC2 over UART Failed\n\r");
+		return XST_FAILURE;
+	}
+  xil_printf("Successfully sent ADC2 over UART\n\r");
 
 /*--- Reset ---*/
   xil_printf("Resetting\n\r");

@@ -1,7 +1,7 @@
 //Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2018.3 (win64) Build 2405991 Thu Dec  6 23:38:27 MST 2018
-//Date        : Sun Apr 14 15:36:51 2019
+//Date        : Thu Apr 25 09:47:05 2019
 //Host        : Lenovo running 64-bit major release  (build 9200)
 //Command     : generate_target design_1_wrapper.bd
 //Design      : design_1_wrapper
@@ -10,12 +10,18 @@
 `timescale 1 ps / 1 ps
 
 module design_1_wrapper
-   (A,
-    CONVST,
-    CS,
-    DB,
-    EOC,
-    RD,
+   (A_ADC1,
+    A_ADC2,
+    CONVST_ADC1,
+    CONVST_ADC2,
+    CS_ADC1,
+    CS_ADC2,
+    DB_ADC1,
+    DB_ADC2,
+    EOC_ADC1,
+    EOC_ADC2,
+    RD_ADC1,
+    RD_ADC2,
     cellular_ram_addr,
     cellular_ram_ce_n,
     cellular_ram_dq_io,
@@ -27,12 +33,18 @@ module design_1_wrapper
     sys_clock,
     usb_uart_rxd,
     usb_uart_txd);
-  output [2:0]A;
-  output CONVST;
-  output CS;
-  input [7:0]DB;
-  input EOC;
-  output RD;
+  output [2:0]A_ADC1;
+  output [2:0]A_ADC2;
+  output CONVST_ADC1;
+  output CONVST_ADC2;
+  output CS_ADC1;
+  output CS_ADC2;
+  input [7:0]DB_ADC1;
+  input [7:0]DB_ADC2;
+  input EOC_ADC1;
+  input EOC_ADC2;
+  output RD_ADC1;
+  output RD_ADC2;
   output [18:0]cellular_ram_addr;
   output cellular_ram_ce_n;
   inout [7:0]cellular_ram_dq_io;
@@ -45,12 +57,18 @@ module design_1_wrapper
   input usb_uart_rxd;
   output usb_uart_txd;
 
-  wire [2:0]A;
-  wire CONVST;
-  wire CS;
-  wire [7:0]DB;
-  wire EOC;
-  wire RD;
+  wire [2:0]A_ADC1;
+  wire [2:0]A_ADC2;
+  wire CONVST_ADC1;
+  wire CONVST_ADC2;
+  wire CS_ADC1;
+  wire CS_ADC2;
+  wire [7:0]DB_ADC1;
+  wire [7:0]DB_ADC2;
+  wire EOC_ADC1;
+  wire EOC_ADC2;
+  wire RD_ADC1;
+  wire RD_ADC2;
   wire [18:0]cellular_ram_addr;
   wire cellular_ram_ce_n;
   wire [0:0]cellular_ram_dq_i_0;
@@ -142,12 +160,18 @@ module design_1_wrapper
         .O(cellular_ram_dq_i_7),
         .T(cellular_ram_dq_t_7));
   design_1 design_1_i
-       (.A(A),
-        .CONVST(CONVST),
-        .CS(CS),
-        .DB(DB),
-        .EOC(EOC),
-        .RD(RD),
+       (.A_ADC1(A_ADC1),
+        .A_ADC2(A_ADC2),
+        .CONVST_ADC1(CONVST_ADC1),
+        .CONVST_ADC2(CONVST_ADC2),
+        .CS_ADC1(CS_ADC1),
+        .CS_ADC2(CS_ADC2),
+        .DB_ADC1(DB_ADC1),
+        .DB_ADC2(DB_ADC2),
+        .EOC_ADC1(EOC_ADC1),
+        .EOC_ADC2(EOC_ADC2),
+        .RD_ADC1(RD_ADC1),
+        .RD_ADC2(RD_ADC2),
         .cellular_ram_addr(cellular_ram_addr),
         .cellular_ram_ce_n(cellular_ram_ce_n),
         .cellular_ram_dq_i({cellular_ram_dq_i_7,cellular_ram_dq_i_6,cellular_ram_dq_i_5,cellular_ram_dq_i_4,cellular_ram_dq_i_3,cellular_ram_dq_i_2,cellular_ram_dq_i_1,cellular_ram_dq_i_0}),

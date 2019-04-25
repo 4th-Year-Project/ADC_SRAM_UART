@@ -36,9 +36,6 @@ set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==design_1_rst_cl
 # IP: bd/design_1/ip/design_1_FPGA_ADC_interface_0_1/design_1_FPGA_ADC_interface_0_1.xci
 set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==design_1_FPGA_ADC_interface_0_1 || ORIG_REF_NAME==design_1_FPGA_ADC_interface_0_1} -quiet] -quiet
 
-# IP: bd/design_1/ip/design_1_ila_0_0/design_1_ila_0_0.xci
-set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==design_1_ila_0_0 || ORIG_REF_NAME==design_1_ila_0_0} -quiet] -quiet
-
 # IP: bd/design_1/ip/design_1_proc_sys_reset_0_0/design_1_proc_sys_reset_0_0.xci
 set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==design_1_proc_sys_reset_0_0 || ORIG_REF_NAME==design_1_proc_sys_reset_0_0} -quiet] -quiet
 
@@ -57,17 +54,8 @@ set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==design_1_axi_em
 # IP: bd/design_1/ip/design_1_axis_clock_converter_0_1/design_1_axis_clock_converter_0_1.xci
 set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==design_1_axis_clock_converter_0_1 || ORIG_REF_NAME==design_1_axis_clock_converter_0_1} -quiet] -quiet
 
-# IP: bd/design_1/ip/design_1_ila_1_0/design_1_ila_1_0.xci
-set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==design_1_ila_1_0 || ORIG_REF_NAME==design_1_ila_1_0} -quiet] -quiet
-
-# IP: bd/design_1/ip/design_1_ila_2_0/design_1_ila_2_0.xci
-set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==design_1_ila_2_0 || ORIG_REF_NAME==design_1_ila_2_0} -quiet] -quiet
-
 # IP: bd/design_1/ip/design_1_axi_fifo_mm_s_0_0/design_1_axi_fifo_mm_s_0_0.xci
 set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==design_1_axi_fifo_mm_s_0_0 || ORIG_REF_NAME==design_1_axi_fifo_mm_s_0_0} -quiet] -quiet
-
-# IP: bd/design_1/ip/design_1_ila_3_0/design_1_ila_3_0.xci
-set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==design_1_ila_3_0 || ORIG_REF_NAME==design_1_ila_3_0} -quiet] -quiet
 
 # IP: bd/design_1/ip/design_1_axis_interconnect_0_0/design_1_axis_interconnect_0_0.xci
 set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==design_1_axis_interconnect_0_0 || ORIG_REF_NAME==design_1_axis_interconnect_0_0} -quiet] -quiet
@@ -95,5 +83,29 @@ set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==design_1_auto_u
 
 # IP: bd/design_1/ip/design_1_auto_ss_k_0/design_1_auto_ss_k_0.xci
 set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==design_1_auto_ss_k_0 || ORIG_REF_NAME==design_1_auto_ss_k_0} -quiet] -quiet
+
+# IP: bd/design_1/ip/design_1_FPGA_ADC_interface_0_0/design_1_FPGA_ADC_interface_0_0.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==design_1_FPGA_ADC_interface_0_0 || ORIG_REF_NAME==design_1_FPGA_ADC_interface_0_0} -quiet] -quiet
+
+# IP: bd/design_1/ip/design_1_axi_fifo_mm_s_0_1/design_1_axi_fifo_mm_s_0_1.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==design_1_axi_fifo_mm_s_0_1 || ORIG_REF_NAME==design_1_axi_fifo_mm_s_0_1} -quiet] -quiet
+
+# IP: bd/design_1/ip/design_1_axis_clock_converter_0_0/design_1_axis_clock_converter_0_0.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==design_1_axis_clock_converter_0_0 || ORIG_REF_NAME==design_1_axis_clock_converter_0_0} -quiet] -quiet
+
+# IP: bd/design_1/ip/design_1_auto_us_1/design_1_auto_us_1.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==design_1_auto_us_1 || ORIG_REF_NAME==design_1_auto_us_1} -quiet] -quiet
+
+# IP: bd/design_1/ip/design_1_auto_ss_k_1/design_1_auto_ss_k_1.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==design_1_auto_ss_k_1 || ORIG_REF_NAME==design_1_auto_ss_k_1} -quiet] -quiet
+
+# IP: bd/design_1/ip/design_1_axis_interconnect_0_1/design_1_axis_interconnect_0_1.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==design_1_axis_interconnect_0_1 || ORIG_REF_NAME==design_1_axis_interconnect_0_1} -quiet] -quiet
+
+# IP: bd/design_1/ip/design_1_xlslice_0_2/design_1_xlslice_0_2.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==design_1_xlslice_0_2 || ORIG_REF_NAME==design_1_xlslice_0_2} -quiet] -quiet
+
+# IP: bd/design_1/ip/design_1_xlconcat_0_0/design_1_xlconcat_0_0.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==design_1_xlconcat_0_0 || ORIG_REF_NAME==design_1_xlconcat_0_0} -quiet] -quiet
 
 # XDC: bd/design_1/design_1_ooc.xdc
