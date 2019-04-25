@@ -4074,6 +4074,7 @@ con
 ----------------End of Script----------------
 
 20:26:45 INFO  : Launch script is exported to file 'C:\FPGA_Projects\ADC_SRAM_UART\ADC_SRAM_UART.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_adc_sram_uart.elf_on_local.tcl'
+<<<<<<< HEAD
 20:46:53 INFO  : Disconnected from the channel tcfchan#59.
 20:46:54 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Cmod A7 - 35T 210328AA0008A" && level==0} -index 0' command is executed.
 20:46:54 INFO  : 'fpga -state' command is executed.
@@ -4116,3 +4117,5 @@ con
 21:39:17 INFO  : Workspace synchronized with the new hardware specification file. Cleaning dependent projects...
 21:39:33 WARN  : Linker script will not be updated automatically. Users need to update it manually.
 21:39:53 INFO  : Disconnected from the channel tcfchan#60.
+=======
+>>>>>>> 2nd-ADC-Channel

@@ -1,7 +1,7 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2018.3 (win64) Build 2405991 Thu Dec  6 23:38:27 MST 2018
-| Date         : Sun Apr 14 15:45:15 2019
+| Date         : Thu Apr 25 09:54:08 2019
 | Host         : Lenovo running 64-bit major release  (build 9200)
 | Command      : report_drc -file design_1_wrapper_drc_opted.rpt -pb design_1_wrapper_drc_opted.pb -rpx design_1_wrapper_drc_opted.rpx
 | Design       : design_1_wrapper
@@ -24,12 +24,11 @@ Table of Contents
       Design limits: <entire design considered>
            Ruledeck: default
              Max violations: <unlimited>
-             Violations found: 5
+             Violations found: 1
 +----------+----------+-----------------------------------------------------+------------+
 | Rule     | Severity | Description                                         | Violations |
 +----------+----------+-----------------------------------------------------+------------+
 | CFGBVS-1 | Warning  | Missing CFGBVS and CONFIG_VOLTAGE Design Properties | 1          |
-| IOSR-1   | Warning  | IOB set reset sharing                               | 4          |
 +----------+----------+-----------------------------------------------------+------------+
 
 2. REPORT DETAILS
@@ -45,26 +44,6 @@ Neither the CFGBVS nor CONFIG_VOLTAGE voltage property is set in the current_des
  #where value2 is the voltage provided to configuration bank 0
 
 Refer to the device configuration user guide for more information.
-Related violations: <none>
-
-IOSR-1#1 Warning
-IOB set reset sharing  
-IO DB[4] connects to flops which have these design_1_i/ila_0/inst/ila_core_inst/use_probe_debug_circuit, design_1_i/proc_sys_reset_0/U0/peripheral_reset[0] set/reset signals.  For optimal IOB flop packing there should be only one set/reset signal coming into the IOB.
-Related violations: <none>
-
-IOSR-1#2 Warning
-IOB set reset sharing  
-IO DB[5] connects to flops which have these design_1_i/ila_0/inst/ila_core_inst/use_probe_debug_circuit, design_1_i/proc_sys_reset_0/U0/peripheral_reset[0] set/reset signals.  For optimal IOB flop packing there should be only one set/reset signal coming into the IOB.
-Related violations: <none>
-
-IOSR-1#3 Warning
-IOB set reset sharing  
-IO DB[6] connects to flops which have these design_1_i/ila_0/inst/ila_core_inst/use_probe_debug_circuit, design_1_i/proc_sys_reset_0/U0/peripheral_reset[0] set/reset signals.  For optimal IOB flop packing there should be only one set/reset signal coming into the IOB.
-Related violations: <none>
-
-IOSR-1#4 Warning
-IOB set reset sharing  
-IO DB[7] connects to flops which have these design_1_i/ila_0/inst/ila_core_inst/use_probe_debug_circuit, design_1_i/proc_sys_reset_0/U0/peripheral_reset[0] set/reset signals.  For optimal IOB flop packing there should be only one set/reset signal coming into the IOB.
 Related violations: <none>
 
 

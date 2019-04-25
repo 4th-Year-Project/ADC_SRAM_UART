@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 21:39:45 **** Build of configuration Debug for project ADC_SRAM_UART ****
+=======
+20:46:52 **** Incremental Build of configuration Debug for project ADC_SRAM_UART ****
+>>>>>>> 2nd-ADC-Channel
 make all 
 'Building file: ../src/ADC_SRAM_UART.c'
 'Invoking: MicroBlaze gcc compiler'
@@ -32,5 +36,9 @@ mb-size ADC_SRAM_UART.elf  |tee "ADC_SRAM_UART.elf.size"
 'Finished building: ADC_SRAM_UART.elf.size'
 ' '
 
+<<<<<<< HEAD
 21:39:47 Build Finished (took 1s.766ms)
+=======
+20:46:52 Build Finished (took 283ms)
+>>>>>>> 2nd-ADC-Channel
 

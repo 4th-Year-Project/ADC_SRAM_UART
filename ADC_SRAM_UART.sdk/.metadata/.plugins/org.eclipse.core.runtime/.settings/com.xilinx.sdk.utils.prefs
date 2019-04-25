@@ -1,2 +1,6 @@
+<<<<<<< HEAD
 com.xilinx.sdk.preference.invokecount=4
+=======
+com.xilinx.sdk.preference.invokecount=3
+>>>>>>> 2nd-ADC-Channel
 eclipse.preferences.version=1

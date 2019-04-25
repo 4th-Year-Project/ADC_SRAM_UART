@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 21:39:33 **** Build of project ADC_SRAM_UART_bsp ****
+=======
+10:06:04 **** Auto Build of project ADC_SRAM_UART_bsp ****
+>>>>>>> 2nd-ADC-Channel
 make -k all 
 "Running Make include in microblaze_0/libsrc/bram_v4_2/src"
 make -C microblaze_0/libsrc/bram_v4_2/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
@@ -36,5 +40,9 @@ make -C microblaze_0/libsrc/uartlite_v3_2/src -s libs  "SHELL=CMD" "COMPILER=mb-
 "Compiling uartlite"
 'Finished building libraries'
 
+<<<<<<< HEAD
 21:39:45 Build Finished (took 12s.532ms)
+=======
+10:06:18 Build Finished (took 14s.411ms)
+>>>>>>> 2nd-ADC-Channel
 

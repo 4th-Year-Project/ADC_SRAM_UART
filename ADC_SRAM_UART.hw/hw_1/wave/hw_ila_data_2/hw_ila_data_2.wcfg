@@ -9,15 +9,17 @@
       </db_ref>
    </db_ref_list>
    <zoom_setting>
-      <ZoomStartTime time="0fs"></ZoomStartTime>
-      <ZoomEndTime time="9481fs"></ZoomEndTime>
+      <ZoomStartTime time="13050fs"></ZoomStartTime>
+      <ZoomEndTime time="18051fs"></ZoomEndTime>
       <Cursor1Time time="15000fs"></Cursor1Time>
    </zoom_setting>
    <column_width_setting>
-      <NameColumnWidth column_width="350"></NameColumnWidth>
+      <NameColumnWidth column_width="346"></NameColumnWidth>
       <ValueColumnWidth column_width="58"></ValueColumnWidth>
    </column_width_setting>
    <WVObjectSize size="4" />
+   <wave_markers>
+   </wave_markers>
    <wvobject fp_name="design_1_i/FPGA_ADC_interface_0_Data_axi_stream_TLAST" type="logic">
       <obj_property name="DisplayName">FullPathName</obj_property>
       <obj_property name="ElementShortName">design_1_i/FPGA_ADC_interface_0_Data_axi_stream_TLAST</obj_property>
