@@ -43,13 +43,15 @@ This is the top level for the FPGA project. The aim of this is to read from the 
       * GPIO Channel 1:
          * bit 0: BTN 1 (Used to start samplng)
       * GPIO Channel 2:
-         * bit 0: LED1
+         * bit 0: LED1 (See LED table above)
          * bit 1: LED2
       * GPIO1 Channel 1:
-         * bit 0: ADC_INTERFACE DONE
+         * bit 0: ADC1_INTERFACE DONE
+	 * bit 1: ADC2_INTERFACE DONE
       * GPIO1 Channel 1:
-         * bit 0: ADC_INTERFACE ENABLE
-         * bit 1: RESET (Active high)
+	 * bit 0: RESET (Active high)
+         * bit 1: ADC1_INTERFACE ENABLE
+	 * bit 2: ADC2_INTERFACE ENABLE
 * SRAM
 * MicroBlaze
 * UART
