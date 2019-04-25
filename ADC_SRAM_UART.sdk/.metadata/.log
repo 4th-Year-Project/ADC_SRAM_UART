@@ -2358,3 +2358,1335 @@ Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.]. Thread: Worker-69
 
 !ENTRY com.xilinx.sdk.utils 0 0 2019-04-16 20:45:18.484
 !MESSAGE XSCT command with result: [con], Result: [null, ]. Thread: Worker-69
+
+!ENTRY org.eclipse.ui.workbench 4 0 2019-04-25 21:38:07.172
+!MESSAGE Invalid thread access
+!STACK 0
+org.eclipse.swt.SWTException: Invalid thread access
+	at org.eclipse.swt.SWT.error(SWT.java:4533)
+	at org.eclipse.swt.SWT.error(SWT.java:4448)
+	at org.eclipse.swt.SWT.error(SWT.java:4419)
+	at org.eclipse.swt.widgets.Widget.error(Widget.java:482)
+	at org.eclipse.swt.widgets.Widget.checkWidget(Widget.java:373)
+	at org.eclipse.swt.widgets.Widget.getData(Widget.java:539)
+	at org.eclipse.ui.internal.ide.handlers.PagePropertyTester.test(PagePropertyTester.java:36)
+	at org.eclipse.core.internal.expressions.Property.test(Property.java:58)
+	at org.eclipse.core.internal.expressions.TestExpression.evaluate(TestExpression.java:100)
+	at org.eclipse.core.internal.expressions.CompositeExpression.evaluateAnd(CompositeExpression.java:53)
+	at org.eclipse.core.internal.expressions.WithExpression.evaluate(WithExpression.java:75)
+	at org.eclipse.core.internal.expressions.CompositeExpression.evaluateOr(CompositeExpression.java:68)
+	at org.eclipse.core.internal.expressions.OrExpression.evaluate(OrExpression.java:22)
+	at org.eclipse.core.internal.expressions.ReferenceExpression.evaluate(ReferenceExpression.java:71)
+	at org.eclipse.ui.internal.services.EvaluationReference.evaluate(EvaluationReference.java:72)
+	at org.eclipse.ui.internal.services.EvaluationReference.evaluate(EvaluationReference.java:97)
+	at org.eclipse.ui.internal.services.EvaluationService.requestEvaluation(EvaluationService.java:294)
+	at org.eclipse.ui.internal.handlers.DirtyStateTracker.update(DirtyStateTracker.java:45)
+	at org.eclipse.ui.internal.handlers.DirtyStateTracker.propertyChanged(DirtyStateTracker.java:107)
+	at org.eclipse.ui.part.WorkbenchPart.firePropertyChange(WorkbenchPart.java:120)
+	at com.xilinx.sdk.lscript.ui.LscriptEditor.access$2(LscriptEditor.java:1)
+	at com.xilinx.sdk.lscript.ui.LscriptEditor$ResourceChangeListener.resourceChanged(LscriptEditor.java:188)
+	at org.eclipse.core.internal.events.NotificationManager$1.run(NotificationManager.java:299)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.NotificationManager.notify(NotificationManager.java:289)
+	at org.eclipse.core.internal.events.NotificationManager.broadcastChanges(NotificationManager.java:152)
+	at org.eclipse.core.internal.resources.Workspace.broadcastPostChange(Workspace.java:374)
+	at org.eclipse.core.internal.resources.Workspace.endOperation(Workspace.java:1469)
+	at org.eclipse.core.internal.resources.InternalWorkspaceJob.run(InternalWorkspaceJob.java:46)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-25 21:39:00.538
+!MESSAGE XSCT Command: [::hsi::utils::openhw C:/FPGA_Projects/ADC_SRAM_UART/ADC_SRAM_UART.sdk/design_1_wrapper_hw_platform_0/system.hdf], Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-25 21:39:00.581
+!MESSAGE XSCT command with result: [::hsi::utils::openhw C:/FPGA_Projects/ADC_SRAM_UART/ADC_SRAM_UART.sdk/design_1_wrapper_hw_platform_0/system.hdf], Result: [null, ]. Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-25 21:39:00.595
+!MESSAGE XSCT Command: [hsi get_hw_files -of_object [openhw C:/FPGA_Projects/ADC_SRAM_UART/ADC_SRAM_UART.sdk/design_1_wrapper_hw_platform_0/system.hdf ; hsi current_hw_design]], Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-25 21:39:00.643
+!MESSAGE XSCT command with result: [hsi get_hw_files -of_object [openhw C:/FPGA_Projects/ADC_SRAM_UART/ADC_SRAM_UART.sdk/design_1_wrapper_hw_platform_0/system.hdf ; hsi current_hw_design]], Result: [null, design_1.hwh design_1_bd.tcl design_1_wrapper.bit design_1_wrapper.mmi]. Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-25 21:39:01.070
+!MESSAGE XSCT Command: [::hsi::utils::closehw C:/FPGA_Projects/ADC_SRAM_UART/ADC_SRAM_UART.sdk/design_1_wrapper_hw_platform_0/system.hdf], Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-25 21:39:01.368
+!MESSAGE XSCT command with result: [::hsi::utils::closehw C:/FPGA_Projects/ADC_SRAM_UART/ADC_SRAM_UART.sdk/design_1_wrapper_hw_platform_0/system.hdf], Result: [null, ]. Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-25 21:39:01.407
+!MESSAGE XSCT Command: [::hsi::utils::openhw C:/FPGA_Projects/ADC_SRAM_UART/ADC_SRAM_UART.sdk/design_1_wrapper_hw_platform_0/system.hdf], Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-25 21:39:04.973
+!MESSAGE XSCT command with result: [::hsi::utils::openhw C:/FPGA_Projects/ADC_SRAM_UART/ADC_SRAM_UART.sdk/design_1_wrapper_hw_platform_0/system.hdf], Result: [null, ]. Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-25 21:39:04.999
+!MESSAGE XSCT Command: [::hsi::utils::openhw C:/Users/LAWREN~1/AppData/Local/Temp/system4036158490916446584.hdf], Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-25 21:39:07.404
+!MESSAGE XSCT command with result: [::hsi::utils::openhw C:/Users/LAWREN~1/AppData/Local/Temp/system4036158490916446584.hdf], Result: [null, ]. Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-25 21:39:07.405
+!MESSAGE XSCT Command: [::hsi::utils::get_all_periphs -json C:/FPGA_Projects/ADC_SRAM_UART/ADC_SRAM_UART.sdk/design_1_wrapper_hw_platform_0/system.hdf], Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-25 21:39:07.436
+!MESSAGE XSCT command with result: [::hsi::utils::get_all_periphs -json C:/FPGA_Projects/ADC_SRAM_UART/ADC_SRAM_UART.sdk/design_1_wrapper_hw_platform_0/system.hdf], Result: [null, {"FPGA_ADC_interface_0": {"hier_name": "FPGA_ADC_interface_0",
+"type": "FPGA_ADC_interface",
+"version": "1.14",
+"ip_type": "PERIPHERAL",
+},
+"axi_emc_0": {"hier_name": "axi_emc_0",
+"type": "axi_emc",
+"version": "3.0",
+"ip_type": "MEMORY_CNTLR",
+},
+"axi_fifo_mm_s_0": {"hier_name": "axi_fifo_mm_s_0",
+"type": "axi_fifo_mm_s",
+"version": "4.2",
+"ip_type": "PERIPHERAL",
+},
+"axi_gpio_0": {"hier_name": "axi_gpio_0",
+"type": "axi_gpio",
+"version": "2.0",
+"ip_type": "PERIPHERAL",
+},
+"axi_gpio_1": {"hier_name": "axi_gpio_1",
+"type": "axi_gpio",
+"version": "2.0",
+"ip_type": "PERIPHERAL",
+},
+"axi_uartlite_0": {"hier_name": "axi_uartlite_0",
+"type": "axi_uartlite",
+"version": "2.0",
+"ip_type": "PERIPHERAL",
+},
+"axis_clock_converter_0": {"hier_name": "axis_clock_converter_0",
+"type": "axis_clock_converter",
+"version": "1.1",
+"ip_type": "BUS",
+},
+"axis_interconnect_0_s00_couplers_auto_ss_k": {"hier_name": "axis_interconnect_0_s00_couplers_auto_ss_k",
+"type": "axis_subset_converter",
+"version": "1.1",
+"ip_type": "BUS",
+},
+"axis_interconnect_0_s00_couplers_auto_us": {"hier_name": "axis_interconnect_0_s00_couplers_auto_us",
+"type": "axis_dwidth_converter",
+"version": "1.1",
+"ip_type": "BUS",
+},
+"clk_wiz_1": {"hier_name": "clk_wiz_1",
+"type": "clk_wiz",
+"version": "6.0",
+"ip_type": "PERIPHERAL",
+},
+"ila_0": {"hier_name": "ila_0",
+"type": "ila",
+"version": "6.2",
+"ip_type": "PERIPHERAL",
+},
+"ila_1": {"hier_name": "ila_1",
+"type": "ila",
+"version": "6.2",
+"ip_type": "MONITOR",
+},
+"ila_2": {"hier_name": "ila_2",
+"type": "ila",
+"version": "6.2",
+"ip_type": "MONITOR",
+},
+"ila_3": {"hier_name": "ila_3",
+"type": "ila",
+"version": "6.2",
+"ip_type": "MONITOR",
+},
+"mdm_0": {"hier_name": "mdm_0",
+"type": "mdm",
+"version": "3.2",
+"ip_type": "DEBUG",
+},
+"microblaze_0": {"hier_name": "microblaze_0",
+"type": "microblaze",
+"version": "11.0",
+"ip_type": "PROCESSOR",
+},
+"microblaze_0_axi_periph": {"hier_name": "microblaze_0_axi_periph",
+"type": "axi_interconnect",
+"version": "2.1",
+"ip_type": "BUS",
+},
+"microblaze_0_local_memory_dlmb_bram_if_cntlr": {"hier_name": "microblaze_0_local_memory_dlmb_bram_if_cntlr",
+"type": "lmb_bram_if_cntlr",
+"version": "4.0",
+"ip_type": "MEMORY_CNTLR",
+},
+"microblaze_0_local_memory_dlmb_v10": {"hier_name": "microblaze_0_local_memory_dlmb_v10",
+"type": "lmb_v10",
+"version": "3.0",
+"ip_type": "BUS",
+},
+"microblaze_0_local_memory_ilmb_bram_if_cntlr": {"hier_name": "microblaze_0_local_memory_ilmb_bram_if_cntlr",
+"type": "lmb_bram_if_cntlr",
+"version": "4.0",
+"ip_type": "MEMORY_CNTLR",
+},
+"microblaze_0_local_memory_ilmb_v10": {"hier_name": "microblaze_0_local_memory_ilmb_v10",
+"type": "lmb_v10",
+"version": "3.0",
+"ip_type": "BUS",
+},
+"microblaze_0_local_memory_lmb_bram": {"hier_name": "microblaze_0_local_memory_lmb_bram",
+"type": "blk_mem_gen",
+"version": "8.4",
+"ip_type": "MEMORY",
+},
+"proc_sys_reset_0": {"hier_name": "proc_sys_reset_0",
+"type": "proc_sys_reset",
+"version": "5.0",
+"ip_type": "PERIPHERAL",
+},
+"rst_clk_wiz_1_100M": {"hier_name": "rst_clk_wiz_1_100M",
+"type": "proc_sys_reset",
+"version": "5.0",
+"ip_type": "PERIPHERAL",
+},
+"util_vector_logic_0": {"hier_name": "util_vector_logic_0",
+"type": "util_vector_logic",
+"version": "2.0",
+"ip_type": "PERIPHERAL",
+},
+"xlslice_0": {"hier_name": "xlslice_0",
+"type": "xlslice",
+"version": "1.0",
+"ip_type": "PERIPHERAL",
+},
+"xlslice_1": {"hier_name": "xlslice_1",
+"type": "xlslice",
+"version": "1.0",
+"ip_type": "PERIPHERAL",
+},
+}]. Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-25 21:39:07.436
+!MESSAGE XSCT Command: [::hsi::utils::get_all_periphs -json C:/Users/LAWREN~1/AppData/Local/Temp/system4036158490916446584.hdf], Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-25 21:39:07.467
+!MESSAGE XSCT command with result: [::hsi::utils::get_all_periphs -json C:/Users/LAWREN~1/AppData/Local/Temp/system4036158490916446584.hdf], Result: [null, {"FPGA_ADC_interface_0": {"hier_name": "FPGA_ADC_interface_0",
+"type": "FPGA_ADC_interface",
+"version": "1.14",
+"ip_type": "PERIPHERAL",
+},
+"axi_emc_0": {"hier_name": "axi_emc_0",
+"type": "axi_emc",
+"version": "3.0",
+"ip_type": "MEMORY_CNTLR",
+},
+"axi_fifo_mm_s_0": {"hier_name": "axi_fifo_mm_s_0",
+"type": "axi_fifo_mm_s",
+"version": "4.2",
+"ip_type": "PERIPHERAL",
+},
+"axi_gpio_0": {"hier_name": "axi_gpio_0",
+"type": "axi_gpio",
+"version": "2.0",
+"ip_type": "PERIPHERAL",
+},
+"axi_gpio_1": {"hier_name": "axi_gpio_1",
+"type": "axi_gpio",
+"version": "2.0",
+"ip_type": "PERIPHERAL",
+},
+"axi_uartlite_0": {"hier_name": "axi_uartlite_0",
+"type": "axi_uartlite",
+"version": "2.0",
+"ip_type": "PERIPHERAL",
+},
+"axis_clock_converter_0": {"hier_name": "axis_clock_converter_0",
+"type": "axis_clock_converter",
+"version": "1.1",
+"ip_type": "BUS",
+},
+"axis_interconnect_0_s00_couplers_auto_ss_k": {"hier_name": "axis_interconnect_0_s00_couplers_auto_ss_k",
+"type": "axis_subset_converter",
+"version": "1.1",
+"ip_type": "BUS",
+},
+"axis_interconnect_0_s00_couplers_auto_us": {"hier_name": "axis_interconnect_0_s00_couplers_auto_us",
+"type": "axis_dwidth_converter",
+"version": "1.1",
+"ip_type": "BUS",
+},
+"clk_wiz_1": {"hier_name": "clk_wiz_1",
+"type": "clk_wiz",
+"version": "6.0",
+"ip_type": "PERIPHERAL",
+},
+"ila_0": {"hier_name": "ila_0",
+"type": "ila",
+"version": "6.2",
+"ip_type": "PERIPHERAL",
+},
+"ila_1": {"hier_name": "ila_1",
+"type": "ila",
+"version": "6.2",
+"ip_type": "MONITOR",
+},
+"ila_2": {"hier_name": "ila_2",
+"type": "ila",
+"version": "6.2",
+"ip_type": "MONITOR",
+},
+"ila_3": {"hier_name": "ila_3",
+"type": "ila",
+"version": "6.2",
+"ip_type": "MONITOR",
+},
+"mdm_0": {"hier_name": "mdm_0",
+"type": "mdm",
+"version": "3.2",
+"ip_type": "DEBUG",
+},
+"microblaze_0": {"hier_name": "microblaze_0",
+"type": "microblaze",
+"version": "11.0",
+"ip_type": "PROCESSOR",
+},
+"microblaze_0_axi_periph": {"hier_name": "microblaze_0_axi_periph",
+"type": "axi_interconnect",
+"version": "2.1",
+"ip_type": "BUS",
+},
+"microblaze_0_local_memory_dlmb_bram_if_cntlr": {"hier_name": "microblaze_0_local_memory_dlmb_bram_if_cntlr",
+"type": "lmb_bram_if_cntlr",
+"version": "4.0",
+"ip_type": "MEMORY_CNTLR",
+},
+"microblaze_0_local_memory_dlmb_v10": {"hier_name": "microblaze_0_local_memory_dlmb_v10",
+"type": "lmb_v10",
+"version": "3.0",
+"ip_type": "BUS",
+},
+"microblaze_0_local_memory_ilmb_bram_if_cntlr": {"hier_name": "microblaze_0_local_memory_ilmb_bram_if_cntlr",
+"type": "lmb_bram_if_cntlr",
+"version": "4.0",
+"ip_type": "MEMORY_CNTLR",
+},
+"microblaze_0_local_memory_ilmb_v10": {"hier_name": "microblaze_0_local_memory_ilmb_v10",
+"type": "lmb_v10",
+"version": "3.0",
+"ip_type": "BUS",
+},
+"microblaze_0_local_memory_lmb_bram": {"hier_name": "microblaze_0_local_memory_lmb_bram",
+"type": "blk_mem_gen",
+"version": "8.4",
+"ip_type": "MEMORY",
+},
+"proc_sys_reset_0": {"hier_name": "proc_sys_reset_0",
+"type": "proc_sys_reset",
+"version": "5.0",
+"ip_type": "PERIPHERAL",
+},
+"rst_clk_wiz_1_100M": {"hier_name": "rst_clk_wiz_1_100M",
+"type": "proc_sys_reset",
+"version": "5.0",
+"ip_type": "PERIPHERAL",
+},
+"util_vector_logic_0": {"hier_name": "util_vector_logic_0",
+"type": "util_vector_logic",
+"version": "2.0",
+"ip_type": "PERIPHERAL",
+},
+"xlslice_0": {"hier_name": "xlslice_0",
+"type": "xlslice",
+"version": "1.0",
+"ip_type": "PERIPHERAL",
+},
+"xlslice_1": {"hier_name": "xlslice_1",
+"type": "xlslice",
+"version": "1.0",
+"ip_type": "PERIPHERAL",
+},
+}]. Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-25 21:39:08.280
+!MESSAGE XSCT Command: [::hsi::utils::sync_sw_with_hw_changes -newhw C:/FPGA_Projects/ADC_SRAM_UART/ADC_SRAM_UART.sdk/design_1_wrapper_hw_platform_0/system.hdf -oldhw C:/Users/LAWREN~1/AppData/Local/Temp/system4036158490916446584.hdf -sw C:/FPGA_Projects/ADC_SRAM_UART/ADC_SRAM_UART.sdk/ADC_SRAM_UART_bsp/system.mss -dir C:/FPGA_Projects/ADC_SRAM_UART/ADC_SRAM_UART.sdk/ADC_SRAM_UART_bsp], Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-25 21:39:14.193
+!MESSAGE XSCT command with result: [::hsi::utils::sync_sw_with_hw_changes -newhw C:/FPGA_Projects/ADC_SRAM_UART/ADC_SRAM_UART.sdk/design_1_wrapper_hw_platform_0/system.hdf -oldhw C:/Users/LAWREN~1/AppData/Local/Temp/system4036158490916446584.hdf -sw C:/FPGA_Projects/ADC_SRAM_UART/ADC_SRAM_UART.sdk/ADC_SRAM_UART_bsp/system.mss -dir C:/FPGA_Projects/ADC_SRAM_UART/ADC_SRAM_UART.sdk/ADC_SRAM_UART_bsp], Result: [null, ]. Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-25 21:39:14.318
+!MESSAGE XSCT Command: [ ::hsi::utils::set_current_hw_sw C:/FPGA_Projects/ADC_SRAM_UART/ADC_SRAM_UART.sdk/design_1_wrapper_hw_platform_0/system.hdf C:/FPGA_Projects/ADC_SRAM_UART/ADC_SRAM_UART.sdk/ADC_SRAM_UART_bsp/system.mss ], Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-25 21:39:14.349
+!MESSAGE XSCT command with result: [ ::hsi::utils::set_current_hw_sw C:/FPGA_Projects/ADC_SRAM_UART/ADC_SRAM_UART.sdk/design_1_wrapper_hw_platform_0/system.hdf C:/FPGA_Projects/ADC_SRAM_UART/ADC_SRAM_UART.sdk/ADC_SRAM_UART_bsp/system.mss ], Result: [null, ]. Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-25 21:39:14.364
+!MESSAGE XSCT Command: [::hsi::utils::get_hw_sw_details -json C:/FPGA_Projects/ADC_SRAM_UART/ADC_SRAM_UART.sdk/design_1_wrapper_hw_platform_0/system.hdf C:/FPGA_Projects/ADC_SRAM_UART/ADC_SRAM_UART.sdk/ADC_SRAM_UART_bsp/system.mss], Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-25 21:39:14.396
+!MESSAGE XSCT command with result: [::hsi::utils::get_hw_sw_details -json C:/FPGA_Projects/ADC_SRAM_UART/ADC_SRAM_UART.sdk/design_1_wrapper_hw_platform_0/system.hdf C:/FPGA_Projects/ADC_SRAM_UART/ADC_SRAM_UART.sdk/ADC_SRAM_UART_bsp/system.mss], Result: [null, {"procname": "microblaze_0",
+"osname": "standalone",
+"osver": "6.8",
+}]. Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-25 21:39:14.396
+!MESSAGE XSCT Command: [hsi::utils::get_supported_os -json C:/FPGA_Projects/ADC_SRAM_UART/ADC_SRAM_UART.sdk/design_1_wrapper_hw_platform_0/system.hdf], Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-25 21:39:14.443
+!MESSAGE XSCT command with result: [hsi::utils::get_supported_os -json C:/FPGA_Projects/ADC_SRAM_UART/ADC_SRAM_UART.sdk/design_1_wrapper_hw_platform_0/system.hdf], Result: [null, {"microblaze_0": {"freertos10_xilinx_v1_2": {"name": "freertos10_xilinx",
+"version": "1.2",
+"desc": "FreeRTOS is a market leading open source RTOS",
+"compilerflags": "",
+"linkerflags": "-Wl,--start-group,-lxil,-lfreertos,-lgcc,-lc,--end-group",
+"repo": "C:/Xilinx/SDK/2018.3/data/embeddedsw/ThirdParty/bsp/freertos10_xilinx_v1_2",
+},
+"standalone_v6_8": {"name": "standalone",
+"version": "6.8",
+"desc": "Standalone is a simple, low-level software layer. It provides access to basic processor features such as caches, interrupts and exceptions as well as the basic features of a hosted environment, such as standard input and output, profiling, abort and exit.",
+"compilerflags": "",
+"linkerflags": "-Wl,--start-group,-lxil,-lgcc,-lc,--end-group",
+"repo": "C:/Xilinx/SDK/2018.3/data/embeddedsw/lib/bsp/standalone_v6_8",
+},
+},
+}]. Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-25 21:39:14.458
+!MESSAGE XSCT Command: [::hsi::utils::get_libs_from_sw C:/FPGA_Projects/ADC_SRAM_UART/ADC_SRAM_UART.sdk/design_1_wrapper_hw_platform_0/system.hdf C:/FPGA_Projects/ADC_SRAM_UART/ADC_SRAM_UART.sdk/ADC_SRAM_UART_bsp/system.mss], Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-25 21:39:14.505
+!MESSAGE XSCT command with result: [::hsi::utils::get_libs_from_sw C:/FPGA_Projects/ADC_SRAM_UART/ADC_SRAM_UART.sdk/design_1_wrapper_hw_platform_0/system.hdf C:/FPGA_Projects/ADC_SRAM_UART/ADC_SRAM_UART.sdk/ADC_SRAM_UART_bsp/system.mss], Result: [null, ]. Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-25 21:39:14.521
+!MESSAGE XSCT Command: [::hsi::utils::get_sw_libs -json C:/FPGA_Projects/ADC_SRAM_UART/ADC_SRAM_UART.sdk/design_1_wrapper_hw_platform_0/system.hdf C:/FPGA_Projects/ADC_SRAM_UART/ADC_SRAM_UART.sdk/ADC_SRAM_UART_bsp/system.mss], Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-25 21:39:14.568
+!MESSAGE XSCT command with result: [::hsi::utils::get_sw_libs -json C:/FPGA_Projects/ADC_SRAM_UART/ADC_SRAM_UART.sdk/design_1_wrapper_hw_platform_0/system.hdf C:/FPGA_Projects/ADC_SRAM_UART/ADC_SRAM_UART.sdk/ADC_SRAM_UART_bsp/system.mss], Result: [null, {}]. Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-25 21:39:14.583
+!MESSAGE XSCT Command: [::hsi::utils::get_connected_periphs C:/FPGA_Projects/ADC_SRAM_UART/ADC_SRAM_UART.sdk/design_1_wrapper_hw_platform_0/system.hdf microblaze_0], Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-25 21:39:14.661
+!MESSAGE XSCT command with result: [::hsi::utils::get_connected_periphs C:/FPGA_Projects/ADC_SRAM_UART/ADC_SRAM_UART.sdk/design_1_wrapper_hw_platform_0/system.hdf microblaze_0], Result: [null, axi_emc_0 axi_fifo_mm_s_0 axi_gpio_0 axi_gpio_1 axi_uartlite_0 microblaze_0_local_memory_dlmb_bram_if_cntlr microblaze_0_local_memory_ilmb_bram_if_cntlr]. Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-25 21:39:14.661
+!MESSAGE XSCT Command: [::hsi::utils::get_drivers_for_sw -json C:/FPGA_Projects/ADC_SRAM_UART/ADC_SRAM_UART.sdk/design_1_wrapper_hw_platform_0/system.hdf C:/FPGA_Projects/ADC_SRAM_UART/ADC_SRAM_UART.sdk/ADC_SRAM_UART_bsp/system.mss], Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-25 21:39:14.693
+!MESSAGE XSCT command with result: [::hsi::utils::get_drivers_for_sw -json C:/FPGA_Projects/ADC_SRAM_UART/ADC_SRAM_UART.sdk/design_1_wrapper_hw_platform_0/system.hdf C:/FPGA_Projects/ADC_SRAM_UART/ADC_SRAM_UART.sdk/ADC_SRAM_UART_bsp/system.mss], Result: [null, {"axi_emc_0": {"name": "emc",
+"ver": "4.0",
+},
+"axi_fifo_mm_s_0": {"name": "llfifo",
+"ver": "5.2",
+},
+"axi_gpio_0": {"name": "gpio",
+"ver": "4.3",
+},
+"axi_gpio_1": {"name": "gpio",
+"ver": "4.3",
+},
+"axi_uartlite_0": {"name": "uartlite",
+"ver": "3.2",
+},
+"microblaze_0_local_memory_dlmb_bram_if_cntlr": {"name": "bram",
+"ver": "4.2",
+},
+"microblaze_0_local_memory_ilmb_bram_if_cntlr": {"name": "bram",
+"ver": "4.2",
+},
+"microblaze_0": {"name": "cpu",
+"ver": "2.8",
+},
+}]. Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-25 21:39:14.724
+!MESSAGE XSCT Command: [hsi::utils::get_drivers_for_hw -json C:/FPGA_Projects/ADC_SRAM_UART/ADC_SRAM_UART.sdk/design_1_wrapper_hw_platform_0/system.hdf], Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-25 21:39:14.927
+!MESSAGE XSCT command with result: [hsi::utils::get_drivers_for_hw -json C:/FPGA_Projects/ADC_SRAM_UART/ADC_SRAM_UART.sdk/design_1_wrapper_hw_platform_0/system.hdf], Result: [null, {"FPGA_ADC_interface_0": {"version": "1.14",
+"driver_info": {"generic": {"name": "generic",
+"version": "2.0",
+"repo": "C:/Xilinx/SDK/2018.3/data/embeddedsw/XilinxProcessorIPLib/drivers/generic_v2_0",
+},
+},
+},
+"axi_emc_0": {"version": "3.0",
+"driver_info": {"generic": {"name": "generic",
+"version": "2.0",
+"repo": "C:/Xilinx/SDK/2018.3/data/embeddedsw/XilinxProcessorIPLib/drivers/generic_v2_0",
+},
+"emc_v4_0": {"name": "emc",
+"version": "4.0",
+"repo": "C:/Xilinx/SDK/2018.3/data/embeddedsw/XilinxProcessorIPLib/drivers/emc_v4_0",
+"compilerflags": "",
+"linkerflags": "",
+},
+},
+},
+"axi_fifo_mm_s_0": {"version": "4.2",
+"driver_info": {"generic": {"name": "generic",
+"version": "2.0",
+"repo": "C:/Xilinx/SDK/2018.3/data/embeddedsw/XilinxProcessorIPLib/drivers/generic_v2_0",
+},
+"llfifo_v5_2": {"name": "llfifo",
+"version": "5.2",
+"repo": "C:/Xilinx/SDK/2018.3/data/embeddedsw/XilinxProcessorIPLib/drivers/llfifo_v5_2",
+"compilerflags": "",
+"linkerflags": "",
+},
+},
+},
+"axi_gpio_0": {"version": "2.0",
+"driver_info": {"generic": {"name": "generic",
+"version": "2.0",
+"repo": "C:/Xilinx/SDK/2018.3/data/embeddedsw/XilinxProcessorIPLib/drivers/generic_v2_0",
+},
+"gpio_v4_3": {"name": "gpio",
+"version": "4.3",
+"repo": "C:/Xilinx/SDK/2018.3/data/embeddedsw/XilinxProcessorIPLib/drivers/gpio_v4_3",
+"compilerflags": "",
+"linkerflags": "",
+},
+},
+},
+"axi_gpio_1": {"version": "2.0",
+"driver_info": {"generic": {"name": "generic",
+"version": "2.0",
+"repo": "C:/Xilinx/SDK/2018.3/data/embeddedsw/XilinxProcessorIPLib/drivers/generic_v2_0",
+},
+"gpio_v4_3": {"name": "gpio",
+"version": "4.3",
+"repo": "C:/Xilinx/SDK/2018.3/data/embeddedsw/XilinxProcessorIPLib/drivers/gpio_v4_3",
+"compilerflags": "",
+"linkerflags": "",
+},
+},
+},
+"axi_uartlite_0": {"version": "2.0",
+"driver_info": {"generic": {"name": "generic",
+"version": "2.0",
+"repo": "C:/Xilinx/SDK/2018.3/data/embeddedsw/XilinxProcessorIPLib/drivers/generic_v2_0",
+},
+"uartlite_v3_2": {"name": "uartlite",
+"version": "3.2",
+"repo": "C:/Xilinx/SDK/2018.3/data/embeddedsw/XilinxProcessorIPLib/drivers/uartlite_v3_2",
+"compilerflags": "",
+"linkerflags": "",
+},
+},
+},
+"axis_clock_converter_0": {"version": "1.1",
+"driver_info": {"generic": {"name": "generic",
+"version": "2.0",
+"repo": "C:/Xilinx/SDK/2018.3/data/embeddedsw/XilinxProcessorIPLib/drivers/generic_v2_0",
+},
+},
+},
+"axis_interconnect_0_s00_couplers_auto_ss_k": {"version": "1.1",
+"driver_info": {"generic": {"name": "generic",
+"version": "2.0",
+"repo": "C:/Xilinx/SDK/2018.3/data/embeddedsw/XilinxProcessorIPLib/drivers/generic_v2_0",
+},
+},
+},
+"axis_interconnect_0_s00_couplers_auto_us": {"version": "1.1",
+"driver_info": {"generic": {"name": "generic",
+"version": "2.0",
+"repo": "C:/Xilinx/SDK/2018.3/data/embeddedsw/XilinxProcessorIPLib/drivers/generic_v2_0",
+},
+},
+},
+"clk_wiz_1": {"version": "6.0",
+"driver_info": {"generic": {"name": "generic",
+"version": "2.0",
+"repo": "C:/Xilinx/SDK/2018.3/data/embeddedsw/XilinxProcessorIPLib/drivers/generic_v2_0",
+},
+"clk_wiz_v1_2": {"name": "clk_wiz",
+"version": "1.2",
+"repo": "C:/Xilinx/SDK/2018.3/data/embeddedsw/XilinxProcessorIPLib/drivers/clk_wiz_v1_2",
+"compilerflags": "",
+"linkerflags": "",
+},
+},
+},
+"ila_0": {"version": "6.2",
+"driver_info": {"generic": {"name": "generic",
+"version": "2.0",
+"repo": "C:/Xilinx/SDK/2018.3/data/embeddedsw/XilinxProcessorIPLib/drivers/generic_v2_0",
+},
+},
+},
+"ila_1": {"version": "6.2",
+"driver_info": {"generic": {"name": "generic",
+"version": "2.0",
+"repo": "C:/Xilinx/SDK/2018.3/data/embeddedsw/XilinxProcessorIPLib/drivers/generic_v2_0",
+},
+},
+},
+"ila_2": {"version": "6.2",
+"driver_info": {"generic": {"name": "generic",
+"version": "2.0",
+"repo": "C:/Xilinx/SDK/2018.3/data/embeddedsw/XilinxProcessorIPLib/drivers/generic_v2_0",
+},
+},
+},
+"ila_3": {"version": "6.2",
+"driver_info": {"generic": {"name": "generic",
+"version": "2.0",
+"repo": "C:/Xilinx/SDK/2018.3/data/embeddedsw/XilinxProcessorIPLib/drivers/generic_v2_0",
+},
+},
+},
+"mdm_0": {"version": "3.2",
+"driver_info": {"generic": {"name": "generic",
+"version": "2.0",
+"repo": "C:/Xilinx/SDK/2018.3/data/embeddedsw/XilinxProcessorIPLib/drivers/generic_v2_0",
+},
+"uartlite_v3_2": {"name": "uartlite",
+"version": "3.2",
+"repo": "C:/Xilinx/SDK/2018.3/data/embeddedsw/XilinxProcessorIPLib/drivers/uartlite_v3_2",
+"compilerflags": "",
+"linkerflags": "",
+},
+},
+},
+"microblaze_0": {"version": "11.0",
+"driver_info": {"generic": {"name": "generic",
+"version": "2.0",
+"repo": "C:/Xilinx/SDK/2018.3/data/embeddedsw/XilinxProcessorIPLib/drivers/generic_v2_0",
+},
+"cpu_v2_8": {"name": "cpu",
+"version": "2.8",
+"repo": "C:/Xilinx/SDK/2018.3/data/embeddedsw/XilinxProcessorIPLib/drivers/cpu_v2_8",
+"compilerflags": "",
+"linkerflags": "",
+},
+},
+},
+"microblaze_0_axi_periph": {"version": "2.1",
+"driver_info": {"generic": {"name": "generic",
+"version": "2.0",
+"repo": "C:/Xilinx/SDK/2018.3/data/embeddedsw/XilinxProcessorIPLib/drivers/generic_v2_0",
+},
+},
+},
+"microblaze_0_local_memory_dlmb_bram_if_cntlr": {"version": "4.0",
+"driver_info": {"generic": {"name": "generic",
+"version": "2.0",
+"repo": "C:/Xilinx/SDK/2018.3/data/embeddedsw/XilinxProcessorIPLib/drivers/generic_v2_0",
+},
+"bram_v4_2": {"name": "bram",
+"version": "4.2",
+"repo": "C:/Xilinx/SDK/2018.3/data/embeddedsw/XilinxProcessorIPLib/drivers/bram_v4_2",
+"compilerflags": "",
+"linkerflags": "",
+},
+},
+},
+"microblaze_0_local_memory_dlmb_v10": {"version": "3.0",
+"driver_info": {"generic": {"name": "generic",
+"version": "2.0",
+"repo": "C:/Xilinx/SDK/2018.3/data/embeddedsw/XilinxProcessorIPLib/drivers/generic_v2_0",
+},
+},
+},
+"microblaze_0_local_memory_ilmb_bram_if_cntlr": {"version": "4.0",
+"driver_info": {"generic": {"name": "generic",
+"version": "2.0",
+"repo": "C:/Xilinx/SDK/2018.3/data/embeddedsw/XilinxProcessorIPLib/drivers/generic_v2_0",
+},
+"bram_v4_2": {"name": "bram",
+"version": "4.2",
+"repo": "C:/Xilinx/SDK/2018.3/data/embeddedsw/XilinxProcessorIPLib/drivers/bram_v4_2",
+"compilerflags": "",
+"linkerflags": "",
+},
+},
+},
+"microblaze_0_local_memory_ilmb_v10": {"version": "3.0",
+"driver_info": {"generic": {"name": "generic",
+"version": "2.0",
+"repo": "C:/Xilinx/SDK/2018.3/data/embeddedsw/XilinxProcessorIPLib/drivers/generic_v2_0",
+},
+},
+},
+"microblaze_0_local_memory_lmb_bram": {"version": "8.4",
+"driver_info": {"generic": {"name": "generic",
+"version": "2.0",
+"repo": "C:/Xilinx/SDK/2018.3/data/embeddedsw/XilinxProcessorIPLib/drivers/generic_v2_0",
+},
+},
+},
+"proc_sys_reset_0": {"version": "5.0",
+"driver_info": {"generic": {"name": "generic",
+"version": "2.0",
+"repo": "C:/Xilinx/SDK/2018.3/data/embeddedsw/XilinxProcessorIPLib/drivers/generic_v2_0",
+},
+},
+},
+"rst_clk_wiz_1_100M": {"version": "5.0",
+"driver_info": {"generic": {"name": "generic",
+"version": "2.0",
+"repo": "C:/Xilinx/SDK/2018.3/data/embeddedsw/XilinxProcessorIPLib/drivers/generic_v2_0",
+},
+},
+},
+"util_vector_logic_0": {"version": "2.0",
+"driver_info": {"generic": {"name": "generic",
+"version": "2.0",
+"repo": "C:/Xilinx/SDK/2018.3/data/embeddedsw/XilinxProcessorIPLib/drivers/generic_v2_0",
+},
+},
+},
+"xlslice_0": {"version": "1.0",
+"driver_info": {"generic": {"name": "generic",
+"version": "2.0",
+"repo": "C:/Xilinx/SDK/2018.3/data/embeddedsw/XilinxProcessorIPLib/drivers/generic_v2_0",
+},
+},
+},
+"xlslice_1": {"version": "1.0",
+"driver_info": {"generic": {"name": "generic",
+"version": "2.0",
+"repo": "C:/Xilinx/SDK/2018.3/data/embeddedsw/XilinxProcessorIPLib/drivers/generic_v2_0",
+},
+},
+},
+}]. Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-25 21:39:14.943
+!MESSAGE XSCT Command: [::hsi::utils::closesw C:/FPGA_Projects/ADC_SRAM_UART/ADC_SRAM_UART.sdk/ADC_SRAM_UART_bsp/system.mss], Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-25 21:39:14.943
+!MESSAGE XSCT command with result: [::hsi::utils::closesw C:/FPGA_Projects/ADC_SRAM_UART/ADC_SRAM_UART.sdk/ADC_SRAM_UART_bsp/system.mss], Result: [null, ]. Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-25 21:39:15.083
+!MESSAGE XSCT Command: [ ::hsi::utils::set_current_hw_sw C:/FPGA_Projects/ADC_SRAM_UART/ADC_SRAM_UART.sdk/design_1_wrapper_hw_platform_0/system.hdf C:/FPGA_Projects/ADC_SRAM_UART/ADC_SRAM_UART.sdk/ADC_SRAM_UART_bsp/system.mss ], Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-25 21:39:15.083
+!MESSAGE XSCT command with result: [ ::hsi::utils::set_current_hw_sw C:/FPGA_Projects/ADC_SRAM_UART/ADC_SRAM_UART.sdk/design_1_wrapper_hw_platform_0/system.hdf C:/FPGA_Projects/ADC_SRAM_UART/ADC_SRAM_UART.sdk/ADC_SRAM_UART_bsp/system.mss ], Result: [null, ]. Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-25 21:39:15.099
+!MESSAGE XSCT Command: [::hsi::utils::get_hw_sw_details -json C:/FPGA_Projects/ADC_SRAM_UART/ADC_SRAM_UART.sdk/design_1_wrapper_hw_platform_0/system.hdf C:/FPGA_Projects/ADC_SRAM_UART/ADC_SRAM_UART.sdk/ADC_SRAM_UART_bsp/system.mss], Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-25 21:39:15.114
+!MESSAGE XSCT command with result: [::hsi::utils::get_hw_sw_details -json C:/FPGA_Projects/ADC_SRAM_UART/ADC_SRAM_UART.sdk/design_1_wrapper_hw_platform_0/system.hdf C:/FPGA_Projects/ADC_SRAM_UART/ADC_SRAM_UART.sdk/ADC_SRAM_UART_bsp/system.mss], Result: [null, {"procname": "microblaze_0",
+"osname": "standalone",
+"osver": "6.8",
+}]. Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-25 21:39:15.130
+!MESSAGE XSCT Command: [::hsi::utils::get_libs_from_sw C:/FPGA_Projects/ADC_SRAM_UART/ADC_SRAM_UART.sdk/design_1_wrapper_hw_platform_0/system.hdf C:/FPGA_Projects/ADC_SRAM_UART/ADC_SRAM_UART.sdk/ADC_SRAM_UART_bsp/system.mss], Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-25 21:39:15.130
+!MESSAGE XSCT command with result: [::hsi::utils::get_libs_from_sw C:/FPGA_Projects/ADC_SRAM_UART/ADC_SRAM_UART.sdk/design_1_wrapper_hw_platform_0/system.hdf C:/FPGA_Projects/ADC_SRAM_UART/ADC_SRAM_UART.sdk/ADC_SRAM_UART_bsp/system.mss], Result: [null, ]. Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-25 21:39:15.193
+!MESSAGE XSCT Command: [::hsi::utils::closesw C:/FPGA_Projects/ADC_SRAM_UART/ADC_SRAM_UART.sdk/ADC_SRAM_UART_bsp/system.mss], Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-25 21:39:15.208
+!MESSAGE XSCT command with result: [::hsi::utils::closesw C:/FPGA_Projects/ADC_SRAM_UART/ADC_SRAM_UART.sdk/ADC_SRAM_UART_bsp/system.mss], Result: [null, ]. Thread: main
+
+!ENTRY org.eclipse.ui.workbench 4 0 2019-04-25 21:39:15.667
+!MESSAGE Invalid thread access
+!STACK 0
+org.eclipse.swt.SWTException: Invalid thread access
+	at org.eclipse.swt.SWT.error(SWT.java:4533)
+	at org.eclipse.swt.SWT.error(SWT.java:4448)
+	at org.eclipse.swt.SWT.error(SWT.java:4419)
+	at org.eclipse.swt.widgets.Widget.error(Widget.java:482)
+	at org.eclipse.swt.widgets.Widget.checkWidget(Widget.java:373)
+	at org.eclipse.swt.widgets.Widget.getData(Widget.java:539)
+	at org.eclipse.ui.internal.ide.handlers.PagePropertyTester.test(PagePropertyTester.java:36)
+	at org.eclipse.core.internal.expressions.Property.test(Property.java:58)
+	at org.eclipse.core.internal.expressions.TestExpression.evaluate(TestExpression.java:100)
+	at org.eclipse.core.internal.expressions.CompositeExpression.evaluateAnd(CompositeExpression.java:53)
+	at org.eclipse.core.internal.expressions.WithExpression.evaluate(WithExpression.java:75)
+	at org.eclipse.core.internal.expressions.CompositeExpression.evaluateOr(CompositeExpression.java:68)
+	at org.eclipse.core.internal.expressions.OrExpression.evaluate(OrExpression.java:22)
+	at org.eclipse.core.internal.expressions.ReferenceExpression.evaluate(ReferenceExpression.java:71)
+	at org.eclipse.ui.internal.services.EvaluationReference.evaluate(EvaluationReference.java:72)
+	at org.eclipse.ui.internal.services.EvaluationReference.evaluate(EvaluationReference.java:97)
+	at org.eclipse.ui.internal.services.EvaluationService.requestEvaluation(EvaluationService.java:294)
+	at org.eclipse.ui.internal.handlers.DirtyStateTracker.update(DirtyStateTracker.java:45)
+	at org.eclipse.ui.internal.handlers.DirtyStateTracker.propertyChanged(DirtyStateTracker.java:107)
+	at org.eclipse.ui.part.WorkbenchPart.firePropertyChange(WorkbenchPart.java:120)
+	at com.xilinx.sdk.lscript.ui.LscriptEditor.access$2(LscriptEditor.java:1)
+	at com.xilinx.sdk.lscript.ui.LscriptEditor$ResourceChangeListener.resourceChanged(LscriptEditor.java:188)
+	at org.eclipse.core.internal.events.NotificationManager$1.run(NotificationManager.java:299)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.NotificationManager.notify(NotificationManager.java:289)
+	at org.eclipse.core.internal.events.NotificationManager.broadcastChanges(NotificationManager.java:152)
+	at org.eclipse.core.internal.resources.Workspace.broadcastPostChange(Workspace.java:374)
+	at org.eclipse.core.internal.resources.Workspace.endOperation(Workspace.java:1469)
+	at org.eclipse.core.internal.resources.InternalWorkspaceJob.run(InternalWorkspaceJob.java:46)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-25 21:39:16.560
+!MESSAGE XSCT Command: [::hsi::utils::get_hw_param_value C:/FPGA_Projects/ADC_SRAM_UART/ADC_SRAM_UART.sdk/design_1_wrapper_hw_platform_0/system.hdf microblaze_0 C_USE_REORDER_INSTR], Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-25 21:39:16.579
+!MESSAGE XSCT command with result: [::hsi::utils::get_hw_param_value C:/FPGA_Projects/ADC_SRAM_UART/ADC_SRAM_UART.sdk/design_1_wrapper_hw_platform_0/system.hdf microblaze_0 C_USE_REORDER_INSTR], Result: [null, 1]. Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-25 21:39:16.591
+!MESSAGE XSCT Command: [::hsi::utils::get_hw_param_value C:/FPGA_Projects/ADC_SRAM_UART/ADC_SRAM_UART.sdk/design_1_wrapper_hw_platform_0/system.hdf microblaze_0 C_ENDIANNESS], Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-25 21:39:16.603
+!MESSAGE XSCT command with result: [::hsi::utils::get_hw_param_value C:/FPGA_Projects/ADC_SRAM_UART/ADC_SRAM_UART.sdk/design_1_wrapper_hw_platform_0/system.hdf microblaze_0 C_ENDIANNESS], Result: [null, 1]. Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-25 21:39:16.619
+!MESSAGE XSCT Command: [::hsi::utils::get_hw_param_value C:/FPGA_Projects/ADC_SRAM_UART/ADC_SRAM_UART.sdk/design_1_wrapper_hw_platform_0/system.hdf microblaze_0 C_USE_BARREL], Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-25 21:39:16.631
+!MESSAGE XSCT command with result: [::hsi::utils::get_hw_param_value C:/FPGA_Projects/ADC_SRAM_UART/ADC_SRAM_UART.sdk/design_1_wrapper_hw_platform_0/system.hdf microblaze_0 C_USE_BARREL], Result: [null, 0]. Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-25 21:39:16.638
+!MESSAGE XSCT Command: [::hsi::utils::get_hw_param_value C:/FPGA_Projects/ADC_SRAM_UART/ADC_SRAM_UART.sdk/design_1_wrapper_hw_platform_0/system.hdf microblaze_0 C_USE_PCMP_INSTR], Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-25 21:39:16.653
+!MESSAGE XSCT command with result: [::hsi::utils::get_hw_param_value C:/FPGA_Projects/ADC_SRAM_UART/ADC_SRAM_UART.sdk/design_1_wrapper_hw_platform_0/system.hdf microblaze_0 C_USE_PCMP_INSTR], Result: [null, 0]. Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-25 21:39:16.659
+!MESSAGE XSCT Command: [::hsi::utils::get_hw_param_value C:/FPGA_Projects/ADC_SRAM_UART/ADC_SRAM_UART.sdk/design_1_wrapper_hw_platform_0/system.hdf microblaze_0 C_USE_DIV], Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-25 21:39:16.670
+!MESSAGE XSCT command with result: [::hsi::utils::get_hw_param_value C:/FPGA_Projects/ADC_SRAM_UART/ADC_SRAM_UART.sdk/design_1_wrapper_hw_platform_0/system.hdf microblaze_0 C_USE_DIV], Result: [null, 0]. Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-25 21:39:16.676
+!MESSAGE XSCT Command: [::hsi::utils::get_hw_param_value C:/FPGA_Projects/ADC_SRAM_UART/ADC_SRAM_UART.sdk/design_1_wrapper_hw_platform_0/system.hdf microblaze_0 C_USE_FPU], Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-25 21:39:16.684
+!MESSAGE XSCT command with result: [::hsi::utils::get_hw_param_value C:/FPGA_Projects/ADC_SRAM_UART/ADC_SRAM_UART.sdk/design_1_wrapper_hw_platform_0/system.hdf microblaze_0 C_USE_FPU], Result: [null, 0]. Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-25 21:39:16.693
+!MESSAGE XSCT Command: [::hsi::utils::get_hw_param_value C:/FPGA_Projects/ADC_SRAM_UART/ADC_SRAM_UART.sdk/design_1_wrapper_hw_platform_0/system.hdf microblaze_0 C_USE_HW_MUL], Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-25 21:39:16.702
+!MESSAGE XSCT command with result: [::hsi::utils::get_hw_param_value C:/FPGA_Projects/ADC_SRAM_UART/ADC_SRAM_UART.sdk/design_1_wrapper_hw_platform_0/system.hdf microblaze_0 C_USE_HW_MUL], Result: [null, 0]. Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-25 21:39:16.709
+!MESSAGE XSCT Command: [::hsi::utils::get_hw_param_value C:/FPGA_Projects/ADC_SRAM_UART/ADC_SRAM_UART.sdk/design_1_wrapper_hw_platform_0/system.hdf microblaze_0 C_AREA_OPTIMIZED], Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-25 21:39:16.720
+!MESSAGE XSCT command with result: [::hsi::utils::get_hw_param_value C:/FPGA_Projects/ADC_SRAM_UART/ADC_SRAM_UART.sdk/design_1_wrapper_hw_platform_0/system.hdf microblaze_0 C_AREA_OPTIMIZED], Result: [null, 0]. Thread: ModalContext
+
+!ENTRY org.eclipse.cdt.core 4 0 2019-04-25 21:39:16.998
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-25 21:39:17.091
+!MESSAGE XSCT Command: [ ::hsi::utils::set_current_hw_sw C:/FPGA_Projects/ADC_SRAM_UART/ADC_SRAM_UART.sdk/design_1_wrapper_hw_platform_0/system.hdf C:/FPGA_Projects/ADC_SRAM_UART/ADC_SRAM_UART.sdk/ADC_SRAM_UART_bsp/system.mss ], Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-25 21:39:17.107
+!MESSAGE XSCT command with result: [ ::hsi::utils::set_current_hw_sw C:/FPGA_Projects/ADC_SRAM_UART/ADC_SRAM_UART.sdk/design_1_wrapper_hw_platform_0/system.hdf C:/FPGA_Projects/ADC_SRAM_UART/ADC_SRAM_UART.sdk/ADC_SRAM_UART_bsp/system.mss ], Result: [null, ]. Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-25 21:39:17.119
+!MESSAGE XSCT Command: [::hsi::utils::get_hw_sw_details -json C:/FPGA_Projects/ADC_SRAM_UART/ADC_SRAM_UART.sdk/design_1_wrapper_hw_platform_0/system.hdf C:/FPGA_Projects/ADC_SRAM_UART/ADC_SRAM_UART.sdk/ADC_SRAM_UART_bsp/system.mss], Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-25 21:39:17.135
+!MESSAGE XSCT command with result: [::hsi::utils::get_hw_sw_details -json C:/FPGA_Projects/ADC_SRAM_UART/ADC_SRAM_UART.sdk/design_1_wrapper_hw_platform_0/system.hdf C:/FPGA_Projects/ADC_SRAM_UART/ADC_SRAM_UART.sdk/ADC_SRAM_UART_bsp/system.mss], Result: [null, {"procname": "microblaze_0",
+"osname": "standalone",
+"osver": "6.8",
+}]. Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-25 21:39:17.170
+!MESSAGE XSCT Command: [::hsi::utils::get_drivers_for_sw -json C:/FPGA_Projects/ADC_SRAM_UART/ADC_SRAM_UART.sdk/design_1_wrapper_hw_platform_0/system.hdf C:/FPGA_Projects/ADC_SRAM_UART/ADC_SRAM_UART.sdk/ADC_SRAM_UART_bsp/system.mss], Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-25 21:39:17.188
+!MESSAGE XSCT command with result: [::hsi::utils::get_drivers_for_sw -json C:/FPGA_Projects/ADC_SRAM_UART/ADC_SRAM_UART.sdk/design_1_wrapper_hw_platform_0/system.hdf C:/FPGA_Projects/ADC_SRAM_UART/ADC_SRAM_UART.sdk/ADC_SRAM_UART_bsp/system.mss], Result: [null, {"axi_emc_0": {"name": "emc",
+"ver": "4.0",
+},
+"axi_fifo_mm_s_0": {"name": "llfifo",
+"ver": "5.2",
+},
+"axi_gpio_0": {"name": "gpio",
+"ver": "4.3",
+},
+"axi_gpio_1": {"name": "gpio",
+"ver": "4.3",
+},
+"axi_uartlite_0": {"name": "uartlite",
+"ver": "3.2",
+},
+"microblaze_0_local_memory_dlmb_bram_if_cntlr": {"name": "bram",
+"ver": "4.2",
+},
+"microblaze_0_local_memory_ilmb_bram_if_cntlr": {"name": "bram",
+"ver": "4.2",
+},
+"microblaze_0": {"name": "cpu",
+"ver": "2.8",
+},
+}]. Thread: main
+
+!ENTRY org.eclipse.cdt.core 4 0 2019-04-25 21:39:17.198
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.cdt.core 4 0 2019-04-25 21:39:17.220
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-25 21:39:17.241
+!MESSAGE XSCT Command: [ ::hsi::utils::set_current_hw_sw C:/FPGA_Projects/ADC_SRAM_UART/ADC_SRAM_UART.sdk/design_1_wrapper_hw_platform_0/system.hdf C:/FPGA_Projects/ADC_SRAM_UART/ADC_SRAM_UART.sdk/ADC_SRAM_UART_bsp/system.mss ], Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-25 21:39:17.258
+!MESSAGE XSCT command with result: [ ::hsi::utils::set_current_hw_sw C:/FPGA_Projects/ADC_SRAM_UART/ADC_SRAM_UART.sdk/design_1_wrapper_hw_platform_0/system.hdf C:/FPGA_Projects/ADC_SRAM_UART/ADC_SRAM_UART.sdk/ADC_SRAM_UART_bsp/system.mss ], Result: [null, ]. Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-25 21:39:17.263
+!MESSAGE XSCT Command: [::hsi::utils::get_hw_sw_details -json C:/FPGA_Projects/ADC_SRAM_UART/ADC_SRAM_UART.sdk/design_1_wrapper_hw_platform_0/system.hdf C:/FPGA_Projects/ADC_SRAM_UART/ADC_SRAM_UART.sdk/ADC_SRAM_UART_bsp/system.mss], Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-25 21:39:17.277
+!MESSAGE XSCT command with result: [::hsi::utils::get_hw_sw_details -json C:/FPGA_Projects/ADC_SRAM_UART/ADC_SRAM_UART.sdk/design_1_wrapper_hw_platform_0/system.hdf C:/FPGA_Projects/ADC_SRAM_UART/ADC_SRAM_UART.sdk/ADC_SRAM_UART_bsp/system.mss], Result: [null, {"procname": "microblaze_0",
+"osname": "standalone",
+"osver": "6.8",
+}]. Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-25 21:39:17.295
+!MESSAGE XSCT Command: [::hsi::utils::get_libs_from_sw C:/FPGA_Projects/ADC_SRAM_UART/ADC_SRAM_UART.sdk/design_1_wrapper_hw_platform_0/system.hdf C:/FPGA_Projects/ADC_SRAM_UART/ADC_SRAM_UART.sdk/ADC_SRAM_UART_bsp/system.mss], Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-25 21:39:17.305
+!MESSAGE XSCT command with result: [::hsi::utils::get_libs_from_sw C:/FPGA_Projects/ADC_SRAM_UART/ADC_SRAM_UART.sdk/design_1_wrapper_hw_platform_0/system.hdf C:/FPGA_Projects/ADC_SRAM_UART/ADC_SRAM_UART.sdk/ADC_SRAM_UART_bsp/system.mss], Result: [null, ]. Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-25 21:39:17.414
+!MESSAGE XSCT Command: [::hsi::utils::closesw C:/FPGA_Projects/ADC_SRAM_UART/ADC_SRAM_UART.sdk/ADC_SRAM_UART_bsp/system.mss], Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-25 21:39:17.424
+!MESSAGE XSCT command with result: [::hsi::utils::closesw C:/FPGA_Projects/ADC_SRAM_UART/ADC_SRAM_UART.sdk/ADC_SRAM_UART_bsp/system.mss], Result: [null, ]. Thread: main
+
+!ENTRY org.eclipse.cdt.core 4 0 2019-04-25 21:39:17.518
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.cdt.core 4 0 2019-04-25 21:39:17.539
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.cdt.core 4 0 2019-04-25 21:39:17.727
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.cdt.core 4 0 2019-04-25 21:39:17.743
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.cdt.core 4 0 2019-04-25 21:39:17.893
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.cdt.core 4 0 2019-04-25 21:39:17.912
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.cdt.core 4 0 2019-04-25 21:39:18.125
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.cdt.core 4 0 2019-04-25 21:39:18.141
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.cdt.core 4 0 2019-04-25 21:39:18.735
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.cdt.core 4 0 2019-04-25 21:39:18.750
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.cdt.core 4 0 2019-04-25 21:39:18.953
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.cdt.core 4 0 2019-04-25 21:39:18.985
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.cdt.core 4 0 2019-04-25 21:39:19.110
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.cdt.core 4 0 2019-04-25 21:39:20.235
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.cdt.core 4 0 2019-04-25 21:39:20.453
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.cdt.core 4 0 2019-04-25 21:39:20.453
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.cdt.core 4 0 2019-04-25 21:39:20.547
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.cdt.core 4 0 2019-04-25 21:39:20.907
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.cdt.core 4 0 2019-04-25 21:39:20.922
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.cdt.core 4 0 2019-04-25 21:39:21.000
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.cdt.core 4 0 2019-04-25 21:39:22.235
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.cdt.core 4 0 2019-04-25 21:39:22.250
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.cdt.core 4 0 2019-04-25 21:39:22.313
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.cdt.core 4 0 2019-04-25 21:39:23.250
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.cdt.core 4 0 2019-04-25 21:39:23.266
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.cdt.core 4 0 2019-04-25 21:39:23.422
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.cdt.core 4 0 2019-04-25 21:39:26.545
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.cdt.core 4 0 2019-04-25 21:39:26.561
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.cdt.core 4 0 2019-04-25 21:39:26.577
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.ui.workbench 4 0 2019-04-25 21:39:28.108
+!MESSAGE Invalid thread access
+!STACK 0
+org.eclipse.swt.SWTException: Invalid thread access
+	at org.eclipse.swt.SWT.error(SWT.java:4533)
+	at org.eclipse.swt.SWT.error(SWT.java:4448)
+	at org.eclipse.swt.SWT.error(SWT.java:4419)
+	at org.eclipse.swt.widgets.Widget.error(Widget.java:482)
+	at org.eclipse.swt.widgets.Widget.checkWidget(Widget.java:373)
+	at org.eclipse.swt.widgets.Widget.getData(Widget.java:539)
+	at org.eclipse.ui.internal.ide.handlers.PagePropertyTester.test(PagePropertyTester.java:36)
+	at org.eclipse.core.internal.expressions.Property.test(Property.java:58)
+	at org.eclipse.core.internal.expressions.TestExpression.evaluate(TestExpression.java:100)
+	at org.eclipse.core.internal.expressions.CompositeExpression.evaluateAnd(CompositeExpression.java:53)
+	at org.eclipse.core.internal.expressions.WithExpression.evaluate(WithExpression.java:75)
+	at org.eclipse.core.internal.expressions.CompositeExpression.evaluateOr(CompositeExpression.java:68)
+	at org.eclipse.core.internal.expressions.OrExpression.evaluate(OrExpression.java:22)
+	at org.eclipse.core.internal.expressions.ReferenceExpression.evaluate(ReferenceExpression.java:71)
+	at org.eclipse.ui.internal.services.EvaluationReference.evaluate(EvaluationReference.java:72)
+	at org.eclipse.ui.internal.services.EvaluationReference.evaluate(EvaluationReference.java:97)
+	at org.eclipse.ui.internal.services.EvaluationService.requestEvaluation(EvaluationService.java:294)
+	at org.eclipse.ui.internal.handlers.DirtyStateTracker.update(DirtyStateTracker.java:45)
+	at org.eclipse.ui.internal.handlers.DirtyStateTracker.propertyChanged(DirtyStateTracker.java:107)
+	at org.eclipse.ui.part.WorkbenchPart.firePropertyChange(WorkbenchPart.java:120)
+	at com.xilinx.sdk.lscript.ui.LscriptEditor.access$2(LscriptEditor.java:1)
+	at com.xilinx.sdk.lscript.ui.LscriptEditor$ResourceChangeListener.resourceChanged(LscriptEditor.java:188)
+	at org.eclipse.core.internal.events.NotificationManager$1.run(NotificationManager.java:299)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.NotificationManager.notify(NotificationManager.java:289)
+	at org.eclipse.core.internal.events.NotificationManager.broadcastChanges(NotificationManager.java:152)
+	at org.eclipse.core.internal.resources.Workspace.broadcastPostChange(Workspace.java:374)
+	at org.eclipse.core.internal.resources.Workspace.endOperation(Workspace.java:1469)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2253)
+	at org.eclipse.core.internal.events.NotificationManager$NotifyJob.run(NotificationManager.java:43)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY org.eclipse.cdt.core 4 0 2019-04-25 21:39:29.389
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.cdt.core 4 0 2019-04-25 21:39:29.405
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.cdt.core 4 0 2019-04-25 21:39:29.483
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.cdt.core 4 0 2019-04-25 21:39:30.811
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.cdt.core 4 0 2019-04-25 21:39:30.842
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer.closeConsoleOutputStream(ConsoleOutputSniffer.java:160)
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer$ConsoleOutputStream.close(ConsoleOutputSniffer.java:68)
+	at org.eclipse.cdt.internal.core.ProcessClosure$ReaderThread.close(ProcessClosure.java:98)
+	at org.eclipse.cdt.internal.core.ProcessClosure.isAlive(ProcessClosure.java:193)
+	at org.eclipse.cdt.core.CommandLauncher.waitAndRead(CommandLauncher.java:259)
+	at org.eclipse.cdt.internal.core.BuildRunnerHelper.build(BuildRunnerHelper.java:273)
+	at org.eclipse.cdt.make.core.MakeBuilder.invokeMake(MakeBuilder.java:219)
+	at org.eclipse.cdt.make.core.MakeBuilder.build(MakeBuilder.java:108)
+	at org.eclipse.core.internal.events.BuildManager$2.run(BuildManager.java:735)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:206)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:246)
+	at org.eclipse.core.internal.events.BuildManager$1.run(BuildManager.java:301)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:304)
+	at org.eclipse.core.internal.events.BuildManager.basicBuildLoop(BuildManager.java:360)
+	at org.eclipse.core.internal.events.BuildManager.build(BuildManager.java:383)
+	at org.eclipse.core.internal.events.AutoBuildJob.doBuild(AutoBuildJob.java:144)
+	at org.eclipse.core.internal.events.AutoBuildJob.run(AutoBuildJob.java:235)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY org.eclipse.cdt.core 4 0 2019-04-25 21:39:33.311
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.cdt.core 4 0 2019-04-25 21:39:33.452
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.cdt.core 4 0 2019-04-25 21:39:33.467
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.cdt.core 4 0 2019-04-25 21:39:33.623
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.cdt.core 4 0 2019-04-25 21:39:33.639
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.cdt.core 4 0 2019-04-25 21:39:33.811
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.cdt.core 4 0 2019-04-25 21:39:33.827
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.cdt.core 4 0 2019-04-25 21:39:33.967
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.cdt.core 4 0 2019-04-25 21:39:33.983
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.cdt.core 4 0 2019-04-25 21:39:34.155
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.cdt.core 4 0 2019-04-25 21:39:34.155
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.cdt.core 4 0 2019-04-25 21:39:34.639
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.cdt.core 4 0 2019-04-25 21:39:34.655
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.cdt.core 4 0 2019-04-25 21:39:34.827
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.cdt.core 4 0 2019-04-25 21:39:34.842
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.cdt.core 4 0 2019-04-25 21:39:34.920
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.cdt.core 4 0 2019-04-25 21:39:35.827
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.cdt.core 4 0 2019-04-25 21:39:36.014
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.cdt.core 4 0 2019-04-25 21:39:36.030
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.cdt.core 4 0 2019-04-25 21:39:36.108
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.cdt.core 4 0 2019-04-25 21:39:36.452
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.cdt.core 4 0 2019-04-25 21:39:36.467
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.cdt.core 4 0 2019-04-25 21:39:36.561
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.cdt.core 4 0 2019-04-25 21:39:37.655
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.cdt.core 4 0 2019-04-25 21:39:37.670
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.cdt.core 4 0 2019-04-25 21:39:37.748
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.cdt.core 4 0 2019-04-25 21:39:38.639
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.cdt.core 4 0 2019-04-25 21:39:38.655
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.cdt.core 4 0 2019-04-25 21:39:38.795
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.cdt.core 4 0 2019-04-25 21:39:41.733
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.cdt.core 4 0 2019-04-25 21:39:41.748
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.cdt.core 4 0 2019-04-25 21:39:41.764
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.cdt.core 4 0 2019-04-25 21:39:44.264
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.cdt.core 4 0 2019-04-25 21:39:44.280
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.cdt.core 4 0 2019-04-25 21:39:44.405
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.cdt.core 4 0 2019-04-25 21:39:45.655
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.cdt.core 4 0 2019-04-25 21:39:45.702
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer.closeConsoleOutputStream(ConsoleOutputSniffer.java:160)
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer$ConsoleOutputStream.close(ConsoleOutputSniffer.java:68)
+	at org.eclipse.cdt.internal.core.ProcessClosure$ReaderThread.close(ProcessClosure.java:98)
+	at org.eclipse.cdt.internal.core.ProcessClosure.isAlive(ProcessClosure.java:193)
+	at org.eclipse.cdt.core.CommandLauncher.waitAndRead(CommandLauncher.java:259)
+	at org.eclipse.cdt.internal.core.BuildRunnerHelper.build(BuildRunnerHelper.java:273)
+	at org.eclipse.cdt.make.core.MakeBuilder.invokeMake(MakeBuilder.java:219)
+	at org.eclipse.cdt.make.core.MakeBuilder.build(MakeBuilder.java:108)
+	at org.eclipse.core.internal.events.BuildManager$2.run(BuildManager.java:735)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:206)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:246)
+	at org.eclipse.core.internal.events.BuildManager$1.run(BuildManager.java:301)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:304)
+	at org.eclipse.core.internal.events.BuildManager.basicBuildLoop(BuildManager.java:360)
+	at org.eclipse.core.internal.events.BuildManager.build(BuildManager.java:383)
+	at org.eclipse.core.internal.events.AutoBuildJob.doBuild(AutoBuildJob.java:144)
+	at org.eclipse.core.internal.events.AutoBuildJob.run(AutoBuildJob.java:235)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-25 21:39:53.577
+!MESSAGE XSCT Command: [disconnect tcfchan#60], Thread: Thread-3955
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-04-25 21:39:53.599
+!MESSAGE XSCT command with result: [disconnect tcfchan#60], Result: [null, ]. Thread: Thread-3955

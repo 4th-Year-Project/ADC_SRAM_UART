@@ -1,16 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <section name="Workbench">
+	<section name="org.eclipse.ui.texteditor.GotoLineAction$GotoLineDialog_dialogBounds">
+		<item value="793" key="DIALOG_X_ORIGIN"/>
+		<item value="503" key="DIALOG_Y_ORIGIN"/>
+	</section>
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
 		<item value="false" key="isRegEx"/>
-		<item value="gpio0" key="selection"/>
+		<item value="rec" key="selection"/>
 		<item value="false" key="casesensitive"/>
 		<item value="false" key="incremental"/>
 		<item value="true" key="wrap"/>
 		<item value="true" key="wholeword"/>
 		<list key="findhistory">
+			<item value="recbuf"/>
+			<item value="&#x09;&#x09;&#x09;&#x09;XUartLite_RecvByte(UART_BASE_ADDR)"/>
+			<item value="fifo_dev_id"/>
+			<item value="FifoInstance"/>
+			<item value="DONE_MASK"/>
 			<item value="gpio"/>
 		</list>
 		<list key="replacehistory">
+			<item value="rec"/>
+			<item value="ADC1_FIFO_DEV_ID"/>
+			<item value="FifoInstance1"/>
+			<item value="FifoInstance2"/>
+			<item value="ADC1_DONE_MASK"/>
 			<item value="gpio0"/>
 		</list>
 	</section>
