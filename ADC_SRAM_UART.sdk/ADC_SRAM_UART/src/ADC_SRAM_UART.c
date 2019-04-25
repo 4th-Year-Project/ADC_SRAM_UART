@@ -5,6 +5,7 @@
 #include "xil_cache.h"
 #include "xllfifo.h"
 #include "xstatus.h"
+#include <xuartlite_l.h>
 
 
 #define ADC1_FIFO_DEV_ID	   	XPAR_AXI_FIFO_0_DEVICE_ID   /* ADC1 Fifo instance */
@@ -19,10 +20,12 @@
 #define ADC1_ENABLE_MASK 0b10  		/* Bit mask for ADC 1 ENABLE */
 #define ADC2_ENABLE_MASK 0b100  	/* Bit mask for ADC 2 ENABLE */
 #define ADCs_ENABLE_MASK (ADC1_ENABLE_MASK|ADC2_ENABLE_MASK) 	/* Bit mask for all ADCs ENABLE */
-#define RESETE_MASK 0b1  			/* Bit mask for Software Reset */
+#define RESET_MASK 0b1  			/* Bit mask for Software Reset */
 
 #define WORD_SIZE 4					/* Size of words in bytes */
 #define SAMPLES_PER_ADC 32000		/* Total number of samples per ADC*/
+
+#define UART_BASE_ADDR 0x40600000   /* Base Address of UART IP */
 
 #undef DEBUG
 
@@ -40,6 +43,7 @@ XLlFifo FifoInstance2;
 XGpio gpio0; // the gpio0 struct for LEDs and buttons
 XGpio gpio1; // gpio struct for internal devices
 u32 SRAMBaseAddr = 0x60000000;
+u32 NumSamplesToTx = 200;
 
 static u32 ReceiveLength;
 
@@ -80,12 +84,39 @@ int main (){
 
 /*--- Start the ADC sampling to fill FIFO ---*/
 	xil_printf("Press sample button now\n\r");
-	//Wait for button 1 press
+	//Wait for button 1 press or NUMOFSAMPLE setting
 	while (1){
 		read = XGpio_DiscreteRead(&gpio0, 1);
 		if ((read & BTN1_MASK) !=0 ){
 			xil_printf("BTN1 Pressed\n\r");
 			break;
+		}
+		if (!XUartLite_IsReceiveEmpty(UART_BASE_ADDR)){
+			switch(XUartLite_RecvByte(UART_BASE_ADDR)) {
+			case '0' :
+				xil_printf("NUMOFSAMPLES\n\r");
+				int rec[5];
+				rec[0] = XUartLite_RecvByte(UART_BASE_ADDR);
+				rec[1] = XUartLite_RecvByte(UART_BASE_ADDR);
+				rec[2] = XUartLite_RecvByte(UART_BASE_ADDR);
+				rec[3] = XUartLite_RecvByte(UART_BASE_ADDR);
+				rec[4] = XUartLite_RecvByte(UART_BASE_ADDR);
+				NumSamplesToTx = rec[1] + rec[2]*0xFF;
+				xil_printf("NUMOFSAMPLES received\n\r");
+				if(NumSamplesToTx > 8000){
+					xil_printf("Error: Over sample number limit\n\r");
+					NumSamplesToTx = 8000;
+				}
+				break;
+			case '\r' :
+				xil_printf("Ignoring line feed\n\r");
+				break;
+			default:
+				xil_printf("Error: Unknown command\n\r");
+			}
+
+
+
 		}
 	}
 	//Start Sampling
@@ -222,7 +253,9 @@ int TxUART(u32 DestinationAddr){
 
     print("RAWDATA\n\r"); //Keyword for Matlab GUI
 
-    while(addr < (DestinationAddr + ReceiveLength* WORD_SIZE)){
+    ReceiveLength = 200;
+
+	while(addr < (DestinationAddr + NumSamplesToTx * WORD_SIZE)){
     xil_printf("%08x",Xil_In32(addr));
     print("\n\r");
     addr += WORD_SIZE;
@@ -232,6 +265,6 @@ int TxUART(u32 DestinationAddr){
 }
 
 void Reset(){
-	XGpio_DiscreteWrite(&gpio1, 2, 0b10); //Pulls RESET high
+	XGpio_DiscreteWrite(&gpio1, 2, RESET_MASK); //Pulls RESET high
 }
 

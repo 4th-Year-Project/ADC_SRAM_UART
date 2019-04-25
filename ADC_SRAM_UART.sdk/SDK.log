@@ -2905,3 +2905,1172 @@ con
 ----------------End of Script----------------
 
 11:52:26 INFO  : Launch script is exported to file 'C:\FPGA_Projects\ADC_SRAM_UART\ADC_SRAM_UART.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_adc_sram_uart.elf_on_local.tcl'
+12:21:34 INFO  : Disconnected from the channel tcfchan#21.
+12:21:36 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Cmod A7 - 35T 210328AA0008A" && level==0} -index 0' command is executed.
+12:21:36 INFO  : 'fpga -state' command is executed.
+12:21:36 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+12:21:36 INFO  : Jtag cable 'Digilent Cmod A7 - 35T 210328AA0008A' is selected.
+12:21:36 INFO  : 'jtag frequency' command is executed.
+12:21:36 INFO  : 'configparams mdm-detect-bscan-mask 2' command is executed.
+12:21:37 INFO  : Context for processor 'microblaze_0' is selected.
+12:21:37 INFO  : Processor reset is completed for 'microblaze_0'.
+12:21:37 INFO  : Context for processor 'microblaze_0' is selected.
+12:21:37 INFO  : The application 'C:/FPGA_Projects/ADC_SRAM_UART/ADC_SRAM_UART.sdk/ADC_SRAM_UART/Debug/ADC_SRAM_UART.elf' is downloaded to processor 'microblaze_0'.
+12:21:37 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+configparams mdm-detect-bscan-mask 2
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Cmod A7 - 35T 210328AA0008A"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Cmod A7 - 35T 210328AA0008A"} -index 0
+dow C:/FPGA_Projects/ADC_SRAM_UART/ADC_SRAM_UART.sdk/ADC_SRAM_UART/Debug/ADC_SRAM_UART.elf
+----------------End of Script----------------
+
+12:21:37 INFO  : Memory regions updated for context PA
+12:21:37 INFO  : Memory regions updated for context MicroBlaze Debug Module at USER2
+12:21:37 INFO  : Context for processor 'microblaze_0' is selected.
+12:21:37 INFO  : 'con' command is executed.
+12:21:37 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Cmod A7 - 35T 210328AA0008A"} -index 0
+con
+----------------End of Script----------------
+
+12:21:37 INFO  : Launch script is exported to file 'C:\FPGA_Projects\ADC_SRAM_UART\ADC_SRAM_UART.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_adc_sram_uart.elf_on_local.tcl'
+13:40:36 INFO  : Disconnected from the channel tcfchan#22.
+13:40:37 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Cmod A7 - 35T 210328AA0008A" && level==0} -index 0' command is executed.
+13:40:38 INFO  : 'fpga -state' command is executed.
+13:40:38 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+13:40:38 INFO  : Jtag cable 'Digilent Cmod A7 - 35T 210328AA0008A' is selected.
+13:40:38 INFO  : 'jtag frequency' command is executed.
+13:40:38 INFO  : 'configparams mdm-detect-bscan-mask 2' command is executed.
+13:40:38 INFO  : Context for processor 'microblaze_0' is selected.
+13:40:38 INFO  : Processor reset is completed for 'microblaze_0'.
+13:40:38 INFO  : Context for processor 'microblaze_0' is selected.
+13:40:38 INFO  : The application 'C:/FPGA_Projects/ADC_SRAM_UART/ADC_SRAM_UART.sdk/ADC_SRAM_UART/Debug/ADC_SRAM_UART.elf' is downloaded to processor 'microblaze_0'.
+13:40:38 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+configparams mdm-detect-bscan-mask 2
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Cmod A7 - 35T 210328AA0008A"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Cmod A7 - 35T 210328AA0008A"} -index 0
+dow C:/FPGA_Projects/ADC_SRAM_UART/ADC_SRAM_UART.sdk/ADC_SRAM_UART/Debug/ADC_SRAM_UART.elf
+----------------End of Script----------------
+
+13:40:38 INFO  : Memory regions updated for context PA
+13:40:38 INFO  : Memory regions updated for context MicroBlaze Debug Module at USER2
+13:40:38 INFO  : Context for processor 'microblaze_0' is selected.
+13:40:38 INFO  : 'con' command is executed.
+13:40:38 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Cmod A7 - 35T 210328AA0008A"} -index 0
+con
+----------------End of Script----------------
+
+13:40:38 INFO  : Launch script is exported to file 'C:\FPGA_Projects\ADC_SRAM_UART\ADC_SRAM_UART.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_adc_sram_uart.elf_on_local.tcl'
+14:11:16 INFO  : Disconnected from the channel tcfchan#23.
+14:11:17 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Cmod A7 - 35T 210328AA0008A" && level==0} -index 0' command is executed.
+14:11:17 INFO  : 'fpga -state' command is executed.
+14:11:17 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+14:11:18 INFO  : Jtag cable 'Digilent Cmod A7 - 35T 210328AA0008A' is selected.
+14:11:18 INFO  : 'jtag frequency' command is executed.
+14:11:18 INFO  : 'configparams mdm-detect-bscan-mask 2' command is executed.
+14:11:18 INFO  : Context for processor 'microblaze_0' is selected.
+14:11:18 INFO  : Processor reset is completed for 'microblaze_0'.
+14:11:18 INFO  : Context for processor 'microblaze_0' is selected.
+14:11:18 INFO  : The application 'C:/FPGA_Projects/ADC_SRAM_UART/ADC_SRAM_UART.sdk/ADC_SRAM_UART/Debug/ADC_SRAM_UART.elf' is downloaded to processor 'microblaze_0'.
+14:11:18 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+configparams mdm-detect-bscan-mask 2
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Cmod A7 - 35T 210328AA0008A"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Cmod A7 - 35T 210328AA0008A"} -index 0
+dow C:/FPGA_Projects/ADC_SRAM_UART/ADC_SRAM_UART.sdk/ADC_SRAM_UART/Debug/ADC_SRAM_UART.elf
+----------------End of Script----------------
+
+14:11:18 INFO  : Memory regions updated for context PA
+14:11:18 INFO  : Memory regions updated for context MicroBlaze Debug Module at USER2
+14:11:18 INFO  : Context for processor 'microblaze_0' is selected.
+14:11:18 INFO  : 'con' command is executed.
+14:11:18 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Cmod A7 - 35T 210328AA0008A"} -index 0
+con
+----------------End of Script----------------
+
+14:11:18 INFO  : Launch script is exported to file 'C:\FPGA_Projects\ADC_SRAM_UART\ADC_SRAM_UART.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_adc_sram_uart.elf_on_local.tcl'
+14:19:52 INFO  : Disconnected from the channel tcfchan#24.
+14:19:53 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Cmod A7 - 35T 210328AA0008A" && level==0} -index 0' command is executed.
+14:19:53 INFO  : 'fpga -state' command is executed.
+14:19:53 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+14:19:54 INFO  : Jtag cable 'Digilent Cmod A7 - 35T 210328AA0008A' is selected.
+14:19:54 INFO  : 'jtag frequency' command is executed.
+14:19:54 INFO  : 'configparams mdm-detect-bscan-mask 2' command is executed.
+14:19:54 INFO  : Context for processor 'microblaze_0' is selected.
+14:19:54 INFO  : Processor reset is completed for 'microblaze_0'.
+14:19:54 INFO  : Context for processor 'microblaze_0' is selected.
+14:19:54 INFO  : The application 'C:/FPGA_Projects/ADC_SRAM_UART/ADC_SRAM_UART.sdk/ADC_SRAM_UART/Debug/ADC_SRAM_UART.elf' is downloaded to processor 'microblaze_0'.
+14:19:54 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+configparams mdm-detect-bscan-mask 2
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Cmod A7 - 35T 210328AA0008A"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Cmod A7 - 35T 210328AA0008A"} -index 0
+dow C:/FPGA_Projects/ADC_SRAM_UART/ADC_SRAM_UART.sdk/ADC_SRAM_UART/Debug/ADC_SRAM_UART.elf
+----------------End of Script----------------
+
+14:19:54 INFO  : Memory regions updated for context PA
+14:19:54 INFO  : Memory regions updated for context MicroBlaze Debug Module at USER2
+14:19:54 INFO  : Context for processor 'microblaze_0' is selected.
+14:19:54 INFO  : 'con' command is executed.
+14:19:54 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Cmod A7 - 35T 210328AA0008A"} -index 0
+con
+----------------End of Script----------------
+
+14:19:54 INFO  : Launch script is exported to file 'C:\FPGA_Projects\ADC_SRAM_UART\ADC_SRAM_UART.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_adc_sram_uart.elf_on_local.tcl'
+14:41:52 INFO  : Disconnected from the channel tcfchan#25.
+14:41:53 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Cmod A7 - 35T 210328AA0008A" && level==0} -index 0' command is executed.
+14:41:53 INFO  : 'fpga -state' command is executed.
+14:41:53 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+14:41:53 INFO  : Jtag cable 'Digilent Cmod A7 - 35T 210328AA0008A' is selected.
+14:41:53 INFO  : 'jtag frequency' command is executed.
+14:41:53 INFO  : 'configparams mdm-detect-bscan-mask 2' command is executed.
+14:41:53 INFO  : Context for processor 'microblaze_0' is selected.
+14:41:54 INFO  : Processor reset is completed for 'microblaze_0'.
+14:41:54 INFO  : Context for processor 'microblaze_0' is selected.
+14:41:54 INFO  : The application 'C:/FPGA_Projects/ADC_SRAM_UART/ADC_SRAM_UART.sdk/ADC_SRAM_UART/Debug/ADC_SRAM_UART.elf' is downloaded to processor 'microblaze_0'.
+14:41:54 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+configparams mdm-detect-bscan-mask 2
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Cmod A7 - 35T 210328AA0008A"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Cmod A7 - 35T 210328AA0008A"} -index 0
+dow C:/FPGA_Projects/ADC_SRAM_UART/ADC_SRAM_UART.sdk/ADC_SRAM_UART/Debug/ADC_SRAM_UART.elf
+----------------End of Script----------------
+
+14:41:54 INFO  : Memory regions updated for context PA
+14:41:54 INFO  : Memory regions updated for context MicroBlaze Debug Module at USER2
+14:41:54 INFO  : Context for processor 'microblaze_0' is selected.
+14:41:54 INFO  : 'con' command is executed.
+14:41:54 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Cmod A7 - 35T 210328AA0008A"} -index 0
+con
+----------------End of Script----------------
+
+14:41:54 INFO  : Launch script is exported to file 'C:\FPGA_Projects\ADC_SRAM_UART\ADC_SRAM_UART.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_adc_sram_uart.elf_on_local.tcl'
+15:06:15 INFO  : Disconnected from the channel tcfchan#26.
+15:06:16 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Cmod A7 - 35T 210328AA0008A" && level==0} -index 0' command is executed.
+15:06:16 INFO  : 'fpga -state' command is executed.
+15:06:16 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+15:06:17 INFO  : Jtag cable 'Digilent Cmod A7 - 35T 210328AA0008A' is selected.
+15:06:17 INFO  : 'jtag frequency' command is executed.
+15:06:17 INFO  : 'configparams mdm-detect-bscan-mask 2' command is executed.
+15:06:17 INFO  : Context for processor 'microblaze_0' is selected.
+15:06:17 INFO  : Processor reset is completed for 'microblaze_0'.
+15:06:17 INFO  : Context for processor 'microblaze_0' is selected.
+15:06:17 INFO  : The application 'C:/FPGA_Projects/ADC_SRAM_UART/ADC_SRAM_UART.sdk/ADC_SRAM_UART/Debug/ADC_SRAM_UART.elf' is downloaded to processor 'microblaze_0'.
+15:06:17 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+configparams mdm-detect-bscan-mask 2
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Cmod A7 - 35T 210328AA0008A"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Cmod A7 - 35T 210328AA0008A"} -index 0
+dow C:/FPGA_Projects/ADC_SRAM_UART/ADC_SRAM_UART.sdk/ADC_SRAM_UART/Debug/ADC_SRAM_UART.elf
+----------------End of Script----------------
+
+15:06:17 INFO  : Memory regions updated for context PA
+15:06:17 INFO  : Memory regions updated for context MicroBlaze Debug Module at USER2
+15:06:17 INFO  : Context for processor 'microblaze_0' is selected.
+15:06:17 INFO  : 'con' command is executed.
+15:06:17 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Cmod A7 - 35T 210328AA0008A"} -index 0
+con
+----------------End of Script----------------
+
+15:06:17 INFO  : Launch script is exported to file 'C:\FPGA_Projects\ADC_SRAM_UART\ADC_SRAM_UART.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_adc_sram_uart.elf_on_local.tcl'
+18:25:10 INFO  : Disconnected from the channel tcfchan#27.
+18:25:11 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Cmod A7 - 35T 210328AA0008A" && level==0} -index 0' command is executed.
+18:25:11 INFO  : 'fpga -state' command is executed.
+18:25:11 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+18:25:11 INFO  : Jtag cable 'Digilent Cmod A7 - 35T 210328AA0008A' is selected.
+18:25:11 INFO  : 'jtag frequency' command is executed.
+18:25:11 INFO  : 'configparams mdm-detect-bscan-mask 2' command is executed.
+18:25:11 INFO  : Context for processor 'microblaze_0' is selected.
+18:25:12 INFO  : Processor reset is completed for 'microblaze_0'.
+18:25:12 INFO  : Context for processor 'microblaze_0' is selected.
+18:25:12 INFO  : The application 'C:/FPGA_Projects/ADC_SRAM_UART/ADC_SRAM_UART.sdk/ADC_SRAM_UART/Debug/ADC_SRAM_UART.elf' is downloaded to processor 'microblaze_0'.
+18:25:12 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+configparams mdm-detect-bscan-mask 2
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Cmod A7 - 35T 210328AA0008A"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Cmod A7 - 35T 210328AA0008A"} -index 0
+dow C:/FPGA_Projects/ADC_SRAM_UART/ADC_SRAM_UART.sdk/ADC_SRAM_UART/Debug/ADC_SRAM_UART.elf
+----------------End of Script----------------
+
+18:25:12 INFO  : Memory regions updated for context PA
+18:25:12 INFO  : Memory regions updated for context MicroBlaze Debug Module at USER2
+18:25:12 INFO  : Context for processor 'microblaze_0' is selected.
+18:25:12 INFO  : 'con' command is executed.
+18:25:12 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Cmod A7 - 35T 210328AA0008A"} -index 0
+con
+----------------End of Script----------------
+
+18:25:12 INFO  : Launch script is exported to file 'C:\FPGA_Projects\ADC_SRAM_UART\ADC_SRAM_UART.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_adc_sram_uart.elf_on_local.tcl'
+19:31:19 INFO  : Disconnected from the channel tcfchan#28.
+19:31:20 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Cmod A7 - 35T 210328AA0008A" && level==0} -index 0' command is executed.
+19:31:20 INFO  : 'fpga -state' command is executed.
+19:31:20 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+19:31:20 INFO  : Jtag cable 'Digilent Cmod A7 - 35T 210328AA0008A' is selected.
+19:31:20 INFO  : 'jtag frequency' command is executed.
+19:31:20 INFO  : 'configparams mdm-detect-bscan-mask 2' command is executed.
+19:31:20 INFO  : Context for processor 'microblaze_0' is selected.
+19:31:20 INFO  : Processor reset is completed for 'microblaze_0'.
+19:31:21 INFO  : Context for processor 'microblaze_0' is selected.
+19:31:21 INFO  : The application 'C:/FPGA_Projects/ADC_SRAM_UART/ADC_SRAM_UART.sdk/ADC_SRAM_UART/Debug/ADC_SRAM_UART.elf' is downloaded to processor 'microblaze_0'.
+19:31:21 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+configparams mdm-detect-bscan-mask 2
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Cmod A7 - 35T 210328AA0008A"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Cmod A7 - 35T 210328AA0008A"} -index 0
+dow C:/FPGA_Projects/ADC_SRAM_UART/ADC_SRAM_UART.sdk/ADC_SRAM_UART/Debug/ADC_SRAM_UART.elf
+----------------End of Script----------------
+
+19:31:21 INFO  : Memory regions updated for context PA
+19:31:21 INFO  : Memory regions updated for context MicroBlaze Debug Module at USER2
+19:31:21 INFO  : Context for processor 'microblaze_0' is selected.
+19:31:21 INFO  : 'con' command is executed.
+19:31:21 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Cmod A7 - 35T 210328AA0008A"} -index 0
+con
+----------------End of Script----------------
+
+19:31:21 INFO  : Launch script is exported to file 'C:\FPGA_Projects\ADC_SRAM_UART\ADC_SRAM_UART.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_adc_sram_uart.elf_on_local.tcl'
+19:34:39 INFO  : Disconnected from the channel tcfchan#29.
+19:34:40 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Cmod A7 - 35T 210328AA0008A" && level==0} -index 0' command is executed.
+19:34:40 INFO  : 'fpga -state' command is executed.
+19:34:40 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+19:34:41 INFO  : Jtag cable 'Digilent Cmod A7 - 35T 210328AA0008A' is selected.
+19:34:41 INFO  : 'jtag frequency' command is executed.
+19:34:41 INFO  : 'configparams mdm-detect-bscan-mask 2' command is executed.
+19:34:41 INFO  : Context for processor 'microblaze_0' is selected.
+19:34:41 INFO  : Processor reset is completed for 'microblaze_0'.
+19:34:41 INFO  : Context for processor 'microblaze_0' is selected.
+19:34:41 INFO  : The application 'C:/FPGA_Projects/ADC_SRAM_UART/ADC_SRAM_UART.sdk/ADC_SRAM_UART/Debug/ADC_SRAM_UART.elf' is downloaded to processor 'microblaze_0'.
+19:34:41 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+configparams mdm-detect-bscan-mask 2
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Cmod A7 - 35T 210328AA0008A"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Cmod A7 - 35T 210328AA0008A"} -index 0
+dow C:/FPGA_Projects/ADC_SRAM_UART/ADC_SRAM_UART.sdk/ADC_SRAM_UART/Debug/ADC_SRAM_UART.elf
+----------------End of Script----------------
+
+19:34:41 INFO  : Memory regions updated for context PA
+19:34:41 INFO  : Memory regions updated for context MicroBlaze Debug Module at USER2
+19:34:41 INFO  : Context for processor 'microblaze_0' is selected.
+19:34:41 INFO  : 'con' command is executed.
+19:34:41 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Cmod A7 - 35T 210328AA0008A"} -index 0
+con
+----------------End of Script----------------
+
+19:34:41 INFO  : Launch script is exported to file 'C:\FPGA_Projects\ADC_SRAM_UART\ADC_SRAM_UART.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_adc_sram_uart.elf_on_local.tcl'
+19:34:42 INFO  : Disconnected from the channel tcfchan#30.
+19:34:44 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Cmod A7 - 35T 210328AA0008A" && level==0} -index 0' command is executed.
+19:34:44 INFO  : 'fpga -state' command is executed.
+19:34:44 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+19:34:44 INFO  : Jtag cable 'Digilent Cmod A7 - 35T 210328AA0008A' is selected.
+19:34:44 INFO  : 'jtag frequency' command is executed.
+19:34:44 INFO  : 'configparams mdm-detect-bscan-mask 2' command is executed.
+19:34:44 INFO  : Context for processor 'microblaze_0' is selected.
+19:34:44 INFO  : Processor reset is completed for 'microblaze_0'.
+19:34:44 INFO  : Context for processor 'microblaze_0' is selected.
+19:34:44 INFO  : The application 'C:/FPGA_Projects/ADC_SRAM_UART/ADC_SRAM_UART.sdk/ADC_SRAM_UART/Debug/ADC_SRAM_UART.elf' is downloaded to processor 'microblaze_0'.
+19:34:44 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+configparams mdm-detect-bscan-mask 2
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Cmod A7 - 35T 210328AA0008A"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Cmod A7 - 35T 210328AA0008A"} -index 0
+dow C:/FPGA_Projects/ADC_SRAM_UART/ADC_SRAM_UART.sdk/ADC_SRAM_UART/Debug/ADC_SRAM_UART.elf
+----------------End of Script----------------
+
+19:34:44 INFO  : Memory regions updated for context PA
+19:34:44 INFO  : Memory regions updated for context MicroBlaze Debug Module at USER2
+19:34:45 INFO  : Context for processor 'microblaze_0' is selected.
+19:34:45 INFO  : 'con' command is executed.
+19:34:45 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Cmod A7 - 35T 210328AA0008A"} -index 0
+con
+----------------End of Script----------------
+
+19:34:45 INFO  : Launch script is exported to file 'C:\FPGA_Projects\ADC_SRAM_UART\ADC_SRAM_UART.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_adc_sram_uart.elf_on_local.tcl'
+19:34:57 INFO  : Disconnected from the channel tcfchan#31.
+19:34:58 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Cmod A7 - 35T 210328AA0008A" && level==0} -index 0' command is executed.
+19:34:58 INFO  : 'fpga -state' command is executed.
+19:34:58 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+19:34:58 INFO  : Jtag cable 'Digilent Cmod A7 - 35T 210328AA0008A' is selected.
+19:34:58 INFO  : 'jtag frequency' command is executed.
+19:34:58 INFO  : 'configparams mdm-detect-bscan-mask 2' command is executed.
+19:34:58 INFO  : Context for processor 'microblaze_0' is selected.
+19:34:58 INFO  : Processor reset is completed for 'microblaze_0'.
+19:34:58 INFO  : Context for processor 'microblaze_0' is selected.
+19:34:59 INFO  : The application 'C:/FPGA_Projects/ADC_SRAM_UART/ADC_SRAM_UART.sdk/ADC_SRAM_UART/Debug/ADC_SRAM_UART.elf' is downloaded to processor 'microblaze_0'.
+19:34:59 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+configparams mdm-detect-bscan-mask 2
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Cmod A7 - 35T 210328AA0008A"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Cmod A7 - 35T 210328AA0008A"} -index 0
+dow C:/FPGA_Projects/ADC_SRAM_UART/ADC_SRAM_UART.sdk/ADC_SRAM_UART/Debug/ADC_SRAM_UART.elf
+----------------End of Script----------------
+
+19:34:59 INFO  : Memory regions updated for context PA
+19:34:59 INFO  : Memory regions updated for context MicroBlaze Debug Module at USER2
+19:34:59 INFO  : Context for processor 'microblaze_0' is selected.
+19:34:59 INFO  : 'con' command is executed.
+19:34:59 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Cmod A7 - 35T 210328AA0008A"} -index 0
+con
+----------------End of Script----------------
+
+19:34:59 INFO  : Launch script is exported to file 'C:\FPGA_Projects\ADC_SRAM_UART\ADC_SRAM_UART.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_adc_sram_uart.elf_on_local.tcl'
+19:38:23 INFO  : Disconnected from the channel tcfchan#32.
+19:38:24 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Cmod A7 - 35T 210328AA0008A" && level==0} -index 0' command is executed.
+19:38:25 INFO  : 'fpga -state' command is executed.
+19:38:25 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+19:38:25 INFO  : Jtag cable 'Digilent Cmod A7 - 35T 210328AA0008A' is selected.
+19:38:25 INFO  : 'jtag frequency' command is executed.
+19:38:25 INFO  : 'configparams mdm-detect-bscan-mask 2' command is executed.
+19:38:25 INFO  : Context for processor 'microblaze_0' is selected.
+19:38:25 INFO  : Processor reset is completed for 'microblaze_0'.
+19:38:25 INFO  : Context for processor 'microblaze_0' is selected.
+19:38:25 INFO  : The application 'C:/FPGA_Projects/ADC_SRAM_UART/ADC_SRAM_UART.sdk/ADC_SRAM_UART/Debug/ADC_SRAM_UART.elf' is downloaded to processor 'microblaze_0'.
+19:38:25 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+configparams mdm-detect-bscan-mask 2
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Cmod A7 - 35T 210328AA0008A"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Cmod A7 - 35T 210328AA0008A"} -index 0
+dow C:/FPGA_Projects/ADC_SRAM_UART/ADC_SRAM_UART.sdk/ADC_SRAM_UART/Debug/ADC_SRAM_UART.elf
+----------------End of Script----------------
+
+19:38:25 INFO  : Memory regions updated for context PA
+19:38:25 INFO  : Memory regions updated for context MicroBlaze Debug Module at USER2
+19:38:25 INFO  : Context for processor 'microblaze_0' is selected.
+19:38:25 INFO  : 'con' command is executed.
+19:38:25 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Cmod A7 - 35T 210328AA0008A"} -index 0
+con
+----------------End of Script----------------
+
+19:38:25 INFO  : Launch script is exported to file 'C:\FPGA_Projects\ADC_SRAM_UART\ADC_SRAM_UART.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_adc_sram_uart.elf_on_local.tcl'
+19:38:43 INFO  : Disconnected from the channel tcfchan#33.
+19:38:44 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Cmod A7 - 35T 210328AA0008A" && level==0} -index 0' command is executed.
+19:38:44 INFO  : 'fpga -state' command is executed.
+19:38:44 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+19:38:44 INFO  : Jtag cable 'Digilent Cmod A7 - 35T 210328AA0008A' is selected.
+19:38:44 INFO  : 'jtag frequency' command is executed.
+19:38:44 INFO  : 'configparams mdm-detect-bscan-mask 2' command is executed.
+19:38:45 INFO  : Context for processor 'microblaze_0' is selected.
+19:38:45 INFO  : Processor reset is completed for 'microblaze_0'.
+19:38:45 INFO  : Context for processor 'microblaze_0' is selected.
+19:38:45 INFO  : The application 'C:/FPGA_Projects/ADC_SRAM_UART/ADC_SRAM_UART.sdk/ADC_SRAM_UART/Debug/ADC_SRAM_UART.elf' is downloaded to processor 'microblaze_0'.
+19:38:45 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+configparams mdm-detect-bscan-mask 2
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Cmod A7 - 35T 210328AA0008A"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Cmod A7 - 35T 210328AA0008A"} -index 0
+dow C:/FPGA_Projects/ADC_SRAM_UART/ADC_SRAM_UART.sdk/ADC_SRAM_UART/Debug/ADC_SRAM_UART.elf
+----------------End of Script----------------
+
+19:38:45 INFO  : Memory regions updated for context PA
+19:38:45 INFO  : Memory regions updated for context MicroBlaze Debug Module at USER2
+19:38:45 INFO  : Context for processor 'microblaze_0' is selected.
+19:38:45 INFO  : 'con' command is executed.
+19:38:45 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Cmod A7 - 35T 210328AA0008A"} -index 0
+con
+----------------End of Script----------------
+
+19:38:45 INFO  : Launch script is exported to file 'C:\FPGA_Projects\ADC_SRAM_UART\ADC_SRAM_UART.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_adc_sram_uart.elf_on_local.tcl'
+19:38:45 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Cmod A7 - 35T 210328AA0008A" && level==0} -index 0' command is executed.
+19:38:45 INFO  : 'fpga -state' command is executed.
+19:38:45 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+19:38:46 INFO  : Jtag cable 'Digilent Cmod A7 - 35T 210328AA0008A' is selected.
+19:38:46 INFO  : 'jtag frequency' command is executed.
+19:38:46 INFO  : 'configparams mdm-detect-bscan-mask 2' command is executed.
+19:38:46 INFO  : Context for processor 'microblaze_0' is selected.
+19:38:46 INFO  : Processor reset is completed for 'microblaze_0'.
+19:38:46 INFO  : Context for processor 'microblaze_0' is selected.
+19:38:46 INFO  : The application 'C:/FPGA_Projects/ADC_SRAM_UART/ADC_SRAM_UART.sdk/ADC_SRAM_UART/Debug/ADC_SRAM_UART.elf' is downloaded to processor 'microblaze_0'.
+19:38:46 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+configparams mdm-detect-bscan-mask 2
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Cmod A7 - 35T 210328AA0008A"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Cmod A7 - 35T 210328AA0008A"} -index 0
+dow C:/FPGA_Projects/ADC_SRAM_UART/ADC_SRAM_UART.sdk/ADC_SRAM_UART/Debug/ADC_SRAM_UART.elf
+----------------End of Script----------------
+
+19:38:46 INFO  : Memory regions updated for context PA
+19:38:46 INFO  : Memory regions updated for context MicroBlaze Debug Module at USER2
+19:38:46 INFO  : Context for processor 'microblaze_0' is selected.
+19:38:47 INFO  : 'con' command is executed.
+19:38:47 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Cmod A7 - 35T 210328AA0008A"} -index 0
+con
+----------------End of Script----------------
+
+19:38:47 INFO  : Launch script is exported to file 'C:\FPGA_Projects\ADC_SRAM_UART\ADC_SRAM_UART.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_adc_sram_uart.elf_on_local.tcl'
+19:39:01 INFO  : Disconnected from the channel tcfchan#34.
+19:39:02 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Cmod A7 - 35T 210328AA0008A" && level==0} -index 0' command is executed.
+19:39:02 INFO  : 'fpga -state' command is executed.
+19:39:02 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+19:39:03 INFO  : Jtag cable 'Digilent Cmod A7 - 35T 210328AA0008A' is selected.
+19:39:03 INFO  : 'jtag frequency' command is executed.
+19:39:03 INFO  : 'configparams mdm-detect-bscan-mask 2' command is executed.
+19:39:03 INFO  : Context for processor 'microblaze_0' is selected.
+19:39:03 INFO  : Processor reset is completed for 'microblaze_0'.
+19:39:03 INFO  : Context for processor 'microblaze_0' is selected.
+19:39:03 INFO  : The application 'C:/FPGA_Projects/ADC_SRAM_UART/ADC_SRAM_UART.sdk/ADC_SRAM_UART/Debug/ADC_SRAM_UART.elf' is downloaded to processor 'microblaze_0'.
+19:39:03 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+configparams mdm-detect-bscan-mask 2
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Cmod A7 - 35T 210328AA0008A"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Cmod A7 - 35T 210328AA0008A"} -index 0
+dow C:/FPGA_Projects/ADC_SRAM_UART/ADC_SRAM_UART.sdk/ADC_SRAM_UART/Debug/ADC_SRAM_UART.elf
+----------------End of Script----------------
+
+19:39:03 INFO  : Memory regions updated for context PA
+19:39:03 INFO  : Memory regions updated for context MicroBlaze Debug Module at USER2
+19:39:03 INFO  : Context for processor 'microblaze_0' is selected.
+19:39:03 INFO  : 'con' command is executed.
+19:39:03 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Cmod A7 - 35T 210328AA0008A"} -index 0
+con
+----------------End of Script----------------
+
+19:39:03 INFO  : Launch script is exported to file 'C:\FPGA_Projects\ADC_SRAM_UART\ADC_SRAM_UART.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_adc_sram_uart.elf_on_local.tcl'
+19:39:15 INFO  : Disconnected from the channel tcfchan#35.
+19:39:16 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Cmod A7 - 35T 210328AA0008A" && level==0} -index 0' command is executed.
+19:39:16 INFO  : 'fpga -state' command is executed.
+19:39:16 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+19:39:16 INFO  : Jtag cable 'Digilent Cmod A7 - 35T 210328AA0008A' is selected.
+19:39:16 INFO  : 'jtag frequency' command is executed.
+19:39:16 INFO  : 'configparams mdm-detect-bscan-mask 2' command is executed.
+19:39:16 INFO  : Context for processor 'microblaze_0' is selected.
+19:39:17 INFO  : Processor reset is completed for 'microblaze_0'.
+19:39:17 INFO  : Context for processor 'microblaze_0' is selected.
+19:39:17 INFO  : The application 'C:/FPGA_Projects/ADC_SRAM_UART/ADC_SRAM_UART.sdk/ADC_SRAM_UART/Debug/ADC_SRAM_UART.elf' is downloaded to processor 'microblaze_0'.
+19:39:17 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+configparams mdm-detect-bscan-mask 2
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Cmod A7 - 35T 210328AA0008A"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Cmod A7 - 35T 210328AA0008A"} -index 0
+dow C:/FPGA_Projects/ADC_SRAM_UART/ADC_SRAM_UART.sdk/ADC_SRAM_UART/Debug/ADC_SRAM_UART.elf
+----------------End of Script----------------
+
+19:39:17 INFO  : Memory regions updated for context PA
+19:39:17 INFO  : Memory regions updated for context MicroBlaze Debug Module at USER2
+19:39:17 INFO  : Context for processor 'microblaze_0' is selected.
+19:39:17 INFO  : 'con' command is executed.
+19:39:17 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Cmod A7 - 35T 210328AA0008A"} -index 0
+con
+----------------End of Script----------------
+
+19:39:17 INFO  : Launch script is exported to file 'C:\FPGA_Projects\ADC_SRAM_UART\ADC_SRAM_UART.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_adc_sram_uart.elf_on_local.tcl'
+19:39:25 INFO  : Disconnected from the channel tcfchan#36.
+19:39:26 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Cmod A7 - 35T 210328AA0008A" && level==0} -index 0' command is executed.
+19:39:26 INFO  : 'fpga -state' command is executed.
+19:39:26 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+19:39:27 INFO  : Jtag cable 'Digilent Cmod A7 - 35T 210328AA0008A' is selected.
+19:39:27 INFO  : 'jtag frequency' command is executed.
+19:39:27 INFO  : 'configparams mdm-detect-bscan-mask 2' command is executed.
+19:39:27 INFO  : Context for processor 'microblaze_0' is selected.
+19:39:27 INFO  : Processor reset is completed for 'microblaze_0'.
+19:39:27 INFO  : Context for processor 'microblaze_0' is selected.
+19:39:27 INFO  : The application 'C:/FPGA_Projects/ADC_SRAM_UART/ADC_SRAM_UART.sdk/ADC_SRAM_UART/Debug/ADC_SRAM_UART.elf' is downloaded to processor 'microblaze_0'.
+19:39:27 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+configparams mdm-detect-bscan-mask 2
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Cmod A7 - 35T 210328AA0008A"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Cmod A7 - 35T 210328AA0008A"} -index 0
+dow C:/FPGA_Projects/ADC_SRAM_UART/ADC_SRAM_UART.sdk/ADC_SRAM_UART/Debug/ADC_SRAM_UART.elf
+----------------End of Script----------------
+
+19:39:27 INFO  : Memory regions updated for context PA
+19:39:27 INFO  : Memory regions updated for context MicroBlaze Debug Module at USER2
+19:39:27 INFO  : Context for processor 'microblaze_0' is selected.
+19:39:27 INFO  : 'con' command is executed.
+19:39:27 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Cmod A7 - 35T 210328AA0008A"} -index 0
+con
+----------------End of Script----------------
+
+19:39:27 INFO  : Launch script is exported to file 'C:\FPGA_Projects\ADC_SRAM_UART\ADC_SRAM_UART.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_adc_sram_uart.elf_on_local.tcl'
+19:39:34 INFO  : Disconnected from the channel tcfchan#37.
+19:39:38 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Cmod A7 - 35T 210328AA0008A" && level==0} -index 0' command is executed.
+19:39:38 INFO  : 'fpga -state' command is executed.
+19:39:38 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+19:39:39 INFO  : Jtag cable 'Digilent Cmod A7 - 35T 210328AA0008A' is selected.
+19:39:39 INFO  : 'jtag frequency' command is executed.
+19:39:39 INFO  : 'configparams mdm-detect-bscan-mask 2' command is executed.
+19:39:39 INFO  : Context for processor 'microblaze_0' is selected.
+19:39:39 INFO  : Processor reset is completed for 'microblaze_0'.
+19:39:39 INFO  : Context for processor 'microblaze_0' is selected.
+19:39:39 INFO  : The application 'C:/FPGA_Projects/ADC_SRAM_UART/ADC_SRAM_UART.sdk/ADC_SRAM_UART/Debug/ADC_SRAM_UART.elf' is downloaded to processor 'microblaze_0'.
+19:39:39 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+configparams mdm-detect-bscan-mask 2
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Cmod A7 - 35T 210328AA0008A"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Cmod A7 - 35T 210328AA0008A"} -index 0
+dow C:/FPGA_Projects/ADC_SRAM_UART/ADC_SRAM_UART.sdk/ADC_SRAM_UART/Debug/ADC_SRAM_UART.elf
+----------------End of Script----------------
+
+19:39:39 INFO  : Memory regions updated for context PA
+19:39:39 INFO  : Memory regions updated for context MicroBlaze Debug Module at USER2
+19:39:40 INFO  : Context for processor 'microblaze_0' is selected.
+19:39:40 INFO  : 'con' command is executed.
+19:39:40 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Cmod A7 - 35T 210328AA0008A"} -index 0
+con
+----------------End of Script----------------
+
+19:39:40 INFO  : Launch script is exported to file 'C:\FPGA_Projects\ADC_SRAM_UART\ADC_SRAM_UART.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_adc_sram_uart.elf_on_local.tcl'
+19:39:59 INFO  : Disconnected from the channel tcfchan#38.
+19:40:00 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Cmod A7 - 35T 210328AA0008A" && level==0} -index 0' command is executed.
+19:40:00 INFO  : 'fpga -state' command is executed.
+19:40:00 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+19:40:01 INFO  : Jtag cable 'Digilent Cmod A7 - 35T 210328AA0008A' is selected.
+19:40:01 INFO  : 'jtag frequency' command is executed.
+19:40:01 INFO  : 'configparams mdm-detect-bscan-mask 2' command is executed.
+19:40:01 INFO  : Context for processor 'microblaze_0' is selected.
+19:40:01 INFO  : Processor reset is completed for 'microblaze_0'.
+19:40:01 INFO  : Context for processor 'microblaze_0' is selected.
+19:40:01 INFO  : The application 'C:/FPGA_Projects/ADC_SRAM_UART/ADC_SRAM_UART.sdk/ADC_SRAM_UART/Debug/ADC_SRAM_UART.elf' is downloaded to processor 'microblaze_0'.
+19:40:01 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+configparams mdm-detect-bscan-mask 2
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Cmod A7 - 35T 210328AA0008A"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Cmod A7 - 35T 210328AA0008A"} -index 0
+dow C:/FPGA_Projects/ADC_SRAM_UART/ADC_SRAM_UART.sdk/ADC_SRAM_UART/Debug/ADC_SRAM_UART.elf
+----------------End of Script----------------
+
+19:40:01 INFO  : Memory regions updated for context PA
+19:40:01 INFO  : Memory regions updated for context MicroBlaze Debug Module at USER2
+19:40:01 INFO  : Context for processor 'microblaze_0' is selected.
+19:40:02 INFO  : 'con' command is executed.
+19:40:02 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Cmod A7 - 35T 210328AA0008A"} -index 0
+con
+----------------End of Script----------------
+
+19:40:02 INFO  : Launch script is exported to file 'C:\FPGA_Projects\ADC_SRAM_UART\ADC_SRAM_UART.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_adc_sram_uart.elf_on_local.tcl'
+19:40:12 INFO  : Disconnected from the channel tcfchan#39.
+19:40:32 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Cmod A7 - 35T 210328AA0008A" && level==0} -index 0' command is executed.
+19:40:32 INFO  : 'fpga -state' command is executed.
+19:40:32 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+19:40:32 INFO  : Jtag cable 'Digilent Cmod A7 - 35T 210328AA0008A' is selected.
+19:40:32 INFO  : 'jtag frequency' command is executed.
+19:40:32 INFO  : 'configparams mdm-detect-bscan-mask 2' command is executed.
+19:40:32 INFO  : Context for processor 'microblaze_0' is selected.
+19:40:32 INFO  : Processor reset is completed for 'microblaze_0'.
+19:40:32 INFO  : Context for processor 'microblaze_0' is selected.
+19:40:33 INFO  : The application 'C:/FPGA_Projects/ADC_SRAM_UART/ADC_SRAM_UART.sdk/ADC_SRAM_UART/Debug/ADC_SRAM_UART.elf' is downloaded to processor 'microblaze_0'.
+19:40:33 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+configparams mdm-detect-bscan-mask 2
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Cmod A7 - 35T 210328AA0008A"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Cmod A7 - 35T 210328AA0008A"} -index 0
+dow C:/FPGA_Projects/ADC_SRAM_UART/ADC_SRAM_UART.sdk/ADC_SRAM_UART/Debug/ADC_SRAM_UART.elf
+----------------End of Script----------------
+
+19:40:33 INFO  : Memory regions updated for context PA
+19:40:33 INFO  : Memory regions updated for context MicroBlaze Debug Module at USER2
+19:40:33 INFO  : Context for processor 'microblaze_0' is selected.
+19:40:33 INFO  : 'con' command is executed.
+19:40:33 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Cmod A7 - 35T 210328AA0008A"} -index 0
+con
+----------------End of Script----------------
+
+19:40:33 INFO  : Launch script is exported to file 'C:\FPGA_Projects\ADC_SRAM_UART\ADC_SRAM_UART.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_adc_sram_uart.elf_on_local.tcl'
+19:41:29 INFO  : Disconnected from the channel tcfchan#40.
+19:41:30 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Cmod A7 - 35T 210328AA0008A" && level==0} -index 0' command is executed.
+19:41:30 INFO  : 'fpga -state' command is executed.
+19:41:30 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+19:41:31 INFO  : Jtag cable 'Digilent Cmod A7 - 35T 210328AA0008A' is selected.
+19:41:31 INFO  : 'jtag frequency' command is executed.
+19:41:31 INFO  : 'configparams mdm-detect-bscan-mask 2' command is executed.
+19:41:31 INFO  : Context for processor 'microblaze_0' is selected.
+19:41:31 INFO  : Processor reset is completed for 'microblaze_0'.
+19:41:31 INFO  : Context for processor 'microblaze_0' is selected.
+19:41:31 INFO  : The application 'C:/FPGA_Projects/ADC_SRAM_UART/ADC_SRAM_UART.sdk/ADC_SRAM_UART/Debug/ADC_SRAM_UART.elf' is downloaded to processor 'microblaze_0'.
+19:41:31 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+configparams mdm-detect-bscan-mask 2
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Cmod A7 - 35T 210328AA0008A"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Cmod A7 - 35T 210328AA0008A"} -index 0
+dow C:/FPGA_Projects/ADC_SRAM_UART/ADC_SRAM_UART.sdk/ADC_SRAM_UART/Debug/ADC_SRAM_UART.elf
+----------------End of Script----------------
+
+19:41:31 INFO  : Memory regions updated for context PA
+19:41:31 INFO  : Memory regions updated for context MicroBlaze Debug Module at USER2
+19:41:31 INFO  : Context for processor 'microblaze_0' is selected.
+19:41:31 INFO  : 'con' command is executed.
+19:41:31 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Cmod A7 - 35T 210328AA0008A"} -index 0
+con
+----------------End of Script----------------
+
+19:41:31 INFO  : Launch script is exported to file 'C:\FPGA_Projects\ADC_SRAM_UART\ADC_SRAM_UART.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_adc_sram_uart.elf_on_local.tcl'
+19:49:53 INFO  : Disconnected from the channel tcfchan#41.
+19:49:54 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Cmod A7 - 35T 210328AA0008A" && level==0} -index 0' command is executed.
+19:49:54 INFO  : 'fpga -state' command is executed.
+19:49:54 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+19:49:55 INFO  : Jtag cable 'Digilent Cmod A7 - 35T 210328AA0008A' is selected.
+19:49:55 INFO  : 'jtag frequency' command is executed.
+19:49:55 INFO  : 'configparams mdm-detect-bscan-mask 2' command is executed.
+19:49:55 INFO  : Context for processor 'microblaze_0' is selected.
+19:49:55 INFO  : Processor reset is completed for 'microblaze_0'.
+19:49:55 INFO  : Context for processor 'microblaze_0' is selected.
+19:49:55 INFO  : The application 'C:/FPGA_Projects/ADC_SRAM_UART/ADC_SRAM_UART.sdk/ADC_SRAM_UART/Debug/ADC_SRAM_UART.elf' is downloaded to processor 'microblaze_0'.
+19:49:55 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+configparams mdm-detect-bscan-mask 2
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Cmod A7 - 35T 210328AA0008A"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Cmod A7 - 35T 210328AA0008A"} -index 0
+dow C:/FPGA_Projects/ADC_SRAM_UART/ADC_SRAM_UART.sdk/ADC_SRAM_UART/Debug/ADC_SRAM_UART.elf
+----------------End of Script----------------
+
+19:49:55 INFO  : Memory regions updated for context PA
+19:49:55 INFO  : Memory regions updated for context MicroBlaze Debug Module at USER2
+19:49:55 INFO  : Context for processor 'microblaze_0' is selected.
+19:49:56 INFO  : 'con' command is executed.
+19:49:56 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Cmod A7 - 35T 210328AA0008A"} -index 0
+con
+----------------End of Script----------------
+
+19:49:56 INFO  : Launch script is exported to file 'C:\FPGA_Projects\ADC_SRAM_UART\ADC_SRAM_UART.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_adc_sram_uart.elf_on_local.tcl'
+19:50:33 INFO  : Disconnected from the channel tcfchan#42.
+19:50:35 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Cmod A7 - 35T 210328AA0008A" && level==0} -index 0' command is executed.
+19:50:35 INFO  : 'fpga -state' command is executed.
+19:50:35 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+19:50:35 INFO  : Jtag cable 'Digilent Cmod A7 - 35T 210328AA0008A' is selected.
+19:50:35 INFO  : 'jtag frequency' command is executed.
+19:50:35 INFO  : 'configparams mdm-detect-bscan-mask 2' command is executed.
+19:50:35 INFO  : Context for processor 'microblaze_0' is selected.
+19:50:35 INFO  : Processor reset is completed for 'microblaze_0'.
+19:50:35 INFO  : Context for processor 'microblaze_0' is selected.
+19:50:36 INFO  : The application 'C:/FPGA_Projects/ADC_SRAM_UART/ADC_SRAM_UART.sdk/ADC_SRAM_UART/Debug/ADC_SRAM_UART.elf' is downloaded to processor 'microblaze_0'.
+19:50:36 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+configparams mdm-detect-bscan-mask 2
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Cmod A7 - 35T 210328AA0008A"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Cmod A7 - 35T 210328AA0008A"} -index 0
+dow C:/FPGA_Projects/ADC_SRAM_UART/ADC_SRAM_UART.sdk/ADC_SRAM_UART/Debug/ADC_SRAM_UART.elf
+----------------End of Script----------------
+
+19:50:36 INFO  : Memory regions updated for context PA
+19:50:36 INFO  : Memory regions updated for context MicroBlaze Debug Module at USER2
+19:50:36 INFO  : Context for processor 'microblaze_0' is selected.
+19:50:36 INFO  : 'con' command is executed.
+19:50:36 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Cmod A7 - 35T 210328AA0008A"} -index 0
+con
+----------------End of Script----------------
+
+19:50:36 INFO  : Launch script is exported to file 'C:\FPGA_Projects\ADC_SRAM_UART\ADC_SRAM_UART.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_adc_sram_uart.elf_on_local.tcl'
+19:51:28 INFO  : Disconnected from the channel tcfchan#43.
+19:51:29 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Cmod A7 - 35T 210328AA0008A" && level==0} -index 0' command is executed.
+19:51:29 INFO  : 'fpga -state' command is executed.
+19:51:29 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+19:51:30 INFO  : Jtag cable 'Digilent Cmod A7 - 35T 210328AA0008A' is selected.
+19:51:30 INFO  : 'jtag frequency' command is executed.
+19:51:30 INFO  : 'configparams mdm-detect-bscan-mask 2' command is executed.
+19:51:30 INFO  : Context for processor 'microblaze_0' is selected.
+19:51:30 INFO  : Processor reset is completed for 'microblaze_0'.
+19:51:30 INFO  : Context for processor 'microblaze_0' is selected.
+19:51:30 INFO  : The application 'C:/FPGA_Projects/ADC_SRAM_UART/ADC_SRAM_UART.sdk/ADC_SRAM_UART/Debug/ADC_SRAM_UART.elf' is downloaded to processor 'microblaze_0'.
+19:51:30 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+configparams mdm-detect-bscan-mask 2
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Cmod A7 - 35T 210328AA0008A"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Cmod A7 - 35T 210328AA0008A"} -index 0
+dow C:/FPGA_Projects/ADC_SRAM_UART/ADC_SRAM_UART.sdk/ADC_SRAM_UART/Debug/ADC_SRAM_UART.elf
+----------------End of Script----------------
+
+19:51:30 INFO  : Memory regions updated for context PA
+19:51:30 INFO  : Memory regions updated for context MicroBlaze Debug Module at USER2
+19:51:30 INFO  : Context for processor 'microblaze_0' is selected.
+19:51:30 INFO  : 'con' command is executed.
+19:51:30 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Cmod A7 - 35T 210328AA0008A"} -index 0
+con
+----------------End of Script----------------
+
+19:51:30 INFO  : Launch script is exported to file 'C:\FPGA_Projects\ADC_SRAM_UART\ADC_SRAM_UART.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_adc_sram_uart.elf_on_local.tcl'
+19:52:41 INFO  : Disconnected from the channel tcfchan#44.
+19:52:43 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Cmod A7 - 35T 210328AA0008A" && level==0} -index 0' command is executed.
+19:52:43 INFO  : 'fpga -state' command is executed.
+19:52:43 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+19:52:43 INFO  : Jtag cable 'Digilent Cmod A7 - 35T 210328AA0008A' is selected.
+19:52:43 INFO  : 'jtag frequency' command is executed.
+19:52:43 INFO  : 'configparams mdm-detect-bscan-mask 2' command is executed.
+19:52:44 INFO  : Context for processor 'microblaze_0' is selected.
+19:52:44 INFO  : Processor reset is completed for 'microblaze_0'.
+19:52:44 INFO  : Context for processor 'microblaze_0' is selected.
+19:52:44 INFO  : The application 'C:/FPGA_Projects/ADC_SRAM_UART/ADC_SRAM_UART.sdk/ADC_SRAM_UART/Debug/ADC_SRAM_UART.elf' is downloaded to processor 'microblaze_0'.
+19:52:44 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+configparams mdm-detect-bscan-mask 2
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Cmod A7 - 35T 210328AA0008A"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Cmod A7 - 35T 210328AA0008A"} -index 0
+dow C:/FPGA_Projects/ADC_SRAM_UART/ADC_SRAM_UART.sdk/ADC_SRAM_UART/Debug/ADC_SRAM_UART.elf
+----------------End of Script----------------
+
+19:52:44 INFO  : Memory regions updated for context PA
+19:52:44 INFO  : Memory regions updated for context MicroBlaze Debug Module at USER2
+19:52:44 INFO  : Context for processor 'microblaze_0' is selected.
+19:52:44 INFO  : 'con' command is executed.
+19:52:44 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Cmod A7 - 35T 210328AA0008A"} -index 0
+con
+----------------End of Script----------------
+
+19:52:44 INFO  : Launch script is exported to file 'C:\FPGA_Projects\ADC_SRAM_UART\ADC_SRAM_UART.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_adc_sram_uart.elf_on_local.tcl'
+19:54:01 INFO  : Disconnected from the channel tcfchan#45.
+19:54:02 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Cmod A7 - 35T 210328AA0008A" && level==0} -index 0' command is executed.
+19:54:02 INFO  : 'fpga -state' command is executed.
+19:54:02 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+19:54:03 INFO  : Jtag cable 'Digilent Cmod A7 - 35T 210328AA0008A' is selected.
+19:54:03 INFO  : 'jtag frequency' command is executed.
+19:54:03 INFO  : 'configparams mdm-detect-bscan-mask 2' command is executed.
+19:54:03 INFO  : Context for processor 'microblaze_0' is selected.
+19:54:03 INFO  : Processor reset is completed for 'microblaze_0'.
+19:54:03 INFO  : Context for processor 'microblaze_0' is selected.
+19:54:03 INFO  : The application 'C:/FPGA_Projects/ADC_SRAM_UART/ADC_SRAM_UART.sdk/ADC_SRAM_UART/Debug/ADC_SRAM_UART.elf' is downloaded to processor 'microblaze_0'.
+19:54:03 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+configparams mdm-detect-bscan-mask 2
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Cmod A7 - 35T 210328AA0008A"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Cmod A7 - 35T 210328AA0008A"} -index 0
+dow C:/FPGA_Projects/ADC_SRAM_UART/ADC_SRAM_UART.sdk/ADC_SRAM_UART/Debug/ADC_SRAM_UART.elf
+----------------End of Script----------------
+
+19:54:03 INFO  : Memory regions updated for context PA
+19:54:03 INFO  : Memory regions updated for context MicroBlaze Debug Module at USER2
+19:54:03 INFO  : Context for processor 'microblaze_0' is selected.
+19:54:03 INFO  : 'con' command is executed.
+19:54:03 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Cmod A7 - 35T 210328AA0008A"} -index 0
+con
+----------------End of Script----------------
+
+19:54:03 INFO  : Launch script is exported to file 'C:\FPGA_Projects\ADC_SRAM_UART\ADC_SRAM_UART.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_adc_sram_uart.elf_on_local.tcl'
+19:56:30 INFO  : Disconnected from the channel tcfchan#46.
+19:56:31 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Cmod A7 - 35T 210328AA0008A" && level==0} -index 0' command is executed.
+19:56:31 INFO  : 'fpga -state' command is executed.
+19:56:31 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+19:56:32 INFO  : Jtag cable 'Digilent Cmod A7 - 35T 210328AA0008A' is selected.
+19:56:32 INFO  : 'jtag frequency' command is executed.
+19:56:32 INFO  : 'configparams mdm-detect-bscan-mask 2' command is executed.
+19:56:32 INFO  : Context for processor 'microblaze_0' is selected.
+19:56:32 INFO  : Processor reset is completed for 'microblaze_0'.
+19:56:32 INFO  : Context for processor 'microblaze_0' is selected.
+19:56:32 INFO  : The application 'C:/FPGA_Projects/ADC_SRAM_UART/ADC_SRAM_UART.sdk/ADC_SRAM_UART/Debug/ADC_SRAM_UART.elf' is downloaded to processor 'microblaze_0'.
+19:56:32 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+configparams mdm-detect-bscan-mask 2
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Cmod A7 - 35T 210328AA0008A"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Cmod A7 - 35T 210328AA0008A"} -index 0
+dow C:/FPGA_Projects/ADC_SRAM_UART/ADC_SRAM_UART.sdk/ADC_SRAM_UART/Debug/ADC_SRAM_UART.elf
+----------------End of Script----------------
+
+19:56:32 INFO  : Memory regions updated for context PA
+19:56:32 INFO  : Memory regions updated for context MicroBlaze Debug Module at USER2
+19:56:33 INFO  : Context for processor 'microblaze_0' is selected.
+19:56:33 INFO  : 'con' command is executed.
+19:56:33 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Cmod A7 - 35T 210328AA0008A"} -index 0
+con
+----------------End of Script----------------
+
+19:56:33 INFO  : Launch script is exported to file 'C:\FPGA_Projects\ADC_SRAM_UART\ADC_SRAM_UART.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_adc_sram_uart.elf_on_local.tcl'
+19:57:50 INFO  : Disconnected from the channel tcfchan#47.
+19:57:51 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Cmod A7 - 35T 210328AA0008A" && level==0} -index 0' command is executed.
+19:57:51 INFO  : 'fpga -state' command is executed.
+19:57:51 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+19:57:52 INFO  : Jtag cable 'Digilent Cmod A7 - 35T 210328AA0008A' is selected.
+19:57:52 INFO  : 'jtag frequency' command is executed.
+19:57:52 INFO  : 'configparams mdm-detect-bscan-mask 2' command is executed.
+19:57:52 INFO  : Context for processor 'microblaze_0' is selected.
+19:57:52 INFO  : Processor reset is completed for 'microblaze_0'.
+19:57:52 INFO  : Context for processor 'microblaze_0' is selected.
+19:57:52 INFO  : The application 'C:/FPGA_Projects/ADC_SRAM_UART/ADC_SRAM_UART.sdk/ADC_SRAM_UART/Debug/ADC_SRAM_UART.elf' is downloaded to processor 'microblaze_0'.
+19:57:52 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+configparams mdm-detect-bscan-mask 2
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Cmod A7 - 35T 210328AA0008A"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Cmod A7 - 35T 210328AA0008A"} -index 0
+dow C:/FPGA_Projects/ADC_SRAM_UART/ADC_SRAM_UART.sdk/ADC_SRAM_UART/Debug/ADC_SRAM_UART.elf
+----------------End of Script----------------
+
+19:57:52 INFO  : Memory regions updated for context PA
+19:57:52 INFO  : Memory regions updated for context MicroBlaze Debug Module at USER2
+19:57:52 INFO  : Context for processor 'microblaze_0' is selected.
+19:57:52 INFO  : 'con' command is executed.
+19:57:52 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Cmod A7 - 35T 210328AA0008A"} -index 0
+con
+----------------End of Script----------------
+
+19:57:52 INFO  : Launch script is exported to file 'C:\FPGA_Projects\ADC_SRAM_UART\ADC_SRAM_UART.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_adc_sram_uart.elf_on_local.tcl'
+19:58:44 INFO  : Disconnected from the channel tcfchan#48.
+19:58:45 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Cmod A7 - 35T 210328AA0008A" && level==0} -index 0' command is executed.
+19:58:45 INFO  : 'fpga -state' command is executed.
+19:58:45 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+19:58:46 INFO  : Jtag cable 'Digilent Cmod A7 - 35T 210328AA0008A' is selected.
+19:58:46 INFO  : 'jtag frequency' command is executed.
+19:58:46 INFO  : 'configparams mdm-detect-bscan-mask 2' command is executed.
+19:58:46 INFO  : Context for processor 'microblaze_0' is selected.
+19:58:46 INFO  : Processor reset is completed for 'microblaze_0'.
+19:58:46 INFO  : Context for processor 'microblaze_0' is selected.
+19:58:46 INFO  : The application 'C:/FPGA_Projects/ADC_SRAM_UART/ADC_SRAM_UART.sdk/ADC_SRAM_UART/Debug/ADC_SRAM_UART.elf' is downloaded to processor 'microblaze_0'.
+19:58:46 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+configparams mdm-detect-bscan-mask 2
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Cmod A7 - 35T 210328AA0008A"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Cmod A7 - 35T 210328AA0008A"} -index 0
+dow C:/FPGA_Projects/ADC_SRAM_UART/ADC_SRAM_UART.sdk/ADC_SRAM_UART/Debug/ADC_SRAM_UART.elf
+----------------End of Script----------------
+
+19:58:46 INFO  : Memory regions updated for context PA
+19:58:46 INFO  : Memory regions updated for context MicroBlaze Debug Module at USER2
+19:58:46 INFO  : Context for processor 'microblaze_0' is selected.
+19:58:46 INFO  : 'con' command is executed.
+19:58:46 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Cmod A7 - 35T 210328AA0008A"} -index 0
+con
+----------------End of Script----------------
+
+19:58:46 INFO  : Launch script is exported to file 'C:\FPGA_Projects\ADC_SRAM_UART\ADC_SRAM_UART.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_adc_sram_uart.elf_on_local.tcl'
+20:02:12 INFO  : Disconnected from the channel tcfchan#49.
+20:02:13 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Cmod A7 - 35T 210328AA0008A" && level==0} -index 0' command is executed.
+20:02:13 INFO  : 'fpga -state' command is executed.
+20:02:13 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+20:02:14 INFO  : Jtag cable 'Digilent Cmod A7 - 35T 210328AA0008A' is selected.
+20:02:14 INFO  : 'jtag frequency' command is executed.
+20:02:14 INFO  : 'configparams mdm-detect-bscan-mask 2' command is executed.
+20:02:14 INFO  : Context for processor 'microblaze_0' is selected.
+20:02:14 INFO  : Processor reset is completed for 'microblaze_0'.
+20:02:14 INFO  : Context for processor 'microblaze_0' is selected.
+20:02:14 INFO  : The application 'C:/FPGA_Projects/ADC_SRAM_UART/ADC_SRAM_UART.sdk/ADC_SRAM_UART/Debug/ADC_SRAM_UART.elf' is downloaded to processor 'microblaze_0'.
+20:02:14 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+configparams mdm-detect-bscan-mask 2
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Cmod A7 - 35T 210328AA0008A"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Cmod A7 - 35T 210328AA0008A"} -index 0
+dow C:/FPGA_Projects/ADC_SRAM_UART/ADC_SRAM_UART.sdk/ADC_SRAM_UART/Debug/ADC_SRAM_UART.elf
+----------------End of Script----------------
+
+20:02:14 INFO  : Memory regions updated for context PA
+20:02:14 INFO  : Memory regions updated for context MicroBlaze Debug Module at USER2
+20:02:14 INFO  : Context for processor 'microblaze_0' is selected.
+20:02:14 INFO  : 'con' command is executed.
+20:02:14 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Cmod A7 - 35T 210328AA0008A"} -index 0
+con
+----------------End of Script----------------
+
+20:02:14 INFO  : Launch script is exported to file 'C:\FPGA_Projects\ADC_SRAM_UART\ADC_SRAM_UART.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_adc_sram_uart.elf_on_local.tcl'
+20:06:54 INFO  : Disconnected from the channel tcfchan#50.
+20:06:55 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Cmod A7 - 35T 210328AA0008A" && level==0} -index 0' command is executed.
+20:06:55 INFO  : 'fpga -state' command is executed.
+20:06:55 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+20:06:56 INFO  : Jtag cable 'Digilent Cmod A7 - 35T 210328AA0008A' is selected.
+20:06:56 INFO  : 'jtag frequency' command is executed.
+20:06:56 INFO  : 'configparams mdm-detect-bscan-mask 2' command is executed.
+20:06:56 INFO  : Context for processor 'microblaze_0' is selected.
+20:06:56 INFO  : Processor reset is completed for 'microblaze_0'.
+20:06:56 INFO  : Context for processor 'microblaze_0' is selected.
+20:06:56 INFO  : The application 'C:/FPGA_Projects/ADC_SRAM_UART/ADC_SRAM_UART.sdk/ADC_SRAM_UART/Debug/ADC_SRAM_UART.elf' is downloaded to processor 'microblaze_0'.
+20:06:56 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+configparams mdm-detect-bscan-mask 2
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Cmod A7 - 35T 210328AA0008A"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Cmod A7 - 35T 210328AA0008A"} -index 0
+dow C:/FPGA_Projects/ADC_SRAM_UART/ADC_SRAM_UART.sdk/ADC_SRAM_UART/Debug/ADC_SRAM_UART.elf
+----------------End of Script----------------
+
+20:06:56 INFO  : Memory regions updated for context PA
+20:06:56 INFO  : Memory regions updated for context MicroBlaze Debug Module at USER2
+20:06:56 INFO  : Context for processor 'microblaze_0' is selected.
+20:06:56 INFO  : 'con' command is executed.
+20:06:56 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Cmod A7 - 35T 210328AA0008A"} -index 0
+con
+----------------End of Script----------------
+
+20:06:57 INFO  : Launch script is exported to file 'C:\FPGA_Projects\ADC_SRAM_UART\ADC_SRAM_UART.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_adc_sram_uart.elf_on_local.tcl'
+20:09:58 INFO  : Disconnected from the channel tcfchan#51.
+20:09:59 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Cmod A7 - 35T 210328AA0008A" && level==0} -index 0' command is executed.
+20:09:59 INFO  : 'fpga -state' command is executed.
+20:09:59 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+20:10:00 INFO  : Jtag cable 'Digilent Cmod A7 - 35T 210328AA0008A' is selected.
+20:10:00 INFO  : 'jtag frequency' command is executed.
+20:10:00 INFO  : 'configparams mdm-detect-bscan-mask 2' command is executed.
+20:10:00 INFO  : Context for processor 'microblaze_0' is selected.
+20:10:00 INFO  : Processor reset is completed for 'microblaze_0'.
+20:10:00 INFO  : Context for processor 'microblaze_0' is selected.
+20:10:00 INFO  : The application 'C:/FPGA_Projects/ADC_SRAM_UART/ADC_SRAM_UART.sdk/ADC_SRAM_UART/Debug/ADC_SRAM_UART.elf' is downloaded to processor 'microblaze_0'.
+20:10:00 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+configparams mdm-detect-bscan-mask 2
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Cmod A7 - 35T 210328AA0008A"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Cmod A7 - 35T 210328AA0008A"} -index 0
+dow C:/FPGA_Projects/ADC_SRAM_UART/ADC_SRAM_UART.sdk/ADC_SRAM_UART/Debug/ADC_SRAM_UART.elf
+----------------End of Script----------------
+
+20:10:01 INFO  : Memory regions updated for context PA
+20:10:01 INFO  : Memory regions updated for context MicroBlaze Debug Module at USER2
+20:10:01 INFO  : Context for processor 'microblaze_0' is selected.
+20:10:01 INFO  : 'con' command is executed.
+20:10:01 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Cmod A7 - 35T 210328AA0008A"} -index 0
+con
+----------------End of Script----------------
+
+20:10:01 INFO  : Launch script is exported to file 'C:\FPGA_Projects\ADC_SRAM_UART\ADC_SRAM_UART.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_adc_sram_uart.elf_on_local.tcl'
+20:11:46 INFO  : Disconnected from the channel tcfchan#52.
+20:11:47 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Cmod A7 - 35T 210328AA0008A" && level==0} -index 0' command is executed.
+20:11:47 INFO  : 'fpga -state' command is executed.
+20:11:47 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+20:11:47 INFO  : Jtag cable 'Digilent Cmod A7 - 35T 210328AA0008A' is selected.
+20:11:47 INFO  : 'jtag frequency' command is executed.
+20:11:47 INFO  : 'configparams mdm-detect-bscan-mask 2' command is executed.
+20:11:47 INFO  : Context for processor 'microblaze_0' is selected.
+20:11:48 INFO  : Processor reset is completed for 'microblaze_0'.
+20:11:48 INFO  : Context for processor 'microblaze_0' is selected.
+20:11:48 INFO  : The application 'C:/FPGA_Projects/ADC_SRAM_UART/ADC_SRAM_UART.sdk/ADC_SRAM_UART/Debug/ADC_SRAM_UART.elf' is downloaded to processor 'microblaze_0'.
+20:11:48 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+configparams mdm-detect-bscan-mask 2
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Cmod A7 - 35T 210328AA0008A"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Cmod A7 - 35T 210328AA0008A"} -index 0
+dow C:/FPGA_Projects/ADC_SRAM_UART/ADC_SRAM_UART.sdk/ADC_SRAM_UART/Debug/ADC_SRAM_UART.elf
+----------------End of Script----------------
+
+20:11:48 INFO  : Memory regions updated for context PA
+20:11:48 INFO  : Memory regions updated for context MicroBlaze Debug Module at USER2
+20:11:48 INFO  : Context for processor 'microblaze_0' is selected.
+20:11:48 INFO  : 'con' command is executed.
+20:11:48 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Cmod A7 - 35T 210328AA0008A"} -index 0
+con
+----------------End of Script----------------
+
+20:11:48 INFO  : Launch script is exported to file 'C:\FPGA_Projects\ADC_SRAM_UART\ADC_SRAM_UART.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_adc_sram_uart.elf_on_local.tcl'
+20:13:00 INFO  : Disconnected from the channel tcfchan#53.
+20:13:02 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Cmod A7 - 35T 210328AA0008A" && level==0} -index 0' command is executed.
+20:13:02 INFO  : 'fpga -state' command is executed.
+20:13:02 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+20:13:02 INFO  : Jtag cable 'Digilent Cmod A7 - 35T 210328AA0008A' is selected.
+20:13:02 INFO  : 'jtag frequency' command is executed.
+20:13:02 INFO  : 'configparams mdm-detect-bscan-mask 2' command is executed.
+20:13:02 INFO  : Context for processor 'microblaze_0' is selected.
+20:13:02 INFO  : Processor reset is completed for 'microblaze_0'.
+20:13:02 INFO  : Context for processor 'microblaze_0' is selected.
+20:13:03 INFO  : The application 'C:/FPGA_Projects/ADC_SRAM_UART/ADC_SRAM_UART.sdk/ADC_SRAM_UART/Debug/ADC_SRAM_UART.elf' is downloaded to processor 'microblaze_0'.
+20:13:03 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+configparams mdm-detect-bscan-mask 2
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Cmod A7 - 35T 210328AA0008A"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Cmod A7 - 35T 210328AA0008A"} -index 0
+dow C:/FPGA_Projects/ADC_SRAM_UART/ADC_SRAM_UART.sdk/ADC_SRAM_UART/Debug/ADC_SRAM_UART.elf
+----------------End of Script----------------
+
+20:13:03 INFO  : Memory regions updated for context PA
+20:13:03 INFO  : Memory regions updated for context MicroBlaze Debug Module at USER2
+20:13:03 INFO  : Context for processor 'microblaze_0' is selected.
+20:13:03 INFO  : 'con' command is executed.
+20:13:03 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Cmod A7 - 35T 210328AA0008A"} -index 0
+con
+----------------End of Script----------------
+
+20:13:03 INFO  : Launch script is exported to file 'C:\FPGA_Projects\ADC_SRAM_UART\ADC_SRAM_UART.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_adc_sram_uart.elf_on_local.tcl'
+20:19:18 INFO  : Disconnected from the channel tcfchan#54.
+20:19:20 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Cmod A7 - 35T 210328AA0008A" && level==0} -index 0' command is executed.
+20:19:20 INFO  : 'fpga -state' command is executed.
+20:19:20 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+20:19:20 INFO  : Jtag cable 'Digilent Cmod A7 - 35T 210328AA0008A' is selected.
+20:19:21 INFO  : 'jtag frequency' command is executed.
+20:19:21 INFO  : 'configparams mdm-detect-bscan-mask 2' command is executed.
+20:19:21 INFO  : Context for processor 'microblaze_0' is selected.
+20:19:21 INFO  : Processor reset is completed for 'microblaze_0'.
+20:19:21 INFO  : Context for processor 'microblaze_0' is selected.
+20:19:21 INFO  : The application 'C:/FPGA_Projects/ADC_SRAM_UART/ADC_SRAM_UART.sdk/ADC_SRAM_UART/Debug/ADC_SRAM_UART.elf' is downloaded to processor 'microblaze_0'.
+20:19:21 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+configparams mdm-detect-bscan-mask 2
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Cmod A7 - 35T 210328AA0008A"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Cmod A7 - 35T 210328AA0008A"} -index 0
+dow C:/FPGA_Projects/ADC_SRAM_UART/ADC_SRAM_UART.sdk/ADC_SRAM_UART/Debug/ADC_SRAM_UART.elf
+----------------End of Script----------------
+
+20:19:21 INFO  : Memory regions updated for context PA
+20:19:21 INFO  : Memory regions updated for context MicroBlaze Debug Module at USER2
+20:19:22 INFO  : Context for processor 'microblaze_0' is selected.
+20:19:22 INFO  : 'con' command is executed.
+20:19:22 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Cmod A7 - 35T 210328AA0008A"} -index 0
+con
+----------------End of Script----------------
+
+20:19:22 INFO  : Launch script is exported to file 'C:\FPGA_Projects\ADC_SRAM_UART\ADC_SRAM_UART.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_adc_sram_uart.elf_on_local.tcl'
+20:21:05 INFO  : Disconnected from the channel tcfchan#55.
+20:21:06 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Cmod A7 - 35T 210328AA0008A" && level==0} -index 0' command is executed.
+20:21:06 INFO  : 'fpga -state' command is executed.
+20:21:06 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+20:21:07 INFO  : Jtag cable 'Digilent Cmod A7 - 35T 210328AA0008A' is selected.
+20:21:07 INFO  : 'jtag frequency' command is executed.
+20:21:07 INFO  : 'configparams mdm-detect-bscan-mask 2' command is executed.
+20:21:07 INFO  : Context for processor 'microblaze_0' is selected.
+20:21:07 INFO  : Processor reset is completed for 'microblaze_0'.
+20:21:08 INFO  : Context for processor 'microblaze_0' is selected.
+20:21:08 INFO  : The application 'C:/FPGA_Projects/ADC_SRAM_UART/ADC_SRAM_UART.sdk/ADC_SRAM_UART/Debug/ADC_SRAM_UART.elf' is downloaded to processor 'microblaze_0'.
+20:21:08 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+configparams mdm-detect-bscan-mask 2
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Cmod A7 - 35T 210328AA0008A"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Cmod A7 - 35T 210328AA0008A"} -index 0
+dow C:/FPGA_Projects/ADC_SRAM_UART/ADC_SRAM_UART.sdk/ADC_SRAM_UART/Debug/ADC_SRAM_UART.elf
+----------------End of Script----------------
+
+20:21:08 INFO  : Memory regions updated for context PA
+20:21:08 INFO  : Memory regions updated for context MicroBlaze Debug Module at USER2
+20:21:08 INFO  : Context for processor 'microblaze_0' is selected.
+20:21:08 INFO  : 'con' command is executed.
+20:21:08 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Cmod A7 - 35T 210328AA0008A"} -index 0
+con
+----------------End of Script----------------
+
+20:21:08 INFO  : Launch script is exported to file 'C:\FPGA_Projects\ADC_SRAM_UART\ADC_SRAM_UART.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_adc_sram_uart.elf_on_local.tcl'
+20:23:41 INFO  : Disconnected from the channel tcfchan#56.
+20:23:43 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Cmod A7 - 35T 210328AA0008A" && level==0} -index 0' command is executed.
+20:23:43 INFO  : 'fpga -state' command is executed.
+20:23:43 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+20:23:43 INFO  : Jtag cable 'Digilent Cmod A7 - 35T 210328AA0008A' is selected.
+20:23:43 INFO  : 'jtag frequency' command is executed.
+20:23:43 INFO  : 'configparams mdm-detect-bscan-mask 2' command is executed.
+20:23:44 INFO  : Context for processor 'microblaze_0' is selected.
+20:23:44 INFO  : Processor reset is completed for 'microblaze_0'.
+20:23:44 INFO  : Context for processor 'microblaze_0' is selected.
+20:23:44 INFO  : The application 'C:/FPGA_Projects/ADC_SRAM_UART/ADC_SRAM_UART.sdk/ADC_SRAM_UART/Debug/ADC_SRAM_UART.elf' is downloaded to processor 'microblaze_0'.
+20:23:44 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+configparams mdm-detect-bscan-mask 2
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Cmod A7 - 35T 210328AA0008A"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Cmod A7 - 35T 210328AA0008A"} -index 0
+dow C:/FPGA_Projects/ADC_SRAM_UART/ADC_SRAM_UART.sdk/ADC_SRAM_UART/Debug/ADC_SRAM_UART.elf
+----------------End of Script----------------
+
+20:23:44 INFO  : Memory regions updated for context PA
+20:23:44 INFO  : Memory regions updated for context MicroBlaze Debug Module at USER2
+20:23:44 INFO  : Context for processor 'microblaze_0' is selected.
+20:23:44 INFO  : 'con' command is executed.
+20:23:44 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Cmod A7 - 35T 210328AA0008A"} -index 0
+con
+----------------End of Script----------------
+
+20:23:44 INFO  : Launch script is exported to file 'C:\FPGA_Projects\ADC_SRAM_UART\ADC_SRAM_UART.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_adc_sram_uart.elf_on_local.tcl'
+20:25:58 INFO  : Disconnected from the channel tcfchan#57.
+20:25:59 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Cmod A7 - 35T 210328AA0008A" && level==0} -index 0' command is executed.
+20:25:59 INFO  : 'fpga -state' command is executed.
+20:25:59 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+20:26:00 INFO  : Jtag cable 'Digilent Cmod A7 - 35T 210328AA0008A' is selected.
+20:26:00 INFO  : 'jtag frequency' command is executed.
+20:26:00 INFO  : 'configparams mdm-detect-bscan-mask 2' command is executed.
+20:26:00 INFO  : Context for processor 'microblaze_0' is selected.
+20:26:00 INFO  : Processor reset is completed for 'microblaze_0'.
+20:26:00 INFO  : Context for processor 'microblaze_0' is selected.
+20:26:00 INFO  : The application 'C:/FPGA_Projects/ADC_SRAM_UART/ADC_SRAM_UART.sdk/ADC_SRAM_UART/Debug/ADC_SRAM_UART.elf' is downloaded to processor 'microblaze_0'.
+20:26:00 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+configparams mdm-detect-bscan-mask 2
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Cmod A7 - 35T 210328AA0008A"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Cmod A7 - 35T 210328AA0008A"} -index 0
+dow C:/FPGA_Projects/ADC_SRAM_UART/ADC_SRAM_UART.sdk/ADC_SRAM_UART/Debug/ADC_SRAM_UART.elf
+----------------End of Script----------------
+
+20:26:00 INFO  : Memory regions updated for context PA
+20:26:00 INFO  : Memory regions updated for context MicroBlaze Debug Module at USER2
+20:26:01 INFO  : Context for processor 'microblaze_0' is selected.
+20:26:01 INFO  : 'con' command is executed.
+20:26:01 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Cmod A7 - 35T 210328AA0008A"} -index 0
+con
+----------------End of Script----------------
+
+20:26:01 INFO  : Launch script is exported to file 'C:\FPGA_Projects\ADC_SRAM_UART\ADC_SRAM_UART.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_adc_sram_uart.elf_on_local.tcl'
+20:26:42 INFO  : Disconnected from the channel tcfchan#58.
+20:26:43 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Cmod A7 - 35T 210328AA0008A" && level==0} -index 0' command is executed.
+20:26:43 INFO  : 'fpga -state' command is executed.
+20:26:43 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+20:26:44 INFO  : Jtag cable 'Digilent Cmod A7 - 35T 210328AA0008A' is selected.
+20:26:44 INFO  : 'jtag frequency' command is executed.
+20:26:44 INFO  : 'configparams mdm-detect-bscan-mask 2' command is executed.
+20:26:44 INFO  : Context for processor 'microblaze_0' is selected.
+20:26:44 INFO  : Processor reset is completed for 'microblaze_0'.
+20:26:44 INFO  : Context for processor 'microblaze_0' is selected.
+20:26:44 INFO  : The application 'C:/FPGA_Projects/ADC_SRAM_UART/ADC_SRAM_UART.sdk/ADC_SRAM_UART/Debug/ADC_SRAM_UART.elf' is downloaded to processor 'microblaze_0'.
+20:26:44 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+configparams mdm-detect-bscan-mask 2
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Cmod A7 - 35T 210328AA0008A"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Cmod A7 - 35T 210328AA0008A"} -index 0
+dow C:/FPGA_Projects/ADC_SRAM_UART/ADC_SRAM_UART.sdk/ADC_SRAM_UART/Debug/ADC_SRAM_UART.elf
+----------------End of Script----------------
+
+20:26:44 INFO  : Memory regions updated for context PA
+20:26:44 INFO  : Memory regions updated for context MicroBlaze Debug Module at USER2
+20:26:45 INFO  : Context for processor 'microblaze_0' is selected.
+20:26:45 INFO  : 'con' command is executed.
+20:26:45 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Cmod A7 - 35T 210328AA0008A"} -index 0
+con
+----------------End of Script----------------
+
+20:26:45 INFO  : Launch script is exported to file 'C:\FPGA_Projects\ADC_SRAM_UART\ADC_SRAM_UART.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_adc_sram_uart.elf_on_local.tcl'
