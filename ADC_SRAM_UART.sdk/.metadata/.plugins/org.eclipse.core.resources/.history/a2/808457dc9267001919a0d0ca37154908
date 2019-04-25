@@ -101,7 +101,7 @@ int main (){
 				rec[2] = XUartLite_RecvByte(UART_BASE_ADDR);
 				rec[3] = XUartLite_RecvByte(UART_BASE_ADDR);
 				rec[4] = XUartLite_RecvByte(UART_BASE_ADDR);
-				NumSamplesToTx = rec[1] + rec[2]*0x100;
+				NumSamplesToTx = rec[1] + rec[2]*0xFF;
 				xil_printf("NUMOFSAMPLES received\n\r");
 				if(NumSamplesToTx > 8000){
 					xil_printf("Error: Over sample number limit\n\r");
