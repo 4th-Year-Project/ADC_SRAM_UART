@@ -1,4 +1,4 @@
-11:52:22 **** Incremental Build of configuration Debug for project ADC_SRAM_UART ****
+11:53:46 **** Auto Build of configuration Debug for project ADC_SRAM_UART ****
 make all 
 'Building file: ../src/ADC_SRAM_UART.c'
 'Invoking: MicroBlaze gcc compiler'
@@ -16,14 +16,6 @@ mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/ADC_SRAM_UART.o" -I../../ADC_
 ../src/ADC_SRAM_UART.c:32:5: note: expected 'u32 * {aka long unsigned int *}' but argument is of type 'long unsigned int'
  int RxSamples(XLlFifo *InstancePtr, u32 *DestinationAddr);
      ^~~~~~~~~
-../src/ADC_SRAM_UART.c: In function 'TxUART':
-../src/ADC_SRAM_UART.c:222:9: warning: unused variable 'count' [-Wunused-variable]
-     u16 count = 0;
-         ^~~~~
-../src/ADC_SRAM_UART.c: In function 'Reset':
-../src/ADC_SRAM_UART.c:237:1: warning: control reaches end of non-void function [-Wreturn-type]
- }
- ^
 'Finished building: ../src/ADC_SRAM_UART.c'
 ' '
 'Building target: ADC_SRAM_UART.elf'
@@ -34,9 +26,9 @@ mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../ADC_SRAM_UART_bsp/microblaze_0/lib -
 'Invoking: MicroBlaze Print Size'
 mb-size ADC_SRAM_UART.elf  |tee "ADC_SRAM_UART.elf.size"
    text	   data	    bss	    dec	    hex	filename
-  12060	    344	   3356	  15760	   3d90	ADC_SRAM_UART.elf
+  12056	    344	   3352	  15752	   3d88	ADC_SRAM_UART.elf
 'Finished building: ADC_SRAM_UART.elf.size'
 ' '
 
-11:52:23 Build Finished (took 1s.342ms)
+11:53:47 Build Finished (took 1s.518ms)
 

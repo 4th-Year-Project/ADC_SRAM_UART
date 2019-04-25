@@ -31,7 +31,7 @@ int GPIOInit(XGpio *Instance0Ptr, XGpio *Instance1Ptr);
 int RxInit(XLlFifo *InstancePtr, u16 DeviceId);
 int RxSamples(XLlFifo *InstancePtr, u32 *DestinationAddr);
 int TxUART(u32 DestinationAddr);
-void Reset(void);
+int Reset(void);
 
 /************************** Variable Definitions *****************************/
 
@@ -219,6 +219,7 @@ int RxSamples(XLlFifo *InstancePtr, u32* DestinationAddr){
 
 int TxUART(u32 DestinationAddr){
     u32 addr = DestinationAddr;
+    u16 count = 0;
 
     print("RAWDATA\n\r"); //Keyword for Matlab GUI
 
@@ -231,7 +232,7 @@ int TxUART(u32 DestinationAddr){
     return XST_SUCCESS;
 }
 
-void Reset(){
+int Reset(){
 	XGpio_DiscreteWrite(&gpio1, 2, 0b10); //Pulls RESET high
 }
 
