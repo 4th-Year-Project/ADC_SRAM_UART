@@ -6,10 +6,14 @@
 #include "xllfifo.h"
 #include "xstatus.h"
 #include <xuartlite_l.h>
+#include "xspi.h"
+#include "xspi_l.h"
+#include "xil_printf.h"
 
 
-#define ADC1_FIFO_DEV_ID	   	XPAR_AXI_FIFO_0_DEVICE_ID   /* ADC1 Fifo instance */
-#define ADC2_FIFO_DEV_ID	   	XPAR_AXI_FIFO_1_DEVICE_ID   /* ADC2 Fifo instance */
+#define ADC1_FIFO_DEV_ID	   	XPAR_AXI_FIFO_0_DEVICE_ID   /* ADC1 FIFO instance */
+#define ADC2_FIFO_DEV_ID	   	XPAR_AXI_FIFO_1_DEVICE_ID   /* ADC2 FIFO instance */
+#define SPI_DEVICE_ID			XPAR_SPI_0_DEVICE_ID 		/* Oscillator SPI instance */
 
 #define BTN1_MASK 0b1				/* Bit mask for BTN1*/
 #define LED1_MASK 0b1				/* Bit mask for BTN1*/
@@ -25,11 +29,22 @@
 #define WORD_SIZE 4					/* Size of words in bytes */
 #define SAMPLES_PER_ADC 32000		/* Total number of samples per ADC*/
 
+#define BUFFER_SIZE		4 			/* Size SPI Tx Buffer */
+
 #define UART_BASE_ADDR 0x40600000   /* Base Address of UART IP */
 
 #undef DEBUG
 
+/**************************** Type Definitions *******************************/
+
+/*
+ * The following data type is used to send data on the SPI
+ * interface.
+ */
+typedef u8 DataBuffer[BUFFER_SIZE];
+
 /************************** Function Prototypes ******************************/
+int SpiProgramOsc(XSpi *SpiInstancePtr, u16 SpiDeviceId);
 int GPIOInit(XGpio *Instance0Ptr, XGpio *Instance1Ptr);
 int RxInit(XLlFifo *InstancePtr, u16 DeviceId);
 int RxSamples(XLlFifo *InstancePtr, u32 *DestinationAddr);
@@ -37,7 +52,7 @@ int TxUART(u32 DestinationAddr);
 void Reset(void);
 
 /************************** Variable Definitions *****************************/
-
+XSpi  SpiInstance;	 /* The instance of the SPI device */
 XLlFifo FifoInstance1;
 XLlFifo FifoInstance2;
 XGpio gpio0; // the gpio0 struct for LEDs and buttons
@@ -87,13 +102,14 @@ int main (){
 	//Wait for button 1 press or NUMOFSAMPLE setting
 	while (1){
 		read = XGpio_DiscreteRead(&gpio0, 1);
-		if ((read & BTN1_MASK) !=0 ){
+		if ((read & BTN1_MASK) == BTN1_MASK ){
 			xil_printf("BTN1 Pressed\n\r");
 			break;
 		}
+
 		if (!XUartLite_IsReceiveEmpty(UART_BASE_ADDR)){
 			switch(XUartLite_RecvByte(UART_BASE_ADDR)) {
-			case '0' :
+			case '0' ://Set number of samples
 				xil_printf("NUMOFSAMPLES\n\r");
 				int rec[5];
 				rec[0] = XUartLite_RecvByte(UART_BASE_ADDR);
@@ -108,14 +124,20 @@ int main (){
 					NumSamplesToTx = 8000;
 				}
 				break;
+			case '1': //Program Oscillator
+				Status = SpiProgramOsc(&SpiInstance, SPI_DEVICE_ID);
+				if (Status != XST_SUCCESS) {
+					xil_printf("Oscillator communication Failed\r\n");
+					return XST_FAILURE;
+				}
+				xil_printf("Successfully ran oscillator communication\r\n");
+				break;
 			case '\r' :
 				xil_printf("Ignoring line feed\n\r");
 				break;
 			default:
 				xil_printf("Error: Unknown command\n\r");
 			}
-
-
 
 		}
 	}
@@ -268,3 +290,52 @@ void Reset(){
 	XGpio_DiscreteWrite(&gpio1, 2, RESET_MASK); //Pulls RESET high
 }
 
+int SpiProgramOsc(XSpi *SpiInstancePtr, u16 SpiDeviceId){
+	int Status;
+	static u8 Registers[6][BUFFER_SIZE] = { //Reversed and upside down!
+				{0x05, 0x00, 0x58, 0x00},
+				{0x24, 0x00, 0x95, 0x00},
+				{0xB3, 0x04, 0x80, 0x00},
+				{0x42, 0x4E, 0x00, 0x00},
+				{0xC9, 0x80, 0x00, 0x00},
+				{0xB0, 0x00, 0x45, 0x00}
+									 	};
+
+	XSpi_Config *ConfigPtr;	/* Pointer to Configuration data */
+
+
+	// Initialize the SPI driver so that it is ready to use.
+	ConfigPtr = XSpi_LookupConfig(SpiDeviceId);
+	if (ConfigPtr == NULL) {
+		return XST_DEVICE_NOT_FOUND;
+	}
+
+	Status = XSpi_CfgInitialize(SpiInstancePtr, ConfigPtr,
+				  ConfigPtr->BaseAddress);
+	if (Status != XST_SUCCESS) {
+		return XST_FAILURE;
+	}
+
+	//Set the Spi device as a master.
+
+	Status = XSpi_SetOptions(SpiInstancePtr, XSP_MASTER_OPTION);
+	if (Status != XST_SUCCESS) {
+		return XST_FAILURE;
+	}
+
+	// Start the SPI driver so that the device is enabled.
+	XSpi_Start(SpiInstancePtr);
+
+	// Disable Global interrupt to use polled mode operation.
+	XSpi_IntrGlobalDisable(SpiInstancePtr);
+
+	// Select the slave device
+    XSpi_SetSlaveSelect(SpiInstancePtr, 1);
+
+
+	// Transmit the data.
+	XSpi_Transfer(SpiInstancePtr, Registers[0], NULL, 24);
+
+
+	return XST_SUCCESS;
+}

@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;ADC_SRAM_UART/src/Oscillator.c&apos; to &apos;oscillator.c&apos;" description="Rename resource &apos;Oscillator.c&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="src/Oscillator.c" name="oscillator.c" stamp="1556285322993" updateReferences="true"/>
+</session>

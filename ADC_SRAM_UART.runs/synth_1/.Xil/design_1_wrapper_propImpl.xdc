@@ -29,6 +29,12 @@ set_property src_info {type:XDC file:1 line:57 export:INPUT save:INPUT read:READ
 set_property -dict {PACKAGE_PIN L2 IOSTANDARD LVCMOS33}  [get_ports  {DB_ADC1[6]}];
 set_property src_info {type:XDC file:1 line:58 export:INPUT save:INPUT read:READ} [current_design]
 set_property -dict {PACKAGE_PIN M1 IOSTANDARD LVCMOS33}  [get_ports  {DB_ADC1[7]}];
+set_property src_info {type:XDC file:1 line:59 export:INPUT save:INPUT read:READ} [current_design]
+set_property -dict { PACKAGE_PIN N3    IOSTANDARD LVCMOS33 } [get_ports { SCK_OSC }]; #IO_L12P_T1_MRCC_35 Sch=pio[18]
+set_property src_info {type:XDC file:1 line:60 export:INPUT save:INPUT read:READ} [current_design]
+set_property -dict { PACKAGE_PIN P3    IOSTANDARD LVCMOS33 } [get_ports { MOSI_OSC}]; #IO_L12N_T1_MRCC_35 Sch=pio[19]
+set_property src_info {type:XDC file:1 line:61 export:INPUT save:INPUT read:READ} [current_design]
+set_property -dict { PACKAGE_PIN M2    IOSTANDARD LVCMOS33 } [get_ports { SS_OSC  }]; #IO_L9P_T1_DQS_AD7P_35 Sch=pio[20]
 set_property src_info {type:XDC file:1 line:73 export:INPUT save:INPUT read:READ} [current_design]
 set_property -dict { PACKAGE_PIN W3    IOSTANDARD LVCMOS33 } [get_ports {A_ADC2[0]} ]; #IO_L6N_T0_VREF_34 Sch=pio[34]
 set_property src_info {type:XDC file:1 line:74 export:INPUT save:INPUT read:READ} [current_design]

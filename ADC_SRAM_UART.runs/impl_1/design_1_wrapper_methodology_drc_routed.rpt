@@ -1,7 +1,7 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2018.3 (win64) Build 2405991 Thu Dec  6 23:38:27 MST 2018
-| Date         : Thu Apr 25 09:56:25 2019
+| Date         : Fri Apr 26 15:43:30 2019
 | Host         : Lenovo running 64-bit major release  (build 9200)
 | Command      : report_methodology -file design_1_wrapper_methodology_drc_routed.rpt -pb design_1_wrapper_methodology_drc_routed.pb -rpx design_1_wrapper_methodology_drc_routed.rpx
 | Design       : design_1_wrapper
@@ -23,13 +23,14 @@ Table of Contents
           Floorplan: design_1
       Design limits: <entire design considered>
              Max violations: <unlimited>
-             Violations found: 246
+             Violations found: 247
 +-----------+----------+------------------------------------------------------------------+------------+
 | Rule      | Severity | Description                                                      | Violations |
 +-----------+----------+------------------------------------------------------------------+------------+
 | CKLD-2    | Warning  | Clock Net has IO Driver, not a Clock Buf, and/or non-Clock loads | 2          |
 | LUTAR-1   | Warning  | LUT drives async reset alert                                     | 1          |
 | TIMING-9  | Warning  | Unknown CDC Logic                                                | 1          |
+| TIMING-10 | Warning  | Missing property on synchronizer                                 | 1          |
 | TIMING-17 | Warning  | Non-clocked sequential cell                                      | 242        |
 +-----------+----------+------------------------------------------------------------------+------------+
 
@@ -53,6 +54,11 @@ Related violations: <none>
 TIMING-9#1 Warning
 Unknown CDC Logic  
 One or more asynchronous Clock Domain Crossing has been detected between 2 clock domains through a set_false_path or a set_clock_groups or set_max_delay -datapath_only constraint but no double-registers logic synchronizer has been found on the side of the capture clock. It is recommended to run report_cdc for a complete and detailed CDC coverage. Please consider using XPM_CDC to avoid Critical severities
+Related violations: <none>
+
+TIMING-10#1 Warning
+Missing property on synchronizer  
+One or more logic synchronizer has been detected between 2 clock domains but the synchronizer does not have the property ASYNC_REG defined on one or both registers. It is recommended to run report_cdc for a complete and detailed CDC coverage
 Related violations: <none>
 
 TIMING-17#1 Warning

@@ -56,9 +56,9 @@ set_property -dict {PACKAGE_PIN K2 IOSTANDARD LVCMOS33}  [get_ports  {DB_ADC1[4]
 set_property -dict {PACKAGE_PIN L1 IOSTANDARD LVCMOS33}  [get_ports  {DB_ADC1[5]}];
 set_property -dict {PACKAGE_PIN L2 IOSTANDARD LVCMOS33}  [get_ports  {DB_ADC1[6]}];
 set_property -dict {PACKAGE_PIN M1 IOSTANDARD LVCMOS33}  [get_ports  {DB_ADC1[7]}];
-#set_property -dict { PACKAGE_PIN N3    IOSTANDARD LVCMOS33 } [get_ports { pio[18] }]; #IO_L12P_T1_MRCC_35 Sch=pio[18]
-#set_property -dict { PACKAGE_PIN P3    IOSTANDARD LVCMOS33 } [get_ports { pio[19] }]; #IO_L12N_T1_MRCC_35 Sch=pio[19]
-#set_property -dict { PACKAGE_PIN M2    IOSTANDARD LVCMOS33 } [get_ports { pio[20] }]; #IO_L9P_T1_DQS_AD7P_35 Sch=pio[20]
+set_property -dict { PACKAGE_PIN N3    IOSTANDARD LVCMOS33 } [get_ports { SCK_OSC }]; #IO_L12P_T1_MRCC_35 Sch=pio[18]
+set_property -dict { PACKAGE_PIN P3    IOSTANDARD LVCMOS33 } [get_ports { MOSI_OSC}]; #IO_L12N_T1_MRCC_35 Sch=pio[19]
+set_property -dict { PACKAGE_PIN M2    IOSTANDARD LVCMOS33 } [get_ports { SS_OSC  }]; #IO_L9P_T1_DQS_AD7P_35 Sch=pio[20]
 #set_property -dict { PACKAGE_PIN N1    IOSTANDARD LVCMOS33 } [get_ports { pio[21] }]; #IO_L10N_T1_AD15N_35 Sch=pio[21]
 #set_property -dict { PACKAGE_PIN N2    IOSTANDARD LVCMOS33 } [get_ports { pio[22] }]; #IO_L10P_T1_AD15P_35 Sch=pio[22]
 #set_property -dict { PACKAGE_PIN P1    IOSTANDARD LVCMOS33 } [get_ports { pio[23] }]; #IO_L19N_T3_VREF_35 Sch=pio[23]

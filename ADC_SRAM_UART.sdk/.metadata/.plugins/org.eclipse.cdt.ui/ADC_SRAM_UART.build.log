@@ -1,44 +1,6 @@
-<<<<<<< HEAD
-21:39:45 **** Build of configuration Debug for project ADC_SRAM_UART ****
-=======
-20:46:52 **** Incremental Build of configuration Debug for project ADC_SRAM_UART ****
->>>>>>> 2nd-ADC-Channel
+17:30:00 **** Incremental Build of configuration Debug for project ADC_SRAM_UART ****
 make all 
-'Building file: ../src/ADC_SRAM_UART.c'
-'Invoking: MicroBlaze gcc compiler'
-mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/ADC_SRAM_UART.o" -I../../ADC_SRAM_UART_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/ADC_SRAM_UART.d" -MT"src/ADC_SRAM_UART.o" -o "src/ADC_SRAM_UART.o" "../src/ADC_SRAM_UART.c"
-../src/ADC_SRAM_UART.c: In function 'main':
-../src/ADC_SRAM_UART.c:82:37: warning: passing argument 2 of 'RxSamples' makes pointer from integer without a cast [-Wint-conversion]
-   Status = RxSamples(&FifoInstance, SRAMBaseAddr);
-                                     ^~~~~~~~~~~~
-../src/ADC_SRAM_UART.c:20:5: note: expected 'u32 * {aka long unsigned int *}' but argument is of type 'u32 {aka long unsigned int}'
- int RxSamples(XLlFifo *InstancePtr, u32 *DestinationAddr);
-     ^~~~~~~~~
-../src/ADC_SRAM_UART.c: In function 'TxUART':
-../src/ADC_SRAM_UART.c:181:9: warning: unused variable 'count' [-Wunused-variable]
-     u16 count = 0;
-         ^~~~~
-../src/ADC_SRAM_UART.c: In function 'Reset':
-../src/ADC_SRAM_UART.c:196:1: warning: control reaches end of non-void function [-Wreturn-type]
- }
- ^
-'Finished building: ../src/ADC_SRAM_UART.c'
-' '
-'Building target: ADC_SRAM_UART.elf'
-'Invoking: MicroBlaze gcc linker'
-mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../ADC_SRAM_UART_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "ADC_SRAM_UART.elf"  ./src/ADC_SRAM_UART.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
-'Finished building target: ADC_SRAM_UART.elf'
-' '
-'Invoking: MicroBlaze Print Size'
-mb-size ADC_SRAM_UART.elf  |tee "ADC_SRAM_UART.elf.size"
-   text	   data	    bss	    dec	    hex	filename
-  11340	    328	   3252	  14920	   3a48	ADC_SRAM_UART.elf
-'Finished building: ADC_SRAM_UART.elf.size'
-' '
+make: Nothing to be done for 'all'.
 
-<<<<<<< HEAD
-21:39:47 Build Finished (took 1s.766ms)
-=======
-20:46:52 Build Finished (took 283ms)
->>>>>>> 2nd-ADC-Channel
+17:30:00 Build Finished (took 190ms)
 

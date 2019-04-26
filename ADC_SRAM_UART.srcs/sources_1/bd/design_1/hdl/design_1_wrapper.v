@@ -1,7 +1,7 @@
 //Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2018.3 (win64) Build 2405991 Thu Dec  6 23:38:27 MST 2018
-//Date        : Thu Apr 25 09:47:05 2019
+//Date        : Fri Apr 26 15:36:37 2019
 //Host        : Lenovo running 64-bit major release  (build 9200)
 //Command     : generate_target design_1_wrapper.bd
 //Design      : design_1_wrapper
@@ -20,8 +20,11 @@ module design_1_wrapper
     DB_ADC2,
     EOC_ADC1,
     EOC_ADC2,
+    MOSI_OSC,
     RD_ADC1,
     RD_ADC2,
+    SCK_OSC,
+    SS_OSC,
     cellular_ram_addr,
     cellular_ram_ce_n,
     cellular_ram_dq_io,
@@ -43,8 +46,11 @@ module design_1_wrapper
   input [7:0]DB_ADC2;
   input EOC_ADC1;
   input EOC_ADC2;
+  output MOSI_OSC;
   output RD_ADC1;
   output RD_ADC2;
+  output SCK_OSC;
+  output [0:0]SS_OSC;
   output [18:0]cellular_ram_addr;
   output cellular_ram_ce_n;
   inout [7:0]cellular_ram_dq_io;
@@ -67,8 +73,11 @@ module design_1_wrapper
   wire [7:0]DB_ADC2;
   wire EOC_ADC1;
   wire EOC_ADC2;
+  wire MOSI_OSC;
   wire RD_ADC1;
   wire RD_ADC2;
+  wire SCK_OSC;
+  wire [0:0]SS_OSC;
   wire [18:0]cellular_ram_addr;
   wire cellular_ram_ce_n;
   wire [0:0]cellular_ram_dq_i_0;
@@ -170,8 +179,11 @@ module design_1_wrapper
         .DB_ADC2(DB_ADC2),
         .EOC_ADC1(EOC_ADC1),
         .EOC_ADC2(EOC_ADC2),
+        .MOSI_OSC(MOSI_OSC),
         .RD_ADC1(RD_ADC1),
         .RD_ADC2(RD_ADC2),
+        .SCK_OSC(SCK_OSC),
+        .SS_OSC(SS_OSC),
         .cellular_ram_addr(cellular_ram_addr),
         .cellular_ram_ce_n(cellular_ram_ce_n),
         .cellular_ram_dq_i({cellular_ram_dq_i_7,cellular_ram_dq_i_6,cellular_ram_dq_i_5,cellular_ram_dq_i_4,cellular_ram_dq_i_3,cellular_ram_dq_i_2,cellular_ram_dq_i_1,cellular_ram_dq_i_0}),

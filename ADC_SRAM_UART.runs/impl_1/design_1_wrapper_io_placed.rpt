@@ -1,7 +1,7 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------
 | Tool Version              : Vivado v.2018.3 (win64) Build 2405991 Thu Dec  6 23:38:27 MST 2018
-| Date                      : Thu Apr 25 09:55:00 2019
+| Date                      : Fri Apr 26 15:42:00 2019
 | Host                      : Lenovo running 64-bit major release  (build 9200)
 | Command                   : report_io -file design_1_wrapper_io_placed.rpt
 | Design                    : design_1_wrapper
@@ -25,7 +25,7 @@ Table of Contents
 +---------------+
 | Total User IO |
 +---------------+
-|            67 |
+|            70 |
 +---------------+
 
 
@@ -173,7 +173,7 @@ Table of Contents
 | L18        |                         | High Range | IO_L8P_T1_D11_14             | User IO       |             |      14 |            |      |                     |                      |         |            |           |          |      |                  |              |                   |              |
 | L19        |                         |            | GND                          | GND           |             |         |            |      |                     |                      |     0.0 |            |           |          |      |                  |              |                   |              |
 | M1         | DB_ADC1[7]              | High Range | IO_L9N_T1_DQS_AD7N_35        | INPUT         | LVCMOS33    |      35 |            |      |                     |                 NONE |         | FIXED      |           |          |      | NONE             |              |                   |              |
-| M2         |                         | High Range | IO_L9P_T1_DQS_AD7P_35        | User IO       |             |      35 |            |      |                     |                      |         |            |           |          |      |                  |              |                   |              |
+| M2         | SS_OSC[0]               | High Range | IO_L9P_T1_DQS_AD7P_35        | OUTPUT        | LVCMOS33    |      35 |         12 | SLOW |                     |            FP_VTT_50 |         | FIXED      |           |          |      | NONE             |              |                   |              |
 | M3         | A_ADC1[0]               | High Range | IO_L8N_T1_AD14N_35           | OUTPUT        | LVCMOS33    |      35 |         12 | SLOW |                     |            FP_VTT_50 |         | FIXED      |           |          |      | NONE             |              |                   |              |
 | M7         |                         | High Range | VCCO_35                      | VCCO          |             |      35 |            |      |                     |                      |    3.30 |            |           |          |      |                  |              |                   |              |
 | M8         |                         | High Range | VCCO_34                      | VCCO          |             |      34 |            |      |                     |                      |    3.30 |            |           |          |      |                  |              |                   |              |
@@ -187,7 +187,7 @@ Table of Contents
 | M19        | cellular_ram_addr[1]    | High Range | IO_L11N_T1_SRCC_14           | OUTPUT        | LVCMOS33    |      14 |         12 | SLOW |                     |            FP_VTT_50 |         | FIXED      |           |          |      | NONE             |              |                   |              |
 | N1         |                         | High Range | IO_L10N_T1_AD15N_35          | User IO       |             |      35 |            |      |                     |                      |         |            |           |          |      |                  |              |                   |              |
 | N2         |                         | High Range | IO_L10P_T1_AD15P_35          | User IO       |             |      35 |            |      |                     |                      |         |            |           |          |      |                  |              |                   |              |
-| N3         |                         | High Range | IO_L12P_T1_MRCC_35           | User IO       |             |      35 |            |      |                     |                      |         |            |           |          |      |                  |              |                   |              |
+| N3         | SCK_OSC                 | High Range | IO_L12P_T1_MRCC_35           | OUTPUT        | LVCMOS33    |      35 |         12 | SLOW |                     |            FP_VTT_50 |         | FIXED      |           |          |      | NONE             |              |                   |              |
 | N7         |                         | High Range | VCCO_34                      | VCCO          |             |      34 |            |      |                     |                      |    3.30 |            |           |          |      |                  |              |                   |              |
 | N8         |                         | High Range | VCCO_34                      | VCCO          |             |      34 |            |      |                     |                      |    3.30 |            |           |          |      |                  |              |                   |              |
 | N9         |                         |            | GND                          | GND           |             |         |            |      |                     |                      |     0.0 |            |           |          |      |                  |              |                   |              |
@@ -200,7 +200,7 @@ Table of Contents
 | N19        | cellular_ram_ce_n       | High Range | IO_L9N_T1_DQS_D13_14         | OUTPUT        | LVCMOS33    |      14 |         12 | SLOW |                     |            FP_VTT_50 |         | FIXED      |           |          |      | NONE             |              |                   |              |
 | P1         |                         | High Range | IO_L19N_T3_VREF_35           | User IO       |             |      35 |            |      |                     |                      |         |            |           |          |      |                  |              |                   |              |
 | P2         |                         |            | GND                          | GND           |             |         |            |      |                     |                      |     0.0 |            |           |          |      |                  |              |                   |              |
-| P3         |                         | High Range | IO_L12N_T1_MRCC_35           | User IO       |             |      35 |            |      |                     |                      |         |            |           |          |      |                  |              |                   |              |
+| P3         | MOSI_OSC                | High Range | IO_L12N_T1_MRCC_35           | OUTPUT        | LVCMOS33    |      35 |         12 | SLOW |                     |            FP_VTT_50 |         | FIXED      |           |          |      | NONE             |              |                   |              |
 | P17        | cellular_ram_addr[4]    | High Range | IO_L13N_T2_MRCC_14           | OUTPUT        | LVCMOS33    |      14 |         12 | SLOW |                     |            FP_VTT_50 |         | FIXED      |           |          |      | NONE             |              |                   |              |
 | P18        | cellular_ram_addr[5]    | High Range | IO_L14P_T2_SRCC_14           | OUTPUT        | LVCMOS33    |      14 |         12 | SLOW |                     |            FP_VTT_50 |         | FIXED      |           |          |      | NONE             |              |                   |              |
 | P19        | cellular_ram_oen        | High Range | IO_L10P_T1_D14_14            | OUTPUT        | LVCMOS33    |      14 |         12 | SLOW |                     |            FP_VTT_50 |         | FIXED      |           |          |      | NONE             |              |                   |              |
