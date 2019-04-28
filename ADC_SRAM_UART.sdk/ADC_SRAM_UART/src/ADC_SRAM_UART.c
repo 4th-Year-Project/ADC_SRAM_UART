@@ -13,181 +13,111 @@
 
 #define ADC1_FIFO_DEV_ID	   	XPAR_AXI_FIFO_0_DEVICE_ID   /* ADC1 FIFO instance */
 #define ADC2_FIFO_DEV_ID	   	XPAR_AXI_FIFO_1_DEVICE_ID   /* ADC2 FIFO instance */
-#define SPI_DEVICE_ID			XPAR_SPI_0_DEVICE_ID 		/* Oscillator SPI instance */
+#define SPI_DEV_ID			      XPAR_SPI_0_DEVICE_ID 		/* Oscillator SPI instance */
 
-#define BTN1_MASK 0b1				/* Bit mask for BTN1*/
-#define LED1_MASK 0b1				/* Bit mask for BTN1*/
-#define LED2_MASK 0b10				/* Bit mask for BTN1*/
-#define ADC1_DONE_MASK 0b1  		/* Bit mask for ADC 1  DONE */
-#define ADC2_DONE_MASK 0b10  		/* Bit mask for ADC 2 DONE */
-#define ADCs_DONE_MASK (ADC1_DONE_MASK|ADC2_DONE_MASK)  		/* Bit mask all ADCs DONE */
-#define ADC1_ENABLE_MASK 0b10  		/* Bit mask for ADC 1 ENABLE */
-#define ADC2_ENABLE_MASK 0b100  	/* Bit mask for ADC 2 ENABLE */
-#define ADCs_ENABLE_MASK (ADC1_ENABLE_MASK|ADC2_ENABLE_MASK) 	/* Bit mask for all ADCs ENABLE */
-#define RESET_MASK 0b1  			/* Bit mask for Software Reset */
+#define UART_BASE_ADDR    0x40600000  /* Base Address of UART IP */
+#define SRAM_BASE_ADDR    0x60000000  /* Base Address of SRAM IP */
 
-#define WORD_SIZE 4					/* Size of words in bytes */
-#define SAMPLES_PER_ADC 32000		/* Total number of samples per ADC*/
+#define BTN1_MASK         0b1			    /* Bit mask for BTN1*/
+#define LED1_MASK         0b1			    /* Bit mask for BTN1*/
+#define LED2_MASK         0b10				/* Bit mask for BTN1*/
+#define ADC1_DONE_MASK    0b1  	     	/* Bit mask for ADC 1  DONE */
+#define ADC2_DONE_MASK    0b10  	   	/* Bit mask for ADC 2 DONE */
+#define ADC1_ENABLE_MASK  0b10  	   	/* Bit mask for ADC 1 ENABLE */
+#define ADC2_ENABLE_MASK  0b100  	    /* Bit mask for ADC 2 ENABLE */
+#define RESET_MASK        0b1  			  /* Bit mask for Software Reset */
+#define ALL_ADCS_DONE_MASK    (ADC1_DONE_MASK|ADC2_DONE_MASK) 		  /* Bit mask all ADCs DONE */
+#define ALL_ADCS_ENABLE_MASK  (ADC1_ENABLE_MASK|ADC2_ENABLE_MASK) 	/* Bit mask for all ADCs ENABLE */
 
-#define BUFFER_SIZE		4 			/* Size SPI Tx Buffer */
-
-#define UART_BASE_ADDR 0x40600000   /* Base Address of UART IP */
+#define WORD_SIZE            4        /* Size of words in bytes */
+#define SAMPLES_PER_ADC      32000		/* Total number of samples per ADC*/
+#define SPI_TX_BUFFER_SIZE	 4 			  /* Size SPI Tx Buffer */
 
 #undef DEBUG
 
-/**************************** Type Definitions *******************************/
-
-/*
- * The following data type is used to send data on the SPI
- * interface.
- */
-typedef u8 DataBuffer[BUFFER_SIZE];
-
 /************************** Function Prototypes ******************************/
-int SpiProgramOsc(XSpi *SpiInstancePtr, u16 SpiDeviceId);
-int GPIOInit(XGpio *Instance0Ptr, XGpio *Instance1Ptr);
-int RxInit(XLlFifo *InstancePtr, u16 DeviceId);
-int RxSamples(XLlFifo *InstancePtr, u32 *DestinationAddr);
-int TxUART(u32 DestinationAddr);
+int ProgramOscillator(XSpi *SpiInstancePtr, u16 SpiDeviceId);
+int InitialiseGPIO(XGpio *Instance0Ptr, XGpio *Instance1Ptr);
+int InitialiseRecieveChain(XLlFifo *InstancePtr, u16 DeviceId);
+int RecieveSamples(XLlFifo *InstancePtr, u32 *DestinationAddr);
+int TransmitSamplesOnUART(u32 DestinationAddr);
+
+int IsBTN1Pressed(void);
+int HandleSerialCommand(void);
+
+void CheckStatus(int status);
 void Reset(void);
 
 /************************** Variable Definitions *****************************/
-XSpi  SpiInstance;	 /* The instance of the SPI device */
-XLlFifo FifoInstance1;
-XLlFifo FifoInstance2;
-XGpio gpio0; // the gpio0 struct for LEDs and buttons
-XGpio gpio1; // gpio struct for internal devices
-u32 SRAMBaseAddr = 0x60000000;
-u32 NumSamplesToTx = 200;
+XSpi  SpiInstance;
+XLlFifo Fifo1Instance;
+XLlFifo Fifo2Instance;
+XGpio Gpio0Instance;
+XGpio Gpio1Instance;
 
-static u32 ReceiveLength;
+u32 NumSamplesToTx = 200;
 
 /******************************* Functions ***********************************/
 int main (){
-  int Status;
-
-/*--- Initialise ---*/
-  u32 read = 0;
+  int status;
 
   xil_printf("RESET\n\r");
+/*--- Initaise---*/
+  status = InitialiseGPIO(&Gpio0Instance, &Gpio1Instance); //Init GPIO blocks
+  CheckStatus(status);
 
-  Status = GPIOInit(&gpio0, &gpio1); //Init GPIO blocks
-  if (Status != XST_SUCCESS) {
-		xil_printf("Initialisation of XGpio\n\r");
-		return XST_FAILURE;
-	}
-  xil_printf("Successfully ran Initialisation of XGpio\n\r");
+  status = InitialiseRecieveChain(&Fifo1Instance, ADC1_FIFO_DEV_ID); // Initaise ADC1 Rx chain
+  CheckStatus(status);
 
-  Status = RxInit(&FifoInstance1, ADC1_FIFO_DEV_ID); // Initaise ADC1 Rx chain
-  if (Status != XST_SUCCESS) {
-		xil_printf("Initialisation of ADC1 Rx chain failed\n\r");
-		return XST_FAILURE;
-	}
-  xil_printf("Successfully ran Initialisation of ADC1 Rx chain\n\r");
+  status = InitialiseRecieveChain(&Fifo2Instance, ADC2_FIFO_DEV_ID); // Initaise ADC2 Rx chain
+  CheckStatus(status);
 
-  Status = RxInit(&FifoInstance2, ADC2_FIFO_DEV_ID); // Initaise ADC2 Rx chain
-  if (Status != XST_SUCCESS) {
-		xil_printf("Initialisation of ADC2 Rx chain failed\n\r");
-		return XST_FAILURE;
-	}
-  xil_printf("Successfully ran Initialisation of ADC2 Rx chain\n\r");
+  XGpio_DiscreteWrite(&Gpio0Instance, 2, LED1_MASK); //Turn on LED1 (to show programming is successful)
+	xil_printf("Inilised and ready to sample\r");
 
-  xil_printf("Successfully ran Initialisation of all ADCs Rx chain\n\r");
+/*--- Wait for trigger ---*/
+  int waiting = TRUE;
+  while(waiting){
+   if(isBTN1Pressed()){
+     waiting = FALSE;
+   }
+   if(HandleSerialCommand()){
+     waiting = FALSE;
+   }
+  }
 
+/*--- Sample ---*/
+	XGpio_DiscreteWrite(&Gpio1Instance, 2, ALL_ADCS_ENABLE_MASK ); //Sends enable signal to ADCs
+	XGpio_DiscreteWrite(&Gpio0Instance, 2, LED2_MASK); //Turn on LED2
+  xil_printf("Sampling Started\r");
 
-  XGpio_DiscreteWrite(&gpio0, 2, LED1_MASK); //Turn on LED1 (to show programming is successful)
-
-/*--- Start the ADC sampling to fill FIFO ---*/
-	xil_printf("Press sample button now\n\r");
-	//Wait for button 1 press or NUMOFSAMPLE setting
-	while (1){
-		read = XGpio_DiscreteRead(&gpio0, 1);
-		if ((read & BTN1_MASK) == BTN1_MASK ){
-			xil_printf("BTN1 Pressed\n\r");
-			break;
-		}
-
-		if (!XUartLite_IsReceiveEmpty(UART_BASE_ADDR)){
-			switch(XUartLite_RecvByte(UART_BASE_ADDR)) {
-			case '0' ://Set number of samples
-				xil_printf("NUMOFSAMPLES\n\r");
-				int rec[5];
-				rec[0] = XUartLite_RecvByte(UART_BASE_ADDR);
-				rec[1] = XUartLite_RecvByte(UART_BASE_ADDR);
-				rec[2] = XUartLite_RecvByte(UART_BASE_ADDR);
-				rec[3] = XUartLite_RecvByte(UART_BASE_ADDR);
-				rec[4] = XUartLite_RecvByte(UART_BASE_ADDR);
-				NumSamplesToTx = rec[1] + rec[2]*0x100;
-				xil_printf("NUMOFSAMPLES received\n\r");
-				if(NumSamplesToTx > 8000){
-					xil_printf("Error: Over sample number limit\n\r");
-					NumSamplesToTx = 8000;
-				}
-				break;
-			case '1': //Program Oscillator
-				Status = SpiProgramOsc(&SpiInstance, SPI_DEVICE_ID);
-				if (Status != XST_SUCCESS) {
-					xil_printf("Oscillator communication Failed\r\n");
-					return XST_FAILURE;
-				}
-				xil_printf("Successfully ran oscillator communication\r\n");
-				break;
-			case '\r' :
-				xil_printf("Ignoring line feed\n\r");
-				break;
-			default:
-				xil_printf("Error: Unknown command\n\r");
-			}
-
-		}
-	}
-	//Start Sampling
-	XGpio_DiscreteWrite(&gpio1, 2, ADCs_ENABLE_MASK ); //Sends enable signal to ADCs
-	XGpio_DiscreteWrite(&gpio0, 2, LED2_MASK); //Turn on LED2
-	//Waits for sampling to finish
-	while (1){
-		read = XGpio_DiscreteRead(&gpio1, 1);
-		if ((read & ADCs_DONE_MASK) == ADCs_DONE_MASK){
-			xil_printf("Sampling done\n\r");
-			XGpio_DiscreteWrite(&gpio0, 2, (LED1_MASK | LED2_MASK)); //Turn on LED2
-			break;
-
+  waiting = TRUE;
+	while (waiting){
+		recieved = XGpio_DiscreteRead(&Gpio1Instance, 1);
+		if ((recieved & ALL_ADCS_DONE_MASK) == ALL_ADCS_DONE_MASK){
+			xil_printf("Sampling complete\n\r");
+			XGpio_DiscreteWrite(&Gpio0Instance, 2, (LED1_MASK | LED2_MASK)); //Turn on LED2
+			waiting = FALSE;
 		}
 	}
 
 /*--- Transfer to SRAM ---*/
   xil_printf("Will transfer via SRAM\n\r");
 
-  Status = RxSamples(&FifoInstance1, SRAMBaseAddr);
-  if (Status != XST_SUCCESS) {
-		xil_printf("Receiving of ADC1 samples failed\n\r");
-		return XST_FAILURE;
-	}
-  xil_printf("Successfully ran receiving of ADC1 samples\n\r");
+  status = RecieveSamples(&Fifo1Instance, SRAM_BASE_ADDR);
+  CheckStatus(status);
 
-  Status = RxSamples(&FifoInstance2, SRAMBaseAddr + (SAMPLES_PER_ADC));
-  if (Status != XST_SUCCESS) {
-		xil_printf("Receiving of ADC2 samples failed\n\r");
-		return XST_FAILURE;
-	}
-  xil_printf("Successfully ran receiving of ADC2 samples\n\r");
+  status = RecieveSamples(&Fifo2Instance, SRAM_BASE_ADDR + (SAMPLES_PER_ADC));
+  CheckStatus(status);
 
 /*--- Send over UART ---*/
   xil_printf("ADC1 ");
-  Status = TxUART(SRAMBaseAddr); //Send ADC1 data over UART
-  if (Status != XST_SUCCESS) {
-		xil_printf("Sending ADC1 over UART Failed\n\r");
-		return XST_FAILURE;
-	}
-  xil_printf("Successfully sent ADC1 over UART\n\r");
+  status = TransmitSamplesOnUART(SRAM_BASE_ADDR); //Send ADC1 data over UART
+  CheckStatus(status);
 
   xil_printf("ADC2 ");
-  Status = TxUART(SRAMBaseAddr + SAMPLES_PER_ADC); //Send ADC1 data over UART
-  if (Status != XST_SUCCESS) {
-		xil_printf("Sending ADC2 over UART Failed\n\r");
-		return XST_FAILURE;
-	}
-  xil_printf("Successfully sent ADC2 over UART\n\r");
+  status = TransmitSamplesOnUART(SRAM_BASE_ADDR + SAMPLES_PER_ADC); //Send ADC1 data over UART
+  CheckStatus(status);
 
 /*--- Reset ---*/
   xil_printf("Resetting\n\r");
@@ -195,20 +125,20 @@ int main (){
   return XST_SUCCESS;
   }
 
-int GPIOInit(XGpio *Instance0Ptr, XGpio *Instance1Ptr){
-	  XGpio_Initialize(Instance0Ptr, 0); //inits the gpio0 for LEDs and BUttons
-	  XGpio_Initialize(Instance1Ptr,1); //Initis the gpio0 for internal devices
-	  XGpio_SetDataDirection(Instance0Ptr, 2, 0x00000000); // set LED gpio0 channel tristates to All Output
-	  XGpio_SetDataDirection(Instance0Ptr, 1, 0xFFFFFFFF); // set BTN gpio0 channel tristates to All Input
-	  XGpio_SetDataDirection(Instance1Ptr, 2, 0x00000000); // set internal outputs gpio0 channel tristates to All output
-	  XGpio_SetDataDirection(Instance1Ptr, 1, 0xFFFFFFFF); // set internal inputs gpio0 channel tristates to All Input
+int InitialiseGPIO(XGpio *Instance0Ptr, XGpio *Instance1Ptr){
+	  XGpio_Initialize(Instance0Ptr, 0); //inits the Gpio0Instance for LEDs and BUttons
+	  XGpio_Initialize(Instance1Ptr,1); //Initis the Gpio0Instance for internal devices
+	  XGpio_SetDataDirection(Instance0Ptr, 2, 0x00000000); // set LED Gpio0Instance channel tristates to All Output
+	  XGpio_SetDataDirection(Instance0Ptr, 1, 0xFFFFFFFF); // set BTN Gpio0Instance channel tristates to All Input
+	  XGpio_SetDataDirection(Instance1Ptr, 2, 0x00000000); // set internal outputs Gpio0Instance channel tristates to All output
+	  XGpio_SetDataDirection(Instance1Ptr, 1, 0xFFFFFFFF); // set internal inputs Gpio0Instance channel tristates to All Input
 	  return XST_SUCCESS;
 }
 
-int RxInit(XLlFifo *InstancePtr, u16 DeviceId){
+int InitialiseRecieveChain(XLlFifo *InstancePtr, u16 DeviceId){
   XLlFifo_Config *Config;
-	int Status;
-	Status = XST_SUCCESS;
+	int status;
+	status = XST_SUCCESS;
 
   /* Initialise the Device Configuration Interface driver */
   Config = XLlFfio_LookupConfig(DeviceId);
@@ -219,31 +149,31 @@ int RxInit(XLlFifo *InstancePtr, u16 DeviceId){
   /*
 	 * Initialise with a physical address
 	 */
-  Status = XLlFifo_CfgInitialize(InstancePtr, Config, Config->BaseAddress);
-	if (Status != XST_SUCCESS) {
+  status = XLlFifo_CfgInitialize(InstancePtr, Config, Config->BaseAddress);
+	if (status != XST_SUCCESS) {
 		xil_printf("Initialisation failed\n\r");
-		return Status;
+		return status;
 	}
 
   /* Check for the Reset value */
-	Status = XLlFifo_Status(InstancePtr);
+	status = XLlFifo_status(InstancePtr);
 	XLlFifo_IntClear(InstancePtr,0xffffffff);
-	Status = XLlFifo_Status(InstancePtr);
-	if(Status != 0x0) {
+	status = XLlFifo_status(InstancePtr);
+	if(status != 0x0) {
 		xil_printf("\n ERROR : Reset value of ISR0 : 0x%x\t"
 			    "Expected : 0x0\n\r",
-			    XLlFifo_Status(InstancePtr));
+			    XLlFifo_status(InstancePtr));
 		return XST_FAILURE;
 	}
 
-	return Status;
+	return status;
 }
 
-int RxSamples(XLlFifo *InstancePtr, u32* DestinationAddr){
-    int i;
-	int Status;
+int RecieveSamples(XLlFifo *InstancePtr, u32* DestinationAddr){
+  int i;
+	int status;
 	u32 RxWord;
-
+  u32 ReceiveLength;
 
   xil_printf("Receiving data ....\n\r");
 
@@ -261,8 +191,8 @@ int RxSamples(XLlFifo *InstancePtr, u32* DestinationAddr){
 		*(DestinationAddr+i) = RxWord;
 	}
 
-	Status = XLlFifo_IsRxDone(InstancePtr);
-	if(Status != TRUE){
+	status = XLlFifo_IsRxDone(InstancePtr);
+	if(status != TRUE){
 		xil_printf("Failing in receive complete ... \r\n");
 		return XST_FAILURE;
 	}
@@ -270,12 +200,10 @@ int RxSamples(XLlFifo *InstancePtr, u32* DestinationAddr){
 	return XST_SUCCESS;
 }
 
-int TxUART(u32 DestinationAddr){
+int TransmitSamplesOverUART(u32 DestinationAddr){
     u32 addr = DestinationAddr;
 
     print("RAWDATA\n\r"); //Keyword for Matlab GUI
-
-    ReceiveLength = 200;
 
 	while(addr < (DestinationAddr + NumSamplesToTx * WORD_SIZE)){
     xil_printf("%08x",Xil_In32(addr));
@@ -286,13 +214,9 @@ int TxUART(u32 DestinationAddr){
     return XST_SUCCESS;
 }
 
-void Reset(){
-	XGpio_DiscreteWrite(&gpio1, 2, RESET_MASK); //Pulls RESET high
-}
-
-int SpiProgramOsc(XSpi *SpiInstancePtr, u16 SpiDeviceId){
-	int Status;
-	static u8 Registers[6][BUFFER_SIZE] = { //Reversed and upside down!
+int ProgramOscillator(XSpi *SpiInstancePtr, u16 SpiDeviceId){
+	int status;
+	static u8 Registers[6][SPI_TX_BUFFER_SIZE] = { //Reversed and upside down!
 				{0x05, 0x00, 0x58, 0x00},
 				{0x24, 0x00, 0x95, 0x00},
 				{0xB3, 0x04, 0x80, 0x00},
@@ -310,16 +234,16 @@ int SpiProgramOsc(XSpi *SpiInstancePtr, u16 SpiDeviceId){
 		return XST_DEVICE_NOT_FOUND;
 	}
 
-	Status = XSpi_CfgInitialize(SpiInstancePtr, ConfigPtr,
+	status = XSpi_CfgInitialize(SpiInstancePtr, ConfigPtr,
 				  ConfigPtr->BaseAddress);
-	if (Status != XST_SUCCESS) {
+	if (status != XST_SUCCESS) {
 		return XST_FAILURE;
 	}
 
 	//Set the Spi device as a master.
 
-	Status = XSpi_SetOptions(SpiInstancePtr, XSP_MASTER_OPTION);
-	if (Status != XST_SUCCESS) {
+	status = XSpi_SetOptions(SpiInstancePtr, XSP_MASTER_OPTION);
+	if (status != XST_SUCCESS) {
 		return XST_FAILURE;
 	}
 
@@ -338,4 +262,64 @@ int SpiProgramOsc(XSpi *SpiInstancePtr, u16 SpiDeviceId){
 
 
 	return XST_SUCCESS;
+}
+
+int IsBTN1Pressed(void){
+  int gpioValue
+  gpioValue = XGpio_DiscreteRead(&Gpio0Instance, 1);
+  if ((gpioValue & BTN1_MASK) == BTN1_MASK ){
+    xil_printf("BTN1 Pressed\n\r");
+    return 1;
+  }
+  return 0;
+}CheckStatus(status);
+
+int HandleSerialCommand(void){
+  		if (!XUartLite_IsReceiveEmpty(UART_BASE_ADDR)){
+  			switch(XUartLite_RecvByte(UART_BASE_ADDR)) {
+  			case '0' ://Set number of samples
+  				xil_printf("NUMOFSAMPLES\n\r");
+  				int rec[5];
+  				rec[0] = XUartLite_RecvByte(UART_BASE_ADDR);
+  				rec[1] = XUartLite_RecvByte(UART_BASE_ADDR);
+  				rec[2] = XUartLite_RecvByte(UART_BASE_ADDR);
+  				rec[3] = XUartLite_RecvByte(UART_BASE_ADDR);
+  				rec[4] = XUartLite_RecvByte(UART_BASE_ADDR);
+  				NumSamplesToTx = rec[1] + rec[2]*0x100;
+  				xil_printf("NUMOFSAMPLES received\n\r");
+  				if(NumSamplesToTx > 8000){
+  					xil_printf("Error: Over sample number limit\n\r");
+  					NumSamplesToTx = 8000;
+  				}
+  				break;
+  			case '1': //Program Oscillator
+  				status = ProgramOscillator(&SpiInstance, SPI_DEV_ID);
+  				if (status != XST_SUCCESS) {
+  					xil_printf("Oscillator communication Failed\r\n");
+  					return XST_FAILURE;
+  				}
+  				xil_printf("Successfully ran oscillator communication\r\n");
+  				break;
+  			case '\r' :
+  				xil_printf("Ignoring line feed\n\r");
+  				break;
+  			default:
+  				xil_printf("Error: Unknown command\n\r");
+  			}
+        return 1;
+  		}
+      else{
+        return 0;
+      }
+}
+
+void CheckStatus(int status){
+  if (status != XST_SUCCESS) {
+		xil_printf("Failed status checkn\r");
+	}
+  xil_printf("Successfully ran\n\r");
+}
+
+void Reset(){
+	XGpio_DiscreteWrite(&Gpio1Instance, 2, RESET_MASK); //Pulls RESET high
 }
