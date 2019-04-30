@@ -1,48 +1,486 @@
-17:29:34 **** Incremental Build of configuration Debug for project ADC_SRAM_UART ****
+20:59:05 **** Incremental Build of configuration Debug for project ADC_SRAM_UART ****
 make all 
-make: Nothing to be done for 'all'.
-17:29:45 **** Auto Build of configuration Debug for project ADC_SRAM_UART ****
+'Building target: ADC_SRAM_UART.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../ADC_SRAM_UART_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "ADC_SRAM_UART.elf"  ./src/ADC_SRAM_UART.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+./src/ADC_SRAM_UART.o: In function `main':
+C:\FPGA_Projects\ADC_SRAM_UART\ADC_SRAM_UART.sdk\ADC_SRAM_UART\Debug/../src/ADC_SRAM_UART.c:216: undefined reference to `TransmitSamplesOnUART'
+C:\FPGA_Projects\ADC_SRAM_UART\ADC_SRAM_UART.sdk\ADC_SRAM_UART\Debug/../src/ADC_SRAM_UART.c:216: undefined reference to `TransmitSamplesOnUART'
+./src/ADC_SRAM_UART.o: In function `InitialiseRecieveChain':
+C:\FPGA_Projects\ADC_SRAM_UART\ADC_SRAM_UART.sdk\ADC_SRAM_UART\Debug/../src/ADC_SRAM_UART.c:216: undefined reference to `XLlFifo_status'
+C:\FPGA_Projects\ADC_SRAM_UART\ADC_SRAM_UART.sdk\ADC_SRAM_UART\Debug/../src/ADC_SRAM_UART.c:216: undefined reference to `XLlFifo_status'
+C:\FPGA_Projects\ADC_SRAM_UART\ADC_SRAM_UART.sdk\ADC_SRAM_UART\Debug/../src/ADC_SRAM_UART.c:216: undefined reference to `XLlFifo_status'
+collect2.exe: error: ld returned 1 exit status
+make: *** [makefile:38: ADC_SRAM_UART.elf] Error 1
+21:00:09 **** Auto Build of configuration Debug for project ADC_SRAM_UART ****
 make all 
 'Building file: ../src/ADC_SRAM_UART.c'
 'Invoking: MicroBlaze gcc compiler'
 mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/ADC_SRAM_UART.o" -I../../ADC_SRAM_UART_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/ADC_SRAM_UART.d" -MT"src/ADC_SRAM_UART.o" -o "src/ADC_SRAM_UART.o" "../src/ADC_SRAM_UART.c"
 ../src/ADC_SRAM_UART.c: In function 'main':
-../src/ADC_SRAM_UART.c:161:38: warning: passing argument 2 of 'RxSamples' makes pointer from integer without a cast [-Wint-conversion]
-   Status = RxSamples(&FifoInstance1, SRAMBaseAddr);
-                                      ^~~~~~~~~~~~
-../src/ADC_SRAM_UART.c:50:5: note: expected 'u32 * {aka long unsigned int *}' but argument is of type 'u32 {aka long unsigned int}'
- int RxSamples(XLlFifo *InstancePtr, u32 *DestinationAddr);
-     ^~~~~~~~~
-../src/ADC_SRAM_UART.c:168:38: warning: passing argument 2 of 'RxSamples' makes pointer from integer without a cast [-Wint-conversion]
-   Status = RxSamples(&FifoInstance2, SRAMBaseAddr + (SAMPLES_PER_ADC));
-                                      ^~~~~~~~~~~~
-../src/ADC_SRAM_UART.c:50:5: note: expected 'u32 * {aka long unsigned int *}' but argument is of type 'long unsigned int'
- int RxSamples(XLlFifo *InstancePtr, u32 *DestinationAddr);
-     ^~~~~~~~~
-../src/ADC_SRAM_UART.c: In function 'SpiProgramOsc':
-../src/ADC_SRAM_UART.c:329:32: error: 'Registers' undeclared (first use in this function)
-  XSpi_Transfer(SpiInstancePtr, Registers[0], NULL, 24);
-                                ^~~~~~~~~
-../src/ADC_SRAM_UART.c:329:32: note: each undeclared identifier is reported only once for each function it appears in
+../src/ADC_SRAM_UART.c:19:27: warning: passing argument 2 of 'RecieveSamples' makes pointer from integer without a cast [-Wint-conversion]
+ #define SRAM_BASE_ADDR    0x60000000  /* Base Address of SRAM IP */
+                           ^
+../src/ADC_SRAM_UART.c:108:43: note: in expansion of macro 'SRAM_BASE_ADDR'
+   status = RecieveSamples(&Fifo1Instance, SRAM_BASE_ADDR);
+                                           ^~~~~~~~~~~~~~
+../src/ADC_SRAM_UART.c:42:5: note: expected 'u32 * {aka long unsigned int *}' but argument is of type 'int'
+ int RecieveSamples(XLlFifo *InstancePtr, u32 *DestinationAddr);
+     ^~~~~~~~~~~~~~
+../src/ADC_SRAM_UART.c:19:27: warning: passing argument 2 of 'RecieveSamples' makes pointer from integer without a cast [-Wint-conversion]
+ #define SRAM_BASE_ADDR    0x60000000  /* Base Address of SRAM IP */
+                           ^
+../src/ADC_SRAM_UART.c:111:43: note: in expansion of macro 'SRAM_BASE_ADDR'
+   status = RecieveSamples(&Fifo2Instance, SRAM_BASE_ADDR + (SAMPLES_PER_ADC));
+                                           ^~~~~~~~~~~~~~
+../src/ADC_SRAM_UART.c:42:5: note: expected 'u32 * {aka long unsigned int *}' but argument is of type 'int'
+ int RecieveSamples(XLlFifo *InstancePtr, u32 *DestinationAddr);
+     ^~~~~~~~~~~~~~
+../src/ADC_SRAM_UART.c:116:12: warning: implicit declaration of function 'TransmitSamplesOnUART'; did you mean 'TransmitSamplesOverUART'? [-Wimplicit-function-declaration]
+   status = TransmitSamplesOnUART(SRAM_BASE_ADDR); //Send ADC1 data over UART
+            ^~~~~~~~~~~~~~~~~~~~~
+            TransmitSamplesOverUART
+../src/ADC_SRAM_UART.c: In function 'InitialiseRecieveChain':
+../src/ADC_SRAM_UART.c:160:11: warning: implicit declaration of function 'XLlFifo_status'; did you mean 'XLlFifo_Status'? [-Wimplicit-function-declaration]
+  status = XLlFifo_status(InstancePtr);
+           ^~~~~~~~~~~~~~
+           XLlFifo_Status
+'Finished building: ../src/ADC_SRAM_UART.c'
+' '
+'Building target: ADC_SRAM_UART.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../ADC_SRAM_UART_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "ADC_SRAM_UART.elf"  ./src/ADC_SRAM_UART.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+./src/ADC_SRAM_UART.o: In function `main':
+C:\FPGA_Projects\ADC_SRAM_UART\ADC_SRAM_UART.sdk\ADC_SRAM_UART\Debug/../src/ADC_SRAM_UART.c:216: undefined reference to `TransmitSamplesOnUART'
+C:\FPGA_Projects\ADC_SRAM_UART\ADC_SRAM_UART.sdk\ADC_SRAM_UART\Debug/../src/ADC_SRAM_UART.c:216: undefined reference to `TransmitSamplesOnUART'
+./src/ADC_SRAM_UART.o: In function `InitialiseRecieveChain':
+C:\FPGA_Projects\ADC_SRAM_UART\ADC_SRAM_UART.sdk\ADC_SRAM_UART\Debug/../src/ADC_SRAM_UART.c:216: undefined reference to `XLlFifo_status'
+C:\FPGA_Projects\ADC_SRAM_UART\ADC_SRAM_UART.sdk\ADC_SRAM_UART\Debug/../src/ADC_SRAM_UART.c:216: undefined reference to `XLlFifo_status'
+C:\FPGA_Projects\ADC_SRAM_UART\ADC_SRAM_UART.sdk\ADC_SRAM_UART\Debug/../src/ADC_SRAM_UART.c:216: undefined reference to `XLlFifo_status'
+collect2.exe: error: ld returned 1 exit status
+make: *** [makefile:38: ADC_SRAM_UART.elf] Error 1
+21:00:35 **** Auto Build of configuration Debug for project ADC_SRAM_UART ****
+make all 
+'Building file: ../src/ADC_SRAM_UART.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/ADC_SRAM_UART.o" -I../../ADC_SRAM_UART_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/ADC_SRAM_UART.d" -MT"src/ADC_SRAM_UART.o" -o "src/ADC_SRAM_UART.o" "../src/ADC_SRAM_UART.c"
+../src/ADC_SRAM_UART.c: In function 'main':
+../src/ADC_SRAM_UART.c:19:27: warning: passing argument 2 of 'RecieveSamples' makes pointer from integer without a cast [-Wint-conversion]
+ #define SRAM_BASE_ADDR    0x60000000  /* Base Address of SRAM IP */
+                           ^
+../src/ADC_SRAM_UART.c:108:43: note: in expansion of macro 'SRAM_BASE_ADDR'
+   status = RecieveSamples(&Fifo1Instance, SRAM_BASE_ADDR);
+                                           ^~~~~~~~~~~~~~
+../src/ADC_SRAM_UART.c:42:5: note: expected 'u32 * {aka long unsigned int *}' but argument is of type 'int'
+ int RecieveSamples(XLlFifo *InstancePtr, u32 *DestinationAddr);
+     ^~~~~~~~~~~~~~
+../src/ADC_SRAM_UART.c:19:27: warning: passing argument 2 of 'RecieveSamples' makes pointer from integer without a cast [-Wint-conversion]
+ #define SRAM_BASE_ADDR    0x60000000  /* Base Address of SRAM IP */
+                           ^
+../src/ADC_SRAM_UART.c:111:43: note: in expansion of macro 'SRAM_BASE_ADDR'
+   status = RecieveSamples(&Fifo2Instance, SRAM_BASE_ADDR + (SAMPLES_PER_ADC));
+                                           ^~~~~~~~~~~~~~
+../src/ADC_SRAM_UART.c:42:5: note: expected 'u32 * {aka long unsigned int *}' but argument is of type 'int'
+ int RecieveSamples(XLlFifo *InstancePtr, u32 *DestinationAddr);
+     ^~~~~~~~~~~~~~
+../src/ADC_SRAM_UART.c:120:12: warning: implicit declaration of function 'TransmitSamplesOnUART'; did you mean 'TransmitSamplesOverUART'? [-Wimplicit-function-declaration]
+   status = TransmitSamplesOnUART(SRAM_BASE_ADDR + SAMPLES_PER_ADC); //Send ADC1 data over UART
+            ^~~~~~~~~~~~~~~~~~~~~
+            TransmitSamplesOverUART
+../src/ADC_SRAM_UART.c: In function 'InitialiseRecieveChain':
+../src/ADC_SRAM_UART.c:160:11: warning: implicit declaration of function 'XLlFifo_status'; did you mean 'XLlFifo_Status'? [-Wimplicit-function-declaration]
+  status = XLlFifo_status(InstancePtr);
+           ^~~~~~~~~~~~~~
+           XLlFifo_Status
+'Finished building: ../src/ADC_SRAM_UART.c'
+' '
+'Building target: ADC_SRAM_UART.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../ADC_SRAM_UART_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "ADC_SRAM_UART.elf"  ./src/ADC_SRAM_UART.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+./src/ADC_SRAM_UART.o: In function `main':
+C:\FPGA_Projects\ADC_SRAM_UART\ADC_SRAM_UART.sdk\ADC_SRAM_UART\Debug/../src/ADC_SRAM_UART.c:120: undefined reference to `TransmitSamplesOnUART'
+./src/ADC_SRAM_UART.o: In function `InitialiseRecieveChain':
+C:\FPGA_Projects\ADC_SRAM_UART\ADC_SRAM_UART.sdk\ADC_SRAM_UART\Debug/../src/ADC_SRAM_UART.c:160: undefined reference to `XLlFifo_status'
+C:\FPGA_Projects\ADC_SRAM_UART\ADC_SRAM_UART.sdk\ADC_SRAM_UART\Debug/../src/ADC_SRAM_UART.c:162: undefined reference to `XLlFifo_status'
+C:\FPGA_Projects\ADC_SRAM_UART\ADC_SRAM_UART.sdk\ADC_SRAM_UART\Debug/../src/ADC_SRAM_UART.c:164: undefined reference to `XLlFifo_status'
+collect2.exe: error: ld returned 1 exit status
+make: *** [makefile:38: ADC_SRAM_UART.elf] Error 1
+21:00:53 **** Auto Build of configuration Debug for project ADC_SRAM_UART ****
+make all 
+'Building file: ../src/ADC_SRAM_UART.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/ADC_SRAM_UART.o" -I../../ADC_SRAM_UART_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/ADC_SRAM_UART.d" -MT"src/ADC_SRAM_UART.o" -o "src/ADC_SRAM_UART.o" "../src/ADC_SRAM_UART.c"
+../src/ADC_SRAM_UART.c: In function 'main':
+../src/ADC_SRAM_UART.c:19:27: warning: passing argument 2 of 'RecieveSamples' makes pointer from integer without a cast [-Wint-conversion]
+ #define SRAM_BASE_ADDR    0x60000000  /* Base Address of SRAM IP */
+                           ^
+../src/ADC_SRAM_UART.c:108:43: note: in expansion of macro 'SRAM_BASE_ADDR'
+   status = RecieveSamples(&Fifo1Instance, SRAM_BASE_ADDR);
+                                           ^~~~~~~~~~~~~~
+../src/ADC_SRAM_UART.c:42:5: note: expected 'u32 * {aka long unsigned int *}' but argument is of type 'int'
+ int RecieveSamples(XLlFifo *InstancePtr, u32 *DestinationAddr);
+     ^~~~~~~~~~~~~~
+../src/ADC_SRAM_UART.c:19:27: warning: passing argument 2 of 'RecieveSamples' makes pointer from integer without a cast [-Wint-conversion]
+ #define SRAM_BASE_ADDR    0x60000000  /* Base Address of SRAM IP */
+                           ^
+../src/ADC_SRAM_UART.c:111:43: note: in expansion of macro 'SRAM_BASE_ADDR'
+   status = RecieveSamples(&Fifo2Instance, SRAM_BASE_ADDR + (SAMPLES_PER_ADC));
+                                           ^~~~~~~~~~~~~~
+../src/ADC_SRAM_UART.c:42:5: note: expected 'u32 * {aka long unsigned int *}' but argument is of type 'int'
+ int RecieveSamples(XLlFifo *InstancePtr, u32 *DestinationAddr);
+     ^~~~~~~~~~~~~~
+../src/ADC_SRAM_UART.c: In function 'InitialiseRecieveChain':
+../src/ADC_SRAM_UART.c:160:11: warning: implicit declaration of function 'XLlFifo_status'; did you mean 'XLlFifo_Status'? [-Wimplicit-function-declaration]
+  status = XLlFifo_status(InstancePtr);
+           ^~~~~~~~~~~~~~
+           XLlFifo_Status
+'Finished building: ../src/ADC_SRAM_UART.c'
+' '
+'Building target: ADC_SRAM_UART.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../ADC_SRAM_UART_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "ADC_SRAM_UART.elf"  ./src/ADC_SRAM_UART.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+./src/ADC_SRAM_UART.o: In function `InitialiseRecieveChain':
+C:\FPGA_Projects\ADC_SRAM_UART\ADC_SRAM_UART.sdk\ADC_SRAM_UART\Debug/../src/ADC_SRAM_UART.c:160: undefined reference to `XLlFifo_status'
+C:\FPGA_Projects\ADC_SRAM_UART\ADC_SRAM_UART.sdk\ADC_SRAM_UART\Debug/../src/ADC_SRAM_UART.c:162: undefined reference to `XLlFifo_status'
+C:\FPGA_Projects\ADC_SRAM_UART\ADC_SRAM_UART.sdk\ADC_SRAM_UART\Debug/../src/ADC_SRAM_UART.c:164: undefined reference to `XLlFifo_status'
+collect2.exe: error: ld returned 1 exit status
+make: *** [makefile:38: ADC_SRAM_UART.elf] Error 1
+21:01:36 **** Auto Build of configuration Debug for project ADC_SRAM_UART ****
+make all 
+'Building file: ../src/ADC_SRAM_UART.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/ADC_SRAM_UART.o" -I../../ADC_SRAM_UART_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/ADC_SRAM_UART.d" -MT"src/ADC_SRAM_UART.o" -o "src/ADC_SRAM_UART.o" "../src/ADC_SRAM_UART.c"
+../src/ADC_SRAM_UART.c: In function 'main':
+../src/ADC_SRAM_UART.c:19:25: warning: passing argument 2 of 'RecieveSamples' makes pointer from integer without a cast [-Wint-conversion]
+ #define SRAM_BASE_ADDR  0x60000000  /* Base Address of SRAM IP */
+                         ^
+../src/ADC_SRAM_UART.c:108:43: note: in expansion of macro 'SRAM_BASE_ADDR'
+   status = RecieveSamples(&Fifo1Instance, SRAM_BASE_ADDR);
+                                           ^~~~~~~~~~~~~~
+../src/ADC_SRAM_UART.c:42:5: note: expected 'u32 * {aka long unsigned int *}' but argument is of type 'int'
+ int RecieveSamples(XLlFifo *InstancePtr, u32 *DestinationAddr);
+     ^~~~~~~~~~~~~~
+../src/ADC_SRAM_UART.c:19:25: warning: passing argument 2 of 'RecieveSamples' makes pointer from integer without a cast [-Wint-conversion]
+ #define SRAM_BASE_ADDR  0x60000000  /* Base Address of SRAM IP */
+                         ^
+../src/ADC_SRAM_UART.c:111:43: note: in expansion of macro 'SRAM_BASE_ADDR'
+   status = RecieveSamples(&Fifo2Instance, SRAM_BASE_ADDR + (SAMPLES_PER_ADC));
+                                           ^~~~~~~~~~~~~~
+../src/ADC_SRAM_UART.c:42:5: note: expected 'u32 * {aka long unsigned int *}' but argument is of type 'int'
+ int RecieveSamples(XLlFifo *InstancePtr, u32 *DestinationAddr);
+     ^~~~~~~~~~~~~~
+../src/ADC_SRAM_UART.c: In function 'InitialiseRecieveChain':
+../src/ADC_SRAM_UART.c:160:11: warning: implicit declaration of function 'XLlFifo_status'; did you mean 'XLlFifo_Status'? [-Wimplicit-function-declaration]
+  status = XLlFifo_status(InstancePtr);
+           ^~~~~~~~~~~~~~
+           XLlFifo_Status
+'Finished building: ../src/ADC_SRAM_UART.c'
+' '
+'Building target: ADC_SRAM_UART.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../ADC_SRAM_UART_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "ADC_SRAM_UART.elf"  ./src/ADC_SRAM_UART.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+./src/ADC_SRAM_UART.o: In function `InitialiseRecieveChain':
+C:\FPGA_Projects\ADC_SRAM_UART\ADC_SRAM_UART.sdk\ADC_SRAM_UART\Debug/../src/ADC_SRAM_UART.c:160: undefined reference to `XLlFifo_status'
+C:\FPGA_Projects\ADC_SRAM_UART\ADC_SRAM_UART.sdk\ADC_SRAM_UART\Debug/../src/ADC_SRAM_UART.c:162: undefined reference to `XLlFifo_status'
+C:\FPGA_Projects\ADC_SRAM_UART\ADC_SRAM_UART.sdk\ADC_SRAM_UART\Debug/../src/ADC_SRAM_UART.c:164: undefined reference to `XLlFifo_status'
+collect2.exe: error: ld returned 1 exit status
+make: *** [makefile:38: ADC_SRAM_UART.elf] Error 1
+21:02:08 **** Auto Build of configuration Debug for project ADC_SRAM_UART ****
+make all 
+'Building file: ../src/ADC_SRAM_UART.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/ADC_SRAM_UART.o" -I../../ADC_SRAM_UART_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/ADC_SRAM_UART.d" -MT"src/ADC_SRAM_UART.o" -o "src/ADC_SRAM_UART.o" "../src/ADC_SRAM_UART.c"
+../src/ADC_SRAM_UART.c: In function 'main':
+../src/ADC_SRAM_UART.c:108:43: error: invalid type argument of unary '*' (have 'int')
+   status = RecieveSamples(&Fifo1Instance, *SRAM_BASE_ADDR);
+                                           ^
+../src/ADC_SRAM_UART.c:111:43: error: invalid type argument of unary '*' (have 'int')
+   status = RecieveSamples(&Fifo2Instance, *SRAM_BASE_ADDR + (SAMPLES_PER_ADC));
+                                           ^
+../src/ADC_SRAM_UART.c: In function 'InitialiseRecieveChain':
+../src/ADC_SRAM_UART.c:160:11: warning: implicit declaration of function 'XLlFifo_status'; did you mean 'XLlFifo_Status'? [-Wimplicit-function-declaration]
+  status = XLlFifo_status(InstancePtr);
+           ^~~~~~~~~~~~~~
+           XLlFifo_Status
 make: *** [src/subdir.mk:23: src/ADC_SRAM_UART.o] Error 1
-17:29:52 **** Auto Build of configuration Debug for project ADC_SRAM_UART ****
+21:02:16 **** Auto Build of configuration Debug for project ADC_SRAM_UART ****
 make all 
 'Building file: ../src/ADC_SRAM_UART.c'
 'Invoking: MicroBlaze gcc compiler'
 mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/ADC_SRAM_UART.o" -I../../ADC_SRAM_UART_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/ADC_SRAM_UART.d" -MT"src/ADC_SRAM_UART.o" -o "src/ADC_SRAM_UART.o" "../src/ADC_SRAM_UART.c"
 ../src/ADC_SRAM_UART.c: In function 'main':
-../src/ADC_SRAM_UART.c:161:38: warning: passing argument 2 of 'RxSamples' makes pointer from integer without a cast [-Wint-conversion]
-   Status = RxSamples(&FifoInstance1, SRAMBaseAddr);
-                                      ^~~~~~~~~~~~
-../src/ADC_SRAM_UART.c:50:5: note: expected 'u32 * {aka long unsigned int *}' but argument is of type 'u32 {aka long unsigned int}'
- int RxSamples(XLlFifo *InstancePtr, u32 *DestinationAddr);
-     ^~~~~~~~~
-../src/ADC_SRAM_UART.c:168:38: warning: passing argument 2 of 'RxSamples' makes pointer from integer without a cast [-Wint-conversion]
-   Status = RxSamples(&FifoInstance2, SRAMBaseAddr + (SAMPLES_PER_ADC));
-                                      ^~~~~~~~~~~~
-../src/ADC_SRAM_UART.c:50:5: note: expected 'u32 * {aka long unsigned int *}' but argument is of type 'long unsigned int'
- int RxSamples(XLlFifo *InstancePtr, u32 *DestinationAddr);
-     ^~~~~~~~~
+../src/ADC_SRAM_UART.c:19:27: warning: passing argument 2 of 'RecieveSamples' makes pointer from integer without a cast [-Wint-conversion]
+ #define SRAM_BASE_ADDR    0x60000000  /* Base Address of SRAM IP */
+                           ^
+../src/ADC_SRAM_UART.c:108:43: note: in expansion of macro 'SRAM_BASE_ADDR'
+   status = RecieveSamples(&Fifo1Instance, SRAM_BASE_ADDR);
+                                           ^~~~~~~~~~~~~~
+../src/ADC_SRAM_UART.c:42:5: note: expected 'u32 * {aka long unsigned int *}' but argument is of type 'int'
+ int RecieveSamples(XLlFifo *InstancePtr, u32 *DestinationAddr);
+     ^~~~~~~~~~~~~~
+../src/ADC_SRAM_UART.c:19:27: warning: passing argument 2 of 'RecieveSamples' makes pointer from integer without a cast [-Wint-conversion]
+ #define SRAM_BASE_ADDR    0x60000000  /* Base Address of SRAM IP */
+                           ^
+../src/ADC_SRAM_UART.c:111:43: note: in expansion of macro 'SRAM_BASE_ADDR'
+   status = RecieveSamples(&Fifo2Instance, SRAM_BASE_ADDR + (SAMPLES_PER_ADC));
+                                           ^~~~~~~~~~~~~~
+../src/ADC_SRAM_UART.c:42:5: note: expected 'u32 * {aka long unsigned int *}' but argument is of type 'int'
+ int RecieveSamples(XLlFifo *InstancePtr, u32 *DestinationAddr);
+     ^~~~~~~~~~~~~~
+../src/ADC_SRAM_UART.c: In function 'InitialiseRecieveChain':
+../src/ADC_SRAM_UART.c:160:11: warning: implicit declaration of function 'XLlFifo_status'; did you mean 'XLlFifo_Status'? [-Wimplicit-function-declaration]
+  status = XLlFifo_status(InstancePtr);
+           ^~~~~~~~~~~~~~
+           XLlFifo_Status
+'Finished building: ../src/ADC_SRAM_UART.c'
+' '
+'Building target: ADC_SRAM_UART.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../ADC_SRAM_UART_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "ADC_SRAM_UART.elf"  ./src/ADC_SRAM_UART.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+./src/ADC_SRAM_UART.o: In function `InitialiseRecieveChain':
+C:\FPGA_Projects\ADC_SRAM_UART\ADC_SRAM_UART.sdk\ADC_SRAM_UART\Debug/../src/ADC_SRAM_UART.c:160: undefined reference to `XLlFifo_status'
+C:\FPGA_Projects\ADC_SRAM_UART\ADC_SRAM_UART.sdk\ADC_SRAM_UART\Debug/../src/ADC_SRAM_UART.c:162: undefined reference to `XLlFifo_status'
+C:\FPGA_Projects\ADC_SRAM_UART\ADC_SRAM_UART.sdk\ADC_SRAM_UART\Debug/../src/ADC_SRAM_UART.c:164: undefined reference to `XLlFifo_status'
+collect2.exe: error: ld returned 1 exit status
+make: *** [makefile:38: ADC_SRAM_UART.elf] Error 1
+21:03:59 **** Auto Build of configuration Debug for project ADC_SRAM_UART ****
+make all 
+'Building file: ../src/ADC_SRAM_UART.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/ADC_SRAM_UART.o" -I../../ADC_SRAM_UART_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/ADC_SRAM_UART.d" -MT"src/ADC_SRAM_UART.o" -o "src/ADC_SRAM_UART.o" "../src/ADC_SRAM_UART.c"
+../src/ADC_SRAM_UART.c: In function 'main':
+../src/ADC_SRAM_UART.c:19:27: warning: passing argument 2 of 'RecieveSamples' makes pointer from integer without a cast [-Wint-conversion]
+ #define SRAM_BASE_ADDR    0x60000000  /* Base Address of SRAM IP */
+                           ^
+../src/ADC_SRAM_UART.c:108:43: note: in expansion of macro 'SRAM_BASE_ADDR'
+   status = RecieveSamples(&Fifo1Instance, SRAM_BASE_ADDR);
+                                           ^~~~~~~~~~~~~~
+../src/ADC_SRAM_UART.c:42:5: note: expected 'int *' but argument is of type 'int'
+ int RecieveSamples(XLlFifo *InstancePtr, int *DestinationAddr);
+     ^~~~~~~~~~~~~~
+../src/ADC_SRAM_UART.c:19:27: warning: passing argument 2 of 'RecieveSamples' makes pointer from integer without a cast [-Wint-conversion]
+ #define SRAM_BASE_ADDR    0x60000000  /* Base Address of SRAM IP */
+                           ^
+../src/ADC_SRAM_UART.c:111:43: note: in expansion of macro 'SRAM_BASE_ADDR'
+   status = RecieveSamples(&Fifo2Instance, SRAM_BASE_ADDR + (SAMPLES_PER_ADC));
+                                           ^~~~~~~~~~~~~~
+../src/ADC_SRAM_UART.c:42:5: note: expected 'int *' but argument is of type 'int'
+ int RecieveSamples(XLlFifo *InstancePtr, int *DestinationAddr);
+     ^~~~~~~~~~~~~~
+../src/ADC_SRAM_UART.c: In function 'InitialiseRecieveChain':
+../src/ADC_SRAM_UART.c:160:11: warning: implicit declaration of function 'XLlFifo_status'; did you mean 'XLlFifo_Status'? [-Wimplicit-function-declaration]
+  status = XLlFifo_status(InstancePtr);
+           ^~~~~~~~~~~~~~
+           XLlFifo_Status
+../src/ADC_SRAM_UART.c: At top level:
+../src/ADC_SRAM_UART.c:173:5: error: conflicting types for 'RecieveSamples'
+ int RecieveSamples(XLlFifo *InstancePtr, u32* DestinationAddr){
+     ^~~~~~~~~~~~~~
+../src/ADC_SRAM_UART.c:42:5: note: previous declaration of 'RecieveSamples' was here
+ int RecieveSamples(XLlFifo *InstancePtr, int *DestinationAddr);
+     ^~~~~~~~~~~~~~
+make: *** [src/subdir.mk:23: src/ADC_SRAM_UART.o] Error 1
+21:04:04 **** Auto Build of configuration Debug for project ADC_SRAM_UART ****
+make all 
+'Building file: ../src/ADC_SRAM_UART.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/ADC_SRAM_UART.o" -I../../ADC_SRAM_UART_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/ADC_SRAM_UART.d" -MT"src/ADC_SRAM_UART.o" -o "src/ADC_SRAM_UART.o" "../src/ADC_SRAM_UART.c"
+../src/ADC_SRAM_UART.c: In function 'main':
+../src/ADC_SRAM_UART.c:19:27: warning: passing argument 2 of 'RecieveSamples' makes pointer from integer without a cast [-Wint-conversion]
+ #define SRAM_BASE_ADDR    0x60000000  /* Base Address of SRAM IP */
+                           ^
+../src/ADC_SRAM_UART.c:108:43: note: in expansion of macro 'SRAM_BASE_ADDR'
+   status = RecieveSamples(&Fifo1Instance, SRAM_BASE_ADDR);
+                                           ^~~~~~~~~~~~~~
+../src/ADC_SRAM_UART.c:42:5: note: expected 'u32 * {aka long unsigned int *}' but argument is of type 'int'
+ int RecieveSamples(XLlFifo *InstancePtr, u32 *DestinationAddr);
+     ^~~~~~~~~~~~~~
+../src/ADC_SRAM_UART.c:19:27: warning: passing argument 2 of 'RecieveSamples' makes pointer from integer without a cast [-Wint-conversion]
+ #define SRAM_BASE_ADDR    0x60000000  /* Base Address of SRAM IP */
+                           ^
+../src/ADC_SRAM_UART.c:111:43: note: in expansion of macro 'SRAM_BASE_ADDR'
+   status = RecieveSamples(&Fifo2Instance, SRAM_BASE_ADDR + (SAMPLES_PER_ADC));
+                                           ^~~~~~~~~~~~~~
+../src/ADC_SRAM_UART.c:42:5: note: expected 'u32 * {aka long unsigned int *}' but argument is of type 'int'
+ int RecieveSamples(XLlFifo *InstancePtr, u32 *DestinationAddr);
+     ^~~~~~~~~~~~~~
+../src/ADC_SRAM_UART.c: In function 'InitialiseRecieveChain':
+../src/ADC_SRAM_UART.c:160:11: warning: implicit declaration of function 'XLlFifo_status'; did you mean 'XLlFifo_Status'? [-Wimplicit-function-declaration]
+  status = XLlFifo_status(InstancePtr);
+           ^~~~~~~~~~~~~~
+           XLlFifo_Status
+'Finished building: ../src/ADC_SRAM_UART.c'
+' '
+'Building target: ADC_SRAM_UART.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../ADC_SRAM_UART_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "ADC_SRAM_UART.elf"  ./src/ADC_SRAM_UART.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+./src/ADC_SRAM_UART.o: In function `InitialiseRecieveChain':
+C:\FPGA_Projects\ADC_SRAM_UART\ADC_SRAM_UART.sdk\ADC_SRAM_UART\Debug/../src/ADC_SRAM_UART.c:160: undefined reference to `XLlFifo_status'
+C:\FPGA_Projects\ADC_SRAM_UART\ADC_SRAM_UART.sdk\ADC_SRAM_UART\Debug/../src/ADC_SRAM_UART.c:162: undefined reference to `XLlFifo_status'
+C:\FPGA_Projects\ADC_SRAM_UART\ADC_SRAM_UART.sdk\ADC_SRAM_UART\Debug/../src/ADC_SRAM_UART.c:164: undefined reference to `XLlFifo_status'
+collect2.exe: error: ld returned 1 exit status
+make: *** [makefile:38: ADC_SRAM_UART.elf] Error 1
+21:04:37 **** Auto Build of configuration Debug for project ADC_SRAM_UART ****
+make all 
+'Building file: ../src/ADC_SRAM_UART.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/ADC_SRAM_UART.o" -I../../ADC_SRAM_UART_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/ADC_SRAM_UART.d" -MT"src/ADC_SRAM_UART.o" -o "src/ADC_SRAM_UART.o" "../src/ADC_SRAM_UART.c"
+../src/ADC_SRAM_UART.c: In function 'main':
+../src/ADC_SRAM_UART.c:108:58: error: expected expression before ')' token
+   status = RecieveSamples(&Fifo1Instance, SRAM_BASE_ADDR*);
+                                                          ^
+../src/ADC_SRAM_UART.c:111:57: warning: integer overflow in expression [-Woverflow]
+   status = RecieveSamples(&Fifo2Instance, SRAM_BASE_ADDR* + (SAMPLES_PER_ADC));
+                                                         ^
+../src/ADC_SRAM_UART.c:19:27: warning: passing argument 2 of 'RecieveSamples' makes pointer from integer without a cast [-Wint-conversion]
+ #define SRAM_BASE_ADDR    0x60000000  /* Base Address of SRAM IP */
+                           ^
+../src/ADC_SRAM_UART.c:111:43: note: in expansion of macro 'SRAM_BASE_ADDR'
+   status = RecieveSamples(&Fifo2Instance, SRAM_BASE_ADDR* + (SAMPLES_PER_ADC));
+                                           ^~~~~~~~~~~~~~
+../src/ADC_SRAM_UART.c:42:5: note: expected 'u32 * {aka long unsigned int *}' but argument is of type 'int'
+ int RecieveSamples(XLlFifo *InstancePtr, u32 *DestinationAddr);
+     ^~~~~~~~~~~~~~
+../src/ADC_SRAM_UART.c: In function 'InitialiseRecieveChain':
+../src/ADC_SRAM_UART.c:160:11: warning: implicit declaration of function 'XLlFifo_status'; did you mean 'XLlFifo_Status'? [-Wimplicit-function-declaration]
+  status = XLlFifo_status(InstancePtr);
+           ^~~~~~~~~~~~~~
+           XLlFifo_Status
+make: *** [src/subdir.mk:23: src/ADC_SRAM_UART.o] Error 1
+21:04:45 **** Auto Build of configuration Debug for project ADC_SRAM_UART ****
+make all 
+'Building file: ../src/ADC_SRAM_UART.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/ADC_SRAM_UART.o" -I../../ADC_SRAM_UART_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/ADC_SRAM_UART.d" -MT"src/ADC_SRAM_UART.o" -o "src/ADC_SRAM_UART.o" "../src/ADC_SRAM_UART.c"
+../src/ADC_SRAM_UART.c: In function 'main':
+../src/ADC_SRAM_UART.c:108:42: warning: passing argument 2 of 'RecieveSamples' makes pointer from integer without a cast [-Wint-conversion]
+   status = RecieveSamples(&Fifo1Instance,(u32) SRAM_BASE_ADDR);
+                                          ^
+../src/ADC_SRAM_UART.c:42:5: note: expected 'u32 * {aka long unsigned int *}' but argument is of type 'long unsigned int'
+ int RecieveSamples(XLlFifo *InstancePtr, u32 *DestinationAddr);
+     ^~~~~~~~~~~~~~
+../src/ADC_SRAM_UART.c:111:57: warning: integer overflow in expression [-Woverflow]
+   status = RecieveSamples(&Fifo2Instance, SRAM_BASE_ADDR* + (SAMPLES_PER_ADC));
+                                                         ^
+../src/ADC_SRAM_UART.c:19:27: warning: passing argument 2 of 'RecieveSamples' makes pointer from integer without a cast [-Wint-conversion]
+ #define SRAM_BASE_ADDR    0x60000000  /* Base Address of SRAM IP */
+                           ^
+../src/ADC_SRAM_UART.c:111:43: note: in expansion of macro 'SRAM_BASE_ADDR'
+   status = RecieveSamples(&Fifo2Instance, SRAM_BASE_ADDR* + (SAMPLES_PER_ADC));
+                                           ^~~~~~~~~~~~~~
+../src/ADC_SRAM_UART.c:42:5: note: expected 'u32 * {aka long unsigned int *}' but argument is of type 'int'
+ int RecieveSamples(XLlFifo *InstancePtr, u32 *DestinationAddr);
+     ^~~~~~~~~~~~~~
+../src/ADC_SRAM_UART.c: In function 'InitialiseRecieveChain':
+../src/ADC_SRAM_UART.c:160:11: warning: implicit declaration of function 'XLlFifo_status'; did you mean 'XLlFifo_Status'? [-Wimplicit-function-declaration]
+  status = XLlFifo_status(InstancePtr);
+           ^~~~~~~~~~~~~~
+           XLlFifo_Status
+'Finished building: ../src/ADC_SRAM_UART.c'
+' '
+'Building target: ADC_SRAM_UART.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../ADC_SRAM_UART_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "ADC_SRAM_UART.elf"  ./src/ADC_SRAM_UART.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+./src/ADC_SRAM_UART.o: In function `InitialiseRecieveChain':
+C:\FPGA_Projects\ADC_SRAM_UART\ADC_SRAM_UART.sdk\ADC_SRAM_UART\Debug/../src/ADC_SRAM_UART.c:160: undefined reference to `XLlFifo_status'
+C:\FPGA_Projects\ADC_SRAM_UART\ADC_SRAM_UART.sdk\ADC_SRAM_UART\Debug/../src/ADC_SRAM_UART.c:162: undefined reference to `XLlFifo_status'
+C:\FPGA_Projects\ADC_SRAM_UART\ADC_SRAM_UART.sdk\ADC_SRAM_UART\Debug/../src/ADC_SRAM_UART.c:164: undefined reference to `XLlFifo_status'
+collect2.exe: error: ld returned 1 exit status
+make: *** [makefile:38: ADC_SRAM_UART.elf] Error 1
+21:04:53 **** Auto Build of configuration Debug for project ADC_SRAM_UART ****
+make all 
+'Building file: ../src/ADC_SRAM_UART.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/ADC_SRAM_UART.o" -I../../ADC_SRAM_UART_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/ADC_SRAM_UART.d" -MT"src/ADC_SRAM_UART.o" -o "src/ADC_SRAM_UART.o" "../src/ADC_SRAM_UART.c"
+../src/ADC_SRAM_UART.c: In function 'main':
+../src/ADC_SRAM_UART.c:111:57: warning: integer overflow in expression [-Woverflow]
+   status = RecieveSamples(&Fifo2Instance, SRAM_BASE_ADDR* + (SAMPLES_PER_ADC));
+                                                         ^
+../src/ADC_SRAM_UART.c:19:27: warning: passing argument 2 of 'RecieveSamples' makes pointer from integer without a cast [-Wint-conversion]
+ #define SRAM_BASE_ADDR    0x60000000  /* Base Address of SRAM IP */
+                           ^
+../src/ADC_SRAM_UART.c:111:43: note: in expansion of macro 'SRAM_BASE_ADDR'
+   status = RecieveSamples(&Fifo2Instance, SRAM_BASE_ADDR* + (SAMPLES_PER_ADC));
+                                           ^~~~~~~~~~~~~~
+../src/ADC_SRAM_UART.c:42:5: note: expected 'u32 * {aka long unsigned int *}' but argument is of type 'int'
+ int RecieveSamples(XLlFifo *InstancePtr, u32 *DestinationAddr);
+     ^~~~~~~~~~~~~~
+../src/ADC_SRAM_UART.c: In function 'InitialiseRecieveChain':
+../src/ADC_SRAM_UART.c:160:11: warning: implicit declaration of function 'XLlFifo_status'; did you mean 'XLlFifo_Status'? [-Wimplicit-function-declaration]
+  status = XLlFifo_status(InstancePtr);
+           ^~~~~~~~~~~~~~
+           XLlFifo_Status
+'Finished building: ../src/ADC_SRAM_UART.c'
+' '
+'Building target: ADC_SRAM_UART.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../ADC_SRAM_UART_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "ADC_SRAM_UART.elf"  ./src/ADC_SRAM_UART.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+./src/ADC_SRAM_UART.o: In function `InitialiseRecieveChain':
+C:\FPGA_Projects\ADC_SRAM_UART\ADC_SRAM_UART.sdk\ADC_SRAM_UART\Debug/../src/ADC_SRAM_UART.c:160: undefined reference to `XLlFifo_status'
+C:\FPGA_Projects\ADC_SRAM_UART\ADC_SRAM_UART.sdk\ADC_SRAM_UART\Debug/../src/ADC_SRAM_UART.c:162: undefined reference to `XLlFifo_status'
+C:\FPGA_Projects\ADC_SRAM_UART\ADC_SRAM_UART.sdk\ADC_SRAM_UART\Debug/../src/ADC_SRAM_UART.c:164: undefined reference to `XLlFifo_status'
+collect2.exe: error: ld returned 1 exit status
+make: *** [makefile:38: ADC_SRAM_UART.elf] Error 1
+21:05:00 **** Auto Build of configuration Debug for project ADC_SRAM_UART ****
+make all 
+'Building file: ../src/ADC_SRAM_UART.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/ADC_SRAM_UART.o" -I../../ADC_SRAM_UART_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/ADC_SRAM_UART.d" -MT"src/ADC_SRAM_UART.o" -o "src/ADC_SRAM_UART.o" "../src/ADC_SRAM_UART.c"
+../src/ADC_SRAM_UART.c: In function 'main':
+../src/ADC_SRAM_UART.c:111:63: error: invalid operands to binary * (have 'u32 * {aka long unsigned int *}' and 'int')
+   status = RecieveSamples(&Fifo2Instance,(u32*) SRAM_BASE_ADDR* + (SAMPLES_PER_ADC));
+                                                               ^
+../src/ADC_SRAM_UART.c: In function 'InitialiseRecieveChain':
+../src/ADC_SRAM_UART.c:160:11: warning: implicit declaration of function 'XLlFifo_status'; did you mean 'XLlFifo_Status'? [-Wimplicit-function-declaration]
+  status = XLlFifo_status(InstancePtr);
+           ^~~~~~~~~~~~~~
+           XLlFifo_Status
+make: *** [src/subdir.mk:23: src/ADC_SRAM_UART.o] Error 1
+21:05:06 **** Auto Build of configuration Debug for project ADC_SRAM_UART ****
+make all 
+'Building file: ../src/ADC_SRAM_UART.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/ADC_SRAM_UART.o" -I../../ADC_SRAM_UART_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/ADC_SRAM_UART.d" -MT"src/ADC_SRAM_UART.o" -o "src/ADC_SRAM_UART.o" "../src/ADC_SRAM_UART.c"
+../src/ADC_SRAM_UART.c: In function 'InitialiseRecieveChain':
+../src/ADC_SRAM_UART.c:160:11: warning: implicit declaration of function 'XLlFifo_status'; did you mean 'XLlFifo_Status'? [-Wimplicit-function-declaration]
+  status = XLlFifo_status(InstancePtr);
+           ^~~~~~~~~~~~~~
+           XLlFifo_Status
+'Finished building: ../src/ADC_SRAM_UART.c'
+' '
+'Building target: ADC_SRAM_UART.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../ADC_SRAM_UART_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "ADC_SRAM_UART.elf"  ./src/ADC_SRAM_UART.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+./src/ADC_SRAM_UART.o: In function `InitialiseRecieveChain':
+C:\FPGA_Projects\ADC_SRAM_UART\ADC_SRAM_UART.sdk\ADC_SRAM_UART\Debug/../src/ADC_SRAM_UART.c:160: undefined reference to `XLlFifo_status'
+C:\FPGA_Projects\ADC_SRAM_UART\ADC_SRAM_UART.sdk\ADC_SRAM_UART\Debug/../src/ADC_SRAM_UART.c:162: undefined reference to `XLlFifo_status'
+C:\FPGA_Projects\ADC_SRAM_UART\ADC_SRAM_UART.sdk\ADC_SRAM_UART\Debug/../src/ADC_SRAM_UART.c:164: undefined reference to `XLlFifo_status'
+collect2.exe: error: ld returned 1 exit status
+make: *** [makefile:38: ADC_SRAM_UART.elf] Error 1
+21:06:44 **** Auto Build of configuration Debug for project ADC_SRAM_UART ****
+make all 
+'Building file: ../src/ADC_SRAM_UART.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/ADC_SRAM_UART.o" -I../../ADC_SRAM_UART_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/ADC_SRAM_UART.d" -MT"src/ADC_SRAM_UART.o" -o "src/ADC_SRAM_UART.o" "../src/ADC_SRAM_UART.c"
+../src/ADC_SRAM_UART.c: In function 'InitialiseRecieveChain':
+../src/ADC_SRAM_UART.c:166:8: warning: implicit declaration of function 'XLlFifo_status'; did you mean 'XLlFifo_Status'? [-Wimplicit-function-declaration]
+        XLlFifo_status(InstancePtr));
+        ^~~~~~~~~~~~~~
+        XLlFifo_Status
+'Finished building: ../src/ADC_SRAM_UART.c'
+' '
+'Building target: ADC_SRAM_UART.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../ADC_SRAM_UART_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "ADC_SRAM_UART.elf"  ./src/ADC_SRAM_UART.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+./src/ADC_SRAM_UART.o: In function `InitialiseRecieveChain':
+C:\FPGA_Projects\ADC_SRAM_UART\ADC_SRAM_UART.sdk\ADC_SRAM_UART\Debug/../src/ADC_SRAM_UART.c:164: undefined reference to `XLlFifo_status'
+collect2.exe: error: ld returned 1 exit status
+make: *** [makefile:38: ADC_SRAM_UART.elf] Error 1
+21:06:53 **** Auto Build of configuration Debug for project ADC_SRAM_UART ****
+make all 
+'Building file: ../src/ADC_SRAM_UART.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/ADC_SRAM_UART.o" -I../../ADC_SRAM_UART_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/ADC_SRAM_UART.d" -MT"src/ADC_SRAM_UART.o" -o "src/ADC_SRAM_UART.o" "../src/ADC_SRAM_UART.c"
 'Finished building: ../src/ADC_SRAM_UART.c'
 ' '
 'Building target: ADC_SRAM_UART.elf'
@@ -53,9 +491,18 @@ mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../ADC_SRAM_UART_bsp/microblaze_0/lib -
 'Invoking: MicroBlaze Print Size'
 mb-size ADC_SRAM_UART.elf  |tee "ADC_SRAM_UART.elf.size"
    text	   data	    bss	    dec	    hex	filename
-  15824	    400	   3440	  19664	   4cd0	ADC_SRAM_UART.elf
+  15212	    396	   3448	  19056	   4a70	ADC_SRAM_UART.elf
 'Finished building: ADC_SRAM_UART.elf.size'
 ' '
-17:30:00 **** Incremental Build of configuration Debug for project ADC_SRAM_UART ****
+21:06:59 **** Incremental Build of configuration Debug for project ADC_SRAM_UART ****
+make all 
+make: Nothing to be done for 'all'.
+21:08:00 **** Incremental Build of configuration Debug for project ADC_SRAM_UART ****
+make all 
+make: Nothing to be done for 'all'.
+21:08:16 **** Incremental Build of configuration Debug for project ADC_SRAM_UART ****
+make all 
+make: Nothing to be done for 'all'.
+21:08:59 **** Incremental Build of configuration Debug for project ADC_SRAM_UART ****
 make all 
 make: Nothing to be done for 'all'.

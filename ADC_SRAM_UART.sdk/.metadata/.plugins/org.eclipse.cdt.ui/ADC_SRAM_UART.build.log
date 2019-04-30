@@ -1,6 +1,6 @@
-17:30:00 **** Incremental Build of configuration Debug for project ADC_SRAM_UART ****
+21:08:59 **** Incremental Build of configuration Debug for project ADC_SRAM_UART ****
 make all 
 make: Nothing to be done for 'all'.
 
-17:30:00 Build Finished (took 190ms)
+21:08:59 Build Finished (took 195ms)
 

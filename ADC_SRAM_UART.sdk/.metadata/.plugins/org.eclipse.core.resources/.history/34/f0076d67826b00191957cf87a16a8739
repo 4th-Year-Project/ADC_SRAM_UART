@@ -40,7 +40,7 @@ int ProgramOscillator(XSpi *SpiInstancePtr, u16 SpiDeviceId);
 int InitialiseGPIO(XGpio *Instance0Ptr, XGpio *Instance1Ptr);
 int InitialiseRecieveChain(XLlFifo *InstancePtr, u16 DeviceId);
 int RecieveSamples(XLlFifo *InstancePtr, u32 *DestinationAddr);
-int TransmitSamplesOverUART(u32 DestinationAddr);
+int TransmitSamplesOnUART(u32 DestinationAddr);
 
 int IsBTN1Pressed(void);
 int HandleSerialCommand(void);
@@ -60,7 +60,6 @@ u32 NumSamplesToTx = 200;
 /******************************* Functions ***********************************/
 int main (){
   int status;
-  int recieved;
 
   xil_printf("RESET\n\r");
 /*--- Initaise---*/
@@ -79,7 +78,7 @@ int main (){
 /*--- Wait for trigger ---*/
   int waiting = TRUE;
   while(waiting){
-   if(IsBTN1Pressed()){
+   if(isBTN1Pressed()){
      waiting = FALSE;
    }
    if(HandleSerialCommand()){
@@ -105,19 +104,19 @@ int main (){
 /*--- Transfer to SRAM ---*/
   xil_printf("Will transfer via SRAM\n\r");
 
-  status = RecieveSamples(&Fifo1Instance,(u32*) SRAM_BASE_ADDR);
+  status = RecieveSamples(&Fifo1Instance, SRAM_BASE_ADDR);
   CheckStatus(status);
 
-  status = RecieveSamples(&Fifo2Instance,(u32*) SRAM_BASE_ADDR + (SAMPLES_PER_ADC));
+  status = RecieveSamples(&Fifo2Instance, SRAM_BASE_ADDR + (SAMPLES_PER_ADC));
   CheckStatus(status);
 
 /*--- Send over UART ---*/
   xil_printf("ADC1 ");
-  status = TransmitSamplesOverUART(SRAM_BASE_ADDR); //Send ADC1 data over UART
+  status = TransmitSamplesOnUART(SRAM_BASE_ADDR); //Send ADC1 data over UART
   CheckStatus(status);
 
   xil_printf("ADC2 ");
-  status = TransmitSamplesOverUART(SRAM_BASE_ADDR + SAMPLES_PER_ADC); //Send ADC1 data over UART
+  status = TransmitSamplesOnUART(SRAM_BASE_ADDR + SAMPLES_PER_ADC); //Send ADC1 data over UART
   CheckStatus(status);
 
 /*--- Reset ---*/
@@ -157,13 +156,13 @@ int InitialiseRecieveChain(XLlFifo *InstancePtr, u16 DeviceId){
 	}
 
   /* Check for the Reset value */
-	status = XLlFifo_Status(InstancePtr);
+	status = XLlFifo_status(InstancePtr);
 	XLlFifo_IntClear(InstancePtr,0xffffffff);
-	status = XLlFifo_Status(InstancePtr);
+	status = XLlFifo_status(InstancePtr);
 	if(status != 0x0) {
 		xil_printf("\n ERROR : Reset value of ISR0 : 0x%x\t"
 			    "Expected : 0x0\n\r",
-			    XLlFifo_Status(InstancePtr));
+			    XLlFifo_status(InstancePtr));
 		return XST_FAILURE;
 	}
 
@@ -266,19 +265,17 @@ int ProgramOscillator(XSpi *SpiInstancePtr, u16 SpiDeviceId){
 }
 
 int IsBTN1Pressed(void){
-  int gpioValue;
+  int gpioValue
   gpioValue = XGpio_DiscreteRead(&Gpio0Instance, 1);
   if ((gpioValue & BTN1_MASK) == BTN1_MASK ){
     xil_printf("BTN1 Pressed\n\r");
     return 1;
   }
   return 0;
-}
+}CheckStatus(status);
 
 int HandleSerialCommand(void){
-  	int status;
-
-	if (!XUartLite_IsReceiveEmpty(UART_BASE_ADDR)){
+  		if (!XUartLite_IsReceiveEmpty(UART_BASE_ADDR)){
   			switch(XUartLite_RecvByte(UART_BASE_ADDR)) {
   			case '0' ://Set number of samples
   				xil_printf("NUMOFSAMPLES\n\r");

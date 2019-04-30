@@ -108,7 +108,7 @@ int main (){
   status = RecieveSamples(&Fifo1Instance,(u32*) SRAM_BASE_ADDR);
   CheckStatus(status);
 
-  status = RecieveSamples(&Fifo2Instance,(u32*) SRAM_BASE_ADDR + (SAMPLES_PER_ADC));
+  status = RecieveSamples(&Fifo2Instance,(u32*) SRAM_BASE_ADDR* + (SAMPLES_PER_ADC));
   CheckStatus(status);
 
 /*--- Send over UART ---*/
@@ -157,13 +157,13 @@ int InitialiseRecieveChain(XLlFifo *InstancePtr, u16 DeviceId){
 	}
 
   /* Check for the Reset value */
-	status = XLlFifo_Status(InstancePtr);
+	status = XLlFifo_status(InstancePtr);
 	XLlFifo_IntClear(InstancePtr,0xffffffff);
-	status = XLlFifo_Status(InstancePtr);
+	status = XLlFifo_status(InstancePtr);
 	if(status != 0x0) {
 		xil_printf("\n ERROR : Reset value of ISR0 : 0x%x\t"
 			    "Expected : 0x0\n\r",
-			    XLlFifo_Status(InstancePtr));
+			    XLlFifo_status(InstancePtr));
 		return XST_FAILURE;
 	}
 

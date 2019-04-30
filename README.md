@@ -22,7 +22,9 @@ This is the top level for the FPGA project. The aim of this is to read from the 
 | No Green LEDs | Microblaze not programmed |
 |RGB LED| Not used |
 
-## GPIOs
+
+## Tables
+### GPIOs
 | GPIO/bit  | Connection  | Explanation                      |
 |-----------|-------------|----------------------------------|
 | *GPIO0 ch1* |             | *External inputs*              |
@@ -37,6 +39,21 @@ This is the top level for the FPGA project. The aim of this is to read from the 
 | bit 0     | RESET       | For software reset (Active high) |
 | bit 1     | ADC1_ENABLE | ADC1 start sampling              |
 | bit 2     | ADC2_ENABLE | ADC2 start sampling              |
+
+### Serial Commands
+Send these as ascii charactersto perform functions on the FPGA
+|Character|Function|
+|---|---|
+|0| Sets the number of samples to Tx over serial. Send the number as 4 raw bytes LSB first. 0- 8000.Sampling is then performed| 
+|1|Programs the oscillator to 1.736GHz|
+
+### Connections
+For the ADCS it is the same as FPGA_ADC_Interface. The SPI for the oscillator are:
+|Pin|Name|Description|
+|---|---|---|
+|18| SCK| CLK|
+|19|MOSI|DAT|
+|20|SS|LD|
 
 
 ## Specs
